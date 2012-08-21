@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+########################################################################
+##
+## Copyright (c) 2005 Xilinx, Inc.  All rights reserved.
+##
+########################################################################
+-->
+
+<!DOCTYPE doc SYSTEM "sg_ipdialog.dtd" [
+<!ENTITY C_BASEADDR '
+<widget id="C_BASEADDR">
+    <key>C_BASEADDR</key>
+    <label>C_BASEADDR</label>
+    <tip>Base Address</tip>
+</widget>
+'>
+
+<!ENTITY C_MEMMAP_TIMER0_TIMELEFT '
+<widget id="C_MEMMAP_TIMER0_TIMELEFT">
+    <key>C_MEMMAP_TIMER0_TIMELEFT</key>
+    <label>C_MEMMAP_TIMER0_TIMELEFT</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER1_TIMELEFT '
+<widget id="C_MEMMAP_TIMER1_TIMELEFT">
+    <key>C_MEMMAP_TIMER1_TIMELEFT</key>
+    <label>C_MEMMAP_TIMER1_TIMELEFT</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER2_TIMELEFT '
+<widget id="C_MEMMAP_TIMER2_TIMELEFT">
+    <key>C_MEMMAP_TIMER2_TIMELEFT</key>
+    <label>C_MEMMAP_TIMER2_TIMELEFT</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER3_TIMELEFT '
+<widget id="C_MEMMAP_TIMER3_TIMELEFT">
+    <key>C_MEMMAP_TIMER3_TIMELEFT</key>
+    <label>C_MEMMAP_TIMER3_TIMELEFT</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER_CONTROL_R '
+<widget id="C_MEMMAP_TIMER_CONTROL_R">
+    <key>C_MEMMAP_TIMER_CONTROL_R</key>
+    <label>C_MEMMAP_TIMER_CONTROL_R</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER_STATUS '
+<widget id="C_MEMMAP_TIMER_STATUS">
+    <key>C_MEMMAP_TIMER_STATUS</key>
+    <label>C_MEMMAP_TIMER_STATUS</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+
+<!ENTITY C_MEMMAP_TIMER0_COUNTTO '
+<widget id="C_MEMMAP_TIMER0_COUNTTO">
+    <key>C_MEMMAP_TIMER0_COUNTTO</key>
+    <label>C_MEMMAP_TIMER0_COUNTTO</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER1_COUNTTO '
+<widget id="C_MEMMAP_TIMER1_COUNTTO">
+    <key>C_MEMMAP_TIMER1_COUNTTO</key>
+    <label>C_MEMMAP_TIMER1_COUNTTO</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER2_COUNTTO '
+<widget id="C_MEMMAP_TIMER2_COUNTTO">
+    <key>C_MEMMAP_TIMER2_COUNTTO</key>
+    <label>C_MEMMAP_TIMER2_COUNTTO</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER3_COUNTTO '
+<widget id="C_MEMMAP_TIMER3_COUNTTO">
+    <key>C_MEMMAP_TIMER3_COUNTTO</key>
+    <label>C_MEMMAP_TIMER3_COUNTTO</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMER_CONTROL_W '
+<widget id="C_MEMMAP_TIMER_CONTROL_W">
+    <key>C_MEMMAP_TIMER_CONTROL_W</key>
+    <label>C_MEMMAP_TIMER_CONTROL_W</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+
+
+
+]>
+
+<doc>
+<view id="Memory Map Information">
+    <display>Memory Map Information</display>
+    <group id="All">
+        <display>All</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_MEMMAP_TIMER0_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER1_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER2_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER3_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER_CONTROL_R;</item>
+        <item>&C_MEMMAP_TIMER_STATUS;</item>
+        <item>&C_MEMMAP_TIMER0_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER1_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER2_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER3_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER_CONTROL_W;</item>
+    </group>
+    <group id="From/To Registers">
+        <display>From/To Registers</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_MEMMAP_TIMER0_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER1_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER2_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER3_TIMELEFT;</item>
+        <item>&C_MEMMAP_TIMER_CONTROL_R;</item>
+        <item>&C_MEMMAP_TIMER_STATUS;</item>
+        <item>&C_MEMMAP_TIMER0_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER1_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER2_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER3_COUNTTO;</item>
+        <item>&C_MEMMAP_TIMER_CONTROL_W;</item>
+    </group>
+    <group id="From/To FIFOs">
+        <display>From/To FIFOs</display>
+        <item>&C_BASEADDR;</item>
+    </group>
+    <group id="Shared Memories">
+        <display>Shared Memories</display>
+        <item>&C_BASEADDR;</item>
+    </group>
+</view>
+</doc>

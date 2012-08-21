@@ -1,0 +1,1 @@
+xmd "./warp_genace.tcl" -jprog -hw "./implementation/download.bit" -ace "system.ace" -board wfv2p

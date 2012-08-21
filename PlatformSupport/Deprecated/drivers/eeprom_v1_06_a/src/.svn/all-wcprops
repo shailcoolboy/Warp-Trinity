@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src
+END
+EEPROM_l.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src/EEPROM_l.c
+END
+EEPROM.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src/EEPROM.c
+END
+EEPROM_l.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src/EEPROM_l.h
+END
+EEPROM.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src/EEPROM.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WARP/!svn/ver/1290/PlatformSupport/Deprecated/drivers/eeprom_v1_06_a/src/Makefile
+END

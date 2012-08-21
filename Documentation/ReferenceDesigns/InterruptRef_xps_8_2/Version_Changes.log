@@ -1,0 +1,22 @@
+ The following files will be modified:
+  system.mhs
+  system.mss
+
+--------------------------------------
+ The following changes will be made:
+ Core isocm_v10 2.00.a will be replaced by 2.00.b
+ Core isbram_if_cntlr 3.00.a will be replaced by 3.00.b
+ Core dsocm_v10 2.00.a will be replaced by 2.00.b
+ Core dsbram_if_cntlr 3.00.a will be replaced by 3.00.b
+ Core jtagppc_cntlr 2.00.a will be replaced by 2.01.c
+ Core dcm_module 1.00.a will be replaced by 1.00.d
+
+ Driver cpu_ppc405 1.00.a will be replaced by 1.10.b
+ Driver gpio 2.01.a will be replaced by 2.12.a
+ Driver uartlite 1.01.a will be replaced by 1.13.a
+ Driver intc 1.00.c will be replaced by 1.11.a
+ Driver tmrctr 1.00.b will be replaced by 1.10.b
+--------------------------------------
+ The following changes need to be made manually by the user:
+ Core ppc405 2.00.c needs to be replaced by 3.00.a
+ Core proc_sys_reset 1.00.a needs to be replaced by 2.00.a

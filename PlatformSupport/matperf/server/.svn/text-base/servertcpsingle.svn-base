@@ -1,0 +1,53 @@
+import re
+result = open('result.txt').readlines() 
+length1 = len(result) 
+ 
+for i in range(0, length1): 
+        result[i] = result[i].replace('- ', '-')
+        result[i] = result[i].replace('/ ', '/')
+        result[i] = result[i].replace('[','[ ')
+        result[i] = result[i].replace(']',' ]')
+        result[i] = result[i].replace(':',' :')
+        result[i] = result[i].replace('(','( ')
+        result[i] = result[i].replace(')',' )')
+for i in range(0, length1): 
+        result[i] = result[i].replace('-', ' ')
+        result[i] = result[i].replace('/', ' ')
+
+result = result[4:length1] 
+length2 = len(result) 
+
+# from below for loops, 3 is the total output line numbers and the remainder of i divided by 3 is 
+# the location of the line tht contains port #, bandwidth, loss, and etc. 
+########################################################################
+# in each file, ptmp.txt and rtmp.txt, there are sentences that contain port#, and bandwidth, etc. 
+# below command lines separates the sentences into words and rearrange them into vector forms and save them into different files,
+# repnum and portadd, so that they could be imported into matlab workspace.
+
+for i in range(0, length2):
+    if (i%3) == 0:
+        f = open('ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+        a = open('ptmp.txt').readlines()
+        for i in range(0, len(a)):
+            portadd = a[i]
+            q = re.split('\s+', str(portadd))
+            for j in range(0, len(q)):
+                s = open('portadd.txt','a')
+                s.write(str(q[j])+'\n')
+                s.close()
+    elif (i%3) == 2:
+        f = open('rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close() 
+        f = open('rtmp.txt').readlines()
+        for i in range(0, len(f)):
+            repnum = f[i]
+            p = re.split('\s+', str(repnum))
+            for j in range(0, len(p)):
+                s = open('repnum.txt','a')
+                s.write(str(p[j])+'\n')
+                s.close()
+
+        

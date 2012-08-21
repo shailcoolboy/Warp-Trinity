@@ -1,0 +1,42 @@
+--- pcapobj.cc	2007-03-28 08:59:04.000000000 -0500
++++ ../pcapy-0.10.5_patch/pcapobj.cc	2010-05-20 15:59:50.000000000 -0500
+@@ -58,6 +58,7 @@
+ static PyObject* p_getnonblock(register pcapobject* pp, PyObject* args);
+ static PyObject* p_dump_open(register pcapobject* pp, PyObject* args);
+ static PyObject* p_sendpacket(register pcapobject* pp, PyObject* args);
++static PyObject* p_inject(register pcapobject* pp, PyObject* args);
+ 
+ 
+ static PyMethodDef p_methods[] = {
+@@ -72,6 +73,7 @@
+   {"setnonblock", (PyCFunction) p_setnonblock, METH_VARARGS, "puts into `non-blocking' mode, or take it out, depending on the argument"},
+   {"dump_open", (PyCFunction) p_dump_open, METH_VARARGS, "creates a dumper object"},
+   {"sendpacket", (PyCFunction) p_sendpacket, METH_VARARGS, "sends a packet through the interface"},
++  {"inject", (PyCFunction) p_inject, METH_VARARGS, "sends a packet over pcap"},
+   {NULL, NULL}	/* sentinel */
+ };
+ 
+@@ -436,3 +438,23 @@
+   Py_INCREF(Py_None);
+   return Py_None;
+ }
++
++static PyObject*
++p_inject(register pcapobject* pp, PyObject* args)
++{
++	int len;
++	const char *data;
++	int status;
++	
++	if (pp->ob_type != &Pcaptype)
++    {
++      PyErr_SetString(PcapError, "Not a pcap object");
++      return NULL;
++    }
++	
++	if (!PyArg_ParseTuple(args, "s#", &data, &len))
++		return NULL;
++	
++	status = pcap_inject(pp->pcap, data, len);
++	return Py_BuildValue("i", status);
++}

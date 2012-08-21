@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\IPIF_Cores\MyProcessorIPLib\pcores/null_pair_example_v1_00_a/data/null_pair_example_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Tue May 16 13:31:18 2006 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+NULL_PAIR.ngc

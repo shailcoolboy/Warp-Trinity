@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WARP/!svn/ver/1655/PlatformSupport/WARPMAC/util
+END
+warp_timer_regMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WARP/!svn/ver/1197/PlatformSupport/WARPMAC/util/warp_timer_regMacros.h
+END
+ofdm_txrx_mimo_regMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WARP/!svn/ver/1640/PlatformSupport/WARPMAC/util/ofdm_txrx_mimo_regMacros.h
+END
+warp_userio.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WARP/!svn/ver/1451/PlatformSupport/WARPMAC/util/warp_userio.h
+END
+wired_frame_formats.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WARP/!svn/ver/1649/PlatformSupport/WARPMAC/util/wired_frame_formats.h
+END
+ofdm_agc_mimo_regMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WARP/!svn/ver/943/PlatformSupport/WARPMAC/util/ofdm_agc_mimo_regMacros.h
+END
+ascii_characters.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WARP/!svn/ver/1655/PlatformSupport/WARPMAC/util/ascii_characters.h
+END

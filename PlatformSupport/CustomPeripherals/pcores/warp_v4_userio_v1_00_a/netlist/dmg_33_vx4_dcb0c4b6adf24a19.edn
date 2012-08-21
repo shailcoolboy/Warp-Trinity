@@ -1,0 +1,260 @@
+(edif test (edifVersion 2 0 0) (edifLevel 0) (keywordMap (keywordLevel 0))
+(status (written (timeStamp 2009 10 1 13 35 22)
+   (author "Xilinx, Inc.")
+   (program "Xilinx CORE Generator" (version "Xilinx CORE Generator 10.1.03; Cores Update # 3"))))
+   (comment "                                                                                
+      This file is owned and controlled by Xilinx and must be used              
+      solely for design, simulation, implementation and creation of             
+      design files limited to Xilinx devices or technologies. Use               
+      with non-Xilinx devices or technologies is expressly prohibited           
+      and immediately terminates your license.                                  
+                                                                                
+      XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION 'AS IS'             
+      SOLELY FOR USE IN DEVELOPING PROGRAMS AND SOLUTIONS FOR                   
+      XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION           
+      AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE, APPLICATION               
+      OR STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS                 
+      IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,                   
+      AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE          
+      FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY                  
+      WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE                   
+      IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR            
+      REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF           
+      INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS           
+      FOR A PARTICULAR PURPOSE.                                                 
+                                                                                
+      Xilinx products are not intended for use in life support                  
+      appliances, devices, or systems. Use in such applications are             
+      expressly prohibited.                                                     
+                                                                                
+      (c) Copyright 1995-2007 Xilinx, Inc.                                      
+      All rights reserved.                                                      
+                                                                                
+   ")
+   (comment "Core parameters: ")
+       (comment "c_has_clk = 1 ")
+       (comment "c_has_qdpo_clk = 0 ")
+       (comment "c_has_qdpo_ce = 0 ")
+       (comment "c_has_d = 1 ")
+       (comment "c_elaboration_dir = C:\localhome\sgupta\userIOcontroller\netlist01\sysgen\coregen_xp... ")
+       (comment "                 ...yP\coregen_tmp\.\tmp\_cg\ ")
+       (comment "c_has_spo = 1 ")
+       (comment "c_read_mif = 1 ")
+       (comment "c_has_qspo = 0 ")
+       (comment "c_width = 1 ")
+       (comment "c_reg_a_d_inputs = 0 ")
+       (comment "c_has_we = 1 ")
+       (comment "c_pipeline_stages = 0 ")
+       (comment "c_has_qdpo_rst = 0 ")
+       (comment "c_reg_dpra_input = 0 ")
+       (comment "c_qualify_we = 0 ")
+       (comment "InstanceName = dmg_33_vx4_dcb0c4b6adf24a19 ")
+       (comment "c_sync_enable = 1 ")
+       (comment "c_depth = 64 ")
+       (comment "c_has_qspo_srst = 0 ")
+       (comment "c_has_qdpo_srst = 0 ")
+       (comment "c_has_dpra = 1 ")
+       (comment "c_qce_joined = 0 ")
+       (comment "c_mem_type = 2 ")
+       (comment "c_has_i_ce = 0 ")
+       (comment "c_has_dpo = 1 ")
+       (comment "c_mem_init_file = dmg_33_vx4_dcb0c4b6adf24a19.mif ")
+       (comment "c_default_data = 0 ")
+       (comment "c_has_spra = 0 ")
+       (comment "c_has_qspo_ce = 0 ")
+       (comment "c_addr_width = 6 ")
+       (comment "c_has_qdpo = 0 ")
+       (comment "c_has_qspo_rst = 0 ")
+   (external xilinxun (edifLevel 0)
+      (technology (numberDefinition))
+       (cell VCC (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port P (direction OUTPUT))
+               )
+           )
+       )
+       (cell GND (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port G (direction OUTPUT))
+               )
+           )
+       )
+   )
+   (external dmg_33_vx4_dcb0c4b6adf24a19_dist_mem_gen_v3_3_xst_1_lib (edifLevel 0)
+       (technology (numberDefinition))
+       (cell dmg_33_vx4_dcb0c4b6adf24a19_dist_mem_gen_v3_3_xst_1 (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port ( array ( rename a "a(5:0)") 6 ) (direction INPUT))
+                   (port ( array ( rename d "d(0:0)") 1 ) (direction INPUT))
+                   (port ( array ( rename dpra "dpra(5:0)") 6 ) (direction INPUT))
+                   (port ( array ( rename spra "spra(5:0)") 6 ) (direction INPUT))
+                   (port clk (direction INPUT))
+                   (port we (direction INPUT))
+                   (port i_ce (direction INPUT))
+                   (port qspo_ce (direction INPUT))
+                   (port qdpo_ce (direction INPUT))
+                   (port qdpo_clk (direction INPUT))
+                   (port qspo_rst (direction INPUT))
+                   (port qdpo_rst (direction INPUT))
+                   (port qspo_srst (direction INPUT))
+                   (port qdpo_srst (direction INPUT))
+                   (port ( array ( rename spo "spo(0:0)") 1 ) (direction OUTPUT))
+                   (port ( array ( rename dpo "dpo(0:0)") 1 ) (direction OUTPUT))
+                   (port ( array ( rename qspo "qspo(0:0)") 1 ) (direction OUTPUT))
+                   (port ( array ( rename qdpo "qdpo(0:0)") 1 ) (direction OUTPUT))
+               )
+           )
+       )
+   )
+(library test_lib (edifLevel 0) (technology (numberDefinition (scale 1 (E 1 -12) (unit Time))))
+(cell dmg_33_vx4_dcb0c4b6adf24a19
+ (cellType GENERIC) (view view_1 (viewType NETLIST)
+  (interface
+   (port ( array ( rename a "a(5:0)") 6 ) (direction INPUT))
+   (port ( array ( rename d "d(0:0)") 1 ) (direction INPUT))
+   (port ( array ( rename dpra "dpra(5:0)") 6 ) (direction INPUT))
+   (port ( rename clk "clk") (direction INPUT))
+   (port ( rename we "we") (direction INPUT))
+   (port ( array ( rename spo "spo(0:0)") 1 ) (direction OUTPUT))
+   (port ( array ( rename dpo "dpo(0:0)") 1 ) (direction OUTPUT))
+   )
+  (contents
+   (instance VCC (viewRef view_1 (cellRef VCC  (libraryRef xilinxun))))
+   (instance GND (viewRef view_1 (cellRef GND  (libraryRef xilinxun))))
+   (instance BU2
+      (viewRef view_1 (cellRef dmg_33_vx4_dcb0c4b6adf24a19_dist_mem_gen_v3_3_xst_1 (libraryRef dmg_33_vx4_dcb0c4b6adf24a19_dist_mem_gen_v3_3_xst_1_lib)))
+   )
+   (net N0
+    (joined
+      (portRef G (instanceRef GND))
+      (portRef (member spra 0) (instanceRef BU2))
+      (portRef (member spra 1) (instanceRef BU2))
+      (portRef (member spra 2) (instanceRef BU2))
+      (portRef (member spra 3) (instanceRef BU2))
+      (portRef (member spra 4) (instanceRef BU2))
+      (portRef (member spra 5) (instanceRef BU2))
+      (portRef qdpo_clk (instanceRef BU2))
+      (portRef qspo_rst (instanceRef BU2))
+      (portRef qdpo_rst (instanceRef BU2))
+      (portRef qspo_srst (instanceRef BU2))
+      (portRef qdpo_srst (instanceRef BU2))
+    )
+   )
+   (net N1
+    (joined
+      (portRef P (instanceRef VCC))
+      (portRef i_ce (instanceRef BU2))
+      (portRef qspo_ce (instanceRef BU2))
+      (portRef qdpo_ce (instanceRef BU2))
+    )
+   )
+   (net (rename N2087 "a(5)")
+    (joined
+      (portRef (member a 0))
+      (portRef (member a 0) (instanceRef BU2))
+    )
+   )
+   (net (rename N2088 "a(4)")
+    (joined
+      (portRef (member a 1))
+      (portRef (member a 1) (instanceRef BU2))
+    )
+   )
+   (net (rename N2089 "a(3)")
+    (joined
+      (portRef (member a 2))
+      (portRef (member a 2) (instanceRef BU2))
+    )
+   )
+   (net (rename N2090 "a(2)")
+    (joined
+      (portRef (member a 3))
+      (portRef (member a 3) (instanceRef BU2))
+    )
+   )
+   (net (rename N2091 "a(1)")
+    (joined
+      (portRef (member a 4))
+      (portRef (member a 4) (instanceRef BU2))
+    )
+   )
+   (net (rename N2092 "a(0)")
+    (joined
+      (portRef (member a 5))
+      (portRef (member a 5) (instanceRef BU2))
+    )
+   )
+   (net (rename N2093 "d(0)")
+    (joined
+      (portRef (member d 0))
+      (portRef (member d 0) (instanceRef BU2))
+    )
+   )
+   (net (rename N2094 "dpra(5)")
+    (joined
+      (portRef (member dpra 0))
+      (portRef (member dpra 0) (instanceRef BU2))
+    )
+   )
+   (net (rename N2095 "dpra(4)")
+    (joined
+      (portRef (member dpra 1))
+      (portRef (member dpra 1) (instanceRef BU2))
+    )
+   )
+   (net (rename N2096 "dpra(3)")
+    (joined
+      (portRef (member dpra 2))
+      (portRef (member dpra 2) (instanceRef BU2))
+    )
+   )
+   (net (rename N2097 "dpra(2)")
+    (joined
+      (portRef (member dpra 3))
+      (portRef (member dpra 3) (instanceRef BU2))
+    )
+   )
+   (net (rename N2098 "dpra(1)")
+    (joined
+      (portRef (member dpra 4))
+      (portRef (member dpra 4) (instanceRef BU2))
+    )
+   )
+   (net (rename N2099 "dpra(0)")
+    (joined
+      (portRef (member dpra 5))
+      (portRef (member dpra 5) (instanceRef BU2))
+    )
+   )
+   (net (rename N2106 "clk")
+    (joined
+      (portRef clk)
+      (portRef clk (instanceRef BU2))
+    )
+   )
+   (net (rename N2107 "we")
+    (joined
+      (portRef we)
+      (portRef we (instanceRef BU2))
+    )
+   )
+   (net (rename N2116 "spo(0)")
+    (joined
+      (portRef (member spo 0))
+      (portRef (member spo 0) (instanceRef BU2))
+    )
+   )
+   (net (rename N2117 "dpo(0)")
+    (joined
+      (portRef (member dpo 0))
+      (portRef (member dpo 0) (instanceRef BU2))
+    )
+   )
+))))
+(design dmg_33_vx4_dcb0c4b6adf24a19 (cellRef dmg_33_vx4_dcb0c4b6adf24a19 (libraryRef test_lib))
+  (property X_CORE_INFO (string "dist_mem_gen_v3_3, Xilinx CORE Generator 10.1.03_ip3"))
+  (property PART (string "xc4vfx12-sf363-12") (owner "Xilinx"))
+))

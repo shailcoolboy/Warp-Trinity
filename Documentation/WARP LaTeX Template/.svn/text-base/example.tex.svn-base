@@ -1,0 +1,54 @@
+% It is suggested to use the "letterpaper" option below, output is
+% currently unpredictable if anything else is chosen
+
+% Including "titlepage" generates a separate titlepage and contents,
+% leaving it out causes a title header to be placed on the first page
+
+\documentclass[letterpaper, titlepage]{WARPdoc}
+
+\begin{document}
+
+\title{Using the WARPdoc Class}
+\author{Gareth B Middleton}
+\organization{Rice University\\ CMC Lab}
+
+%This version number will be included in the footer on every page
+%You must update it manually whenever you want a new version
+% number to show up in the PDF
+\version{1.2}
+
+\maketitle
+
+\section{Requirements}
+The WARPdoc document class requires:
+\begin{enumerate}
+
+\item {\bf WARP logo}: The WARP project logo in PDF form must be in the root directory of your LaTeX project and must be named ``warplogo.pdf". A copy of the logo is included with this example document.
+
+\item {\bf hyperref package}: The hyperref package must be in the path of your LaTeX installation. You can obtain a copy of the package from \href{http://www.tug.org/applications/hyperref/}{http://www.tug.org/applications/hyperref/}.
+
+\item {\bf color \& graphicx packages}: These packages are required for the color formatting and graphics included in the WARPdoc class. These are standard packages which are probably included in your LaTeX installation.
+
+\end{enumerate}
+
+\section{Sections}
+This document class supports hierarchy through sub-subsections, as illustrated below.
+
+\subsection{Subsections}
+This is the body of the first subsection.
+
+\subsubsection{Sub-subsections}
+This is the body of the first subsubsection.
+
+\section{Figures}
+
+Figures are included in the usual way. Here's a reference to the figure below: Figure \ref{fig:warplogo}.
+
+\begin{figure}[h*]
+	\centering
+		\includegraphics{warplogo.pdf}
+	\caption{This is the WARP logo}
+	\label{fig:warplogo}
+\end{figure}
+
+\end{document}

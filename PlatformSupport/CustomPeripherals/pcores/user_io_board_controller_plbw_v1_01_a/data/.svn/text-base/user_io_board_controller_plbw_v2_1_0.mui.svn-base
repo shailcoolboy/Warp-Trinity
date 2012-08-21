@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+########################################################################
+##
+## Copyright (c) 2005 Xilinx, Inc.  All rights reserved.
+##
+########################################################################
+-->
+
+<!DOCTYPE doc SYSTEM "sg_ipdialog.dtd" [
+<!ENTITY C_BASEADDR '
+<widget id="C_BASEADDR">
+    <key>C_BASEADDR</key>
+    <label>C_BASEADDR</label>
+    <tip>Base Address</tip>
+</widget>
+'>
+
+<!ENTITY C_MEMMAP_BUTTONS_BIG '
+<widget id="C_MEMMAP_BUTTONS_BIG">
+    <key>C_MEMMAP_BUTTONS_BIG</key>
+    <label>C_MEMMAP_BUTTONS_BIG</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_BUTTONS_SMALL '
+<widget id="C_MEMMAP_BUTTONS_SMALL">
+    <key>C_MEMMAP_BUTTONS_SMALL</key>
+    <label>C_MEMMAP_BUTTONS_SMALL</label>
+    <tip>From Register
+    data type: UFix_6_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_DIP_SWITCH '
+<widget id="C_MEMMAP_DIP_SWITCH">
+    <key>C_MEMMAP_DIP_SWITCH</key>
+    <label>C_MEMMAP_DIP_SWITCH</label>
+    <tip>From Register
+    data type: UFix_4_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TRACKBALL '
+<widget id="C_MEMMAP_TRACKBALL">
+    <key>C_MEMMAP_TRACKBALL</key>
+    <label>C_MEMMAP_TRACKBALL</label>
+    <tip>From Register
+    data type: UFix_5_0</tip>
+</widget>
+'>
+
+<!ENTITY C_MEMMAP_BUZZER_DUTYCYCLE '
+<widget id="C_MEMMAP_BUZZER_DUTYCYCLE">
+    <key>C_MEMMAP_BUZZER_DUTYCYCLE</key>
+    <label>C_MEMMAP_BUZZER_DUTYCYCLE</label>
+    <tip>To Register
+    data type: UFix_18_18</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_BUZZER_ENABLE '
+<widget id="C_MEMMAP_BUZZER_ENABLE">
+    <key>C_MEMMAP_BUZZER_ENABLE</key>
+    <label>C_MEMMAP_BUZZER_ENABLE</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_BUZZER_PERIOD '
+<widget id="C_MEMMAP_BUZZER_PERIOD">
+    <key>C_MEMMAP_BUZZER_PERIOD</key>
+    <label>C_MEMMAP_BUZZER_PERIOD</label>
+    <tip>To Register
+    data type: UFix_18_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_BACKGROUNDCOLOR '
+<widget id="C_MEMMAP_LCD_BACKGROUNDCOLOR">
+    <key>C_MEMMAP_LCD_BACKGROUNDCOLOR</key>
+    <label>C_MEMMAP_LCD_BACKGROUNDCOLOR</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_CHARACTEROFFSET '
+<widget id="C_MEMMAP_LCD_CHARACTEROFFSET">
+    <key>C_MEMMAP_LCD_CHARACTEROFFSET</key>
+    <label>C_MEMMAP_LCD_CHARACTEROFFSET</label>
+    <tip>To Register
+    data type: UFix_4_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_CHARACTERSSELECT '
+<widget id="C_MEMMAP_LCD_CHARACTERSSELECT">
+    <key>C_MEMMAP_LCD_CHARACTERSSELECT</key>
+    <label>C_MEMMAP_LCD_CHARACTERSSELECT</label>
+    <tip>To Register
+    data type: UFix_3_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_COLSET '
+<widget id="C_MEMMAP_LCD_COLSET">
+    <key>C_MEMMAP_LCD_COLSET</key>
+    <label>C_MEMMAP_LCD_COLSET</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_CONFIGLOCATION '
+<widget id="C_MEMMAP_LCD_CONFIGLOCATION">
+    <key>C_MEMMAP_LCD_CONFIGLOCATION</key>
+    <label>C_MEMMAP_LCD_CONFIGLOCATION</label>
+    <tip>To Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_DIVIDERSELECT '
+<widget id="C_MEMMAP_LCD_DIVIDERSELECT">
+    <key>C_MEMMAP_LCD_DIVIDERSELECT</key>
+    <label>C_MEMMAP_LCD_DIVIDERSELECT</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_FIRSTEND '
+<widget id="C_MEMMAP_LCD_FIRSTEND">
+    <key>C_MEMMAP_LCD_FIRSTEND</key>
+    <label>C_MEMMAP_LCD_FIRSTEND</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_FIRSTSTART '
+<widget id="C_MEMMAP_LCD_FIRSTSTART">
+    <key>C_MEMMAP_LCD_FIRSTSTART</key>
+    <label>C_MEMMAP_LCD_FIRSTSTART</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_LINEOFFSET '
+<widget id="C_MEMMAP_LCD_LINEOFFSET">
+    <key>C_MEMMAP_LCD_LINEOFFSET</key>
+    <label>C_MEMMAP_LCD_LINEOFFSET</label>
+    <tip>To Register
+    data type: UFix_4_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_RAMWRITE '
+<widget id="C_MEMMAP_LCD_RAMWRITE">
+    <key>C_MEMMAP_LCD_RAMWRITE</key>
+    <label>C_MEMMAP_LCD_RAMWRITE</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_RESET '
+<widget id="C_MEMMAP_LCD_RESET">
+    <key>C_MEMMAP_LCD_RESET</key>
+    <label>C_MEMMAP_LCD_RESET</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_RESETLCD '
+<widget id="C_MEMMAP_LCD_RESETLCD">
+    <key>C_MEMMAP_LCD_RESETLCD</key>
+    <label>C_MEMMAP_LCD_RESETLCD</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_ROWSET '
+<widget id="C_MEMMAP_LCD_ROWSET">
+    <key>C_MEMMAP_LCD_ROWSET</key>
+    <label>C_MEMMAP_LCD_ROWSET</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_SECONDEND '
+<widget id="C_MEMMAP_LCD_SECONDEND">
+    <key>C_MEMMAP_LCD_SECONDEND</key>
+    <label>C_MEMMAP_LCD_SECONDEND</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_SECONDSTART '
+<widget id="C_MEMMAP_LCD_SECONDSTART">
+    <key>C_MEMMAP_LCD_SECONDSTART</key>
+    <label>C_MEMMAP_LCD_SECONDSTART</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_SEND '
+<widget id="C_MEMMAP_LCD_SEND">
+    <key>C_MEMMAP_LCD_SEND</key>
+    <label>C_MEMMAP_LCD_SEND</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_TOTALCMDTRANSFER '
+<widget id="C_MEMMAP_LCD_TOTALCMDTRANSFER">
+    <key>C_MEMMAP_LCD_TOTALCMDTRANSFER</key>
+    <label>C_MEMMAP_LCD_TOTALCMDTRANSFER</label>
+    <tip>To Register
+    data type: UFix_8_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LEDS '
+<widget id="C_MEMMAP_LEDS">
+    <key>C_MEMMAP_LEDS</key>
+    <label>C_MEMMAP_LEDS</label>
+    <tip>To Register
+    data type: UFix_8_0</tip>
+</widget>
+'>
+
+
+
+<!ENTITY C_MEMMAP_LCD_CHARACTERMAP '
+<widget id="C_MEMMAP_LCD_CHARACTERMAP">
+    <key>C_MEMMAP_LCD_CHARACTERMAP</key>
+    <label>C_MEMMAP_LCD_CHARACTERMAP</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_CHARACTERS '
+<widget id="C_MEMMAP_LCD_CHARACTERS">
+    <key>C_MEMMAP_LCD_CHARACTERS</key>
+    <label>C_MEMMAP_LCD_CHARACTERS</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_LCD_COMMANDS '
+<widget id="C_MEMMAP_LCD_COMMANDS">
+    <key>C_MEMMAP_LCD_COMMANDS</key>
+    <label>C_MEMMAP_LCD_COMMANDS</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+]>
+
+<doc>
+<view id="Memory Map Information">
+    <display>Memory Map Information</display>
+    <group id="All">
+        <display>All</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_MEMMAP_BUTTONS_BIG;</item>
+        <item>&C_MEMMAP_BUTTONS_SMALL;</item>
+        <item>&C_MEMMAP_DIP_SWITCH;</item>
+        <item>&C_MEMMAP_TRACKBALL;</item>
+        <item>&C_MEMMAP_BUZZER_DUTYCYCLE;</item>
+        <item>&C_MEMMAP_BUZZER_ENABLE;</item>
+        <item>&C_MEMMAP_BUZZER_PERIOD;</item>
+        <item>&C_MEMMAP_LCD_BACKGROUNDCOLOR;</item>
+        <item>&C_MEMMAP_LCD_CHARACTEROFFSET;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERSSELECT;</item>
+        <item>&C_MEMMAP_LCD_COLSET;</item>
+        <item>&C_MEMMAP_LCD_CONFIGLOCATION;</item>
+        <item>&C_MEMMAP_LCD_DIVIDERSELECT;</item>
+        <item>&C_MEMMAP_LCD_FIRSTEND;</item>
+        <item>&C_MEMMAP_LCD_FIRSTSTART;</item>
+        <item>&C_MEMMAP_LCD_LINEOFFSET;</item>
+        <item>&C_MEMMAP_LCD_RAMWRITE;</item>
+        <item>&C_MEMMAP_LCD_RESET;</item>
+        <item>&C_MEMMAP_LCD_RESETLCD;</item>
+        <item>&C_MEMMAP_LCD_ROWSET;</item>
+        <item>&C_MEMMAP_LCD_SECONDEND;</item>
+        <item>&C_MEMMAP_LCD_SECONDSTART;</item>
+        <item>&C_MEMMAP_LCD_SEND;</item>
+        <item>&C_MEMMAP_LCD_TOTALCMDTRANSFER;</item>
+        <item>&C_MEMMAP_LEDS;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERMAP;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERS;</item>
+        <item>&C_MEMMAP_LCD_COMMANDS;</item>
+    </group>
+    <group id="From/To Registers">
+        <display>From/To Registers</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_MEMMAP_BUTTONS_BIG;</item>
+        <item>&C_MEMMAP_BUTTONS_SMALL;</item>
+        <item>&C_MEMMAP_DIP_SWITCH;</item>
+        <item>&C_MEMMAP_TRACKBALL;</item>
+        <item>&C_MEMMAP_BUZZER_DUTYCYCLE;</item>
+        <item>&C_MEMMAP_BUZZER_ENABLE;</item>
+        <item>&C_MEMMAP_BUZZER_PERIOD;</item>
+        <item>&C_MEMMAP_LCD_BACKGROUNDCOLOR;</item>
+        <item>&C_MEMMAP_LCD_CHARACTEROFFSET;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERSSELECT;</item>
+        <item>&C_MEMMAP_LCD_COLSET;</item>
+        <item>&C_MEMMAP_LCD_CONFIGLOCATION;</item>
+        <item>&C_MEMMAP_LCD_DIVIDERSELECT;</item>
+        <item>&C_MEMMAP_LCD_FIRSTEND;</item>
+        <item>&C_MEMMAP_LCD_FIRSTSTART;</item>
+        <item>&C_MEMMAP_LCD_LINEOFFSET;</item>
+        <item>&C_MEMMAP_LCD_RAMWRITE;</item>
+        <item>&C_MEMMAP_LCD_RESET;</item>
+        <item>&C_MEMMAP_LCD_RESETLCD;</item>
+        <item>&C_MEMMAP_LCD_ROWSET;</item>
+        <item>&C_MEMMAP_LCD_SECONDEND;</item>
+        <item>&C_MEMMAP_LCD_SECONDSTART;</item>
+        <item>&C_MEMMAP_LCD_SEND;</item>
+        <item>&C_MEMMAP_LCD_TOTALCMDTRANSFER;</item>
+        <item>&C_MEMMAP_LEDS;</item>
+    </group>
+    <group id="From/To FIFOs">
+        <display>From/To FIFOs</display>
+        <item>&C_BASEADDR;</item>
+    </group>
+    <group id="Shared Memories">
+        <display>Shared Memories</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERMAP;</item>
+        <item>&C_MEMMAP_LCD_CHARACTERS;</item>
+        <item>&C_MEMMAP_LCD_COMMANDS;</item>
+    </group>
+</view>
+</doc>

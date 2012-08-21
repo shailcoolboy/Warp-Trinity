@@ -1,0 +1,117 @@
+# this is a python script that parse the tradeoff output into a vector of words to be used later.
+
+import re
+result = open('result.txt').readlines() 
+length1 = len(result) 
+
+# it is the same process as serverudpsingle in the below box.
+############################################### 
+for i in range(0, length1): 
+        result[i] = result[i].replace('- ', '-')
+        result[i] = result[i].replace('/ ', '/')
+        result[i] = result[i].replace('[','[ ')
+        result[i] = result[i].replace(']',' ]')
+        result[i] = result[i].replace(':',' :')
+        result[i] = result[i].replace('(','( ')
+        result[i] = result[i].replace(')',' )')
+for i in range(0, length1): 
+        result[i] = result[i].replace('-', ' ')
+        result[i] = result[i].replace('/', ' ')
+
+############################################### 
+b = result[1:4];
+for i in range(0, len(b)):
+    buffer = b[i]
+    r = re.split('\s+',str(buffer))
+    for j in range(0,len(r)):
+        s = open('buffer.txt','a')
+        s.write(str(r[j])+'\n')
+        s.close()
+
+a = result[9:11];
+for i in range(0, len(a)):
+    buffer = a[i]
+    r = re.split('\s+',str(buffer))
+    for j in range(0,len(r)):
+        s = open('tradeoff_buffer.txt','a')
+        s.write(str(r[j])+'\n')
+        s.close()
+
+#############################################################################################################################################################
+# I checked the size or the length of the specific line. It is the line sometimes contains either 'Transfer Bandwidth Window'
+# or 'Transfer Bandwidth Jitter Loss Totalpacket'. Their size was different. If the size was small(line 12), the line(either 16 or 17) that contain
+# what we need should be located in the different place. Also I had to check that different line whether it contains what we need. I checked the specific
+# word 'server' and if it was not found, that line was defined to be the line we need. and if the word was found, the line we need was defined to be the line 
+# above the line where the word was found. 
+#############################################################################################################################################################
+
+start = 0
+end = 19
+if(len(result[18]) >60):
+    j = 19
+elif(len(result[18]) < 60):
+    j= 15
+
+### the remainder from division of i and 20 (the number of lines) is the line where the information is stored.
+
+for i in range(start, end+1):
+    if (i%20) == 5:
+        f = open('ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%20) == 13:
+        f = open('tradeoff_ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%20) == 7:
+        f = open('rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+    elif (i%20) == j:
+        f = open('tradeoff_rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+
+
+##############################################################################
+# from this line, python separates the sentence into words and store the words
+# into a vector. Matlab deals with vectors better and it makes
+# the matlab users very convenient.
+###############################################################################
+
+a = open('ptmp.txt').readlines()
+for i in range(0, len(a)):
+    portadd = a[i]
+    q = re.split('\s+', str(portadd))
+    for j in range(0, len(q)):
+        s = open('portadd.txt','a')
+        s.write(str(q[j])+'\n')
+        s.close()
+
+f = open('rtmp.txt').readlines()
+for i in range(0, len(f)):
+    repnum = f[i]
+    p = re.split('\s+', str(repnum))
+    for j in range(0, len(p)):
+        s = open('repnum.txt','a')
+        s.write(str(p[j])+'\n')
+        s.close()
+
+
+f = open('tradeoff_rtmp.txt').readlines()
+for i in range(0, len(f)):
+    d_repnum = f[i]
+    p = re.split('\s+', str(d_repnum))
+    for j in range(0, len(p)):
+        s = open('tradeoff_repnum.txt','a')
+        s.write(str(p[j])+'\n')
+        s.close()
+
+a = open('tradeoff_ptmp.txt').readlines()
+for i in range(0, len(a)):
+    d_portadd = a[i] 
+    q = re.split('\s+', str(d_portadd))
+    for j in range(0, len(  q)):
+        s = open('tradeoff_portadd.txt','a')
+        s.write(str(q[j])+'\n')
+        s.close()

@@ -1,0 +1,34 @@
+##############################################################################
+## Filename:          C:\mgtproject\3\pcores/linkport_v1_00_a/data/linkport_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Jul 25 18:16:57 2006 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib linkport_v1_00_a aurora_16b vhdl
+lib linkport_v1_00_a aurora_ctrl vhdl
+lib linkport_v1_00_a aurora_lane vhdl
+lib linkport_v1_00_a aurora_pkg vhdl
+lib linkport_v1_00_a aurora_tx_ctrl vhdl
+lib linkport_v1_00_a channel_error_detect vhdl
+lib linkport_v1_00_a channel_init_sm vhdl
+lib linkport_v1_00_a chbond_count_dec vhdl
+lib linkport_v1_00_a error_detect vhdl
+lib linkport_v1_00_a fifo_64x18 vhdl
+lib linkport_v1_00_a global_logic vhdl
+lib linkport_v1_00_a idle_and_ver_gen vhdl
+lib linkport_v1_00_a lane_init_sm vhdl
+lib linkport_v1_00_a phase_align vhdl
+lib linkport_v1_00_a reset_gen vhdl
+lib linkport_v1_00_a rx_ff_ctrl vhdl
+lib linkport_v1_00_a rx_ll vhdl
+lib linkport_v1_00_a rx_ll_nfc vhdl
+lib linkport_v1_00_a rx_ll_pdu_datapath vhdl
+lib linkport_v1_00_a rx_ll_ufc_datapath vhdl
+lib linkport_v1_00_a standard_cc_module vhdl
+lib linkport_v1_00_a sym_dec vhdl
+lib linkport_v1_00_a sym_gen vhdl
+lib linkport_v1_00_a tx_ff_ctrl vhdl
+lib linkport_v1_00_a tx_ll vhdl
+lib linkport_v1_00_a tx_ll_control vhdl
+lib linkport_v1_00_a tx_ll_datapath vhdl
+lib linkport_v1_00_a linkport vhdl

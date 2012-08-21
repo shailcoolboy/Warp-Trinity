@@ -1,0 +1,22 @@
+  PID   TT  STAT      TIME COMMAND
+ 4961 s000  Ss     0:00.03 login -pf chunter
+ 4962 s000  S+     0:00.42 -bash
+ 5569 s001  Ss     0:00.02 login -pf chunter
+ 5570 s001  S      0:00.16 -bash
+24263 s001  S+     0:00.40 ssh cmc@10.96.94.199
+22765 s002  Ss     0:00.03 login -pf chunter
+22766 s002  S+     0:00.05 -bash
+23666 s003  Ss+    0:00.01 bash
+31313 s004  Ss     0:00.01 login -pf chunter
+31314 s004  S      0:00.01 -bash
+31323 s004  S+     0:11.51 /Applications/MATLAB_R2008a/bin/maci/MATLAB.app/Contents/MacOS/MATLAB -display /tmp/launch-ZjPeVS/:0 -nojvm
+31370 s005  Ss+    0:00.02 /Applications/MATLAB_R2008a/bin/maci/matlab_helper /dev/ttys005 no
+31420 s005  S+     0:00.00 /bin/bash -c ps -a > jobs_l
+31421 s005  R+     0:00.00 ps -a
+23935 s006  Ss     0:00.01 login -pf chunter
+23936 s006  S+     0:00.01 -bash
+24266 s007  Ss     0:00.01 login -pf chunter
+24267 s007  S+     0:00.01 -bash
+24365 s008  Ss     0:00.02 login -pf chunter
+24366 s008  S      0:00.01 -bash
+24375 s008  S+     0:00.05 ssh 128.42.68.172

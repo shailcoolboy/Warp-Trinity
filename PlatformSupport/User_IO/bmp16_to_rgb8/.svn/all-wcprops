@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WARP/!svn/ver/1047/PlatformSupport/User_IO/bmp16_to_rgb8
+END
+bmp16_to_rgb8.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WARP/!svn/ver/1047/PlatformSupport/User_IO/bmp16_to_rgb8/bmp16_to_rgb8.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WARP/!svn/ver/1046/PlatformSupport/User_IO/bmp16_to_rgb8/Makefile
+END

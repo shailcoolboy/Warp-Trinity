@@ -1,0 +1,10 @@
+###################################################################
+# Copyright (c) 2006 Rice University
+# All Rights Reserved
+# This code is covered by the Rice-WARP license
+# See http://warp.rice.edu/license/ for details
+###################################################################
+C_FAMILY FILES
+virtex2p virtex2p/radio_bridge_ratechangefilter_4x_2ch_cw.ngc
+virtex4 virtex2p/radio_bridge_ratechangefilter_4x_2ch_cw.ngc
+

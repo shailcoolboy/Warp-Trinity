@@ -1,0 +1,94 @@
+
+bitinit version Xilinx EDK 8.2.01 Build EDK_Im_Sp1.3
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isocm_v10_v2_00_a/data/isocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isbram_if_cntlr_v3_00_a/data/isbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsocm_v10_v2_00_a/data/dsocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsbram_if_cntlr_v3_00_a/data/dsbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_0.
+tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd line 36 - tool overriding c_device value X2VP4 to 
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to 
+bram_block (dsocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to 
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd line 39 - tool overriding c_family value virtex2p to 
+opb_gpio (leds_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to 
+opb_gpio (push_buttons_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to 
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to 
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 38 - tool overriding c_family value virtex2 to 
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd line 61 - tool overriding c_family value virtex2 to 
+opb_timer (opb_timer_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0.mp
+d line 36 - tool overriding c_family value nofamily to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+Address Map for Processor ppc405_0
+  (0x00000000-0x0001ffff) iocm_cntlr	iocm
+  (0x21800000-0x2180ffff) docm_cntlr	docm
+  (0x40000000-0x4000ffff) Push_Buttons_4bit	plb->plb2opb->opb
+  (0x40020000-0x4002ffff) LEDs_4Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232	plb->plb2opb->opb
+  (0x41200000-0x4120ffff) opb_intc_0	plb->plb2opb->opb
+  (0x41c00000-0x41c0ffff) opb_timer_0	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Initializing Memory...
+INFO:MDT - BRAM isocm_bram will be initialized with ELF of processor ppc405_0
+Running Data2Mem with the following command:
+data2mem -bm implementation/system_bd -bt implementation/system.bit  -bd
+interruptTestrBeta/executable.elf tag ppc405_0  -o b implementation/download.bit
+Memory Initialization completed successfully.
+

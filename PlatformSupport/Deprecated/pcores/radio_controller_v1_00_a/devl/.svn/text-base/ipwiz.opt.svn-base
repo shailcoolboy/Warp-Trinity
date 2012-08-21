@@ -1,0 +1,10 @@
+-batch 
+-create radio_controller 
+-ver 1.00.a 
+-dir C:\edk_user_repository\MyProcessorIPLib 
+-lang verilog 
+-bus opb s 
+-regn 1 32 
+-xps 
+-ise 
+-driver 

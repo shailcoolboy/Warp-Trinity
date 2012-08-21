@@ -1,0 +1,102 @@
+%Copyright (c) 2006 Rice University
+%All Rights Reserved
+%This code is covered by the Rice-WARP license
+%See http://warp.rice.edu/license/ for details
+\section{FAQ}
+	
+	\subsection{QUESTIONS}
+		\begin{enumerate}
+			\item \textbf{I forgot to enable interrupts for the push buttons when using Base System Builder. What do I do now?}
+			\item \textbf{What do I do if I didn't select one of the devices while using Base System Builder?}
+			\item \textbf{I get an error: ``*** No rule to make target 'File name', needed by 'UserIOTest/executable.elf'. Stop''} 
+			\item \textbf{Where can I get Tera Term Pro?}
+			\item \textbf{When I download my project (download.bit) to the board, nothing happens.}
+			\item \textbf{My project takes a longtime to generate the bitstream. Then it doesn't work. What's wrong?}
+			\item \textbf{Everything looks right, but when I try downloading to the board with iMPACT, nothing happens.}
+			\item \textbf{I get an error: ``built in linker script:[line\#] cannot move location counter backwards (from [address1] to [address2])''}
+			\item \textbf{When all else fails...}
+		\end{enumerate}	
+	
+	\subsection{ANSWERS}
+		\begin{enumerate}
+			\item \textbf{I forgot to enable interrupts for the push buttons when using Base System Builder. What do I do now?}
+				\begin{itemize}
+					\item Copy the following lines of code into the MHS file:
+						\begin{verbatim}
+							BEGIN opb_intc
+							PARAMETER INSTANCE = opb_intc_0
+							PARAMETER HW_VER = 1.00.c
+							PARAMETER C_BASEADDR = 0x41200000
+							PARAMETER C_HIGHADDR = 0x4120ffff
+							BUS_INTERFACE SOPB = opb_newline
+							PORT Intr = Push_Buttons_4bit_IP2INTC_Irpt
+							PORT Irq = EICC405EXTINPUTIRQ
+							END
+						\end{verbatim}
+					\item Add these lines to the Push\_Buttons\_4bit instance in the MHS file (the first parameter in each device in the instance name):
+						\begin{verbatim}
+							PARAMETER C_INTERRUPT_PRESENT = 1
+							PORT IP2INTC_Irpt = Push_Buttons_4bit_IP2INTC_Irpt
+						\end{verbatim}
+					\item Add this line to the ppc405\_0 instance in the MHS file:
+						\begin{verbatim}
+							PORT EICC405EXTINPUTIRQ = EICC405EXTINPUTIRQ
+						\end{verbatim}
+					\item Add these lines to the MSS file:
+						\begin{verbatim}
+							BEGIN DRIVER
+							PARAMETER DRIVER_NAME = intc
+							PARAMETER DRIVER_VER = 1.00.c
+							PARAMETER HW_INSTANCE = opb_intc_0
+							END
+						\end{verbatim}
+				\end{itemize}
+				\textit{If this does not work, you will need to recreate the project using Base System Builder}		
+					
+			\item \textbf{What do I do if I didn't select one of the devices while using Base System Builder?}
+				\begin{itemize}
+					\item For the size of this project, it will be easier to simply recreate the project using Base System Builder. You can clear out the contents of the directory containing all the current files, or simply create a new folder in which to store the new project.
+				\end{itemize}
+			\item \textbf{I get an error: ``*** No rule to make target 'File name', needed by 'UserIOTest/executable.elf'. Stop''} 
+				\begin{itemize}
+					\item Check to see that there are no spaces anywhere in the names of your source and header paths. XPS will give the above error if there are.
+				\end{itemize}
+			\item \textbf{Where can I get Tera Term Pro?}
+				\begin{itemize}
+					\item http://www.vector.co.jp/authors/VA002416/teraterm.html
+				\end{itemize}
+			\item \textbf{When I download my project (\textit{download.bit}) to the board, nothing happens.}
+				\begin{itemize}
+					\item Did the lowest LED light up up downloading?
+						\begin{itemize}
+							\item Yes? This indicates that the program has reached the board but that there may be something wrong with the serial connection. Check these and try again.
+							\item No? This indicates that the program never got to your board. Check the JTAG connection and try again. Then move to the following questions.
+						\end{itemize} 
+					\item Do the baud rates match between your project and Tera Term?
+						\begin{itemize}
+							\item See Step 3 and ``NOTE'' on the \textbf{Running the Program} page
+						\end{itemize}
+					\item Review Steps 2-6 of \textbf{Setting up the UserIO Test in XPS}
+				\end{itemize}
+			\item \textbf{My project takes a longtime to generate the bitstream. Then it doesn't work. What's wrong?}
+				\begin{itemize}
+					\item Refer to steps 4-6 of \textbf{Setting up the UserIO Test in XPS}
+				\end{itemize}
+			\item \textbf{Everything looks right, but when I try downloading to the board with iMPACT, nothing happens.}
+				\begin{itemize}
+					\item Try restarting TeraTerm and iMPACT. If this doesn't work, try the other methods listed in the \textbf{Download Peripheral Test to the Board} section
+				\end{itemize}
+			\item \textbf{I get an error: ``built in linker script:[line\#] cannot move location counter backwards (from [address1] to [address2])''}
+				\begin{itemize}
+					\item You need to regenerate the linker script because of changes to your code. Repeat step 6 of \textbf{Setting up the UserIO Test in XPS}: here. Click OK at the request to overwrite the previous script.
+				\end{itemize}
+			\item \textbf{When all else fails...}
+				\begin{itemize}
+					\item Consult the help documentation provided by Xilinx accessible through the help menu (\textbf{Help} $\rightarrow$ \textbf{EDK Online Documentation} $\rightarrow$ Click \textbf{DOCUMENTS} tab). You may find the following most helpful:
+						\begin{itemize}
+							\item Platform Specification Format
+							\item OS and Libraries Reference Guide
+							\item Processor IP Catalog
+						\end{itemize}
+				\end{itemize}
+		\end{enumerate}

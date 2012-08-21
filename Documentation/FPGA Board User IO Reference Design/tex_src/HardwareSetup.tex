@@ -1,0 +1,28 @@
+%Copyright (c) 2006 Rice University
+%All Rights Reserved
+%This code is covered by the Rice-WARP license
+%See http://warp.rice.edu/license/ for details
+\section{Connecting and Powering the WARP FGPA Board}
+	\subsection{Hardware Requirements}
+		\begin{itemize}
+			\item Power Supply for the WARP FPGA Board (12V-DC)
+			\item Parallel Cable w/ JTAG (Requires 5V-DC supply for Xilinx Parallel Cable IV)
+			\item 9-pin serial cable
+		\end{itemize}
+	\subsection{Connecting the Board}
+		\subsubsection{Connect and Power the Parallel Cable}
+			\begin{enumerate}
+				\item Attach the parallel cable to the 25-pin port on your computer.
+				\item Attach the parallel cable to the board using the JTAG connector. (The connection to the board is underneath the board on the middle-left side)
+				\item Connect the parallel cable to a 5V-DC power supply. (The status light on the parallel cable should be yellow before the board is powered)
+			\end{enumerate}
+		\subsubsection{Connect the Serial Cable}
+			\begin{enumerate}
+				\item Attach the 9-pin serial cable to one of the COM ports of your computer
+				\item Attach the serial cable to the board. (The connection to the board is in the lower right hand corner on the right side of the board)
+			\end{enumerate}
+		\subsubsection{Connect and Power the WARP FPGA Board}
+			\begin{enumerate}
+				\item Connect a 12V-DC power supply to the FPGA board. (The connection to the board is in the bottom right corner on the bottom side)
+				\item Turn the power switch on. The switch is located to the left of the power connection. (Turning on the board should cause a number of LEDs to light. If there is no flash card in the flash port, then the LED near the flash port will blink until one is inserted. This is not needed now.)
+			\end{enumerate}

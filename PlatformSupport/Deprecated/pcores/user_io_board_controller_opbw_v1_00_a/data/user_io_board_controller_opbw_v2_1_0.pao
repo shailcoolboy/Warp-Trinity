@@ -1,0 +1,17 @@
+#############################################################
+# Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Peripheral Analyze Order (PAO) file
+# created by System Generator
+# Aug 30, 2007 11:29:45 PM
+#############################################################
+
+lib user_io_board_controller_opbw_v1_00_a user_io_board_controller
+lib user_io_board_controller_opbw_v1_00_a user_io_board_controller_opbw

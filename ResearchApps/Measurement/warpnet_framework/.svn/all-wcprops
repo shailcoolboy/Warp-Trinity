@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WARP/!svn/ver/1595/ResearchApps/Measurement/warpnet_framework
+END
+warpnet_client_definitions.py
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/warpnet_client_definitions.py
+END
+warpnet_server_params.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/warpnet_server_params.py
+END
+warpnet_common_params.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/warpnet_common_params.py
+END
+warpnet_client.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WARP/!svn/ver/1565/ResearchApps/Measurement/warpnet_framework/warpnet_client.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/__init__.py
+END
+warpnet_client_azimuth_controller.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WARP/!svn/ver/1595/ResearchApps/Measurement/warpnet_framework/warpnet_client_azimuth_controller.py
+END
+tclserver.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/tclserver.tcl
+END
+warpnet_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/warpnet_server.py
+END
+warpnet_server_azimuth.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WARP/!svn/ver/1558/ResearchApps/Measurement/warpnet_framework/warpnet_server_azimuth.py
+END

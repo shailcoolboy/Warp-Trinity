@@ -1,0 +1,323 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files
+END
+pp_wrapper_noheader.m
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/pp_wrapper_noheader.m
+END
+warplab_defines.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_defines.m
+END
+st_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/st_test.m
+END
+warplab_readregister.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_readregister.m
+END
+warplab_generatelongtrainsyms.m
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_generatelongtrainsyms.m
+END
+warplab_correctdco.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_correctdco.m
+END
+scatter_pilots.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/scatter_pilots.m
+END
+ace400wb_test.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/ace400wb_test.m
+END
+warplab_initnodes.m
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_initnodes.m
+END
+warplab_processrawrxdata.m
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_processrawrxdata.m
+END
+partial_dpost.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/partial_dpost.m
+END
+warplab_initialize.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_initialize.m
+END
+partial_r2dst.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/partial_r2dst.m
+END
+warplab_int2ip.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_int2ip.m
+END
+pp_wrapper.m
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/pp_wrapper.m
+END
+warplab_readagcgains.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_readagcgains.m
+END
+tx2rx1_bfvsalm_fpga_bf_frontend_v07.m
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/tx2rx1_bfvsalm_fpga_bf_frontend_v07.m
+END
+warplab_findlongtrainingstart.m
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_findlongtrainingstart.m
+END
+warplab_readsmro_fast_2.m
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_readsmro_fast_2.m
+END
+tst_dpost.m
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/tst_dpost.m
+END
+warplab_setradioparameter.m
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_setradioparameter.m
+END
+tst_st_chan_est.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/tst_st_chan_est.m
+END
+warplab_readsmro.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_readsmro.m
+END
+warplab_sendcmd.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_sendcmd.m
+END
+p_dfs_det.m
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/p_dfs_det.m
+END
+tst_r2dst.m
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/tst_r2dst.m
+END
+dpost.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/dpost.m
+END
+st_chan_est.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/st_chan_est.m
+END
+tmp_var.mat
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/tmp_var.mat
+END
+coop_wrapper.asv
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/coop_wrapper.asv
+END
+r2dst.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/r2dst.m
+END
+warplab_mimo_2x2_continuoustx_emulatorcal.m
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_mimo_2x2_continuoustx_emulatorcal.m
+END
+warplab_sendsync.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_sendsync.m
+END
+warplab_setradioagcparameter.m
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_setradioagcparameter.m
+END
+coop_wrapper.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/coop_wrapper.m
+END
+warplab_readsmro_fast.m
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_readsmro_fast.m
+END
+gather_pilots.m
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/gather_pilots.m
+END
+warplab_initnets.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_initnets.m
+END
+rpost.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/rpost.m
+END
+warplab_writeregister.m
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_writeregister.m
+END
+dfs_det.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/dfs_det.m
+END
+warplab_writesmwo.m
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_writesmwo.m
+END
+s2rd.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/s2rd.m
+END
+s2dr.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/s2dr.m
+END
+rd_link_tst.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/rd_link_tst.m
+END
+warplab_ip2int.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_ip2int.m
+END
+s2rd_stc.asv
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/s2rd_stc.asv
+END
+coop_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/coop_setup.m
+END
+warplab_pktsend.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/warplab_pktsend.m
+END
+r_partial_post.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/r_partial_post.m
+END
+st_chan_est_gen.m
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/st_chan_est_gen.m
+END
+s2rd_stc.m
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/s2rd_stc.m
+END
+gather_payload.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/1589/ResearchApps/PHY/WARPLAB/ResearchExamples/Cooperative_Setup/Coop_MATLAB_Reference_Files/gather_payload.m
+END

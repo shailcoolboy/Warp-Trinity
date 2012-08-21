@@ -1,0 +1,8 @@
+K 13
+svn:externals
+V 225
+pcores	http://warp.rice.edu/svn/WARP/PlatformSupport/CustomPeripherals/pcores/
+drivers	http://warp.rice.edu/svn/WARP/PlatformSupport/CustomPeripherals/drivers/
+boards	http://warp.rice.edu/svn/WARP/PlatformSupport/XBD/boards/
+
+END

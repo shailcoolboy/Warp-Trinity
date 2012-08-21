@@ -1,0 +1,202 @@
+BEGIN radio_controller
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = MIXED
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION DESC = "WARP Radio Controller (PLB46)"
+OPTION USAGE_LEVEL = BASE_USER #Enable this core in base system builder
+
+IO_INTERFACE IO_IF = radio_controller, IO_TYPE = WARP_RADIOCONTROLLER_V1
+
+## Bus Interfaces
+BUS_INTERFACE BUS = SPLB, BUS_TYPE = SLAVE, BUS_STD = PLBV46
+
+## Generics for VHDL or Parameters for Verilog
+PARAMETER C_BASEADDR = 0xffffffff, DT = std_logic_vector, MIN_SIZE = 0x100, BUS = SPLB, ADDRESS = BASE, PAIR = C_HIGHADDR
+PARAMETER C_HIGHADDR = 0x00000000, DT = std_logic_vector, BUS = SPLB, ADDRESS = HIGH, PAIR = C_BASEADDR
+PARAMETER C_SPLB_AWIDTH = 32, DT = INTEGER, BUS = SPLB, ASSIGNMENT = CONSTANT
+PARAMETER C_SPLB_DWIDTH = 128, DT = INTEGER, BUS = SPLB, RANGE = (32, 64, 128)
+PARAMETER C_SPLB_NUM_MASTERS = 8, DT = INTEGER, BUS = SPLB, RANGE = (1:16)
+PARAMETER C_SPLB_MID_WIDTH = 3, DT = INTEGER, BUS = SPLB, RANGE = (1:4)
+PARAMETER C_SPLB_NATIVE_DWIDTH = 32, DT = INTEGER, BUS = SPLB, RANGE = (32, 64, 128), ASSIGNMENT = CONSTANT
+PARAMETER C_SPLB_P2P = 0, DT = INTEGER, BUS = SPLB, RANGE = (0, 1)
+PARAMETER C_SPLB_SUPPORT_BURSTS = 0, DT = INTEGER, BUS = SPLB, RANGE = (0, 1), ASSIGNMENT = CONSTANT
+PARAMETER C_SPLB_SMALLEST_MASTER = 32, DT = INTEGER, BUS = SPLB, RANGE = (32, 64, 128)
+PARAMETER C_SPLB_CLK_PERIOD_PS = 10000, DT = INTEGER, BUS = SPLB
+PARAMETER C_FAMILY = virtex4, DT = STRING
+
+## Ports
+PORT SPLB_Clk = "", DIR = I, SIGIS = CLK, BUS = SPLB
+PORT SPLB_Rst = SPLB_Rst, DIR = I, SIGIS = RST, BUS = SPLB
+PORT PLB_ABus = PLB_ABus, DIR = I, VEC = [0:31], BUS = SPLB
+PORT PLB_UABus = PLB_UABus, DIR = I, VEC = [0:31], BUS = SPLB
+PORT PLB_PAValid = PLB_PAValid, DIR = I, BUS = SPLB
+PORT PLB_SAValid = PLB_SAValid, DIR = I, BUS = SPLB
+PORT PLB_rdPrim = PLB_rdPrim, DIR = I, BUS = SPLB
+PORT PLB_wrPrim = PLB_wrPrim, DIR = I, BUS = SPLB
+PORT PLB_masterID = PLB_masterID, DIR = I, VEC = [0:(C_SPLB_MID_WIDTH-1)], BUS = SPLB
+PORT PLB_abort = PLB_abort, DIR = I, BUS = SPLB
+PORT PLB_busLock = PLB_busLock, DIR = I, BUS = SPLB
+PORT PLB_RNW = PLB_RNW, DIR = I, BUS = SPLB
+PORT PLB_BE = PLB_BE, DIR = I, VEC = [0:((C_SPLB_DWIDTH/8)-1)], BUS = SPLB
+PORT PLB_MSize = PLB_MSize, DIR = I, VEC = [0:1], BUS = SPLB
+PORT PLB_size = PLB_size, DIR = I, VEC = [0:3], BUS = SPLB
+PORT PLB_type = PLB_type, DIR = I, VEC = [0:2], BUS = SPLB
+PORT PLB_lockErr = PLB_lockErr, DIR = I, BUS = SPLB
+PORT PLB_wrDBus = PLB_wrDBus, DIR = I, VEC = [0:(C_SPLB_DWIDTH-1)], BUS = SPLB
+PORT PLB_wrBurst = PLB_wrBurst, DIR = I, BUS = SPLB
+PORT PLB_rdBurst = PLB_rdBurst, DIR = I, BUS = SPLB
+PORT PLB_wrPendReq = PLB_wrPendReq, DIR = I, BUS = SPLB
+PORT PLB_rdPendReq = PLB_rdPendReq, DIR = I, BUS = SPLB
+PORT PLB_wrPendPri = PLB_wrPendPri, DIR = I, VEC = [0:1], BUS = SPLB
+PORT PLB_rdPendPri = PLB_rdPendPri, DIR = I, VEC = [0:1], BUS = SPLB
+PORT PLB_reqPri = PLB_reqPri, DIR = I, VEC = [0:1], BUS = SPLB
+PORT PLB_TAttribute = PLB_TAttribute, DIR = I, VEC = [0:15], BUS = SPLB
+PORT Sl_addrAck = Sl_addrAck, DIR = O, BUS = SPLB
+PORT Sl_SSize = Sl_SSize, DIR = O, VEC = [0:1], BUS = SPLB
+PORT Sl_wait = Sl_wait, DIR = O, BUS = SPLB
+PORT Sl_rearbitrate = Sl_rearbitrate, DIR = O, BUS = SPLB
+PORT Sl_wrDAck = Sl_wrDAck, DIR = O, BUS = SPLB
+PORT Sl_wrComp = Sl_wrComp, DIR = O, BUS = SPLB
+PORT Sl_wrBTerm = Sl_wrBTerm, DIR = O, BUS = SPLB
+PORT Sl_rdDBus = Sl_rdDBus, DIR = O, VEC = [0:(C_SPLB_DWIDTH-1)], BUS = SPLB
+PORT Sl_rdWdAddr = Sl_rdWdAddr, DIR = O, VEC = [0:3], BUS = SPLB
+PORT Sl_rdDAck = Sl_rdDAck, DIR = O, BUS = SPLB
+PORT Sl_rdComp = Sl_rdComp, DIR = O, BUS = SPLB
+PORT Sl_rdBTerm = Sl_rdBTerm, DIR = O, BUS = SPLB
+PORT Sl_MBusy = Sl_MBusy, DIR = O, VEC = [0:(C_SPLB_NUM_MASTERS-1)], BUS = SPLB
+PORT Sl_MWrErr = Sl_MWrErr, DIR = O, VEC = [0:(C_SPLB_NUM_MASTERS-1)], BUS = SPLB
+PORT Sl_MRdErr = Sl_MRdErr, DIR = O, VEC = [0:(C_SPLB_NUM_MASTERS-1)], BUS = SPLB
+PORT Sl_MIRQ = Sl_MIRQ, DIR = O, VEC = [0:(C_SPLB_NUM_MASTERS-1)], BUS = SPLB
+
+
+PORT spi_clk = "", DIR = O
+PORT data_out = "", DIR = O
+PORT radio1_cs = "", DIR = O
+PORT radio2_cs = "", DIR = O
+PORT radio3_cs = "", DIR = O
+PORT radio4_cs = "", DIR = O
+PORT dac1_cs = "", DIR = O
+PORT dac2_cs = "", DIR = O
+PORT dac3_cs = "", DIR = O
+PORT dac4_cs = "", DIR = O
+PORT radio1_SHDN = "", DIR = O
+PORT radio1_TxEn = "", DIR = O
+PORT radio1_RxEn = "", DIR = O
+PORT radio1_RxHP = "", DIR = O
+PORT radio1_LD = "", DIR = I
+PORT radio1_24PA = "", DIR = O
+PORT radio1_5PA = "", DIR = O
+PORT radio1_ANTSW = "", DIR = O, VEC = [0:1], IO_IS = radio1_antsw
+PORT radio1_LED = "", DIR = O, VEC = [0:2], IO_IS = radio1_LED
+PORT radio1_ADC_RX_DCS = "", DIR = O
+PORT radio1_ADC_RX_DFS = "", DIR = O
+PORT radio1_ADC_RX_OTRA = "", DIR = I
+PORT radio1_ADC_RX_OTRB = "", DIR = I
+PORT radio1_ADC_RX_PWDNA = "", DIR = O
+PORT radio1_ADC_RX_PWDNB = "", DIR = O
+PORT radio1_DIPSW = "", DIR = I, VEC = [0:3], IO_IS = radio1_dipsw
+PORT radio1_RSSI_ADC_CLAMP = "", DIR = O
+PORT radio1_RSSI_ADC_HIZ = "", DIR = O
+PORT radio1_RSSI_ADC_OTR = "", DIR = I
+PORT radio1_RSSI_ADC_SLEEP = "", DIR = O
+PORT radio1_RSSI_ADC_D = "", DIR = I, VEC = [0:9], IO_IS = radio1_rssi_ADC_D
+PORT radio1_TX_DAC_PLL_LOCK = "", DIR = I
+PORT radio1_TX_DAC_RESET = "", DIR = O
+PORT radio1_SHDN_external = "", DIR = I
+PORT radio1_TxEn_external = "", DIR = I
+PORT radio1_RxEn_external = "", DIR = I
+PORT radio1_RxHP_external = "", DIR = I
+PORT radio1_TxGain = "", DIR = O, VEC = [0:5], IO_IS = radio1_TxGain
+PORT radio1_TxStart = "", DIR = O
+PORT radio2_SHDN = "", DIR = O
+PORT radio2_TxEn = "", DIR = O
+PORT radio2_RxEn = "", DIR = O
+PORT radio2_RxHP = "", DIR = O
+PORT radio2_LD = "", DIR = I
+PORT radio2_24PA = "", DIR = O
+PORT radio2_5PA = "", DIR = O
+PORT radio2_ANTSW = "", DIR = O, VEC = [0:1], IO_IS = radio2_antsw
+PORT radio2_LED = "", DIR = O, VEC = [0:2], IO_IS = radio2_LED
+PORT radio2_ADC_RX_DCS = "", DIR = O
+PORT radio2_ADC_RX_DFS = "", DIR = O
+PORT radio2_ADC_RX_OTRA = "", DIR = I
+PORT radio2_ADC_RX_OTRB = "", DIR = I
+PORT radio2_ADC_RX_PWDNA = "", DIR = O
+PORT radio2_ADC_RX_PWDNB = "", DIR = O
+PORT radio2_DIPSW = "", DIR = I, VEC = [0:3], IO_IS = radio2_dipsw
+PORT radio2_RSSI_ADC_CLAMP = "", DIR = O
+PORT radio2_RSSI_ADC_HIZ = "", DIR = O
+PORT radio2_RSSI_ADC_OTR = "", DIR = I
+PORT radio2_RSSI_ADC_SLEEP = "", DIR = O
+PORT radio2_RSSI_ADC_D = "", DIR = I, VEC = [0:9], IO_IS = radio2_rssi_ADC_D
+PORT radio2_TX_DAC_PLL_LOCK = "", DIR = I
+PORT radio2_TX_DAC_RESET = "", DIR = O
+PORT radio2_SHDN_external = "", DIR = I
+PORT radio2_TxEn_external = "", DIR = I
+PORT radio2_RxEn_external = "", DIR = I
+PORT radio2_RxHP_external = "", DIR = I
+PORT radio2_TxGain = "", DIR = O, VEC = [0:5], IO_IS = radio2_TxGain
+PORT radio2_TxStart = "", DIR = O
+PORT radio3_SHDN = "", DIR = O
+PORT radio3_TxEn = "", DIR = O
+PORT radio3_RxEn = "", DIR = O
+PORT radio3_RxHP = "", DIR = O
+PORT radio3_LD = "", DIR = I
+PORT radio3_24PA = "", DIR = O
+PORT radio3_5PA = "", DIR = O
+PORT radio3_ANTSW = "", DIR = O, VEC = [0:1], IO_IS = radio3_antsw
+PORT radio3_LED = "", DIR = O, VEC = [0:2], IO_IS = radio3_LED
+PORT radio3_ADC_RX_DCS = "", DIR = O
+PORT radio3_ADC_RX_DFS = "", DIR = O
+PORT radio3_ADC_RX_OTRA = "", DIR = I
+PORT radio3_ADC_RX_OTRB = "", DIR = I
+PORT radio3_ADC_RX_PWDNA = "", DIR = O
+PORT radio3_ADC_RX_PWDNB = "", DIR = O
+PORT radio3_DIPSW = "", DIR = I, VEC = [0:3], IO_IS = radio3_dipsw
+PORT radio3_RSSI_ADC_CLAMP = "", DIR = O
+PORT radio3_RSSI_ADC_HIZ = "", DIR = O
+PORT radio3_RSSI_ADC_OTR = "", DIR = I
+PORT radio3_RSSI_ADC_SLEEP = "", DIR = O
+PORT radio3_RSSI_ADC_D = "", DIR = I, VEC = [0:9], IO_IS = radio3_rssi_ADC_D
+PORT radio3_TX_DAC_PLL_LOCK = "", DIR = I
+PORT radio3_TX_DAC_RESET = "", DIR = O
+PORT radio3_SHDN_external = "", DIR = I
+PORT radio3_TxEn_external = "", DIR = I
+PORT radio3_RxEn_external = "", DIR = I
+PORT radio3_RxHP_external = "", DIR = I
+PORT radio3_TxGain = "", DIR = O, VEC = [0:5], IO_IS = radio3_TxGain
+PORT radio3_TxStart = "", DIR = O
+PORT radio4_SHDN = "", DIR = O
+PORT radio4_TxEn = "", DIR = O
+PORT radio4_RxEn = "", DIR = O
+PORT radio4_RxHP = "", DIR = O
+PORT radio4_LD = "", DIR = I
+PORT radio4_24PA = "", DIR = O
+PORT radio4_5PA = "", DIR = O
+PORT radio4_ANTSW = "", DIR = O, VEC = [0:1], IO_IS = radio4_antsw
+PORT radio4_LED = "", DIR = O, VEC = [0:2], IO_IS = radio4_LED
+PORT radio4_ADC_RX_DCS = "", DIR = O
+PORT radio4_ADC_RX_DFS = "", DIR = O
+PORT radio4_ADC_RX_OTRA = "", DIR = I
+PORT radio4_ADC_RX_OTRB = "", DIR = I
+PORT radio4_ADC_RX_PWDNA = "", DIR = O
+PORT radio4_ADC_RX_PWDNB = "", DIR = O
+PORT radio4_DIPSW = "", DIR = I, VEC = [0:3], IO_IS = radio4_dipsw
+PORT radio4_RSSI_ADC_CLAMP = "", DIR = O
+PORT radio4_RSSI_ADC_HIZ = "", DIR = O
+PORT radio4_RSSI_ADC_OTR = "", DIR = I
+PORT radio4_RSSI_ADC_SLEEP = "", DIR = O
+PORT radio4_RSSI_ADC_D = "", DIR = I, VEC = [0:9], IO_IS = radio4_rssi_ADC_D
+PORT radio4_TX_DAC_PLL_LOCK = "", DIR = I
+PORT radio4_TX_DAC_RESET = "", DIR = O
+PORT radio4_SHDN_external = "", DIR = I
+PORT radio4_TxEn_external = "", DIR = I
+PORT radio4_RxEn_external = "", DIR = I
+PORT radio4_RxHP_external = "", DIR = I
+PORT radio4_TxGain = "", DIR = O, VEC = [0:5], IO_IS = radio4_TxGain
+PORT radio4_TxStart = "", DIR = O
+
+END

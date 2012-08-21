@@ -1,0 +1,11 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn C:\edk_user_repository\MyProcessorIPLib\pcores\AuroraFIFOrxtxStream1_v1_00_a\devl\synthesis\AuroraFIFOrxtxStream1_xst.prj
+-top AuroraFIFOrxtxStream1
+-p virtex2p
+-ofn C:\edk_user_repository\MyProcessorIPLib\pcores\AuroraFIFOrxtxStream1_v1_00_a\devl\synthesis\AuroraFIFOrxtxStream1_xst.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /

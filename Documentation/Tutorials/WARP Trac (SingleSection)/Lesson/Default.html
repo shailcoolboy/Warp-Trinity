@@ -1,0 +1,110 @@
+[-- START CONFIGURATION --]
+
+web safe= true
+text style= html
+text encoding= utf8
+font family = lucida
+newline = unix
+media folder= images/@LESSON_NAME
+image format=png
+jpeg quality=85
+step image position = top
+max image width on side=400
+max image height on side=
+max image width when centered=580
+max image height when centered=
+
+[-- END CONFIGURATION --]
+
+[-- START CONTENT --]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="ScreenSteps http://www.screensteps.com/" />
+	<title>%LessonTitle%</title>
+	<link href="../neutral.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="%FontFamily%">
+	<div id="wrapper">		
+		<div id="header">
+			<a id="logo" href="http://warp.rice.edu/trac/"><img src="http://warp.rice.edu/images/warpLogo.jpg" alt="Rice University WARP - Wireless Open-Access Research Platform" height="45" width="285" /></a>
+		</div>
+	<div id="mainnav" class="nav">
+		<ul>
+			<li class="first active"><a href="/trac/wiki">Home</a></li><li><a href="/forums">Forums</a></li><li><a href="/trac/browser">Browse Source</a></li>
+		</ul>
+	</div>
+		<div id="LessonContent">
+			<div class="LessonHeader">
+				<h1 class="LessonTitle">%LessonTitle%</h1>
+			</div>
+			%LESSON_DESCRIPTION%
+			
+			%LESSON_STEPS%
+		</div>
+		<div id="lessonNavigation">
+			<table>
+				<tr>
+					<td class="lessonNav_Left">%LESSON_LINK:PREVIOUS%</td>
+					<td class="lessonNav_TOC"><a href="%TableOfContentsLink%">Top</a></td>
+					<td class="lessonNav_Right">%LESSON_LINK:NEXT%</td>
+				</tr>
+			</table>
+		</div>
+	</div>	
+</body>
+</html>
+[-- END CONTENT --]
+
+
+[-- START LESSON DESCRIPTION --]
+	<div class="summary">
+		%LessonDescription%
+	</div>
+[-- END LESSON DESCRIPTION --]
+
+[-- START STEP --]
+	<div id="step_%Index%" class="lessonStep %ImagePosition%">
+	    %STEP_TITLE%
+		%MEDIA:IMAGE% %STEP_INSTRUCTIONS%
+	</div>
+	<div class="clear"></div>
+[-- END STEP --]
+
+
+[-- START STEP TITLE --]
+    <h2 class="StepTitle">%Title%</h2>
+[-- END STEP TITLE --]
+
+
+[-- START STEP INSTRUCTIONS --]
+%Instructions%
+[-- END STEP INSTRUCTIONS --]
+
+[-- START MEDIA:IMAGE --]
+<div class="image">
+<img src="%source%" width="%width%" height="%height%">
+</div>
+[-- END MEDIA:IMAGE --]
+
+[-- START MEDIA:IMAGE FULL-SIZE --]
+<div class="image">
+<a href="%fullsize_source%" class="image" target="_blank"><img src="%source%" width="%width%" height="%height%"></a>
+<div class="caption"><a href="%fullsize_source%" target="_blank">Zoom</a></div>
+</div>
+[-- END MEDIA:IMAGE FULL-SIZE --]
+
+[-- START NAVIGATION --]
+<li><a href="#step_%StepNumber%">%Title%</a></li>
+[-- END NAVIGATION --]
+
+[-- START LESSON LINK:PREVIOUS --]
+<a href="%PreviousLessonLink%">&lt;&lt; %PreviousLessonTitle%</a>
+[-- END LESSON LINK:PREVIOUS --]
+
+
+[-- START LESSON LINK:NEXT --]
+<a href="%NextLessonLink%">%NextLessonTitle% &gt;&gt;</a> 
+[-- END LESSON LINK:NEXT --]

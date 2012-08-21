@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\mgtproject\3\pcores/linkport_v1_00_a/data/linkport_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Tue Jul 25 18:16:57 2006 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+fifo_64x18.ngc

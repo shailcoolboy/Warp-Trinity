@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WARP/!svn/ver/413/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl
+END
+lane_init_sm.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/lane_init_sm.vhd
+END
+aurora_16b.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/aurora_16b.vhd
+END
+sym_gen.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/sym_gen.vhd
+END
+linkport.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/linkport.vhd
+END
+idle_and_ver_gen.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/idle_and_ver_gen.vhd
+END
+rx_ll_nfc.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/rx_ll_nfc.vhd
+END
+channel_error_detect.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/channel_error_detect.vhd
+END
+phase_align.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/phase_align.vhd
+END
+standard_cc_module.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/standard_cc_module.vhd
+END
+reset_gen.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/reset_gen.vhd
+END
+global_logic.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/global_logic.vhd
+END
+aurora_ctrl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/aurora_ctrl.vhd
+END
+chbond_count_dec.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/chbond_count_dec.vhd
+END
+rx_ll.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/rx_ll.vhd
+END
+error_detect.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/error_detect.vhd
+END
+tx_ll.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/tx_ll.vhd
+END
+tx_ll_control.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/tx_ll_control.vhd
+END
+rx_ll_ufc_datapath.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/rx_ll_ufc_datapath.vhd
+END
+sym_dec.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/sym_dec.vhd
+END
+aurora_tx_ctrl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/aurora_tx_ctrl.vhd
+END
+aurora_lane.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/aurora_lane.vhd
+END
+rx_ff_ctrl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/rx_ff_ctrl.vhd
+END
+tx_ll_datapath.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/tx_ll_datapath.vhd
+END
+channel_init_sm.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/channel_init_sm.vhd
+END
+aurora_pkg.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/aurora_pkg.vhd
+END
+tx_ff_ctrl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/tx_ff_ctrl.vhd
+END
+fifo_64x18.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/fifo_64x18.vhd
+END
+rx_ll_pdu_datapath.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/408/PlatformSupport/CustomPeripherals/pcores/linkport_v1_00_a/hdl/vhdl/rx_ll_pdu_datapath.vhd
+END

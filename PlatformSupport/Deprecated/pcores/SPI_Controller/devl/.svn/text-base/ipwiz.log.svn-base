@@ -1,0 +1,116 @@
+HDL language for the peripheral (top level) design unit ourspi is verilog ...
+INFO:MDT - Create temparary xst project file:
+   C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi.prj
+Compiling verilog file "C:\Xilinx/verilog/src/iSE/unisim_comp.v"
+Compiling verilog file
+"C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi.prj"
+Compiling verilog include file "C:\plat_studio\ourspi_0\opb2wb_shell.v"
+Module <opb2wb> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_clgen.v"
+Compiling verilog include file "spi_defines.v"
+Compiling verilog include file "timescale.v"
+Module <spi_clgen> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_defines.v"
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_shift.v"
+Compiling verilog include file "spi_defines.v"
+Module <spi_shift> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\timescale.v"
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_top.v"
+Compiling verilog include file "spi_defines.v"
+Module <spi_top> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\ourspi.v"
+ERROR:HDLCompilers:26 - "C:\plat_studio\ourspi_0\ourspi.v" line 175 unexpected
+   token: '1'
+Module <ourspi> compiled
+HDL language for the peripheral (top level) design unit ourspi is verilog ...
+INFO:MDT - Create temparary xst project file:
+   C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi.prj
+Compiling verilog file "C:\Xilinx/verilog/src/iSE/unisim_comp.v"
+Compiling verilog file
+"C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi.prj"
+Compiling verilog include file "C:\plat_studio\ourspi_0\opb2wb_shell.v"
+Module <opb2wb> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_clgen.v"
+Compiling verilog include file "spi_defines.v"
+Compiling verilog include file "timescale.v"
+Module <spi_clgen> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_defines.v"
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_shift.v"
+Compiling verilog include file "spi_defines.v"
+Module <spi_shift> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\timescale.v"
+Compiling verilog include file "C:\plat_studio\ourspi_0\spi_top.v"
+Compiling verilog include file "spi_defines.v"
+Module <spi_top> compiled
+Compiling verilog include file "C:\plat_studio\ourspi_0\ourspi.v"
+Module <ourspi> compiled
+WARNING:HDLCompilers:259 - "C:\plat_studio\ourspi_0\ourspi.v" line 131
+   Connection to input port 'wb_adr_i' does not match port size
+WARNING:HDLCompilers:261 - "C:\plat_studio\ourspi_0\ourspi.v" line 168
+   Connection to output port 'wb_addr_o' does not match port size
+
+
+Analyzing Verilog code ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VERILOG
+INFO:MDT - NO SIGIS=CLK specified for probable Clock signal OPB_Clk
+INFO:MDT - NO CLKBUF will be inserted for the signal OPB_Clk
+INFO:MDT - NO SIGIS=CLK specified for probable Clock signal OPB_Clk
+INFO:MDT - NO CLKBUF will be inserted for the signal OPB_Clk
+ERROR:MDT - OPB Slave Input Signal connected to bus port OPB_Rst not defined in
+   HDL source
+INFO:MDT - Infer bus clock [OPB_Clk] for bus interface SOPB ...
+Copying file opb2wb_shell.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file spi_clgen.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file spi_defines.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file spi_shift.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file timescale.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file spi_top.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+Copying file ourspi.v to
+C:\edk_user_repository\MyProcessorIPLib\pcores\ourspi\hdl\verilog\ ...
+
+Summary:
+
+  Logical library	: ourspi
+  Version		: None
+  Bus interface(s)	: SOPB 
+
+The following sub-directories will be created in the pcores repository in your
+project:
+
+- ourspi\data
+- ourspi\hdl
+- ourspi\hdl\verilog
+- ourspi\netlist
+
+The following HDL source files will be copied into the ourspi\hdl\verilog
+directory:
+
+- opb2wb_shell.v
+- spi_clgen.v
+- spi_defines.v
+- spi_shift.v
+- timescale.v
+- spi_top.v
+- ourspi.v
+
+
+The following files will be created under the ourspi\data directory:
+
+- ourspi_v2_1_0.mpd
+- ourspi_v2_1_0.pao
+- ourspi_v2_1_0.bbd
+
+The following netlist files will be copied into the ourspi\netlist directory:
+
+- opb2wb.edn
+
+Thank you for using this Import Peripheral Wizard!
+

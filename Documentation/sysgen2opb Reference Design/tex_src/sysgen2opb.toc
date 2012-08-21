@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Directions}{3}{section.2}
+\contentsline {section}{\numberline {3}Rules/Requirements}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}General Requirements}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Original Script with Shared Memory Extension}{10}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}General Requirements}{10}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}DPRAM (Read-Only) Requirements}{11}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}DPRAM (Write-Only) Requirements}{12}{subsubsection.3.2.3}
+\contentsline {section}{\numberline {4}Example with the Original Script}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Software Tools Requirements}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Xilinx Platform Studio - Base System Builder wizard}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Matlab/System Generator}{20}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Xilinx Platform Studio - Using XPS}{24}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Connecting the WARP Board}{29}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Tera Term}{30}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}iMPACT}{31}{subsection.4.7}
+\contentsline {section}{\numberline {5}Example with Read Only Shared Memory Extension}{33}{section.5}
+\contentsline {subsection}{\numberline {5.1}Requirements}{33}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Xilinx Platform Studio - Base System Builder}{33}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Matlab/System Generator}{33}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Xilinx Platform Studio}{35}{subsection.5.4}
+\contentsline {section}{\numberline {6}Example with Write Only Shared Memory Extension}{38}{section.6}
+\contentsline {subsection}{\numberline {6.1}Requirements}{38}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Xilinx Platform Studio - Base System Builder}{38}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Matlab/System Generator}{38}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Xilinx Platform Studio}{41}{subsection.6.4}
+\contentsline {section}{\numberline {7}Example with Configurable Subsystem Extension}{44}{section.7}

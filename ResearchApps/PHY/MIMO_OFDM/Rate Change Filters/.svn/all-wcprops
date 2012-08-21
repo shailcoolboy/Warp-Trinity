@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WARP/!svn/ver/1641/ResearchApps/PHY/MIMO_OFDM/Rate%20Change%20Filters
+END
+rate_change_filters_txrx_2ch.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WARP/!svn/ver/1641/ResearchApps/PHY/MIMO_OFDM/Rate%20Change%20Filters/rate_change_filters_txrx_2ch.mdl
+END
+rate_change_filters_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WARP/!svn/ver/1611/ResearchApps/PHY/MIMO_OFDM/Rate%20Change%20Filters/rate_change_filters_init.m
+END
+set_mults.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WARP/!svn/ver/1612/ResearchApps/PHY/MIMO_OFDM/Rate%20Change%20Filters/set_mults.m
+END

@@ -1,0 +1,15 @@
+#FPGA Board v2.2 Clock Constraints
+#
+# The constraints using the onboard 100MHz oscillator
+Net sys_clk_pin LOC=AM21;
+Net sys_clk_pin IOSTANDARD = LVTTL;
+Net sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 10000 ps;
+#
+# The constraints using the Clock Board generated 40MHz
+# clock for the design. NOTE: The clock_board_configurator
+# must be instantiated to configure the clock board
+Net sys_clk_pin LOC=AN20;
+Net sys_clk_pin IOSTANDARD = LVTTL;
+Net sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 25000 ps;

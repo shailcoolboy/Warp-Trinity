@@ -1,0 +1,128 @@
+###################################################################
+# Copyright (c) 2006 Rice University
+# All Rights Reserved
+# This code is covered by the Rice-WARP license
+# See http://warp.rice.edu/license/ for details
+###################################################################
+
+BEGIN radio_bridge
+
+## Peripheral Options
+OPTION IPTYPE = IP
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VERILOG
+OPTION CORE_STATE = ACTIVE
+OPTION IP_GROUP = USER
+OPTION USAGE_LEVEL = BASE_USER
+
+IO_INTERFACE IO_IF = radio_bridge, IO_TYPE = WARP_RADIOBRIDGE_V1
+
+## Ports
+####################################################################################
+## User Ports
+## The user must connect sources/sinks to these ports in XPS in order to use
+##  the radio board. The rest of the board's connections are made automatically
+####################################################################################
+PORT user_ADC_I = "", DIR = O, VEC = [0:13], IO_IS = userADCI
+PORT user_ADC_Q = "", DIR = O, VEC = [0:13], IO_IS = userADCQ
+
+PORT user_DAC_I = "", DIR = I, VEC = [0:15], IO_IS = userDACI
+PORT user_DAC_Q = "", DIR = I, VEC = [0:15], IO_IS = userDACQ
+
+PORT user_RxRF_gain = "", DIR = I, VEC = [0:1], IO_IS = userRxRFG
+PORT user_RxBB_gain = "", DIR = I, VEC = [0:4], IO_IS = userRxBBG
+
+PORT user_Tx_gain = "", DIR = I, VEC = [0:5], IO_IS = userTxG
+
+PORT user_TxModelStart = "", DIR = O
+
+PORT user_RSSI_ADC_clk = "", DIR = I
+
+PORT user_RSSI_ADC_D = "", DIR = O, VEC = [0:9], IO_IS = userRSSI_D
+
+PORT user_EEPROM_IO_T = "", DIR = I
+PORT user_EEPROM_IO_O = "", DIR = I
+PORT user_EEPROM_IO_I = "", DIR = O
+
+####################################################################################
+
+#Automatically tied to sys_clk_s, the OPB clock created by BSB
+# Custom clock setups may need to change this
+# Show defaults in System Assembly to view and change this assignment
+PORT converter_clock_in = "sys_clk_s", DIR = I, SIGIS = CLK
+
+PORT converter_clock_out = "", DIR = O, SIGIS = CLK
+
+PORT radio_RSSI_ADC_clk = "", DIR = O
+
+PORT radio_DAC_I = "", DIR = O, VEC = [15:0], IO_IS = radioDACI, ENDIAN = LITTLE
+PORT radio_DAC_Q = "", DIR = O, VEC = [15:0], IO_IS = radioDACQ, ENDIAN = LITTLE
+
+PORT radio_ADC_I = "", DIR = I, VEC = [13:0], IO_IS = radioADCI, ENDIAN = LITTLE
+PORT radio_ADC_Q = "", DIR = I, VEC = [13:0], IO_IS = radioADCQ, ENDIAN = LITTLE
+
+PORT radio_B = "", DIR = O, VEC = [6:0], IO_IS = radioGain, ENDIAN = LITTLE
+
+PORT radio_ANTSW = "", DIR = O, VEC = [1:0], IO_IS = b2r_ANTSW, ENDIAN = LITTLE
+PORT radio_LED = "", DIR = O, VEC = [2:0], IO_IS = b2r_LED, ENDIAN = LITTLE
+PORT radio_DIPSW = "", DIR = I, VEC = [3:0], IO_IS = b2r_DIPSW, ENDIAN = LITTLE
+PORT radio_RSSI_ADC_D = "", DIR = I, VEC = [9:0], IO_IS = b2r_RSSI_ADC_D, ENDIAN = LITTLE
+
+PORT radio_EEPROM_IO = "", DIR = IO, THREE_STATE = FALSE, IOB_STATE = BUF 
+
+PORT radio_spi_clk = "", DIR = O
+PORT radio_spi_data = "", DIR = O
+PORT radio_spi_cs = "", DIR = O
+PORT radio_SHDN = "", DIR = O
+PORT radio_TxEn = "", DIR = O
+PORT radio_RxEn = "", DIR = O
+PORT radio_RxHP = "", DIR = O
+PORT radio_24PA = "", DIR = O
+PORT radio_5PA = "", DIR = O
+PORT radio_RX_ADC_DCS = "", DIR = O
+PORT radio_RX_ADC_DFS = "", DIR = O
+PORT radio_RX_ADC_PWDNA = "", DIR = O
+PORT radio_RX_ADC_PWDNB = "", DIR = O
+PORT radio_RSSI_ADC_CLAMP = "", DIR = O
+PORT radio_RSSI_ADC_HIZ = "", DIR = O
+PORT radio_RSSI_ADC_SLEEP = "", DIR = O
+PORT radio_LD = "", DIR = I
+PORT radio_RX_ADC_OTRA = "", DIR = I
+PORT radio_RX_ADC_OTRB = "", DIR = I
+PORT radio_RSSI_ADC_OTR = "", DIR = I
+PORT radio_DAC_PLL_LOCK = "", DIR = I
+PORT radio_DAC_RESET = "", DIR = O
+
+PORT controller_spi_clk = "", DIR = I
+PORT controller_spi_data = "", DIR = I
+PORT controller_radio_cs = "", DIR = I
+PORT controller_dac_cs = "", DIR = I
+PORT controller_SHDN = "", DIR = I
+PORT controller_TxEn = "", DIR = I
+PORT controller_RxEn = "", DIR = I
+PORT controller_RxHP = "", DIR = I
+PORT controller_24PA = "", DIR = I
+PORT controller_5PA = "", DIR = I
+PORT controller_ANTSW = "", DIR = I, VEC = [0:1], IO_IS = c2b_ANTSW
+PORT controller_LED = "", DIR = I, VEC = [0:2], IO_IS = c2b_LED
+PORT controller_RX_ADC_DCS = "", DIR = I
+PORT controller_RX_ADC_DFS = "", DIR = I
+PORT controller_RX_ADC_PWDNA = "", DIR = I
+PORT controller_RX_ADC_PWDNB = "", DIR = I
+PORT controller_RSSI_ADC_CLAMP = "", DIR = I
+PORT controller_RSSI_ADC_HIZ = "", DIR = I
+PORT controller_RSSI_ADC_SLEEP = "", DIR = I
+PORT controller_DIPSW = "", DIR = O, VEC = [0:3], IO_IS = c2b_DIPSW
+PORT controller_RSSI_ADC_D = "", DIR = O, VEC = [0:9], IO_IS = c2b_RSSI_ADC_D
+PORT controller_LD = "", DIR = O
+PORT controller_RX_ADC_OTRA = "", DIR = O
+PORT controller_RX_ADC_OTRB = "", DIR = O
+PORT controller_RSSI_ADC_OTR = "", DIR = O
+PORT controller_DAC_PLL_LOCK = "", DIR = O
+PORT controller_DAC_RESET = "", DIR = I
+PORT controller_TxStart = "", DIR = I
+PORT dac_spi_data = "", DIR = O
+PORT dac_spi_cs = "", DIR = O
+PORT dac_spi_clk = "", DIR = O
+
+END

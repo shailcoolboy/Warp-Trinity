@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WARP/!svn/ver/1673/ResearchApps/PHY/MIMO_OFDM/ConvCoded
+END
+fec_encoder.v
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/fec_encoder.v
+END
+CRC_table_gen.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/CRC_table_gen.m
+END
+fec_decoder_config.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/fec_decoder_config.m
+END
+ofdm_txrx_supermimo_coded.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WARP/!svn/ver/1673/ResearchApps/PHY/MIMO_OFDM/ConvCoded/ofdm_txrx_supermimo_coded.mdl
+END
+fec_decoder.v
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/fec_decoder.v
+END
+calcCRC32.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/calcCRC32.m
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WARP/!svn/ver/1608/ResearchApps/PHY/MIMO_OFDM/ConvCoded/README.txt
+END
+calcCRC16.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/calcCRC16.m
+END
+fec_encoder_config.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/fec_encoder_config.m
+END
+ofdm_rx_supermimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WARP/!svn/ver/1629/ResearchApps/PHY/MIMO_OFDM/ConvCoded/ofdm_rx_supermimo_init.m
+END
+tx_pilot_select.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/tx_pilot_select.m
+END
+fixScopes.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WARP/!svn/ver/1609/ResearchApps/PHY/MIMO_OFDM/ConvCoded/fixScopes.m
+END
+ofdm_tx_supermimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WARP/!svn/ver/1626/ResearchApps/PHY/MIMO_OFDM/ConvCoded/ofdm_tx_supermimo_init.m
+END

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist
+END
+adder_subtracter_virtex2p_7_0_453ed16ba8e84295.edn
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/adder_subtracter_virtex2p_7_0_453ed16ba8e84295.edn
+END
+multiplier_virtex2p_10_1_817edd563258bb47_mult_gen_v10_1_xst_1.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/multiplier_virtex2p_10_1_817edd563258bb47_mult_gen_v10_1_xst_1.ngc
+END
+dual_port_block_memory_virtex2p_6_3_e98c3706f2ec2c76.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/dual_port_block_memory_virtex2p_6_3_e98c3706f2ec2c76.ngc
+END
+binary_counter_virtex2p_7_0_b0a257f5389d649a.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_b0a257f5389d649a.edn
+END
+binary_counter_virtex2p_7_0_77cea312f82499f0.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_77cea312f82499f0.edn
+END
+xlpersistentdff.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/xlpersistentdff.ngc
+END
+dual_port_block_memory_virtex2p_6_3_fb7cc8c2a7e578f8.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/dual_port_block_memory_virtex2p_6_3_fb7cc8c2a7e578f8.ngc
+END
+binary_counter_virtex2p_7_0_950e4ab582797264.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_950e4ab582797264.edn
+END
+binary_counter_virtex2p_7_0_23542cbcca0efa2e.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_23542cbcca0efa2e.edn
+END
+adder_subtracter_virtex2p_7_0_cf28bbebd75d9ce3.edn
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/adder_subtracter_virtex2p_7_0_cf28bbebd75d9ce3.edn
+END
+binary_counter_virtex2p_7_0_b511f9871581ee23.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_b511f9871581ee23.edn
+END
+binary_counter_virtex2p_7_0_a22528b4c55dc1cd.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_a22528b4c55dc1cd.edn
+END
+multiplier_virtex2p_10_1_817edd563258bb47.edn
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/multiplier_virtex2p_10_1_817edd563258bb47.edn
+END
+adder_subtracter_virtex2p_7_0_7182743c9e7adf5e.edn
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/adder_subtracter_virtex2p_7_0_7182743c9e7adf5e.edn
+END
+binary_counter_virtex2p_7_0_32a1863440903b9d.edn
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/binary_counter_virtex2p_7_0_32a1863440903b9d.edn
+END
+dual_port_block_memory_virtex2p_6_3_25371f622c89ba44.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/netlist/dual_port_block_memory_virtex2p_6_3_25371f622c89ba44.ngc
+END

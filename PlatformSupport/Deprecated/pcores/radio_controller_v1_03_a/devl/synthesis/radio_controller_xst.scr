@@ -1,0 +1,11 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn C:\localhome\sgupta\spiper\MyProcessorIPLib\pcores\radio_controller_v1_03_a\devl\synthesis\radio_controller_xst.prj
+-top radio_controller
+-p virtex2p
+-ofn C:\localhome\sgupta\spiper\MyProcessorIPLib\pcores\radio_controller_v1_03_a\devl\synthesis\radio_controller_xst.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /

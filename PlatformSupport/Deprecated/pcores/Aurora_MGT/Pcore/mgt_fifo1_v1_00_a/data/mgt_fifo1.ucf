@@ -1,0 +1,73 @@
+# Timing Contraints for the MGT Recovered clock. These period constraints should match the
+# period used for your MGT reference clock (REFCLK, REFCLK2, BREFCLK or BREFCLK2). This
+# constraint controls the routing between each MGT's REC_CLK port and the phase align
+# module for that lane
+
+###############################  Init values ###############################
+
+# When the FPGA powers up, the AURORA Module should reset itself once and
+# prepare its pseudorandom Idle sequence generators
+
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/ver_counter_i INIT= 0000;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/channel_init_sm_i/free_count_1_i INIT= 8000;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/channel_init_sm_i/free_count_2_i INIT= 8000;
+
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/channel_init_sm_i/reset_lanes_flop_i INIT= 1;
+
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_a_flop_0_i INIT= 0;
+
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_v_flop_1_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_v_flop_2_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_v_flop_3_i INIT= 0;
+
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_k_flop_0_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_r_flop_0_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_k_flop_1_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_r_flop_1_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_k_flop_2_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_r_flop_2_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_k_flop_3_i INIT= 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/global_logic_i/idle_and_ver_gen_i/gen_r_flop_3_i INIT= 0;
+
+
+##########################    Lane 0 Constraints ####################
+
+# Constrain locatation of the registers in the Phase Align Module. This insures
+# correct timing with respect to the MGT's enable comma align signal
+
+# Place lane_0_mgt_i at location X4Y1
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i LOC=GT_X2Y1;
+
+# Set the attributes for lane_0_mgt_i
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i ALIGN_COMMA_MSB          = TRUE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CHAN_BOND_MODE           = OFF;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CHAN_BOND_ONE_SHOT       = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CHAN_BOND_SEQ_1_1        = 00101111100;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i REF_CLK_V_SEL            = 0;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_INSERT_IDLE_FLAG = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_KEEP_IDLE        = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_REPEAT_WAIT      = 8;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_1_1          = 00111110111;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_1_2          = 00111110111;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_1_3          = 00111110111;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_1_4          = 00111110111;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_2_USE        = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_COR_SEQ_LEN          = 4;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i CLK_CORRECT_USE          = TRUE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i COMMA_10B_MASK           = 1111111111;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i MCOMMA_10B_VALUE         = 1100000101;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i PCOMMA_10B_VALUE         = 0011111010;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i RX_CRC_USE               = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i RX_DATA_WIDTH            = 4;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i RX_LOSS_OF_SYNC_FSM      = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i RX_LOS_INVALID_INCR      = 1;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i RX_LOS_THRESHOLD         = 4;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i SERDES_10B               = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i TERMINATION_IMP          = 50;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i TX_CRC_USE               = FALSE;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i TX_DATA_WIDTH            = 4;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i TX_DIFF_CTRL             = 600;
+INST mgt_fifo1_0/mgt_fifo1_0/USER_LOGIC_I/aurora4bitstream1/lane_0_mgt_i TX_PREEMPHASIS           = 1;
+
+
+

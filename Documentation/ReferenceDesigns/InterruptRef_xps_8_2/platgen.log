@@ -1,0 +1,292 @@
+Release 8.2.01i - platgen EDK_Im_Sp1.3
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp70ff1517-6 -lang vhdl -lp
+C:/localhome/chunter/user_repo/ system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isocm_v10_v2_00_a/data/isocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isbram_if_cntlr_v3_00_a/data/isbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsocm_v10_v2_00_a/data/dsocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsbram_if_cntlr_v3_00_a/data/dsbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_0.
+tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd line 36 - tool overriding c_device value X2VP4 to 2vp70
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+bram_block (dsocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+opb_gpio (leds_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to virtex2p
+opb_gpio (push_buttons_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to virtex2p
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 38 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd line 61 - tool overriding c_family value virtex2 to virtex2p
+opb_timer (opb_timer_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0.mp
+d line 36 - tool overriding c_family value nofamily to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+Address Map for Processor ppc405_0
+  (0x00000000-0x0001ffff) iocm_cntlr	iocm
+  (0x21800000-0x2180ffff) docm_cntlr	docm
+  (0x40000000-0x4000ffff) Push_Buttons_4bit	plb->plb2opb->opb
+  (0x40020000-0x4002ffff) LEDs_4Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232	plb->plb2opb->opb
+  (0x41200000-0x4120ffff) opb_intc_0	plb->plb2opb->opb
+  (0x41c00000-0x41c0ffff) opb_timer_0	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform address map ...
+
+Overriding system level properties ...
+isocm_v10 (iocm) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\isocm_v10_v2_00_a\data\isocm_v10_v2_1_0.mp
+d line 38 - tcl overriding C_ISARCVALUE value 0x30 to 0x00
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x20000
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 40 - tool overriding c_port_dwidth value 32 to 64
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 42 - tool overriding c_num_we value 4 to 2
+dsocm_v10 (docm) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dsocm_v10_v2_00_a\data\dsocm_v10_v2_1_0.mp
+d line 38 - tcl overriding C_DSARCVALUE value 0x31 to 0x21
+bram_block (dsocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x10000
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 42 - tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 43 - tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 44 - tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+line 40 - tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+line 41 - tool overriding c_num_slaves value 4 to 5
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd line 51 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd line 52 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd line 43 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd line 50 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x20000
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 40 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 42 - tool overriding c_num_we value 4 to 8
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 47 - tool overriding c_kind_of_intr value
+0b11111111111111111111111111111111 to 0b00000000000000000000000000000000
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 48 - tool overriding c_kind_of_edge value
+0b11111111111111111111111111111111 to 0b00000000000000000000000000000000
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 49 - tool overriding c_kind_of_lvl value 0b11111111111111111111111111111111
+to 0b00000000000000000000000000000011
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+
+Performing System level DRCs on properties...
+
+Check platform configuration ...
+isocm_v10 (iocm) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 78 - 1
+master(s) : 1 slave(s)
+dsocm_v10 (docm) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 103 - 1
+master(s) : 1 slave(s)
+plb_v34 (plb) - C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs
+line 126 - 2 master(s) : 2 slave(s)
+opb_v20 (opb) - C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs
+line 135 - 1 master(s) : 5 slave(s)
+
+Check port drivers...
+Performing Clock DRCs...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+bram_block (isocm_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 96 -
+elaborating IP
+bram_block (dsocm_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 120 -
+elaborating IP
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 207 -
+elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 1.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+ppc405_0_wrapper (ppc405_0) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 28 - Running
+XST synthesis
+ppc405_1_wrapper (ppc405_1) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 49 - Running
+XST synthesis
+jtagppc_0_wrapper (jtagppc_0) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 55 - Running
+XST synthesis
+reset_block_wrapper (reset_block) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 62 - Running
+XST synthesis
+iocm_wrapper (iocm) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 78 - Running
+XST synthesis
+iocm_cntlr_wrapper (iocm_cntlr) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 86 - Running
+XST synthesis
+isocm_bram_wrapper (isocm_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 96 - Running
+XST synthesis
+docm_wrapper (docm) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 103 -
+Running XST synthesis
+docm_cntlr_wrapper (docm_cntlr) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 111 -
+Running XST synthesis
+dsocm_bram_wrapper (dsocm_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 120 -
+Running XST synthesis
+plb_wrapper (plb) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 126 -
+Running XST synthesis
+opb_wrapper (opb) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 135 -
+Running XST synthesis
+plb2opb_wrapper (plb2opb) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 143 -
+Running XST synthesis
+leds_4bit_wrapper (leds_4bit) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 154 -
+Running XST synthesis
+push_buttons_4bit_wrapper (push_buttons_4bit) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 167 -
+Running XST synthesis
+rs232_wrapper (rs232) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 182 -
+Running XST synthesis
+plb_bram_if_cntlr_1_wrapper (plb_bram_if_cntlr_1) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 197 -
+Running XST synthesis
+plb_bram_if_cntlr_1_bram_wrapper (plb_bram_if_cntlr_1_bram) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 207 -
+Running XST synthesis
+opb_intc_0_wrapper (opb_intc_0) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 213 -
+Running XST synthesis
+dcm_0_wrapper (dcm_0) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 223 -
+Running XST synthesis
+opb_timer_0_wrapper (opb_timer_0) -
+C:\localhome\chunter\EDK\interrupt_reference_design\system.mhs line 243 -
+Running XST synthesis
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+Total run time: 342.00 seconds

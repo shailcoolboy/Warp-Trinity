@@ -1,0 +1,847 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.6.6)  18 JUL 2006 16:22
+entering extended mode
+**C:/localHome/elliotng/documentation/sysgen2opb/sysgen2opb.tex
+(C:/localHome/elliotng/documentation/sysgen2opb/sysgen2opb.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8g> and hyphenation patterns for english, dumylang, nohyphenation, german, ngerman, french, loaded.
+(WARPdoc.cls
+Document Class: WARPdoc 
+(C:\LaTex\MiKTeX\tex\latex\graphics\color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+ (C:\LaTex\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2005/12/29 v1.1 MiKTeX 'color' configuration
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+
+(C:\LaTex\MiKTeX\tex\latex\graphics\pdftex.def
+File: pdftex.def 2005/06/20 v0.03m graphics/color for pdftex
+\Gread@gobject=\count79
+)) (C:\LaTex\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\LaTex\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (C:\LaTex\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\LaTex\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (C:\LaTex\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2005/12/29 v1.2 MiKTeX 'graphics' configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+)
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(C:\LaTex\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen104
+\Hy@linkcounter=\count80
+\Hy@pagecounter=\count81
+ (C:\LaTex\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\LaTex\MiKTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2003/03/08 v1.0 MiKTeX 'hyperref' configuration
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 1830.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 1830.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 1830.
+Package hyperref Info: Option `breaklinks' set `true' on input line 1830.
+Package hyperref Info: Option `linktocpage' set `true' on input line 1830.
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Option `hyperindex' set `true' on input line 1830.
+Package hyperref Info: Option `hyperfigures' set `true' on input line 1830.
+Package hyperref Info: Hyper figures ON on input line 1878.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing ON on input line 1898.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(C:\LaTex\MiKTeX\tex\latex\hyperref\backref.sty
+Package: backref 2003/03/20 v1.23 Bibliographical back referencing
+) (C:\LaTex\MiKTeX\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip10
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count82
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+\Choice@toks=\toks15
+\Field@toks=\toks16
+Package hyperref Info: Hyper figures ON on input line 2616.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing ON on input line 2631.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count83
+\c@Hfootnote=\count84
+)
+*hyperref using driver hpdftex*
+(C:\LaTex\MiKTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
+ (C:\LaTex\MiKTeX\tex\latex\psnfss\pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(C:\LaTex\MiKTeX\tex\latex\psnfss\upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+ (C:\LaTex\MiKTeX\tex\latex\psnfss\upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count85
+\@outlinefile=\write3
+)
+(C:\LaTex\MiKTeX\tex\latex\base\size10.clo
+File: size10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\fullwidth=\dimen107
+\leftmarginwidth=\dimen108
+\c@part=\count86
+\c@section=\count87
+\c@subsection=\count88
+\c@subsubsection=\count89
+\c@paragraph=\count90
+\c@subparagraph=\count91
+\c@figure=\count92
+\c@table=\count93
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen109
+) (sysgen2opb.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 5.
+ (C:\LaTex\MiKTeX\tex\latex\psnfss\ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+(C:\LaTex\MiKTeX\tex\context\base\supp-pdf.tex (C:\LaTex\MiKTeX\tex\context\base\supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count94
+\scratchcounter=\count95
+\scratchtoks=\toks17
+\scratchdimen=\dimen110
+\scratchskip=\skip43
+\scratchmuskip=\muskip11
+\scratchbox=\box26
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen111
+\onepoint=\dimen112
+\onebasepoint=\dimen113
+\minusone=\count96
+\thousandpoint=\dimen114
+\onerealpoint=\dimen115
+\emptytoks=\toks18
+\nextbox=\box27
+\nextdepth=\dimen116
+\everyline=\toks19
+\!!counta=\count97
+\!!countb=\count98
+\recursecounter=\count99
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen117
+\MPnumerator=\count103
+\everyMPtoPDFconversion=\toks20
+)
+Package hyperref Info: Link coloring ON on input line 5.
+ (C:\LaTex\MiKTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count104
+)
+LaTeX Info: Redefining \ref on input line 5.
+LaTeX Info: Redefining \pageref on input line 5.
+ (sysgen2opb.out) (sysgen2opb.out)
+<warplogo.pdf, id=115, 289.7495pt x 53.53398pt>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+ [1
+
+{psfonts.map} <warplogo.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 13.
+ (sysgen2opb.toc
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
+)
+\tf@toc=\write5
+
+! pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.13 \tableofcontents
+                     
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[1]
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[2]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 29.
+ <scriptimages/sysgen1.pdf, id=173, 752.8125pt x 528.97626pt>
+File: scriptimages/sysgen1.pdf Graphic file (type pdf)
+ <use scriptimages/sysgen1.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[3 <scriptimages/sysgen1.pdf>] <scriptimages/sysgen2.pdf, id=211, 752.8125pt x 528.97626pt>
+File: scriptimages/sysgen2.pdf Graphic file (type pdf)
+
+<use scriptimages/sysgen2.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[4 <scriptimages/sysgen2.pdf>] <scriptimages/settings.pdf, id=238, 574.145pt x 411.5375pt>
+File: scriptimages/settings.pdf Graphic file (type pdf)
+
+<use scriptimages/settings.pdf> <scriptimages/sysgen3.pdf, id=239, 396.48125pt x 528.97626pt>
+File: scriptimages/sysgen3.pdf Graphic file (type pdf)
+
+<use scriptimages/sysgen3.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[5 <scriptimages/settings.pdf> <scriptimages/sysgen3.pdf>] <ORIGdemo/16.pdf, id=273, 452.69125pt x 754.82pt>
+File: ORIGdemo/16.pdf Graphic file (type pdf)
+
+<use ORIGdemo/16.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[6 <ORIGdemo/16.pdf>] <ORIGdemo/17.pdf, id=299, 951.555pt x 750.805pt>
+File: ORIGdemo/17.pdf Graphic file (type pdf)
+ <use ORIGdemo/17.pdf>
+<ORIGdemo/18.pdf, id=300, 947.54pt x 751.80875pt>
+File: ORIGdemo/18.pdf Graphic file (type pdf)
+ <use ORIGdemo/18.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[7 <ORIGdemo/17.pdf> <ORIGdemo/18.pdf>] <ORIGdemo/19.pdf, id=331, 947.54pt x 751.80875pt>
+File: ORIGdemo/19.pdf Graphic file (type pdf)
+ <use ORIGdemo/19.pdf>
+<ORIGdemo/20.pdf, id=332, 604.2575pt x 775.89874pt>
+File: ORIGdemo/20.pdf Graphic file (type pdf)
+ <use ORIGdemo/20.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[8 <ORIGdemo/19.pdf> <ORIGdemo/20.pdf>] <ORIGdemo/21.pdf, id=362, 604.2575pt x 775.89874pt>
+File: ORIGdemo/21.pdf Graphic file (type pdf)
+ <use ORIGdemo/21.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[9 <ORIGdemo/21.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 181.
+ <scriptimages/dpram.pdf, id=386, 96.36pt x 144.54pt>
+File: scriptimages/dpram.pdf Graphic file (type pdf)
+ <use scriptimages/dpram.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[10 <scriptimages/dpram.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 239.
+ (C:\LaTex\MiKTeX\tex\latex\psnfss\omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
+
+<scriptimages/SMRO_dpram.pdf, id=417, 539.01375pt x 378.41376pt>
+File: scriptimages/SMRO_dpram.pdf Graphic file (type pdf)
+ <use scriptimages/SMRO_dpram.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[11 <scriptimages/SMRO_dpram.pdf>] <scriptimages/SMWO_dpram.pdf, id=452, 656.4525pt x 326.21875pt>
+File: scriptimages/SMWO_dpram.pdf Graphic file (type pdf)
+
+<use scriptimages/SMWO_dpram.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[12 <scriptimages/SMWO_dpram.pdf>] <ORIGdemo/1.pdf, id=489, 426.59375pt x 303.1325pt>
+File: ORIGdemo/1.pdf Graphic file (type pdf)
+ <use ORIGdemo/1.pdf>
+<ORIGdemo/2.pdf, id=490, 409.53pt x 246.9225pt>
+File: ORIGdemo/2.pdf Graphic file (type pdf)
+ <use ORIGdemo/2.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[13 <ORIGdemo/1.pdf> <ORIGdemo/2.pdf>] <ORIGdemo/3.pdf, id=521, 509.905pt x 618.31pt>
+File: ORIGdemo/3.pdf Graphic file (type pdf)
+ <use ORIGdemo/3.pdf>
+<ORIGdemo/4.pdf, id=522, 509.905pt x 618.31pt>
+File: ORIGdemo/4.pdf Graphic file (type pdf)
+ <use ORIGdemo/4.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[14 <ORIGdemo/3.pdf> <ORIGdemo/4.pdf>] <ORIGdemo/5.pdf, id=552, 509.905pt x 659.46375pt>
+File: ORIGdemo/5.pdf Graphic file (type pdf)
+ <use ORIGdemo/5.pdf>
+<ORIGdemo/6.pdf, id=553, 509.905pt x 659.46375pt>
+File: ORIGdemo/6.pdf Graphic file (type pdf)
+ <use ORIGdemo/6.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[15 <ORIGdemo/5.pdf> <ORIGdemo/6.pdf>] <ORIGdemo/7.pdf, id=583, 509.905pt x 659.46375pt>
+File: ORIGdemo/7.pdf Graphic file (type pdf)
+ <use ORIGdemo/7.pdf>
+<ORIGdemo/8.pdf, id=584, 509.905pt x 659.46375pt>
+File: ORIGdemo/8.pdf Graphic file (type pdf)
+ <use ORIGdemo/8.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[16 <ORIGdemo/7.pdf> <ORIGdemo/8.pdf>] <ORIGdemo/9.pdf, id=614, 509.905pt x 659.46375pt>
+File: ORIGdemo/9.pdf Graphic file (type pdf)
+ <use ORIGdemo/9.pdf>
+<ORIGdemo/10.pdf, id=615, 509.905pt x 659.46375pt>
+File: ORIGdemo/10.pdf Graphic file (type pdf)
+ <use ORIGdemo/10.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[17 <ORIGdemo/9.pdf> <ORIGdemo/10.pdf>] <ORIGdemo/11.pdf, id=645, 509.905pt x 659.46375pt>
+File: ORIGdemo/11.pdf Graphic file (type pdf)
+ <use ORIGdemo/11.pdf>
+<ORIGdemo/12.pdf, id=646, 509.905pt x 659.46375pt>
+File: ORIGdemo/12.pdf Graphic file (type pdf)
+ <use ORIGdemo/12.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[18 <ORIGdemo/11.pdf> <ORIGdemo/12.pdf>] <ORIGdemo/13.pdf, id=677, 509.905pt x 659.46375pt>
+File: ORIGdemo/13.pdf Graphic file (type pdf)
+ <use ORIGdemo/13.pdf>
+<ORIGdemo/14.pdf, id=678, 509.905pt x 659.46375pt>
+File: ORIGdemo/14.pdf Graphic file (type pdf)
+ <use ORIGdemo/14.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[19 <ORIGdemo/13.pdf> <ORIGdemo/14.pdf>] <ORIGdemo/15.pdf, id=708, 509.905pt x 659.46375pt>
+File: ORIGdemo/15.pdf Graphic file (type pdf)
+ <use ORIGdemo/15.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[20 <ORIGdemo/15.pdf>]
+File: scriptimages/sysgen1.pdf Graphic file (type pdf)
+ <use scriptimages/sysgen1.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[21]
+File: scriptimages/sysgen2.pdf Graphic file (type pdf)
+ <use scriptimages/sysgen2.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[22]
+File: scriptimages/settings.pdf Graphic file (type pdf)
+ <use scriptimages/settings.pdf>
+File: scriptimages/sysgen3.pdf Graphic file (type pdf)
+ <use scriptimages/sysgen3.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[23]
+File: ORIGdemo/16.pdf Graphic file (type pdf)
+ <use ORIGdemo/16.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[24]
+File: ORIGdemo/17.pdf Graphic file (type pdf)
+ <use ORIGdemo/17.pdf>
+File: ORIGdemo/18.pdf Graphic file (type pdf)
+ <use ORIGdemo/18.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[25]
+File: ORIGdemo/19.pdf Graphic file (type pdf)
+ <use ORIGdemo/19.pdf>
+File: ORIGdemo/20.pdf Graphic file (type pdf)
+ <use ORIGdemo/20.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[26]
+File: ORIGdemo/21.pdf Graphic file (type pdf)
+ <use ORIGdemo/21.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[27] <ORIGdemo/code1.pdf, id=800, 806.01125pt x 85.31876pt>
+File: ORIGdemo/code1.pdf Graphic file (type pdf)
+ <use ORIGdemo/code1.pdf>
+<ORIGdemo/code2.pdf, id=801, 681.54625pt x 423.5825pt>
+File: ORIGdemo/code2.pdf Graphic file (type pdf)
+ <use ORIGdemo/code2.pdf>
+<ORIGdemo/code3.pdf, id=802, 806.01125pt x 260.975pt>
+File: ORIGdemo/code3.pdf Graphic file (type pdf)
+ <use ORIGdemo/code3.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[28 <ORIGdemo/code1.pdf> <ORIGdemo/code2.pdf> <ORIGdemo/code3.pdf>]
+<ORIGdemo/code4.pdf, id=844, 809.0225pt x 693.59125pt>
+File: ORIGdemo/code4.pdf Graphic file (type pdf)
+ <use ORIGdemo/code4.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[29 <ORIGdemo/code4.pdf>] <ORIGdemo/23.pdf, id=865, 551.05875pt x 253.94875pt>
+File: ORIGdemo/23.pdf Graphic file (type pdf)
+ <use ORIGdemo/23.pdf>
+<ORIGdemo/24.pdf, id=866, 482.80376pt x 389.455pt>
+File: ORIGdemo/24.pdf Graphic file (type pdf)
+ <use ORIGdemo/24.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[30 <ORIGdemo/23.pdf> <ORIGdemo/24.pdf>] <ORIGdemo/25.pdf, id=897, 944.52875pt x 734.745pt>
+File: ORIGdemo/25.pdf Graphic file (type pdf)
+ <use ORIGdemo/25.pdf>
+<ORIGdemo/26.pdf, id=898, 297.11pt x 595.22375pt>
+File: ORIGdemo/26.pdf Graphic file (type pdf)
+ <use ORIGdemo/26.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[31 <ORIGdemo/25.pdf> <ORIGdemo/26.pdf>] <ORIGdemo/27.pdf, id=933, 431.6125pt x 209.78375pt>
+File: ORIGdemo/27.pdf Graphic file (type pdf)
+ <use ORIGdemo/27.pdf>
+<ORIGdemo/28.pdf, id=934, 811.03pt x 634.37pt>
+File: ORIGdemo/28.pdf Graphic file (type pdf)
+ <use ORIGdemo/28.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[32 <ORIGdemo/27.pdf> <ORIGdemo/28.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
+
+ []
+
+File: warplogo.pdf Graphic file (type pdf)
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[33]
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[34] <SMROdemo/UnconvertedModel.pdf, id=1031, 878.28125pt x 521.95pt>
+File: SMROdemo/UnconvertedModel.pdf Graphic file (type pdf)
+ <use SMROdemo/UnconvertedModel.pdf>
+<SMROdemo/ConvertedModel.pdf, id=1032, 950.55125pt x 564.1075pt>
+File: SMROdemo/ConvertedModel.pdf Graphic file (type pdf)
+ <use SMROdemo/ConvertedModel.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[35 <SMROdemo/UnconvertedModel.pdf> <SMROdemo/ConvertedModel.pdf>]
+<SMROdemo/code1.pdf, id=1066, 631.35875pt x 352.31625pt>
+File: SMROdemo/code1.pdf Graphic file (type pdf)
+ <use SMROdemo/code1.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[36 <SMROdemo/code1.pdf>] <SMROdemo/code2.pdf, id=1087, 634.37pt x 741.77126pt>
+File: SMROdemo/code2.pdf Graphic file (type pdf)
+ <use SMROdemo/code2.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[37 <SMROdemo/code2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 777--780
+
+ []
+
+File: warplogo.pdf Graphic file (type pdf)
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[38]
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[39] <SMWOdemo/UnconvertedModel.pdf, id=1181, 1143.27126pt x 886.31125pt>
+File: SMWOdemo/UnconvertedModel.pdf Graphic file (type pdf)
+ <use SMWOdemo/UnconvertedModel.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[40 <SMWOdemo/UnconvertedModel.pdf>] <SMWOdemo/ConvertedModel.pdf, id=1200, 1143.27126pt x 886.31125pt>
+File: SMWOdemo/ConvertedModel.pdf Graphic file (type pdf)
+
+<use SMWOdemo/ConvertedModel.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[41 <SMWOdemo/ConvertedModel.pdf>] <SMWOdemo/code1.pdf, id=1223, 865.2325pt x 514.92375pt>
+File: SMWOdemo/code1.pdf Graphic file (type pdf)
+ <use SMWOdemo/code1.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[42 <SMWOdemo/code1.pdf>] <SMWOdemo/code2.pdf, id=1242, 896.34875pt x 824.07875pt>
+File: SMWOdemo/code2.pdf Graphic file (type pdf)
+ <use SMWOdemo/code2.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+
+<use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[43 <SMWOdemo/code2.pdf>] <CONFdemo/ConvertedModel.pdf, id=1261, 906.38625pt x 582.175pt>
+File: CONFdemo/ConvertedModel.pdf Graphic file (type pdf)
+
+<use CONFdemo/ConvertedModel.pdf> <CONFdemo/ConfSubsManager.pdf, id=1262, 912.40875pt x 709.65125pt>
+File: CONFdemo/ConfSubsManager.pdf Graphic file (type pdf)
+
+<use CONFdemo/ConfSubsManager.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[44 <CONFdemo/ConvertedModel.pdf> <CONFdemo/ConfSubsManager.pdf>]
+<CONFdemo/BlockChoice.pdf, id=1292, 911.405pt x 640.3925pt>
+File: CONFdemo/BlockChoice.pdf Graphic file (type pdf)
+ <use CONFdemo/BlockChoice.pdf>
+File: warplogo.pdf Graphic file (type pdf)
+ <use warplogo.pdf>
+Overfull \vbox (18.93684pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (506.84297pt too wide) has occurred while \output is active
+\OT1/phv/m/n/8 ver. 1.1: 18-Jul-2006[]
+ []
+
+[45 <CONFdemo/BlockChoice.pdf>] (sysgen2opb.aux) ) 
+Here is how much of TeX's memory you used:
+ 3897 strings out of 95515
+ 47904 string characters out of 1189294
+ 94365 words of memory out of 1092516
+ 6138 multiletter control sequences out of 60000
+ 22144 words of font info for 44 fonts, out of 1000000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 34i,16n,36p,785b,526s stack positions out of 5000i,500n,10000p,200000b,32768s
+PDF statistics:
+ 1309 PDF objects out of 300000
+ 395 named destinations out of 300000
+ 483 words of extra memory for PDF output out of 65536
+<C:\LaTex\MiKTeX\fonts\type1\bluesky\cm\cmtt10.pfb><C:\LaTex\MiKTeX\fo
+nts\type1\bluesky\cm\cmsy10.pfb>{8r.enc}<C:\LaTex\MiKTeX\fonts\type1\urw\urwstd\uhvro8a.pfb><C:\LaTex\MiKTeX\fonts\type1
+\urw\urwstd\uhvr8a.pfb><C:\LaTex\MiKTeX\fonts\type1\urw\urwstd\uhvb8a.pfb>
+Output written on sysgen2opb.pdf (46 pages, 16051925 bytes).

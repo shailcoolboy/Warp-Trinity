@@ -1,0 +1,780 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=mex 2012.1.20)  25 JUN 2012 09:45
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**pnet.c
+(./pnet.c
+This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
+! You can't use `macro parameter character #' in horizontal mode.
+l.5 #
+     define VERSION "Version  2.0.5  2003-09-16"
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.45   mex -O pnet.c {MATLAB_
+                             INSTALL_DIR}\sys\lcc\lib\wsock32.lib -DWIN32
+? 
+! Extra }, or forgotten $.
+l.45   mex -O pnet.c {MATLAB_INSTALL_DIR}
+                                         \sys\lcc\lib\wsock32.lib -DWIN32
+? 
+! Undefined control sequence.
+l.45   mex -O pnet.c {MATLAB_INSTALL_DIR}\sys
+                                             \lcc\lib\wsock32.lib -DWIN32
+? 
+! Undefined control sequence.
+l.45   mex -O pnet.c {MATLAB_INSTALL_DIR}\sys\lcc
+                                                 \lib\wsock32.lib -DWIN32
+? 
+! Undefined control sequence.
+l.45 ...-O pnet.c {MATLAB_INSTALL_DIR}\sys\lcc\lib
+                                                  \wsock32.lib -DWIN32
+? 
+! Undefined control sequence.
+l.45 ...t.c {MATLAB_INSTALL_DIR}\sys\lcc\lib\wsock
+                                                  32.lib -DWIN32
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.46 
+     
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.48   mex -O pnet.c ws2_
+                         32.lib -DWIN32
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.49 
+     
+? 
+Missing character: There is no ä in font plr10!
+Missing character: There is no Ö in font plr10!
+Missing character: There is no é in font plr10!
+! You can't use `macro parameter character #' in horizontal mode.
+l.64 #
+      include <stdio.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.65 #
+      include <stdlib.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.66 #
+      include <string.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.67 #
+      include <math.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.68 #
+      include <ctype.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.71 #
+      ifdef WIN32
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.72 #
+      define IFWINDOWS(dothis) dothis
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.73 #
+      define IFUNIX(dothis)
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.74 //#
+        include <windows.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.75 #
+      include <winsock2.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.76 #
+      define close(s) closesocket(s)
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.77 #
+      define nonblockingsocket(s) {unsigned long ctl = 1;ioctlsocket( s, FIO...
+
+? 
+! Misplaced alignment tab character &.
+l.77 ...ed long ctl = 1;ioctlsocket( s, FIONBIO, &
+                                                  ctl );}
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.78 #
+      define s_errno WSAGetLastError()
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.78 #define s_
+               errno WSAGetLastError()
+? 
+! You can't use `macro parameter character #' in math mode.
+l.79 #
+      define EWOULDBLOCK WSAEWOULDBLOCK
+? 
+! You can't use `macro parameter character #' in math mode.
+l.80 #
+      define usleep(a) Sleep((a)/1000)
+? 
+! You can't use `macro parameter character #' in math mode.
+l.81 #
+      define MSG_NOSIGNAL 0
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.82 
+     
+? 
+
+Overfull \hbox (479.24728pt too wide) in paragraph at lines 70--82
+\tenrm bloc-king-soc-ket(s) unsi-gned long ctl = 1;ioc-tl-soc-ket( s, FION-BIO,
+ ctl ); de-fine s$[]\teni rrnoWSAGetLastError\tenrm ()\teni defineEWOULDBLOCKWS
+AEWOULDBLOCKdefineusleep\tenrm (\teni a\tenrm )\teni Sleep\tenrm ((\teni a\tenr
+m )\teni =\tenrm 1000)\teni defineMSG[]OSIGNAL\tenrm 0$ |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm b
+.\tenrm l
+.\tenrm o
+.\kern0.27779
+.\discretionary replacing 2
+..\tenrm c
+..\tenrm -
+.etc.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.84 #
+      else
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.85 #
+      define IFWINDOWS(dothis)
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.86 #
+      define IFUNIX(dothis) dothis
+? 
+
+Overfull \hbox (14.29823pt too wide) in paragraph at lines 83--87
+[]\tenrm /******* NON WIN-DOWS DE-FI-NES *********/ else de-fine IFWIN-DOWS(dot
+his) de-fine IFU-NIX(dothis)|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\tenrm *
+.\tenrm *
+.etc.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.88 #
+      include <errno.h>
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.89 #
+      define s_errno errno // ?? Is this OK ??
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.89 #define s_
+               errno errno // ?? Is this OK ??
+? 
+! You can't use `macro parameter character #' in math mode.
+l.90 #
+      include <netdb.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.91 #
+      include <sys/types.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.92 #
+      include <sys/socket.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.93 #
+      include <netinet/in.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.94 #
+      include <arpa/inet.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.95 #
+      include <unistd.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.96 #
+      include <fcntl.h>
+? 
+! You can't use `macro parameter character #' in math mode.
+l.97 #
+      define nonblockingsocket(s)  fcntl(s,F_SETFL,O_NONBLOCK)
+? 
+! You can't use `macro parameter character #' in math mode.
+l.98 #
+      endif
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.99 
+     
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.100 #
+       ifndef INADDR_NONE
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.100 #ifndef INADDR_
+                     NONE
+? 
+! You can't use `macro parameter character #' in math mode.
+l.101 #
+       define INADDR_NONE (-1)
+? 
+! You can't use `macro parameter character #' in math mode.
+l.102 #
+       endif
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.103 
+      
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.105 #
+       ifndef MSG_NOSIGNAL
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.105 #ifndef MSG_
+                  NOSIGNAL
+? 
+! You can't use `macro parameter character #' in math mode.
+l.106 #
+       define MSG_NOSIGNAL 0
+? 
+! You can't use `macro parameter character #' in math mode.
+l.107 #
+       endif
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.108 
+      
+? 
+
+Overfull \hbox (96.5583pt too wide) in paragraph at lines 104--108
+[]\tenrm // Do this hack cause SIG-PIPE that kills ma-tlab on any plat-form??? 
+ifn-def MSG$[]\teni OSIGNALdefineMSG[]OSIGNAL\tenrm 0\teni endif$ |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm /
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm D
+.etc.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.110 #
+       include "mex.h"
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.114 #
+       define debug_view_con_status(X)   // __debug_view_con_status(X)
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.114 #define debug_
+                    view_con_status(X)   // __debug_view_con_status(X)
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.114 #define debug_view_con_status(X)   // __
+                                              debug_view_con_status(X)
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.115 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.115 
+      
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.116 #
+       define MAX_CON         100       /* Maximum number of simultanius tcp...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.116 #define MAX_
+                  CON         100       /* Maximum number of simultanius tcp...
+
+? 
+! You can't use `macro parameter character #' in math mode.
+l.117 #
+       define NAMEBUFF_LEN    100
+? 
+! You can't use `macro parameter character #' in math mode.
+l.118 #
+       define MINBUFFSIZE     1000      /* readbuffer will shrink to this si...
+
+? 
+! You can't use `macro parameter character #' in math mode.
+l.119 #
+       define CBNAMELEN       30
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.120 
+      
+? 
+
+Overfull \hbox (163.7914pt too wide) in paragraph at lines 116--120
+[]\tenrm define MAX$[]\teni ON\tenrm 100\teni = \tensy ^^C \teni Maximumnumbero
+fsimultaniustcpipconnections: \tensy ^^C \teni =defineNAMEBUFF[]EN\tenrm 100\te
+ni defineMINBUFFSIZE\tenrm 1000\teni = \tensy ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm d
+.\tenrm e
+.\tenrm ^^L (ligature fi)
+.\tenrm n
+.etc.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.121 #
+       define CON_FREE         -1       /* Find a new free struct in struct ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.121 #define CON_
+                  FREE         -1       /* Find a new free struct in struct ...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.122 
+      
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.123 #
+       define BACKLOG           50       /* How many pending connections que...
+
+? 
+! You can't use `macro parameter character #' in vertical mode.
+l.125 #
+       define double_inf            HUGE_VAL
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.125 #define double_
+                     inf            HUGE_VAL
+? 
+! You can't use `macro parameter character #' in math mode.
+l.126 #
+       define DEFAULT_WRITETIMEOUT  double_inf
+? 
+! You can't use `macro parameter character #' in math mode.
+l.127 #
+       define DEFAULT_READTIMEOUT   double_inf
+? 
+! You can't use `macro parameter character #' in math mode.
+l.128 #
+       define DEFAULT_INPUT_SIZE    50000
+? 
+! You can't use `macro parameter character #' in math mode.
+l.129 #
+       define DEFAULT_USLEEP        10000
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.130 
+      
+? 
+
+Overfull \hbox (423.37671pt too wide) in paragraph at lines 125--130
+[]\tenrm define double$[]\teni nfHUGE[]ALdefineDEFAULT[]RITETIMEOUTdouble[]nfde
+fineDEFAULT[]EADTIMEOUTdouble[]nfdefineDEFAULT[]NPUT[]IZE\tenrm 50000\teni defi
+neDEFAULT[]SLEEP\tenrm 10000$ |
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm d
+.\tenrm e
+.\tenrm ^^L (ligature fi)
+.\tenrm n
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.131 /* Different status of a con_
+                                   info struct handles a file descriptor    */
+? 
+! You can't use `macro parameter character #' in math mode.
+l.132 #
+       define STATUS_FREE       -1
+? 
+! You can't use `macro parameter character #' in math mode.
+l.133 #
+       define STATUS_NOCONNECT   0    // Disconnected pipe that is note closed
+? 
+! You can't use `macro parameter character #' in math mode.
+l.134 #
+       define STATUS_TCP_SOCKET  1
+? 
+! You can't use `macro parameter character #' in math mode.
+l.135 #
+       define STATUS_IO_OK       5    // Used for IS_... test
+? 
+! You can't use `macro parameter character #' in math mode.
+l.136 #
+       define STATUS_UDP_CLIENT  6
+? 
+! You can't use `macro parameter character #' in math mode.
+l.137 #
+       define STATUS_UDP_SERVER  8
+? 
+! You can't use `macro parameter character #' in math mode.
+l.138 #
+       define STATUS_CONNECT     10   // Used for IS_... test
+? 
+! You can't use `macro parameter character #' in math mode.
+l.139 #
+       define STATUS_TCP_CLIENT  11
+? 
+! You can't use `macro parameter character #' in math mode.
+l.140 #
+       define STATUS_TCP_SERVER  12
+? 
+! You can't use `macro parameter character #' in math mode.
+l.141 #
+       define STATUS_UDP_CLIENT_CONNECT 18
+? 
+! You can't use `macro parameter character #' in math mode.
+l.142 #
+       define STATUS_UDP_SERVER_CONNECT 19
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.143 
+      
+? 
+
+Overfull \hbox (1793.02803pt too wide) in paragraph at lines 131--143
+[]\tenrm /* Dif-fe-rent sta-tus of a con$[]\teni nfostructhandlesafiledescripto
+r \tensy ^^C \teni =defineSTATUS[]REE \tensy ^^@ \tenrm 1\teni defineSTATUS[]OC
+ONNECT\tenrm 0\teni ==DisconnectedpipethatisnotecloseddefineSTATUS[]CP[]OCKET\t
+enrm 1\teni defineSTATUS[]O[]K\tenrm 5\teni ==UsedforIS[]::testdefineSTATUS[]DP
+[]LIENT\tenrm 6\teni defineSTATUS[]DP[]ERVER\tenrm 8\teni defineSTATUS[]ONNECT\
+tenrm 10\teni ==UsedforIS[]::testdefineSTATUS[]CP[]LIENT\tenrm 11\teni defineST
+ATUS[]CP[]ERVER\tenrm 12\teni defineSTATUS[]DP[]LIENT[]ONNECT\tenrm 18\teni def
+ineSTATUS[]DP[]ERVER[]ONNECT\tenrm 19$ |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm D
+.etc.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.144 #
+       define IS_STATUS_IO_OK(x) ((x)>=STATUS_IO_OK)
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.144 #define IS_
+                 STATUS_IO_OK(x) ((x)>=STATUS_IO_OK)
+? 
+! You can't use `macro parameter character #' in math mode.
+l.145 #
+       define IS_STATUS_CONNECTED(x) ((x)>=STATUS_CONNECT)
+? 
+! You can't use `macro parameter character #' in math mode.
+l.146 #
+       define IS_STATUS_UDP_NO_CON(x) ((x)==STATUS_UDP_CLIENT || (x)==STATUS...
+
+? 
+! You can't use `macro parameter character #' in math mode.
+l.147 #
+       define IS_STATUS_TCP_CONNECTED(x) ((x)==STATUS_TCP_CLIENT || (x)==STA...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.148 
+      
+? 
+
+Overfull \hbox (314.75948pt too wide) in paragraph at lines 144--148
+\teni STATUS[]ONNECT\tenrm )\teni defineIS[]TATUS[]DP[]O[]ON\tenrm (\teni x\ten
+rm )((\teni x\tenrm ) == \teni STATUS[]DP[]LIENT\tensy jj\tenrm (\teni x\tenrm 
+) == \teni STATUS[]DP[]ERVER\tenrm )\teni defineIS[]TATUS[]CP[]ONNECTED\tenrm (
+\teni x\tenrm )((\teni x\tenrm ) ==|
+
+\hbox(7.5+2.5)x469.75499
+.\teni S
+.\kern0.57637
+.\teni T
+.\kern1.3889
+.\teni A
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.154 } io_
+           buff;
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.155 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.162     struct sockaddr_
+                          in remote_addr;
+? 
+! Extra }, or forgotten $.
+l.167 }
+        con_info;
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.168 
+      
+? 
+
+Overfull \hbox (222.76294pt too wide) in paragraph at lines 156--168
+\tenrm me-out; do-uble re-ad-ti-me-out; struct sockaddr$[]\teni nremote[]ddr\te
+nrm ; \teni io[]uffwrite\tenrm ; \teni io[]uffread\tenrm ; \teni intstatus\tenr
+m ; \teni = \tensy ^^C \teni STATUS[]::FREE; NOCONNECT; SERVER; CLIENT::: \tens
+y ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm m
+.\tenrm e
+.\discretionary
+..\tenrm -
+.\tenrm o
+.\tenrm u
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.172 int        gret_
+                      args=0;         /* Global variable that holds number o...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.177 
+      
+? 
+
+Overfull \hbox (35.24649pt too wide) in paragraph at lines 170--177
+[]\tenrm //////////////////////////////////////////////////////////////////////
+///////////////////////////|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm /
+.\tenrm /
+.\tenrm /
+.\tenrm /
+.etc.
+
+
+Overfull \hbox (33.87859pt too wide) in paragraph at lines 170--177
+\tenrm /* Some glo-bal va-ria-bles */ int gret$[]\teni rgs \tenrm = 0; \teni = 
+\tensy ^^C \teni Globalvariablethatholdsnumberofmatlabreturnargumensreturned \t
+ensy ^^C|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm /
+.\tenrm *
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm S
+.\tenrm o
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.179 con_
+          info con[MAX_CON];
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.182 
+      
+? 
+
+Overfull \hbox (59.75851pt too wide) in paragraph at lines 178--182
+\tenrm con$[]\teni nfocon\tenrm [\teni MAX[]ON\tenrm ]; \teni intcon[]ndex \ten
+rm = 0; \teni = \tensy ^^C \teni Currentindexpossitionforlistofhandlers \tensy 
+^^C \teni =unsignedlongmex[]all[]ounter \tenrm =|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm c
+.\tenrm o
+.\tenrm n
+.\mathon
+.\hbox(4.63193+0.0)x3.32928, shifted 1.49998
+..\seveni i
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.184 void Print_
+                 Start_Message(){
+? 
+! Undefined control sequence.
+l.185     mexPrintf("\n
+                       =====================================================...
+
+? 
+! Undefined control sequence.
+l.185 ...=======================================\n
+                                                  "
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.187 	      __
+               DATE__ " " __TIME__  "\n"
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.187 	      __DATE__
+                      " " __TIME__  "\n"
+? 
+! Emergency stop.
+<to be read again> 
+                   _
+l.187 	      __DATE__
+                      " " __TIME__  "\n"
+End of file on the terminal!
+
+No pages of output.

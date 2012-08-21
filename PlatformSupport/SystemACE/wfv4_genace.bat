@@ -1,0 +1,1 @@
+xmd -tcl "./warp_genace.tcl" -hw "./implementation/download.bit" -ace "system.ace" -board wfv4

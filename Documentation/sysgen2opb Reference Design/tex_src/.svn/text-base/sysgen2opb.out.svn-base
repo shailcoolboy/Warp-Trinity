@@ -1,0 +1,27 @@
+\BOOKMARK [1][]{section.1}{1 Introduction}{}
+\BOOKMARK [1][]{section.2}{2 Directions}{}
+\BOOKMARK [1][]{section.3}{3 Rules/Requirements}{}
+\BOOKMARK [2][]{subsection.3.1}{3.1 General Requirements}{section.3}
+\BOOKMARK [2][]{subsection.3.2}{3.2 Original Script with Shared Memory Extension}{section.3}
+\BOOKMARK [3][]{subsubsection.3.2.1}{3.2.1 General Requirements}{subsection.3.2}
+\BOOKMARK [3][]{subsubsection.3.2.2}{3.2.2 DPRAM \(Read-Only\) Requirements}{subsection.3.2}
+\BOOKMARK [3][]{subsubsection.3.2.3}{3.2.3 DPRAM \(Write-Only\) Requirements}{subsection.3.2}
+\BOOKMARK [1][]{section.4}{4 Example with the Original Script}{}
+\BOOKMARK [2][]{subsection.4.1}{4.1 Software Tools Requirements}{section.4}
+\BOOKMARK [2][]{subsection.4.2}{4.2 Xilinx Platform Studio - Base System Builder wizard}{section.4}
+\BOOKMARK [2][]{subsection.4.3}{4.3 Matlab/System Generator}{section.4}
+\BOOKMARK [2][]{subsection.4.4}{4.4 Xilinx Platform Studio - Using XPS}{section.4}
+\BOOKMARK [2][]{subsection.4.5}{4.5 Connecting the WARP Board}{section.4}
+\BOOKMARK [2][]{subsection.4.6}{4.6 Tera Term}{section.4}
+\BOOKMARK [2][]{subsection.4.7}{4.7 iMPACT}{section.4}
+\BOOKMARK [1][]{section.5}{5 Example with Read Only Shared Memory Extension}{}
+\BOOKMARK [2][]{subsection.5.1}{5.1 Requirements}{section.5}
+\BOOKMARK [2][]{subsection.5.2}{5.2 Xilinx Platform Studio - Base System Builder}{section.5}
+\BOOKMARK [2][]{subsection.5.3}{5.3 Matlab/System Generator}{section.5}
+\BOOKMARK [2][]{subsection.5.4}{5.4 Xilinx Platform Studio}{section.5}
+\BOOKMARK [1][]{section.6}{6 Example with Write Only Shared Memory Extension}{}
+\BOOKMARK [2][]{subsection.6.1}{6.1 Requirements}{section.6}
+\BOOKMARK [2][]{subsection.6.2}{6.2 Xilinx Platform Studio - Base System Builder}{section.6}
+\BOOKMARK [2][]{subsection.6.3}{6.3 Matlab/System Generator}{section.6}
+\BOOKMARK [2][]{subsection.6.4}{6.4 Xilinx Platform Studio}{section.6}
+\BOOKMARK [1][]{section.7}{7 Example with Configurable Subsystem Extension}{}

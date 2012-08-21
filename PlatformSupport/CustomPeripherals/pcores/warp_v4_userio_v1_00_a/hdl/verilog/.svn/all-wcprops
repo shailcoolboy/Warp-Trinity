@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WARP/!svn/ver/1335/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/hdl/verilog
+END
+hex_out.v
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WARP/!svn/ver/1331/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/hdl/verilog/hex_out.v
+END
+user_logic.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/1335/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/hdl/verilog/user_logic.v
+END
+hex_out_cw.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/1331/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/hdl/verilog/hex_out_cw.v
+END

@@ -1,0 +1,9 @@
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER user_io_board_controller_opbw
+
+	OPTION supported_peripherals = (user_io_board_controller_opbw);
+	OPTION depends = (common_v1_00_a);
+	OPTION copyfiles = all;
+
+END DRIVER

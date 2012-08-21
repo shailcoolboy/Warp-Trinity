@@ -1,0 +1,279 @@
+Release 8.2.01i - libgen Xilinx EDK 8.2.01
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs system.mhs -p xc2vp70ff1517-6 -lp
+C:/localhome/chunter/user_repo/ system.mss 
+
+Output Directory (-od)		: C:\localhome\chunter\EDK\interruptTester\
+Part (-p)			: virtex2p
+
+Software Specification file	: system.mss
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isocm_v10_v2_00_a/data/isocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/isbram_if_cntlr_v3_00_a/data/isbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsocm_v10_v2_00_a/data/dsocm_v10_v2_1_0.tc
+l ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dsbram_if_cntlr_v3_00_a/data/dsbram_if_cnt
+lr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/opb_intc_v1_00_c/data/opb_intc_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/dcm_module_v1_00_a/data/dcm_module_v2_1_0.
+tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd line 36 - tool overriding c_device value X2VP4 to 2vp70
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+bram_block (dsocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+opb_gpio (leds_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to virtex2p
+opb_gpio (push_buttons_4bit) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_gpio_v3_01_b\data\opb_gpio_v2_1_0.mpd
+line 42 - tool overriding c_family value virtex2 to virtex2p
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 43 - tool overriding c_family value virtex2 to virtex2p
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 38 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd line 61 - tool overriding c_family value virtex2 to virtex2p
+opb_timer (opb_timer_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_timer_v1_00_b\data\opb_timer_v2_1_0.mp
+d line 36 - tool overriding c_family value nofamily to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/bram_if_cntlr_v1_00_b/data/bram_if_cntlr_v
+2_1_0.tcl ...
+Address Map for Processor ppc405_0
+  (0x00000000-0x0001ffff) iocm_cntlr	iocm
+  (0x21800000-0x2180ffff) docm_cntlr	docm
+  (0x40000000-0x4000ffff) Push_Buttons_4bit	plb->plb2opb->opb
+  (0x40020000-0x4002ffff) LEDs_4Bit	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232	plb->plb2opb->opb
+  (0x41200000-0x4120ffff) opb_intc_0	plb->plb2opb->opb
+  (0x41c00000-0x41c0ffff) opb_timer_0	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform address map ...
+
+Overriding system level properties ...
+isocm_v10 (iocm) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\isocm_v10_v2_00_a\data\isocm_v10_v2_1_0.mp
+d line 38 - tcl overriding C_ISARCVALUE value 0x30 to 0x00
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x20000
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 40 - tool overriding c_port_dwidth value 32 to 64
+bram_block (isocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 42 - tool overriding c_num_we value 4 to 2
+dsocm_v10 (docm) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dsocm_v10_v2_00_a\data\dsocm_v10_v2_1_0.mp
+d line 38 - tcl overriding C_DSARCVALUE value 0x31 to 0x21
+bram_block (dsocm_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x10000
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 42 - tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 43 - tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+line 44 - tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+line 40 - tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+line 41 - tool overriding c_num_slaves value 4 to 5
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd line 51 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd line 52 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd line 43 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd line 50 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 39 - tool overriding c_memsize value 2048 to 0x20000
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 40 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd line 42 - tool overriding c_num_we value 4 to 8
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 47 - tool overriding c_kind_of_intr value
+0b11111111111111111111111111111111 to 0b00000000000000000000000000000000
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 48 - tool overriding c_kind_of_edge value
+0b11111111111111111111111111111111 to 0b00000000000000000000000000000000
+opb_intc (opb_intc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_intc_v1_00_c\data\opb_intc_v2_1_0.mpd
+line 49 - tool overriding c_kind_of_lvl value 0b11111111111111111111111111111111
+to 0b00000000000000000000000000000011
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/intc_core_v1_00_c/data/intc_core_v2_1_0.tc
+l ...
+
+Performing System level DRCs on properties...
+INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
+  - plb
+  - opb
+  - LEDs_4Bit
+  - Push_Buttons_4bit
+  - RS232
+  - opb_intc_0
+  - opb_timer_0
+  - plb_bram_if_cntlr_1
+  - docm_cntlr
+  - iocm_cntlr
+INFO:MDT - List of peripherals addressable from processor instance ppc405_1 : 
+
+Building Directory Structure for ppc405_0
+FPU OPTION:  
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\standalone_v1_00_a\ ...
+
+Copying files for driver plbarb_v1_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\plbarb_v1_01_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\plbarb_v1_01_a\ ...
+
+Copying files for driver opbarb_v1_02_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\opbarb_v1_02_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\opbarb_v1_02_a\ ...
+
+Copying files for driver gpio_v2_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\gpio_v2_01_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\gpio_v2_01_a\ ...
+
+Copying files for driver uartlite_v1_01_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_01_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\uartlite_v1_01_a\ ...
+
+Copying files for driver intc_v1_00_c from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\intc_v1_00_c\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\intc_v1_00_c\ ...
+
+Copying files for driver tmrctr_v1_00_b from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\tmrctr_v1_00_b\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\tmrctr_v1_00_b\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_0\libsrc\cpu_ppc405_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in C:\localhome\chunter\EDK\interruptTester\ppc405_0\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+Building Directory Structure for ppc405_1
+FPU OPTION:  
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_1\libsrc\standalone_v1_00_a\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\localhome\chunter\EDK\interruptTester\ppc405_1\libsrc\cpu_ppc405_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in C:\localhome\chunter\EDK\interruptTester\ppc405_1\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 

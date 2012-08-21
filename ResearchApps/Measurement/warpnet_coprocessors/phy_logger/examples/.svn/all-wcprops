@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WARP/!svn/ver/1606/ResearchApps/Measurement/warpnet_coprocessors/phy_logger/examples
+END
+twoNode_cfoLogging.py
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WARP/!svn/ver/1605/ResearchApps/Measurement/warpnet_coprocessors/phy_logger/examples/twoNode_cfoLogging.py
+END
+warpnet_experiment_structs.py
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/1606/ResearchApps/Measurement/warpnet_coprocessors/phy_logger/examples/warpnet_experiment_structs.py
+END

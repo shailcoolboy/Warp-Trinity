@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WARP/!svn/ver/936/ResearchApps/PHY/MIMO_PKTDETECTION
+END
+truthtable.xls
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WARP/!svn/ver/517/ResearchApps/PHY/MIMO_PKTDETECTION/truthtable.xls
+END
+ofdm_pktdetector_mimo.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WARP/!svn/ver/936/ResearchApps/PHY/MIMO_PKTDETECTION/ofdm_pktdetector_mimo.mdl
+END
+goodcap1.mat
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WARP/!svn/ver/509/ResearchApps/PHY/MIMO_PKTDETECTION/goodcap1.mat
+END
+goodcap2.mat
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WARP/!svn/ver/509/ResearchApps/PHY/MIMO_PKTDETECTION/goodcap2.mat
+END
+init.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WARP/!svn/ver/509/ResearchApps/PHY/MIMO_PKTDETECTION/init.m
+END

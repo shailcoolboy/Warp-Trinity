@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WARP/!svn/ver/1167/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog
+END
+user_logic.v
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WARP/!svn/ver/1167/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/user_logic.v
+END
+one_wire_io.v
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WARP/!svn/ver/1166/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/one_wire_io.v
+END
+OWM.v
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WARP/!svn/ver/1167/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/OWM.v
+END
+onewiremaster.v
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WARP/!svn/ver/1166/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/onewiremaster.v
+END
+one_wire_interface.v
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/1166/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/one_wire_interface.v
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WARP/!svn/ver/1166/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/README
+END
+clk_prescaler.v
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WARP/!svn/ver/1166/PlatformSupport/CustomPeripherals/pcores/eeprom_v1_07_a/hdl/verilog/clk_prescaler.v
+END

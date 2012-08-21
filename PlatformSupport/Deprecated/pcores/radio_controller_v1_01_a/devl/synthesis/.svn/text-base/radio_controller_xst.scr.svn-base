@@ -1,0 +1,11 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn C:\edk_user_repository\MyProcessorIPLib\pcores\radio_controller_v1_01_a\devl\synthesis\radio_controller_xst.prj
+-top radio_controller
+-p virtex2p
+-ofn C:\edk_user_repository\MyProcessorIPLib\pcores\radio_controller_v1_01_a\devl\synthesis\radio_controller_xst.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /

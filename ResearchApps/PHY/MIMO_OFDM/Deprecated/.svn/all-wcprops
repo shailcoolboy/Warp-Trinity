@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated
+END
+ofdm_tx_mimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WARP/!svn/ver/1407/ResearchApps/PHY/MIMO_OFDM/Deprecated/ofdm_tx_mimo_init.m
+END
+ofdm_txrx_mimo_2x.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WARP/!svn/ver/1407/ResearchApps/PHY/MIMO_OFDM/Deprecated/ofdm_txrx_mimo_2x.mdl
+END
+ofdm_txrx_mimo.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WARP/!svn/ver/1407/ResearchApps/PHY/MIMO_OFDM/Deprecated/ofdm_txrx_mimo.mdl
+END
+ofdm_rx_mimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WARP/!svn/ver/1407/ResearchApps/PHY/MIMO_OFDM/Deprecated/ofdm_rx_mimo_init.m
+END

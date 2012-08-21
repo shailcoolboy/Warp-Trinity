@@ -1,0 +1,48 @@
+****RXN 1, error 0, total 720
+****RXN 2, error 0, total 720
+****RXN 3, error 0, total 720
+****RXN 1, error 0, total 720
+****RXN 2, error 0, total 720
+****RXN 3, error 0, total 720
+****RXN 1, error 0, total 720
+****RXN 2, error 0, total 720
+****RXN 3, error 0, total 720
+****RXN 1, error 0, total 720
+****RXN 2, error 0, total 720
+****RXN 3, error 0, total 720
+{??? Operation terminated by user during ==> <a href="matlab: opentoline('/Users/shailcoolboy/Documents/warp_xyu/researchapps/phy/warplab/warplab_v05_2/m_code_examples/multiTxDAS.m',802,0)">multiTxDAS at 802</a>
+} 
+edit('/Users/shailcoolboy/Documents/warp_xyu/researchapps/phy/warplab/warplab_v05_2/m_code_examples/shail')
+multiTxDAS
+{??? Operation terminated by user during ==> <a href="matlab: opentoline('/Users/shailcoolboy/Documents/warp_xyu/researchapps/phy/warplab/warplab_v05_2/m_code_examples/multiTxDAS.m',704,0)">multiTxDAS at 704</a>
+} 
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/researchapps/phy/warplab/warplab_v05_2/m_code_examples/log.txt',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/researchapps/phy/warplab/warplab_v05_2/m_code_examples/log.txt',1)
+clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+multiTxDAS
+multiTxDAS

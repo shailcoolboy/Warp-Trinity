@@ -1,0 +1,76 @@
+% Testing input outputs for Affiliates demo
+
+global SchemeSelect; % 0 2x1 Beamforming 2 feedback bits
+                     % 1 2x1 Alamouti
+SchemeSelect = 0                     
+                         
+global ConstellationSize;
+ConstellationSize = 4;
+
+global TxPowerRF_Radio2;
+global TxPowerRF_Radio3;
+TxPowerRF_Radio2 = 1; % Tx RF Gain. In [0:63]
+TxPowerRF_Radio3 = 1; % Tx RF Gain. In [0:63]
+
+global TxPowerBB_Radio2;
+global TxPowerBB_Radio3;
+TxPowerBB_Radio2 = 1; %Tx Baseband Gain. In [0:3]
+TxPowerBB_Radio3 = 1; %Tx Baseband Gain. In [0:3]
+
+Tx2Rx1_BFvsAlm_Demo_v00
+
+if(0==SchemeSelect)
+% Plot transmitted and received constellations
+
+% Scatter Plot of received and transmitted constellation points
+% h = scatterplot(yrx_bb_mf_ds(nsym_preamble+1:end),1,0,'g.');
+h = scatterplot(yrx_bb_mf_ds_mrc_norm,1,0,'g.');
+hold on;
+%scatterplot(ytx_mod_norm(nsym_preamble+1:end),1,0,'k*',h);
+scatterplot(ytx_mod_norm,1,0,'k*',h);
+title('Constellations Beamforming');
+legend('Received','Transmitted');
+axis([-2 2 -2 2]); % Set axis ranges.
+hold off;
+
+% Frequency content
+figure
+freq_axis = 40e6*(0:2^14)/2^14;
+freq_axis_shift = fftshift(freq_axis);
+freq_ticks=[freq_axis_shift(1:2^13)-freq_axis_shift(2^13),freq_axis_shift(2^13+1:2^14+1)];
+
+spectrum=10*log10(abs(fftshift(fft(RxData_2_BF,2^14))));
+freqaxismin = find(-5e6==freq_ticks);
+freqaxismax = find(5e6==freq_ticks);
+plot(freq_ticks(6965:9420),spectrum(6965:9420));
+
+BER = Result_BER_BF_AllChannels;
+end
+
+if(1==SchemeSelect)
+% Plot transmitted and received constellations
+
+% Scatter Plot of received and transmitted constellation points
+% h = scatterplot(yrx_bb_mf_ds(nsym_preamble+1:end),1,0,'g.');
+h = scatterplot(yrx_bb_mf_ds_mrc_norm,1,0,'g.');
+hold on;
+%scatterplot(ytx_mod_norm(nsym_preamble+1:end),1,0,'k*',h);
+scatterplot(ytx_mod_norm,1,0,'k*',h);
+title('Constellations Beamforming');
+legend('Received','Transmitted');
+axis([-2 2 -2 2]); % Set axis ranges.
+hold off;
+
+% Frequency content
+figure
+freq_axis = 40e6*(0:2^14)/2^14;
+freq_axis_shift = fftshift(freq_axis);
+freq_ticks=[freq_axis_shift(1:2^13)-freq_axis_shift(2^13),freq_axis_shift(2^13+1:2^14+1)];
+
+spectrum=10*log10(abs(fftshift(fft(RxData_2_BF,2^14))));
+freqaxismin = find(-5e6==freq_ticks);
+freqaxismax = find(5e6==freq_ticks);
+plot(freq_ticks(6965:9420),spectrum(6965:9420));
+
+BER = Result_BER_BF_AllChannels;
+end

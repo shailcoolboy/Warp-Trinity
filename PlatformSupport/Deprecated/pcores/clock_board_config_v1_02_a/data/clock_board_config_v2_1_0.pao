@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          c:\temp\MyProcessorIPLib\pcores/clock_board_config_v1_01_a/data/clock_board_config_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sat Jan 20 00:46:02 2007 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib clock_board_config_v1_02_a clock_board_config verilog

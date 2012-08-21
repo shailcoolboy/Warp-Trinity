@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/radio_controller_v1_02_a/driver
+END
+UCF for new controller.txt
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/radio_controller_v1_02_a/driver/UCF%20for%20new%20controller.txt
+END
+radiocontroller slavereg writelocations.txt
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/radio_controller_v1_02_a/driver/radiocontroller%20slavereg%20writelocations.txt
+END
+radiocontroller slavereg readlocations.txt
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/radio_controller_v1_02_a/driver/radiocontroller%20slavereg%20readlocations.txt
+END
+radio_controller.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/radio_controller_v1_02_a/driver/radio_controller.h
+END

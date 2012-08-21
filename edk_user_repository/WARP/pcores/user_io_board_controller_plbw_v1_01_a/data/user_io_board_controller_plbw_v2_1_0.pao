@@ -1,0 +1,20 @@
+#############################################################
+# Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Peripheral Analyze Order (PAO) file
+# created by System Generator
+# Aug 6, 2008 5:23:41 PM
+#############################################################
+
+lib user_io_board_controller_plbw_v1_01_a user_io_board_controller vhdl
+lib user_io_board_controller_plbw_v1_01_a dual_port_block_memory_virtex2p_6_3_e98c3706f2ec2c76 vhdl
+lib user_io_board_controller_plbw_v1_01_a dual_port_block_memory_virtex2p_6_3_fb7cc8c2a7e578f8 vhdl
+lib user_io_board_controller_plbw_v1_01_a dual_port_block_memory_virtex2p_6_3_25371f622c89ba44 vhdl
+lib user_io_board_controller_plbw_v1_01_a user_io_board_controller_plbw vhdl

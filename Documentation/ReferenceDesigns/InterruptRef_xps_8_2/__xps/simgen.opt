@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl -lp C:/localhome/chunter/user_repo/    -pe ppc405_0 interruptTestrBeta/executable.elf -s mti

@@ -1,0 +1,52 @@
+#### Additional TriMode_MAC_GMII constraints
+
+NET "*tx_gmii_mii_clk_in_0*"    TNM_NET = "clk_phy_tx_clk0";
+NET "*tx_gmii_mii_clk_out_0*"   TNM_NET = "clk_phy_tx_clk0";
+TIMESPEC "TS_phy_tx_clk0"     = PERIOD "clk_phy_tx_clk0" 7700 ps HIGH 50 %;
+
+NET "*gmii_rx_clk_0*"         TNM_NET = "clk_phy_rx_clk0";
+NET "*gmii_rx_clk_delay_0*"   TNM_NET = "clk_phy_rx_clk0";
+NET "*gmii_rx_clk_ibufg_0*"   TNM_NET = "clk_phy_rx_clk0";
+TIMESPEC "TS_phy_rx_clk0"     = PERIOD "clk_phy_rx_clk0" 7700 ps HIGH 50 %;
+
+NET "*tx_client_clk_in_0*"      TNM_NET = "clk_client_tx_clk0";
+NET "*tx_client_clk_out_0*"     TNM_NET = "clk_client_tx_clk0";
+TIMESPEC "TS_client_tx_clk0"            = PERIOD "clk_client_tx_clk0" 7700 ps HIGH 50 %;
+
+NET "*rx_client_clk_in_0*"      TNM_NET = "clk_client_rx_clk0";
+NET "*rx_client_clk_out_0*"     TNM_NET = "clk_client_rx_clk0";
+TIMESPEC "TS_client_rx_clk0"            = PERIOD "clk_client_rx_clk0" 7700 ps HIGH 50 %;
+
+NET "*mii_tx_clk_0*"            TNM_NET = "clk_mii_tx_clk0";
+TIMESPEC "TS_mii_tx_clk0"               = PERIOD "clk_mii_tx_clk0" 25000 ps HIGH 50 %;
+
+
+#################### EMAC 0 GMII Constraints ########################
+INST "*mii0?RXD_TO_MAC*"    IOB = true;
+INST "*mii0?RX_DV_TO_MAC"   IOB = true;
+INST "*mii0?RX_ER_TO_MAC"   IOB = true;
+
+INST "*gmii0/*gmii_rxd?_delay"    IOBDELAY_TYPE = FIXED;
+INST "*gmii0/*gmii_rx_dv_delay"   IOBDELAY_TYPE = FIXED;
+INST "*gmii0/*gmii_rx_er_delay"   IOBDELAY_TYPE = FIXED;
+INST "*gmii0/*gmii_rxd?_delay"    IOBDELAY_VALUE = 0;
+INST "*gmii0/*gmii_rx_dv_delay"   IOBDELAY_VALUE = 0;
+INST "*gmii0/*gmii_rx_er_delay"   IOBDELAY_VALUE = 0;
+INST "*gmii_rx_clk_0_delay"       IOBDELAY_TYPE = FIXED;
+INST "*gmii_rx_clk_0_delay"       IOBDELAY_VALUE = 30;
+
+INST "fpga_0_TriMode_MAC_GMII_GMII_TXD_0_pin<?>"     TNM = "sig_mii_tx_0";
+INST "fpga_0_TriMode_MAC_GMII_GMII_TX_EN_0_pin"      TNM = "sig_mii_tx_0";
+INST "fpga_0_TriMode_MAC_GMII_GMII_TX_ER_0_pin"      TNM = "sig_mii_tx_0";
+
+INST "fpga_0_TriMode_MAC_GMII_GMII_RXD_0_pin<?>"     TNM = "sig_mii_rx_0";
+INST "fpga_0_TriMode_MAC_GMII_GMII_RX_DV_0_pin"      TNM = "sig_mii_rx_0";
+INST "fpga_0_TriMode_MAC_GMII_GMII_RX_ER_0_pin"      TNM = "sig_mii_rx_0";
+
+# Need to TIG between the LocalLink clock and the rx_client and tx_client clocks
+NET "*/LlinkTemac0_CLK*" TNM_NET = "LLCLK";
+TIMESPEC "TS_LL_CLK_2_RX_CLIENT_CLK"  = FROM LLCLK TO clk_client_rx_clk0 8000 ps DATAPATHONLY;
+TIMESPEC "TS_LL_CLK_2_TX_CLIENT_CLK"  = FROM LLCLK TO clk_client_tx_clk0 8000 ps DATAPATHONLY;
+TIMESPEC "TS_RX_CLIENT_CLK_2_LL_CLK"  = FROM clk_client_rx_clk0 TO LLCLK 10000 ps DATAPATHONLY;
+TIMESPEC "TS_TX_CLIENT_CLK_2_LL_CLK"  = FROM clk_client_tx_clk0 TO LLCLK 10000 ps DATAPATHONLY;
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/WARP/!svn/ver/1370/Hardware/FPGA_Board/Rev2.2/UCF
+END
+WARP_FPGA_v2.2_UserIO.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WARP/!svn/ver/1323/Hardware/FPGA_Board/Rev2.2/UCF/WARP_FPGA_v2.2_UserIO.ucf
+END
+WARP_FPGA_v2.2_Memory.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WARP/!svn/ver/1322/Hardware/FPGA_Board/Rev2.2/UCF/WARP_FPGA_v2.2_Memory.ucf
+END
+WARP_FPGA_v2.2_OtherIO.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WARP/!svn/ver/1366/Hardware/FPGA_Board/Rev2.2/UCF/WARP_FPGA_v2.2_OtherIO.ucf
+END
+WARP_FPGA_v2.2_Clocks.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WARP/!svn/ver/1370/Hardware/FPGA_Board/Rev2.2/UCF/WARP_FPGA_v2.2_Clocks.ucf
+END
+WARP_FPGA_v2.2_Ethernet.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WARP/!svn/ver/1322/Hardware/FPGA_Board/Rev2.2/UCF/WARP_FPGA_v2.2_Ethernet.ucf
+END

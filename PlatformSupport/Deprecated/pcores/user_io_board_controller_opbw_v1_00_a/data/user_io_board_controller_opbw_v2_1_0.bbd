@@ -1,0 +1,17 @@
+#############################################################
+# Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Black Box Definition (BBD) file
+# created by System Generator
+# Aug 30, 2007 11:29:45 PM
+#############################################################
+
+FILES
+xlpersistentdff.ngc, dual_port_block_memory_virtex2p_6_1_a4748ac34de4a8d3.edn, dual_port_block_memory_virtex2p_6_1_46032f721e0f73ab.edn, dual_port_block_memory_virtex2p_6_1_299a9f537bb5a43d.edn, binary_counter_virtex2p_7_0_edc7d761bd25890d.edn, binary_counter_virtex2p_7_0_dbb5736f3ec3cba8.edn, binary_counter_virtex2p_7_0_67ac1d95fffad199.edn, binary_counter_virtex2p_7_0_18e84c36111bc674.edn, binary_counter_virtex2p_7_0_0611420023f6fdd6.edn, binary_counter_virtex2p_7_0_016610e0863621bf.edn, adder_subtracter_virtex2p_7_0_cb748602b0616a72.edn, adder_subtracter_virtex2p_7_0_2cb583e55ff51f1e.edn, adder_subtracter_virtex2p_7_0_219d4ec01152994f.edn

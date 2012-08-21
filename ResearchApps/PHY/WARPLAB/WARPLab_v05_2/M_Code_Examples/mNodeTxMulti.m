@@ -1,0 +1,476 @@
+% MU-MIMO channel estimation, based on 802.11ac, draft 1.0
+% Single transmitter, multiple receivers
+% xyzhang
+clear all;
+%[-20 -100 0 -50 70 70 120 -60 70 70 20 150] - [-50 -200 5 -70 150 -50 -10 120 -130 150 -50 110]
+
+USESIM = 0; % whether to use simulation
+numTxNode = 1;
+txID = 1; % currently we only allow one transmitter with ID txID
+numRxNode = 1;
+numTxAntenna = 4; % number of tx antennas
+numRxAntenna = 1; % number of rx antennas
+osamp = 8; % Oversampling rate or Number of samples per symbol, 40Mhz/osamp wide band
+if USESIM osamp = 1; end
+TxGain_RF = 10;  % Tx RF Gain. In [0:63] 
+TxGain_BB = 1; % Tx Baseband Gain. In [0:3]
+RxGain_BB = 15; % Rx Baseband Gain. In [0:31]
+RxGain_RF = 1;%2; % Rx RF Gain. In [1:3] 
+TxMode = 0; %1 for continuous transmission
+MGC_AGC_Select = 0; %0 for MGC, 1 for AGC
+
+TxDelay = 1000;
+TxLength = 2^14-TxDelay; % Length of transmission. In [0:2^14-1-TxDelay]
+CarrierChannel = 13; % Channel in the 2.4 GHz band. In [1:14]; 5GHz in [15:37]
+pktsize_bytes = 10; 
+numRxCapture = 6; 
+
+% -------- Generate 802.11 STF ---------
+STF = [0 0 0 0 0 0 0 0 1+i 0 0 0 -1+i 0 0 0 -1-i 0 0 0 1-i 0 0 0 -1-i 0 0 0 1-i 0 0 0 0 0 0 0 1-i 0 0 0 -1-i 0 0 0 1-i 0 0 0 -1-i 0 0 0 -1+i 0 0 0 1+i 0 0 0 0 0 0 0].';
+STF_t = ifft(fftshift(STF));
+STF_t = STF_t(1:16).';
+STF_10 = repmat(STF_t,1,10);
+STF_I = real(STF_10);
+STF_Q = imag(STF_10);
+% Upsample by osamp so the standard preamble occupies a bandwidth of 
+% +-40/osamp MHz (computed for a sampling frequency of 40 MHz)
+[STF_I_up2] = interp(STF_I, osamp);
+[STF_Q_up2] = interp(STF_Q, osamp);
+% Scale to span -1,1 range of DAC
+scale_ShortSyms = max([ max(abs(STF_I_up2)), max(abs(STF_Q_up2)) ]);
+[STF_I_up2] = (1/scale_ShortSyms)*STF_I_up2;
+[STF_Q_up2] = (1/scale_ShortSyms)*STF_Q_up2;
+STF_up2 = (STF_I_up2 + sqrt(-1)*STF_Q_up2);
+
+
+% -------- Generate 802.11 LTF -----------
+LTF_freq_bot = [0 0 0 0 0 0 1 1 -1 -1 1 1 -1 1 -1 1 1 1 1 1 1 -1 -1 1 1 -1 1 -1 1 1 1 1]';
+LTF_freq_top = [1 -1 -1 1 1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 1 -1 1 -1 1 1 1 1 0 0 0 0 0]';
+LTF_freq = [LTF_freq_bot ; 0 ; LTF_freq_top];
+LTF_time = ifft(fftshift(LTF_freq)).';
+LTF_time_up2 = interp(LTF_time, osamp); % Upsample 
+scale = 1/max([ max(abs(real(LTF_time_up2))), max(abs(imag(LTF_time_up2))) ]);
+LTF_time_up2 = scale * LTF_time_up2; % Scale to span -1,1 range of DAC 
+% Concatenate two long training symbols and add cyclic prefix
+%longsyms_2_cp = [LTF_time(33:64) repmat(LTF_time,1,2)];
+%longsyms_2_cp_up2 = interp(longsyms_2_cp,2); % Upsample by 2
+LTF_up2 = [LTF_time_up2(32*osamp+1:64*osamp) repmat(LTF_time_up2,1,2)];
+
+
+% -------- Generate OFDM data symbol -----------
+% ******* Add pilot tone ********
+% Generate data bits to be transmitted
+numbits = pktsize_bytes*8;
+fg = fopen('inbits.dat', 'wb');
+bt = [0 1 0 1 0 0 1 1];
+bto = [];
+for s = 1:pktsize_bytes
+    bto = [bto bt];
+end
+fwrite(fg, bto, 'int8');
+fclose(fg);
+
+fin = fopen('inbits.dat', 'rb');
+inb = fread(fin, pktsize_bytes*8, 'int8');
+len = length(inb); 
+s = 1;
+posInSymb = 0;
+posOut = 0;
+while s <= len
+    posOut = posOut + 1;
+    
+    posInSymb = posInSymb + 1;
+    if (posInSymb == 65)
+        posInSymb = 1;
+    end
+     
+    % Insert pilot at 7, 21, 43 and 57th subcarriers
+    if (posInSymb == (7+1) || posInSymb == (21+1) ...
+        || posInSymb == (64-21+1) || posInSymb == (64-7+1))
+        pilotOut(posOut) = 1 + 0*i;
+        continue;
+    end 
+    if (posInSymb==1 || (posInSymb > 27 && posInSymb < 64-26+1))
+        pilotOut(posOut) = 0 + 0*i;
+        continue;
+    end 
+    
+    pilotOut(posOut) = inb(s) + 0*i;
+    s = s + 1; 
+    %{
+    % Test: make the first symbol all 1
+    if posOut < 65
+        pilotOut(posOut) = 1 + 0*i;
+    end
+    %}
+end
+
+% *** IFFT: generate time domain data signal 
+DATAamplitudeScaler = 1;%sqrt(1/52); %sqrt(1/52);% FIXME
+l1 = length(pilotOut)-64;
+outCount = 0;
+for ds = 1:64:l1
+    ifftOut = ifft(pilotOut(ds:ds+63), 64);
+
+    % *** Add guard interval 
+    for s = 0:(80-1)
+        ind = mod(s+64-16, 64) + 1;
+        outCount = outCount + 1;
+        output_t(outCount) = DATAamplitudeScaler * ifftOut(ind);   
+    end 
+
+    % ******* Pulse shaping 
+    % Smooth transition between LTF and LSIG
+    % FIXME
+    %kkk=1;
+end  % end for ds = 1:64:l1
+
+DATA_up2 = zeros(1,800);
+%DATA_up2 = interp(output_t, osamp); % Upsample 
+
+% ------- Concatenate all tx samples ---------
+zero_vector = zeros(1, length(LTF_up2));
+zero_data = zeros(1, length(DATA_up2));
+
+for txn = 1:numTxNode
+    td = [STF_up2, LTF_up2, zero_vector, zero_vector, zero_vector, DATA_up2];
+	td(1) = 0.5*td(1);
+	td(length(STF_up2)) = 0.5 * td(length(STF_up2));%windowing
+	td(length(STF_up2)+1) = 0.5 * td(length(STF_up2)+1);
+	td(length(STF_up2+LTF_up2)) = 0.5 * td(length(STF_up2+LTF_up2));
+    td = repmat(td, 1, 1); %5);  % make 5 duplicates
+filterOrder = 256;
+fff = fir1(filterOrder, 1/osamp);
+%td = filter(fff, 1, td);  
+    TxData(:,1,txn) = [td zeros(1,max(1,TxLength-length(td)))];
+
+    td = [STF_up2, zero_vector, LTF_up2, zero_vector, zero_vector, DATA_up2];
+	td(1) = 0.5*td(1);
+	td(length(STF_up2)) = 0.5 * td(length(STF_up2));%windowing
+	td(length(STF_up2)+length(zero_vector)+1) = 0.5 * td(length(STF_up2)+length(zero_vector)+1);
+	td(length(STF_up2+length(zero_vector)+LTF_up2)) = 0.5 * td(length(STF_up2+length(zero_vector)+LTF_up2));
+    td = repmat(td, 1, 1); %5);  % make 5 duplicates
+%td = filter(fff, 1, td);  
+    TxData(:,2,txn) = [td zeros(1,max(1,TxLength-length(td)))];
+
+    td = [STF_up2, zero_vector, zero_vector, LTF_up2, zero_vector, DATA_up2];
+	td(1) = 0.5*td(1);
+	td(length(STF_up2)) = 0.5 * td(length(STF_up2));%windowing
+	td(length(STF_up2)+2*length(zero_vector)+1) = 0.5 * td(length(STF_up2)+2*length(zero_vector)+1);
+	td(length(STF_up2+2*length(zero_vector)+LTF_up2)) = 0.5 * td(length(STF_up2+2*length(zero_vector)+LTF_up2));
+    td = repmat(td, 1, 1); %5);  % make 5 duplicates
+%td = filter(fff, 1, td);  
+    TxData(:,3,txn) = [td zeros(1,max(1,TxLength-length(td)))];
+
+    td = [STF_up2, zero_vector, zero_vector, zero_vector, LTF_up2, DATA_up2];
+	td(1) = 0.5*td(1);
+	td(length(STF_up2)) = 0.5 * td(length(STF_up2));%windowing
+	td(length(STF_up2)+3*length(zero_vector)+1) = 0.5 * td(length(STF_up2)+3*length(zero_vector)+1);
+	td(length(STF_up2+3*length(zero_vector)+LTF_up2)) = 0.5 * td(length(STF_up2+3*length(zero_vector)+LTF_up2)); 
+    td = repmat(td, 1, 1); %5);  % make 5 duplicates
+%td = filter(fff, 1, td);  
+    TxData(:,4,txn) = [td zeros(1,max(1,TxLength-length(td)))];
+
+    %radiovar = eval(sprintf('RADIO%d_TXDATA',txa));
+    %warplab_writeSMWO(udp_txnode(txn), radiovar, TxData(:,txa,txn).');
+end
+
+
+%{
+Node1_Radio1_TxData = [STF_up2, LTF_up2, zero_vector, zero_vector, zero_vector, DATA_up2];
+Node1_Radio1_TxData = repmat(Node1_Radio1_TxData,1,1);%,3); % make 5 packets
+Node1_Radio1_TxData = [Node1_Radio1_TxData zeros(1,max(1,TxLength-length(Node1_Radio1_TxData)))];  
+
+Node1_Radio2_TxData = [STF_up2, zero_vector, LTF_up2, zero_vector, zero_vector, zero_data];
+Node1_Radio2_TxData = repmat(Node1_Radio2_TxData,1,1); % make 5 packets
+Node1_Radio2_TxData = [Node1_Radio2_TxData zeros(1,max(1,TxLength-length(Node1_Radio2_TxData)))];
+
+Node1_Radio3_TxData = [STF_up2, zero_vector, zero_vector, LTF_up2, zero_vector, zero_data]; 
+Node1_Radio3_TxData = repmat(Node1_Radio3_TxData,1,1); % make 5 packets
+Node1_Radio3_TxData = [Node1_Radio3_TxData zeros(1,max(1,TxLength-length(Node1_Radio3_TxData)))];
+
+Node1_Radio4_TxData = [STF_up2, zero_vector, zero_vector, zero_vector, LTF_up2, zero_data]; 
+Node1_Radio4_TxData = repmat(Node1_Radio4_TxData,1,1); % make 5 packets
+Node1_Radio4_TxData = [Node1_Radio4_TxData zeros(1,max(1,TxLength-length(Node1_Radio4_TxData)))];
+%}
+
+%{
+%test SISO transmission
+Node1_Radio1_TxData = [STF_up2, LTF_up2, DATA_up2];
+Node1_Radio1_TxData = [Node1_Radio1_TxData zeros(1,max(1,TxLength-length(Node1_Radio1_TxData)))];  
+Node1_Radio2_TxData = Node1_Radio1_TxData; %zeros(1, length(Node1_Radio1_TxData));
+Node1_Radio1_TxData = zeros(1, length(Node1_Radio1_TxData));
+Node1_Radio3_TxData = zeros(1, length(Node1_Radio1_TxData));
+Node1_Radio4_TxData = zeros(1, length(Node1_Radio1_TxData));
+%}
+
+
+if USESIM == 1
+    fname = 'sim_modulated.dat';
+    fo = fopen(fname, 'wb');
+    %fwrite(fo, [real(output_t); imag(output_t)], 'float32');
+    fwrite(fo, [real(Node1_Radio2_TxData); ...
+            imag(Node1_Radio2_TxData)], 'float32'); 
+    fclose(fo);
+
+    %decode_MUMIMO(Node1_Radio2_TxData.');
+else
+
+% ========== Initializaton of WARP radio parameters ========
+%Load some global definitions (packet types, etc.)
+warplab_defines
+
+% Create Socket handles and intialize nodes
+%[socketHandles, packetNum] = warplab_initialize;
+%[socketHandles, packetNum] = warplab_initialize(3);%test
+[socketHandles, packetNum] = warplab_initialize(numRxNode+1);
+
+% Separate the socket handles for easier access
+% The first socket handle is always the magic SYNC
+% The rest of the handles are the handles to the WARP nodesb
+udp_Sync = socketHandles(1);
+%{
+ncount = 1;
+for n = 1:numTxNode
+    udp_txnode(n) = socketHandles(n+1);
+end
+for n = 1:numRxNode
+    udp_rxnode(n) = socketHandles(1+numTxNode+n);
+end
+%}
+%udp_txnode(1) = socketHandles(txID*2);
+udp_txnode(1) = socketHandles(2); %test one pair of nodes
+%udp_rxnode(1) = socketHandles(3); %test one pair of nodes
+%udp_rxnode(2) = socketHandles(4); %test one pair of nodes
+for rxn = 1:numRxNode
+	udp_rxnode(rxn) = socketHandles(rxn+2);
+end
+
+%udp_rxnode(2) = socketHandles(4);4
+
+%Node2_MGC_AGC_Select = 0;   % Set MGC_AGC_Select=1 to enable Automatic Gain Control (AGC). 
+                            % Set MGC_AGC_Select=0 to enable Manual Gain Control (MGC).
+                            % By default, the nodes are set to MGC.  
+%Node3_MGC_AGC_Select = 0;
+
+%Node2_TargetdBmAGC = -6;     % AGC's target dBm
+%Node2_NoiseEstdBmAGC = -95;  % AGC's Noise Estimate in dBm
+%% Download AGC parameters to node 2
+%warplab_setRadioAGCParameter(udp_node2,SET_AGC_TARGET_dBm,Node2_TargetdBmAGC);
+%warplab_setRadioAGCParameter(udp_node2,SET_AGC_NOISEEST_dBm,Node2_NoiseEstdBmAGC);
+%warplab_setRadioAGCParameter(udp_node2,SET_AGC_TRIG_DELAY,agc_trigger_nsamp_delay);
+%DCOffset_FPGA_Enabled = 0;
+%warplab_setRadioAGCParameter(udp_node2,AGC_DCO_EN,DCOffset_FPGA_Enabled);
+
+% TxMode parameters only to the transmitter node (node 1).
+for txn = 1:numTxNode
+    warplab_writeRegister(udp_txnode(txn),TX_DELAY,TxDelay);
+    warplab_writeRegister(udp_txnode(txn),TX_LENGTH,TxLength);
+    warplab_writeRegister(udp_txnode(txn),TX_MODE,TxMode);
+    warplab_setRadioParameter(udp_txnode(txn),CARRIER_CHANNEL,CarrierChannel);
+for txa = 1:numTxAntenna
+    % Node 1 will be set as the transmitter so download Tx gains to node 1. 
+	txa1 = mod(txa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_TXGAINS',txa1));
+    warplab_setRadioParameter(udp_txnode(txn), radiovar,(TxGain_RF + TxGain_BB*2^16));
+end
+end
+
+
+for rxn = 1:numRxNode
+    warplab_setRadioParameter(udp_rxnode(rxn),CARRIER_CHANNEL,CarrierChannel);
+    warplab_setAGCParameter(udp_rxnode(rxn), MGC_AGC_SEL, MGC_AGC_Select);
+for rxa = 1:numRxAntenna
+	rxa1 = mod(rxa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_RXGAINS',rxa1));
+    warplab_setRadioParameter(udp_rxnode(rxn), radiovar, (RxGain_BB + RxGain_RF*2^16)); 
+end
+end
+
+
+for txn = 1:numTxNode
+for txa = 1:numTxAntenna
+	txa1 = mod(txa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_TXDATA',txa1));
+    warplab_writeSMWO(udp_txnode(txn), radiovar, TxData(:,txa,txn).');
+end
+end
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prepare WARP boards for transmission and reception and send trigger to
+% start transmission and reception (trigger is the SYNC packet)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{
+% Enable transmitter radio path in radios 2 and 3 in node 1 (enable radio 2
+% and radio 3 in node 1 as transmitters)
+warplab_sendCmd(udp_node1, [RADIO2_TXEN], packetNum);
+%warplab_sendCmd(udp_node1, [RADIO1_TXEN,RADIO2_TXEN,RADIO3_TXEN,RADIO4_TXEN], packetNum);
+
+% Enable transmission of node1's radio 2 and radio 3 Tx buffer (enable
+% transmission of samples stored in radio 2 Tx Buffer and in radio 3 Tx
+% Buffer in node 1)
+warplab_sendCmd(udp_node1, [RADIO2TXBUFF_TXEN], packetNum);
+%warplab_sendCmd(udp_node1, [RADIO1TXBUFF_TXEN,RADIO2TXBUFF_TXEN,RADIO3TXBUFF_TXEN,RADIO4TXBUFF_TXEN], packetNum);
+%}
+
+for txn = 1:numTxNode
+for txa = 1:numTxAntenna
+	txa1 = mod(txa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_TXEN', txa1));
+    warplab_sendCmd(udp_txnode(txn), radiovar, packetNum);
+    radiovar = eval(sprintf('RADIO%dTXBUFF_TXEN', txa1));
+    warplab_sendCmd(udp_txnode(txn), radiovar, packetNum);
+end
+end
+for rxn = 1:numRxNode
+for rxa = 1:numRxAntenna
+	rxa1 = mod(rxa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_RXEN', rxa1));
+    warplab_sendCmd(udp_rxnode(rxn), radiovar, packetNum);
+    radiovar = eval(sprintf('RADIO%dRXBUFF_RXEN', rxa1));
+    warplab_sendCmd(udp_rxnode(rxn), radiovar, packetNum);
+end
+end
+
+%% ============= Start tx and rx =======================
+
+% --- store samples to file ---
+for rxn = 1:numRxNode
+for rxa = 1:numRxAntenna	
+    sf = sprintf('OFDMsamples_a%d_r%d_t%d.dat', rxa, rxn, txID);
+    fsout(rxa,rxn) = fopen(sf, 'wb');
+end
+end
+
+for c = 1:numRxCapture % receive for numRxCapture times
+
+% Prime transmitter state machine in node 1. Node 1 will be
+% waiting for the SYNC packet. Transmission from node 1 will be triggered
+% when node 1 receives the SYNC packet.
+%warplab_sendCmd(udp_node1, TX_START, packetNum);
+fprintf(1, 'Start tx %d\n', c);
+for txn = 1:numTxNode
+    warplab_sendCmd(udp_txnode(txn), TX_START, packetNum);
+end
+
+for rxn = 1:numRxNode
+    %xyz: this clears the RX buffer
+    warplab_sendCmd(udp_rxnode(rxn), RX_START, packetNum); 
+end
+
+
+% Prime receiver state machine in node 2. Node 2 will be waiting
+% for the SYNC packet. Capture at node 2 will be triggered when node 2
+% receives the SYNC packet.
+% Send the SYNC packet
+warplab_sendSync(udp_Sync);
+
+% Leave continuous transmitter on for nsec seconds
+%nsec = 0.001;
+%pause(nsec);
+
+% Stop transmission
+%warplab_sendCmd(udp_node1, TX_STOP, packetNum); % Resets the output and read 
+% address of the transmitter buffer without disabling the transmitter radio. 
+for txn = 1:numTxNode
+%warplab_sendCmd(udp_txnode(txn), TX_STOP, packetNum); % Resets the output and read  address of the transmitter buffer without disabling the transmitter radio. 
+end
+
+% ***** Read the received smaples from the WARP board
+% Read back the received samples 
+for rxn = 1:numRxNode
+for rxa = 1:numRxAntenna
+	rxa1 = mod(rxa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%d_RXDATA',rxa1));
+    RawRxData(:,rxa,rxn) = warplab_readSMRO(udp_rxnode(rxn), radiovar, TxLength+TxDelay);
+    fwrite(fsout(rxa,rxn), RawRxData(:,rxa,rxn), 'uint32');
+end 
+end 
+
+
+%{
+%----------------------------------------------------------------------%
+% ===== AGC based processing =====
+% Process the received samples to obtain the meaningful data
+%[Node2_Radio2_RxData_wDCO,Node2_Radio2_RxOTR] = warplab_processRawRxData(Node2_Radio2_RawRxData);
+%[Node2_Radio3_RxData_wDCO,Node2_Radio3_RxOTR] = warplab_processRawRxData(Node2_Radio3_RawRxData);
+
+% Read the address where the AGC fixes the gains
+%[AGC_Set_Address] = warplab_readRegister(udp_node2,AGC_DONE_ADDR);
+% Read the gains that were set by the AGC
+% xyz TODO: disable AGC
+%[GainsRF_Init,GainsBB_Init] = warplab_readAGCGains(udp_node2);
+% Remove DC Offset (DCO) from RxData
+%[Node2_Radio2_RxData] = warplab_correctDCO(Node2_Radio2_RxData_wDCO,AGC_Set_Address);
+%[Node2_Radio3_RxData] = warplab_correctDCO(Node2_Radio3_RxData_wDCO,AGC_Set_Address);
+%          [Node2_Radio2_RxData] = Node2_Radio2_RxData_wDCO;
+%          [Node2_Radio3_RxData] = Node2_Radio3_RxData_wDCO;
+%}
+
+%{
+% Set radios in node 1 back to Tx disabled mode 
+%warplab_sendCmd(udp_node1, [RADIO1TXBUFF_TXDIS,RADIO2TXBUFF_TXDIS,RADIO3TXBUFF_TXDIS,RADIO4TXBUFF_TXDIS], packetNum);
+
+% Disable the transmitter radios
+%warplab_sendCmd(udp_node1, [RADIO1_TXDIS,RADIO2_TXDIS,RADIO3_TXDIS,RADIO4_TXDIS], packetNum);
+
+% Let the receiver know that samples have been read and system is ready for
+% a new capture
+warplab_sendCmd(udp_node2, RX_DONEREADING, packetNum);
+warplab_sendCmd(udp_node3, RX_DONEREADING, packetNum);
+
+% Set Rx buffer in node 2 back to Rx disabled mode
+warplab_sendCmd(udp_node2, [RADIO1RXBUFF_RXDIS, RADIO2RXBUFF_RXDIS, RADIO3RXBUFF_RXDIS, RADIO4RXBUFF_RXDIS], packetNum);
+warplab_sendCmd(udp_node3, [RADIO1RXBUFF_RXDIS, RADIO2RXBUFF_RXDIS, RADIO3RXBUFF_RXDIS, RADIO4RXBUFF_RXDIS], packetNum);
+
+% Disable the receiver radios
+warplab_sendCmd(udp_node2, [RADIO1_RXDIS,RADIO2_RXDIS,RADIO3_RXDIS,RADIO4_RXDIS], packetNum); 
+warplab_sendCmd(udp_node3, [RADIO1_RXDIS,RADIO2_RXDIS,RADIO3_RXDIS,RADIO4_RXDIS], packetNum); 
+%}
+% Reset the AGC
+%warplab_sendCmd(udp_node2, AGC_RESET, packetNum);
+
+end % end for c = 1:numRxCapture
+
+% ---- Disable transmitter ------------
+for txn = 1:numTxNode
+for txa = 1:numTxAntenna
+	txa1 = mod(txa, 4)+1; 
+    radiovar = eval(sprintf('RADIO%dTXBUFF_TXDIS', txa1));
+    warplab_sendCmd(udp_txnode(txn), radiovar, packetNum);
+    radiovar = eval(sprintf('RADIO%d_TXDIS', txa1));
+    warplab_sendCmd(udp_txnode(txn), radiovar, packetNum);
+end
+    warplab_writeRegister(udp_txnode(txn),TX_MODE, 0);
+end
+
+% ============ Reset and disable the rx boards ==========
+for rxn = 1:numRxNode
+    warplab_sendCmd(udp_rxnode(rxn), RX_DONEREADING, packetNum);
+    for rxa = 1:numRxAntenna
+		rxa1 = mod(rxa, 4)+1; 
+        radiovar = eval(sprintf('RADIO%dRXBUFF_RXDIS', rxa1));
+        warplab_sendCmd(udp_rxnode(rxn), radiovar, packetNum);
+        radiovar = eval(sprintf('RADIO%d_RXDIS', rxa1));
+        warplab_sendCmd(udp_rxnode(rxn), radiovar, packetNum);
+    end
+end
+
+
+%Close sockets
+pnet('closeall');
+
+for rxn = 1:numRxNode
+for rxa = 1:numRxAntenna
+    %sf = sprintf('singleToneSamples_a%d_r%d', rxa, rxn);
+    fclose(fsout(rxa,rxn));
+end
+end
+
+
+end % end if USESIM==0
+
+

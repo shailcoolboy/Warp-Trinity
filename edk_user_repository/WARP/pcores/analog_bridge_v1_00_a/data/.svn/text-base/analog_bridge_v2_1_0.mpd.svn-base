@@ -1,0 +1,71 @@
+###################################################################
+# Copyright (c) 2006 Rice University
+# All Rights Reserved
+# This code is covered by the Rice-WARP license
+# See http://warp.rice.edu/license/ for details
+###################################################################
+
+BEGIN analog_bridge
+
+## Peripheral Options
+OPTION IPTYPE = IP
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VERILOG
+OPTION ARCH_SUPPORT_MAP = (virtex2p=PREFERRED, virtex4=PREFERRED, others=AVAILABLE)
+OPTION IP_GROUP = USER
+OPTION USAGE_LEVEL = BASE_USER
+
+IO_INTERFACE IO_IF = analog_bridge, IO_TYPE = WARP_ANALOGBRIDGE_V1
+
+## Ports
+####################################################################################
+## User Ports
+## The user must connect sources/sinks to these ports in XPS in order to use
+##  the analog board. The rest of the board's connections are made automatically
+####################################################################################
+PORT user_DAC1_A = "", DIR = I, VEC = [0:13], IO_IS = userDAC1A
+PORT user_DAC1_B = "", DIR = I, VEC = [0:13], IO_IS = userDAC1B
+PORT user_DAC2_A = "", DIR = I, VEC = [0:13], IO_IS = userDAC2A
+PORT user_DAC2_B = "", DIR = I, VEC = [0:13], IO_IS = userDAC2B
+
+PORT user_DAC1_sleep = "net_gnd", DIR = I
+PORT user_DAC2_sleep = "net_gnd", DIR = I
+
+PORT user_ADC_A = "", DIR = O, VEC = [0:13], IO_IS = userADCA
+PORT user_ADC_B = "", DIR = O, VEC = [0:13], IO_IS = userADCB
+
+PORT user_ADC_DFS = "net_vcc", DIR = I
+PORT user_ADC_DCS = "net_gnd", DIR = I
+PORT user_ADC_pdwnA = "net_gnd", DIR = I
+PORT user_ADC_pdwnB = "net_gnd", DIR = I
+PORT user_ADC_otrA = "", DIR = O
+PORT user_ADC_otrB = "", DIR = O
+PORT user_LED = "", DIR = I, VEC = [0:2]
+
+####################################################################################
+
+#Automatically tied to sys_clk_s, the OPB clock created by BSB
+# Custom clock setups may need to change this
+# Show defaults in System Assembly to view and change this assignment
+PORT clock_in = "sys_clk_s", DIR = I, SIGIS = CLK
+
+PORT clock_out = "", DIR = O, SIGIS = CLK
+
+PORT analog_DAC1_A = "", DIR = O, VEC = [13:0], IO_IS = analogDAC1A, ENDIAN = LITTLE
+PORT analog_DAC1_B = "", DIR = O, VEC = [13:0], IO_IS = analogDAC1B, ENDIAN = LITTLE
+PORT analog_DAC2_A = "", DIR = O, VEC = [13:0], IO_IS = analogDAC2A, ENDIAN = LITTLE
+PORT analog_DAC2_B = "", DIR = O, VEC = [13:0], IO_IS = analogDAC2B, ENDIAN = LITTLE
+PORT analog_DAC1_sleep = "", DIR = O
+PORT analog_DAC2_sleep = "", DIR = O
+
+PORT analog_ADC_A = "", DIR = I, VEC = [13:0], IO_IS = analogADCA, ENDIAN = LITTLE
+PORT analog_ADC_B = "", DIR = I, VEC = [13:0], IO_IS = analogADCB, ENDIAN = LITTLE
+PORT analog_ADC_DFS = "", DIR = O
+PORT analog_ADC_DCS = "", DIR = O
+PORT analog_ADC_pdwnA = "", DIR = O
+PORT analog_ADC_pdwnB = "", DIR = O
+PORT analog_ADC_otrA = "", DIR = I
+PORT analog_ADC_otrB = "", DIR = I
+PORT analog_LED = "", DIR = O, VEC = [0:2], IO_IS = analogLED
+
+END

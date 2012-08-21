@@ -1,0 +1,127 @@
+function matperfClient_StartExp(varargin)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% options :
+%       UDP/TCP single
+%       UDP/TCP dualtest
+%       UDP/TCP tradeoff
+% usage : 
+%       matperfClient_StartExp('UDP','10.96.94.199','dualtest')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+tic;
+
+UdpTcp  = 0; % UdpTcp is 1 when UDP and it is 2 when TCP
+clear_set;
+
+if strcmp(varargin(1),'UDP'),
+    UdpTcp = 1;
+    tmp_add = varargin(2);
+elseif strcmp(varargin(1), 'TCP'),
+    UdpTcp = 2;
+    tmp_add = varargin(2);
+end
+% tells matlab what mode user wants to use. 
+if strcmp(varargin(3), 'single'),
+    mode = 1; % single
+elseif strcmp(varargin(3), 'dualtest'),
+    mode = 2; % dualtest
+elseif strcmp(varargin(3), 'tradeoff'),
+    mode = 3; % tradeoff
+else
+    return 
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ask server to generate & accept experiment
+% 0 - experiment request
+% 1 - trial request
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In the below while loop, it will generate a udp packet that includese whether 
+% the client is in UDP/TCP single, dualtest or trade off mode and asks the 
+% server to get ready for the experiment. If the server successfully 
+% recognizes the request and be ready, it will send 0 back to the client
+% and matlab gets out of this while loop.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+udp = pnet('udpsocket', 3333);
+packet = [0; UdpTcp; mode]; % prepares a package
+while(1),
+    pnet(udp,'write',packet);
+    pnet(udp,'writepacket',char(tmp_add),3333); % sends a packet carrying signal 0.
+    pnet(udp,'setreadtimeout',1.2); % wait for the response for 1.2 seconds
+    len = pnet(udp,'readpacket');
+    [address] = pnet(udp,'gethost');
+    if len == 0 || len < 0, % if the client does not receive the response
+        disp('server not responding...reasking to awknowledge');
+        pnet('closeall');
+        udp = pnet('udpsocket',3333);
+        continue;
+    elseif len >0,          % client has received a response. 
+        data = pnet(udp,'read',1000,'double');
+        if data == 0,
+            disp('server approved experiment request');
+        else
+            disp('Wrong Code');
+            continue
+        end
+        break;
+    end
+end
+pnet('closeall');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% calling the matperfClient_StartTrial(length, bandwidth, UdpTcp, mode)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if need to define port #              %
+% define here                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+reqport = 5001; % default               
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if need to define time #              %
+% define here                           %
+  time = 30; % default                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+oneM = 1024 * 1024; % defined as 1 Mbits
+tenM = 10 * oneM;
+i = 1;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+oneWM = 1024 * 8;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% when UDP is selected, the client will run the two for loops with
+% different values of bandwidth and length; and it will set the windows
+% value to 0, which is not needed here. And after one trial, i and the port
+% number will increment by 1 and used in next trial.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if UdpTcp == 1,
+    windows = 0;
+    for length = 200 :600: 1400
+        for bandwidth = linspace(oneM,oneM * 50,50)
+            matperfClient_StartTrial(length, windows, bandwidth, UdpTcp, mode, time,address,reqport)
+            nem = sprintf('executed %d trial',i);
+            i = i + 1;
+            disp(nem);
+        end
+    end
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % when TCP is selected, length and bandwidth are kept constant and only
+    % window value is being changed and i and port number increment by 1 as
+    % well.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+elseif UdpTcp == 2,
+    length = 0;
+    bandwidth = 0;
+    for windows = linspace(2* oneWM, 216* oneWM, 10)
+        matperfClient_StartTrial(length, windows, bandwidth, UdpTcp, mode, time,address,reqport)
+        nem = sprintf('executed %d trial',i);
+        reqport = reqport + 1;
+        i = i + 1;
+        disp(nem);
+    end
+    
+end
+toker = toc;
+disp(toker)
+return

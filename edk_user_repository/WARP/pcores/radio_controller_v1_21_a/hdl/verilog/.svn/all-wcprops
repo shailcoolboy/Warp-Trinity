@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WARP/!svn/ver/1061/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog
+END
+user_logic.v
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WARP/!svn/ver/1061/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog/user_logic.v
+END
+spi_top.v
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WARP/!svn/ver/1055/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog/spi_top.v
+END
+spi_clgen.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WARP/!svn/ver/1055/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog/spi_clgen.v
+END
+radio_controller_TxTiming.v
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WARP/!svn/ver/1055/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog/radio_controller_TxTiming.v
+END
+spi_shift.v
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WARP/!svn/ver/1055/PlatformSupport/CustomPeripherals/pcores/radio_controller_v1_21_a/hdl/verilog/spi_shift.v
+END

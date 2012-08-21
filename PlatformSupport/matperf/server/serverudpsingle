@@ -1,0 +1,61 @@
+# this program is for UDP single mode
+# first it opens the result.txt produced from pint.txt
+import re
+result = open('result.txt').readlines() 
+length1 = len(result) 
+
+# in order to make sure everything has space between two words so that 
+# when splitting a sentence into a row of words, not
+# any of them get stuck.
+  
+for i in range(0, length1): 
+        result[i] = result[i].replace('- ', '-')
+        result[i] = result[i].replace('/ ', '/')
+        result[i] = result[i].replace('[','[ ')
+        result[i] = result[i].replace(']',' ]')
+        result[i] = result[i].replace(':',' :')
+        result[i] = result[i].replace('(','( ')
+        result[i] = result[i].replace(')',' )')
+for i in range(0, length1): 
+        result[i] = result[i].replace('-', ' ')
+        result[i] = result[i].replace('/', ' ')
+
+
+result = result[5:length1] 
+length2 = len(result) 
+
+# in below 2 for loops, i is devided by the total number of output lines(3). 
+# and the remainders tells the specific line that I would like to save into separate file.
+# in repnum.txt, the line that contains jitter,lost,totalpacket,and etc is saved into it as vector of words.
+# in portadd.txt, the line that contains port numbers of client and server is saved into it, as a vector words.
+# python separates a sentence to each words wih a space between them. 
+
+for i in range(0, length2):
+    if (i%3) == 0:
+        f = open('ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+
+    elif (i%3) == 2:
+        f = open('rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+       
+a = open('ptmp.txt').readlines()
+for i in range(0, len(a)):
+    portadd = a[i]
+    q = re.split('\s+', str(portadd))
+    for j in range(0, len(q)):
+        s = open('portadd.txt','a')
+        s.write(str(q[j])+'\n')
+        s.close()
+
+f = open('rtmp.txt').readlines()
+for i in range(0, len(f)):
+    repnum = f[i]
+    p = re.split('\s+', str(repnum))
+    for j in range(0, len(p)):
+        s = open('repnum.txt','a')
+        s.write(str(p[j])+'\n')
+        s.close()
+

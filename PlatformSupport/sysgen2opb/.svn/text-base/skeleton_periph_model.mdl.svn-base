@@ -1,0 +1,4190 @@
+Model {
+  Name			  "skeleton_periph_model"
+  Version		  6.5
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.13"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Jul 14 14:40:12 2006"
+  Creator		  "murphpo"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "murphpo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Apr 28 03:22:14 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StrictBusMsg		  "None"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "skeleton_periph_model"
+    Location		    [327, 162, 1062, 721]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      " System Generator"
+      Tag		      "genX"
+      Ports		      []
+      Position		      [77, 77, 128, 127]
+      ShowName		      off
+      AttributesFormatString  "System\\nGenerator"
+      UserDataPersistent      on
+      SourceBlock	      "xbsIndex_r4/ System Generator"
+      SourceType	      "Xilinx System Generator Block"
+      ShowPortLabels	      on
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      infoedit		      " System Generator"
+      xilinxfamily	      "Virtex4"
+      part		      "xc4vsx35"
+      speed		      "-10"
+      package		      "ff668"
+      synthesis_tool	      "XST"
+      directory		      "./netlist"
+      testbench		      off
+      simulink_period	      "1"
+      sysclk_period	      "10"
+      incr_netlist	      off
+      trim_vbits	      "Everywhere in SubSystem"
+      dbl_ovrd		      "According to Block Masks"
+      core_generation	      "According to Block Masks"
+      run_coregen	      off
+      deprecated_control      off
+      eval_field	      "0"
+      has_advanced_control    "0"
+      sggui_pos		      "-1,-1,-1,-1"
+      block_type	      "sysgen"
+      block_version	      "8.2.02"
+      sg_icon_stat	      "51,50,-1,-1,red,beige,0,07734"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 51 51 0 ],[0 0 50 50 ],[0.93 0.92 0.86]);\npatch([12 4 16 4 12 25 29 3"
+"3 47 36 25 17 29 17 25 36 47 33 29 25 12 ],[5 13 25 37 45 45 41 45 45 34 45 3"
+"7 25 13 5 16 5 5 9 5 5 ],[0.6 0.2 0.25]);\nplot([0 0 51 51 0 ],[0 50 50 0 0 ]"
+");\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin ico"
+"n text');\nfprintf('','COMMENT: end icon text');\n"
+      sg_blockgui_xml	      "<!--  *  Copyright (c) 2005, Xilinx, Inc.  All "
+"Rights Reserved.            --><!--  *  Reproduction or reuse, in any form, w"
+"ithout the explicit written  --><!--  *  consent of Xilinx, Inc., is strictly"
+" prohibited.                  --><sysgenblock has_userdata=\"true\" tag=\"gen"
+"X\" block_type=\"sysgen\" simulinkname=\" System Generator\" >\n <icon width="
+"\"51\" bg_color=\"beige\" height=\"50\" caption_format=\"System\\nGenerator\""
+" wmark_color=\"red\" />\n <callbacks DeleteFcn=\"xlSysgenGUI('delete', gcs, g"
+"cbh);\" OpenFcn=\"xlSysgenGUI('startup',gcs,gcbh)\" ModelCloseFcn=\"xlSysgenG"
+"UI('Close',gcs,gcbh)\" PostSaveFcn=\"xlSysgenGUI('Save')\" />\n <libraries>\n"
+"  <library name=\"xbsIndex\" />\n  <library name=\"xbsBasic\" />\n  <library "
+"name=\"xbsTools\" />\n </libraries>\n <subsystem_model file=\"system_generato"
+"r_subsystem.mdl\" />\n <blockgui label=\"Xilinx System Generator\" >\n  <edit"
+"box evaluate=\"false\" multi_line=\"true\" name=\"infoedit\" read_only=\"true"
+"\" default=\" System Generator\" />\n  <editbox evaluate=\"false\" name=\"xil"
+"inxfamily\" default=\"Virtex4\" label=\"Xilinx family\" />\n  <editbox evalua"
+"te=\"false\" name=\"part\" default=\"xc4vsx35\" label=\"Part\" />\n  <editbox"
+" evaluate=\"false\" name=\"speed\" default=\"-10\" label=\"Speed\" />\n  <edi"
+"tbox evaluate=\"false\" name=\"package\" default=\"ff668\" label=\"Package\" "
+"/>\n  <listbox evaluate=\"true\" name=\"synthesis_tool\" default=\"XST\" labe"
+"l=\"Synthesis tool\" >\n   <item value=\"Spectrum\" />\n   <item value=\"Synp"
+"lify\" />\n   <item value=\"Synplify Pro\" />\n   <item value=\"XST\" />\n   "
+"<item value=\"Precision\" />\n  </listbox>\n  <editbox evaluate=\"false\" nam"
+"e=\"directory\" default=\"./netlist\" label=\"Target directory\" />\n  <check"
+"box evaluate=\"true\" name=\"testbench\" default=\"off\" label=\"Testbench\" "
+"/>\n  <editbox evaluate=\"true\" name=\"simulink_period\" default=\"1\" label"
+"=\"Simulink period\" />\n  <editbox evaluate=\"true\" name=\"sysclk_period\" "
+"default=\"10\" label=\"System clock period\" />\n  <checkbox evaluate=\"true"
+"\" name=\"incr_netlist\" default=\"off\" label=\"Incremental netlisting\" />"
+"\n  <listbox evaluate=\"true\" name=\"trim_vbits\" default=\"Everywhere in Su"
+"bSystem\" label=\"Trim valid bits\" >\n   <item value=\"According to Block Ma"
+"sks\" />\n   <item value=\"Everywhere in SubSystem\" />\n   <item value=\"No "
+"Where in SubSystem\" />\n  </listbox>\n  <listbox evaluate=\"true\" name=\"db"
+"l_ovrd\" default=\"According to Block Masks\" label=\"Override with doubles\""
+" >\n   <item value=\"According to Block Masks\" />\n   <item value=\"Everywhe"
+"re in SubSystem\" />\n   <item value=\"No Where in SubSystem\" />\n  </listbo"
+"x>\n  <listbox evaluate=\"true\" name=\"core_generation\" default=\"According"
+" to Block Masks\" label=\"Generate cores\" >\n   <item value=\"According to B"
+"lock Masks\" />\n   <item value=\"Everywhere Available\" />\n   <item value="
+"\"Not Needed - Already Generated\" />\n  </listbox>\n  <checkbox evaluate=\"t"
+"rue\" name=\"run_coregen\" default=\"off\" label=\"Run CoreGen\" />\n  <check"
+"box evaluate=\"true\" name=\"deprecated_control\" default=\"off\" label=\"Sho"
+"w deprecated controls\" />\n  <hiddenvar evaluate=\"true\" name=\"eval_field"
+"\" default=\"0\" />\n </blockgui>\n</sysgenblock>\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Force8"
+      Ports		      [1, 1]
+      Position		      [275, 399, 315, 431]
+      SourceBlock	      "xbsIndex_r4/Reinterpret"
+      SourceType	      "Xilinx Type Reinterpreter Block"
+      infoedit		      "Changes type of samples without altering their "
+"binary representation.<P><P>Hardware notes: In hardware this block costs noth"
+"ing.<P><P>Example:  Suppose the input is 6 bits wide, signed, with 2 fraction"
+"al bits, and the output is forced to unsigned with 0 fractional bits.  Then a"
+"n input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (1"
+"11000 in binary)."
+      force_arith_type	      on
+      arith_type	      "Unsigned"
+      force_bin_pt	      off
+      bin_pt		      "0"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,356,331"
+      block_type	      "cast"
+      block_version	      "VER_STRING_GOES_HERE"
+      sg_icon_stat	      "40,32,1,1,white,blue,0,8982c1db"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 50 50 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([16 11 18 11 16 24 26"
+" 28 37 30 23 18 25 18 23 30 37 28 26 24 16 ],[3 8 15 22 27 27 25 27 27 20 27 "
+"22 15 8 3 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 32 32 0 0"
+" ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
+"con text');\ncolor('black');disp('reinterpret');\nfprintf('','COMMENT: end ic"
+"on text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Slice8"
+      Ports		      [1, 1]
+      Position		      [185, 401, 230, 429]
+      SourceBlock	      "xbsIndex_r4/Slice"
+      SourceType	      "Xilinx Bit Slice Extractor Block"
+      infoedit		      "Extracts a given range of bits from each input "
+"sample and presents it at the output.  The output type is ordinarily unsigned"
+" with binary point at zero, but can be Boolean when the slice is one bit wide"
+".<P><P>Hardware notes: In hardware this block costs nothing."
+      nbits		      "1"
+      boolean_output	      off
+      mode		      "Lower Bit Location + Width"
+      bit1		      "0"
+      base1		      "MSB of Input"
+      bit0		      "0"
+      base0		      "LSB of Input"
+      dbl_ovrd		      off
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,516,446"
+      block_type	      "slice"
+      block_version	      "VER_STRING_GOES_HERE"
+      sg_icon_stat	      "45,28,1,1,white,blue,0,fe24a11e"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics ');\np"
+"atch([0 45 45 0 ],[0 0 28 28 ],[0.77 0.82 0.91]);\npatch([15 10 17 10 15 22 2"
+"4 26 34 28 22 18 26 18 22 28 34 26 24 22 15 ],[3 8 15 22 27 27 25 27 27 21 27"
+" 23 15 7 3 9 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 28 28 0 0"
+" ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: begin"
+" icon text ');\ncolor('black');port_label('output',1,'[a:b]');\nfprintf('','C"
+"OMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      From
+      Name		      "a_valid_from"
+      Position		      [20, 271, 80, 299]
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "a_valid"
+    }
+    Block {
+      BlockType		      From
+      Name		      "addr_from"
+      Position		      [20, 214, 75, 246]
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "addr"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "main8"
+      Ports		      []
+      Position		      [124, 205, 164, 265]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"main8"
+	Location		[198, 167, 1360, 994]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant2"
+	  Ports			  [0, 1]
+	  Position		  [855, 481, 890, 499]
+	  ShowName		  off
+	  SourceBlock		  "xbsIndex_r4/Constant"
+	  SourceType		  "Xilinx Constant Block Block"
+	  arith_type		  "Unsigned"
+	  const			  "0"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  explicit_period	  on
+	  period		  "1"
+	  dsp48_infoedit	  "The use of this block for DSP48 instruction"
+"s is deprecated.  Please use the Opmode block."
+	  equ			  "P=C"
+	  opselect		  "C"
+	  inp2			  "PCIN>>17"
+	  opr			  "+"
+	  inp1			  "P"
+	  carry			  "CIN"
+	  dbl_ovrd		  off
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "constant"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "35,18,0,1,white,blue,0,c7c04a0c"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 35 35 0 ],[0 0 18 18 ],[0.77 0.82 0.91]);\npatch([13 10 14 10 13 "
+"18 19 20 25 21 17 14 18 14 17 21 25 20 19 18 13 ],[2 5 9 13 16 16 15 16 16 12"
+" 16 13 9 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ],[0 18 18 0"
+" 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: beg"
+"in icon text ');\ncolor('black');port_label('output',1,'0');\nfprintf('','COM"
+"MENT: end icon text');\nfprintf('','COMMENT: Make no changes above this line "
+"-- machine generated code. ');\n"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [355, 335, 390, 355]
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "ps"
+	  Port {
+	    PortNumber		    1
+	    Name		    "decode"
+	    PropagatedSignals	    "opb addr"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto"
+	  Position		  [275, 309, 315, 331]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "addr"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [270, 340, 315, 360]
+	  ShowName		  off
+	  GotoTag		  "a_valid"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IP2OPB_IF"
+	  Ports			  [5]
+	  Position		  [945, 406, 1025, 574]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "IP2OPB_IF"
+	    Location		    [175, 313, 603, 832]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SGP_DBus_In"
+	      Position		      [60, 33, 90, 47]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SGP_xferAck_In"
+	      Position		      [60, 128, 90, 142]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SGP_retry_In"
+	      Position		      [60, 193, 90, 207]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SGP_toutSup_In"
+	      Position		      [60, 253, 90, 267]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SGP_errAck_In"
+	      Position		      [60, 313, 90, 327]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto6"
+	      Position		      [280, 52, 345, 68]
+	      ShowName		      off
+	      GotoTag		      "SGP_DBus"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto7"
+	      Position		      [280, 127, 345, 143]
+	      ShowName		      off
+	      GotoTag		      "SGP_xferAck"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register"
+	      Ports		      [3, 1]
+	      Position		      [140, 32, 175, 88]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      on
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,56,3,1,white,blue,0,923c1847"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 56 56 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('input',3,'"
+"en');\ncolor('black');port_label('output',1,'q');\ncolor('black');disp('\\bf{"
+"z^{-1}}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register1"
+	      Ports		      [1, 1]
+	      Position		      [140, 107, 175, 163]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,56,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 56 56 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','te"
+"xmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register2"
+	      Ports		      [1, 1]
+	      Position		      [140, 172, 175, 228]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,56,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 56 56 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','te"
+"xmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register3"
+	      Ports		      [1, 1]
+	      Position		      [140, 232, 175, 288]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,56,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 56 56 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','te"
+"xmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register4"
+	      Ports		      [1, 1]
+	      Position		      [140, 292, 175, 348]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,56,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 56 56 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','te"
+"xmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SGP_DBus"
+	      Ports		      [1, 1]
+	      Position		      [205, 53, 255, 67]
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      on
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('black'"
+");port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf"
+"('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above th"
+"is line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SGP_errAck"
+	      Ports		      [1, 1]
+	      Position		      [205, 313, 255, 327]
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      on
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('black'"
+");port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf"
+"('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above th"
+"is line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SGP_retry"
+	      Ports		      [1, 1]
+	      Position		      [205, 193, 255, 207]
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      on
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('black'"
+");port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf"
+"('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above th"
+"is line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SGP_toutSup"
+	      Ports		      [1, 1]
+	      Position		      [205, 253, 255, 267]
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      on
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('black'"
+");port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf"
+"('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above th"
+"is line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "SGP_xferAck"
+	      Ports		      [1, 1]
+	      Position		      [205, 128, 255, 142]
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      on
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('black'"
+");port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf"
+"('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above th"
+"is line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [280, 190, 300, 210]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      Position		      [280, 250, 300, 270]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator2"
+	      Position		      [280, 310, 300, 330]
+	      ShowName		      off
+	    }
+	    Line {
+	      SrcBlock		      "Register"
+	      SrcPort		      1
+	      DstBlock		      "SGP_DBus"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register4"
+	      SrcPort		      1
+	      DstBlock		      "SGP_errAck"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register3"
+	      SrcPort		      1
+	      DstBlock		      "SGP_toutSup"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register2"
+	      SrcPort		      1
+	      DstBlock		      "SGP_retry"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_xferAck"
+	      SrcPort		      1
+	      DstBlock		      "Goto7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_DBus"
+	      SrcPort		      1
+	      DstBlock		      "Goto6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_DBus_In"
+	      SrcPort		      1
+	      DstBlock		      "Register"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_xferAck_In"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		DstBlock		"Register"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"Register1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "SGP_retry_In"
+	      SrcPort		      1
+	      DstBlock		      "Register2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_toutSup_In"
+	      SrcPort		      1
+	      DstBlock		      "Register3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_errAck_In"
+	      SrcPort		      1
+	      DstBlock		      "Register4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register1"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"SGP_xferAck"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -40; -70, 0; 0, -35]
+		DstBlock		"Register"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "SGP_retry"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_toutSup"
+	      SrcPort		      1
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SGP_errAck"
+	      SrcPort		      1
+	      DstBlock		      "Terminator2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "OPB2IP_IF"
+	  Ports			  [0, 7]
+	  Position		  [85, 302, 180, 458]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "opb addr"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "opb select"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "opb data"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "opb reset"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "opb read"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "OPB2IP_IF"
+	    Location		    [2, 74, 1014, 744]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      From
+	      Name		      "From2"
+	      Position		      [15, 46, 85, 64]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_ABus"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From3"
+	      Position		      [15, 106, 85, 124]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_BE"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From4"
+	      Position		      [15, 166, 85, 184]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_DBus"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From5"
+	      Position		      [15, 226, 85, 244]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_RNW"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From6"
+	      Position		      [15, 286, 85, 304]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_select"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From7"
+	      Position		      [15, 346, 85, 364]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_seqAddr"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From8"
+	      Position		      [15, 401, 85, 419]
+	      ShowName		      off
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "OPB_rst"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_ABus"
+	      Ports		      [1, 1]
+	      Position		      [110, 48, 160, 62]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_BE"
+	      Ports		      [1, 1]
+	      Position		      [110, 108, 160, 122]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Unsigned"
+	      n_bits		      "4"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_DBus"
+	      Ports		      [1, 1]
+	      Position		      [110, 168, 160, 182]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_RNW"
+	      Ports		      [1, 1]
+	      Position		      [110, 228, 160, 242]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Boolean"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_Select"
+	      Ports		      [1, 1]
+	      Position		      [110, 288, 160, 302]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Boolean"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_rst"
+	      Ports		      [1, 1]
+	      Position		      [110, 403, 160, 417]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Boolean"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "OPB_seqAddr"
+	      Ports		      [1, 1]
+	      Position		      [110, 348, 160, 362]
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Boolean"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Saturate"
+	      period		      "1"
+	      dbl_ovrd		      off
+	      timing_constraint	      "None"
+	      locs_specified	      off
+	      LOCs		      "{}"
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,432"
+	      block_type	      "gatewayin"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,14,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 14 14 ],[0.95 0.93 0.65]);\npatch([21 19 22 19"
+" 21 25 26 27 31 28 25 23 26 23 25 28 31 27 26 25 21 ],[2 4 7 10 12 12 11 12 1"
+"2 9 12 10 7 4 2 5 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 14 1"
+"4 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\b"
+"f In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register"
+	      Ports		      [2, 1]
+	      Position		      [265, 40, 300, 95]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register1"
+	      Ports		      [2, 1]
+	      Position		      [265, 100, 300, 155]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register2"
+	      Ports		      [2, 1]
+	      Position		      [265, 160, 300, 215]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register3"
+	      Ports		      [2, 1]
+	      Position		      [265, 220, 300, 275]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register4"
+	      Ports		      [2, 1]
+	      Position		      [265, 280, 300, 335]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register5"
+	      Ports		      [2, 1]
+	      Position		      [265, 340, 300, 395]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      on
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,55,2,1,white,blue,0,b6caf0d3"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([8 2 10 2 8 "
+"17 20 23 33 25 18 13 21 13 18 25 33 23 20 17 8 ],[14 20 28 36 42 42 39 42 42 "
+"34 41 36 28 20 15 22 14 14 17 14 14 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ]"
+",[0 55 55 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','C"
+"OMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor"
+"('black');port_label('input',2,'rst');\ncolor('black');port_label('output',1,"
+"'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COMME"
+"NT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "signal inputs"
+	      Ports		      []
+	      Position		      [540, 30, 580, 90]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"signal inputs"
+		Location		[212, 506, 421, 840]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [25, 25, 55, 55]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [25, 115, 55, 145]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [25, 160, 55, 190]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant3"
+		  Position		  [25, 205, 55, 235]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant4"
+		  Position		  [25, 245, 55, 275]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant5"
+		  Position		  [25, 290, 55, 320]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant6"
+		  Position		  [25, 70, 55, 100]
+		  Value			  "1"
+		  VectorParams1D	  on
+		  SamplingMode		  "Sample based"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "sfix(16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  SampleTime		  "inf"
+		  FramePeriod		  "inf"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto"
+		  Position		  [115, 30, 200, 50]
+		  GotoTag		  "OPB_ABus"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto1"
+		  Position		  [115, 120, 200, 140]
+		  GotoTag		  "OPB_DBus"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto2"
+		  Position		  [115, 165, 200, 185]
+		  GotoTag		  "OPB_RNW"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto3"
+		  Position		  [115, 210, 200, 230]
+		  GotoTag		  "OPB_select"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto4"
+		  Position		  [115, 250, 200, 270]
+		  GotoTag		  "OPB_seqAddr"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto5"
+		  Position		  [115, 295, 200, 315]
+		  GotoTag		  "OPB_rst"
+		  TagVisibility		  "global"
+		}
+		Block {
+		  BlockType		  Goto
+		  Name			  "Goto6"
+		  Position		  [115, 75, 200, 95]
+		  GotoTag		  "OPB_BE"
+		  TagVisibility		  "global"
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Goto"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Goto1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Goto2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  DstBlock		  "Goto3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant4"
+		  SrcPort		  1
+		  DstBlock		  "Goto4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant5"
+		  SrcPort		  1
+		  DstBlock		  "Goto5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant6"
+		  SrcPort		  1
+		  DstBlock		  "Goto6"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_ABus_Reg"
+	      Position		      [340, 63, 370, 77]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_Select_Reg"
+	      Position		      [340, 303, 370, 317]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_BE_Reg"
+	      Position		      [340, 123, 370, 137]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_DBus_Reg"
+	      Position		      [340, 183, 370, 197]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_seqAddr_Reg"
+	      Position		      [340, 363, 370, 377]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_Reset"
+	      Position		      [340, 403, 370, 417]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "OPB_RNW_Reg"
+	      Position		      [340, 243, 370, 257]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "OPB_DBus"
+	      SrcPort		      1
+	      DstBlock		      "Register2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_RNW"
+	      SrcPort		      1
+	      DstBlock		      "Register3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_seqAddr"
+	      SrcPort		      1
+	      DstBlock		      "Register5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_BE_Reg"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register2"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_DBus_Reg"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register3"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_RNW_Reg"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register5"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_seqAddr_Reg"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_rst"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"OPB_Reset"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -30]
+		Branch {
+		  DstBlock		  "Register5"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [0, -60]
+		  Branch {
+		    Points		    [0, -60]
+		    Branch {
+		    DstBlock		    "Register3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -60]
+		    Branch {
+		    DstBlock		    "Register2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -60]
+		    Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "Register"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Register1"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "Register4"
+		    DstPort		    2
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Register"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_ABus_Reg"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From2"
+	      SrcPort		      1
+	      DstBlock		      "OPB_ABus"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From3"
+	      SrcPort		      1
+	      DstBlock		      "OPB_BE"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From4"
+	      SrcPort		      1
+	      DstBlock		      "OPB_DBus"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From5"
+	      SrcPort		      1
+	      DstBlock		      "OPB_RNW"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From8"
+	      SrcPort		      1
+	      DstBlock		      "OPB_rst"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From7"
+	      SrcPort		      1
+	      DstBlock		      "OPB_seqAddr"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From6"
+	      SrcPort		      1
+	      DstBlock		      "OPB_Select"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_ABus"
+	      SrcPort		      1
+	      DstBlock		      "Register"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_BE"
+	      SrcPort		      1
+	      DstBlock		      "Register1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "OPB_Select"
+	      SrcPort		      1
+	      DstBlock		      "Register4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Register4"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "OPB_Select_Reg"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [205, 351, 220, 369]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  Position		  [205, 391, 220, 409]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ack_gen"
+	  Ports			  [2, 1]
+	  Position		  [425, 335, 475, 375]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "ack_gen"
+	    Location		    [361, 442, 713, 649]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ps"
+	      Position		      [15, 53, 45, 67]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "rst"
+	      Position		      [15, 133, 45, 147]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Inverter1"
+	      Ports		      [1, 1]
+	      Position		      [135, 132, 165, 148]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Inverter"
+	      SourceType	      "Xilinx Inverter Block"
+	      infoedit		      "Bitwise logical negation (one's complem"
+"ent) operator."
+	      en		      off
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "inv"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "30,16,1,1,white,blue,0,1ab4a85f"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 30 30 0 ],[0 0 16 16 ],[0.77 0.82 0.91]);\npatch([11 8 12 8 1"
+"1 15 16 17 22 18 15 13 17 13 15 18 22 17 16 15 11 ],[2 5 9 13 16 16 15 16 16 "
+"12 15 13 9 5 3 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 30 30 0 ],[0 16 16"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: b"
+"egin icon text ');\ncolor('black');disp('not');\nfprintf('','COMMENT: end ico"
+"n text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Inverter2"
+	      Ports		      [1, 1]
+	      Position		      [135, 92, 165, 108]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Inverter"
+	      SourceType	      "Xilinx Inverter Block"
+	      infoedit		      "Bitwise logical negation (one's complem"
+"ent) operator."
+	      en		      off
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "inv"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "30,16,1,1,white,blue,0,1ab4a85f"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 30 30 0 ],[0 0 16 16 ],[0.77 0.82 0.91]);\npatch([11 8 12 8 1"
+"1 15 16 17 22 18 15 13 17 13 15 18 22 17 16 15 11 ],[2 5 9 13 16 16 15 16 16 "
+"12 15 13 9 5 3 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 30 30 0 ],[0 16 16"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: b"
+"egin icon text ');\ncolor('black');disp('not');\nfprintf('','COMMENT: end ico"
+"n text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical"
+	      Ports		      [3, 1]
+	      Position		      [195, 40, 245, 160]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Logical"
+	      SourceType	      "Xilinx Logical Block Block"
+	      logical_function	      "AND"
+	      inputs		      "3"
+	      en		      off
+	      latency		      "0"
+	      precision		      "Full"
+	      arith_type	      "Unsigned"
+	      n_bits		      "8"
+	      bin_pt		      "2"
+	      align_bp		      on
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "logical"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,120,3,1,white,blue,0,5c2bfaa2"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 120 120 ],[0.77 0.82 0.91]);\npatch([11 3 15 3"
+" 11 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[40 48 60 72 80 80 76 8"
+"0 80 69 80 72 60 48 40 51 40 40 44 40 40 ],[0.98 0.96 0.92]);\nplot([0 0 50 5"
+"0 0 ],[0 120 120 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprint"
+"f('','COMMENT: begin icon text ');\ncolor('black');disp('\\newlineand\\newlin"
+"ez^{-0}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Register"
+	      Ports		      [1, 1]
+	      Position		      [80, 85, 115, 115]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "35,30,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 35 35 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\npatch([10 5 12 5 1"
+"0 18 20 22 30 23 17 12 18 12 17 23 30 22 20 18 10 ],[3 8 15 22 27 27 25 27 27"
+" 20 26 21 15 9 4 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 35 35 0 ],[0 30"
+" 30 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT"
+": begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor('blac"
+"k');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode'"
+",'on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ack"
+	      Position		      [280, 93, 310, 107]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "ps"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Logical"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 40]
+		DstBlock		"Register"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Inverter2"
+	      SrcPort		      1
+	      DstBlock		      "Logical"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Register"
+	      SrcPort		      1
+	      DstBlock		      "Inverter2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Inverter1"
+	      SrcPort		      1
+	      DstBlock		      "Logical"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "rst"
+	      SrcPort		      1
+	      DstBlock		      "Inverter1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Logical"
+	      SrcPort		      1
+	      DstBlock		      "ack"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "en_gen"
+	  Ports			  [3, 2]
+	  Position		  [500, 329, 580, 481]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "en_gen"
+	    Location		    [594, 227, 1218, 922]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ack_in"
+	      Position		      [155, 48, 185, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "addr"
+	      Position		      [75, 178, 105, 192]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "rnw"
+	      Position		      [75, 133, 105, 147]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Concat"
+	      Ports		      [3, 1]
+	      Position		      [230, 131, 270, 199]
+	      SourceBlock	      "xbsIndex_r4/Concat"
+	      SourceType	      "Xilinx Bus Concatenator Block"
+	      infoedit		      "Concatenates two or more inputs.  Outpu"
+"t will be cast to an unsigned value with the binary point at zero."
+	      num_inputs	      "3"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "concat"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "40,68,3,1,white,blue,0,25d2176d"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 40 40 0 ],[0 0 68 68 ],[0.77 0.82 0.91]);\npatch([10 3 12 3 1"
+"0 21 24 27 38 29 20 14 24 14 20 29 38 27 24 21 10 ],[18 25 34 43 50 50 47 50 "
+"50 41 50 44 34 24 18 27 18 18 21 18 18 ],[0.98 0.96 0.92]);\nplot([0 0 40 40 "
+"0 ],[0 68 68 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf(''"
+",'COMMENT: begin icon text ');\ncolor('black');port_label('input',1,'hi');\nc"
+"olor('black');port_label('input',3,'lo');\nfprintf('','COMMENT: end icon text"
+"');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Slice"
+	      Ports		      [1, 1]
+	      Position		      [140, 173, 185, 197]
+	      SourceBlock	      "xbsIndex_r4/Slice"
+	      SourceType	      "Xilinx Bit Slice Extractor Block"
+	      infoedit		      "Extracts a given range of bits from eac"
+"h input sample and presents it at the output.  The output type is ordinarily "
+"unsigned with binary point at zero, but can be Boolean when the slice is one "
+"bit wide.<P><P>Hardware notes: In hardware this block costs nothing."
+	      nbits		      "2"
+	      boolean_output	      off
+	      mode		      "Lower Bit Location + Width"
+	      bit1		      "0"
+	      base1		      "MSB of Input"
+	      bit0		      "2"
+	      base0		      "LSB of Input"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,516,446"
+	      block_type	      "slice"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,24,1,1,white,blue,0,fe24a11e"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 24 24 ],[0.77 0.82 0.91]);\npatch([16 12 18 12"
+" 16 22 24 26 33 28 23 19 25 19 23 28 33 26 24 22 16 ],[3 7 13 19 23 23 21 23 "
+"23 18 23 19 13 7 3 8 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"4 24 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'[a:b]');\nfprin"
+"tf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_constant"
+	      Ports		      [0, 1]
+	      Position		      [215, 314, 260, 346]
+	      SourceBlock	      "xbsIndex_r4/Constant"
+	      SourceType	      "Xilinx Constant Block Block"
+	      arith_type	      "Unsigned"
+	      const		      "12"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      explicit_period	      off
+	      period		      "1"
+	      dsp48_infoedit	      "The use of this block for DSP48 instruc"
+"tions is deprecated.  Please use the Opmode block."
+	      equ		      "P=C"
+	      opselect		      "C"
+	      inp2		      "PCIN>>17"
+	      opr		      "+"
+	      inp1		      "P"
+	      carry		      "CIN"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "constant"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,32,0,1,white,blue,0,85613821"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([14 9 16 9 1"
+"4 22 24 26 35 28 21 16 23 16 21 28 35 26 24 22 14 ],[3 8 15 22 27 27 25 27 27"
+" 20 27 22 15 8 3 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 32"
+" 32 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT"
+": begin icon text ');\ncolor('black');port_label('output',1,'1');\nfprintf(''"
+",'COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above this "
+"line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_inverter"
+	      Ports		      [1, 1]
+	      Position		      [215, 538, 265, 572]
+	      SourceBlock	      "xbsIndex_r4/Inverter"
+	      SourceType	      "Xilinx Inverter Block"
+	      infoedit		      "Bitwise logical negation (one's complem"
+"ent) operator."
+	      en		      off
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,432,222"
+	      block_type	      "inv"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,34,1,1,white,blue,0,1ab4a85f"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 34 34 ],[0.77 0.82 0.91]);\npatch([16 10 18 10"
+" 16 25 27 29 39 31 24 19 27 19 24 31 39 29 27 25 16 ],[4 10 18 26 32 32 30 32"
+" 32 24 31 26 18 10 5 12 4 4 6 4 4 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],["
+"0 34 34 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COM"
+"MENT: begin icon text ');\ncolor('black');disp('not');\nfprintf('','COMMENT: "
+"end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_logical"
+	      Ports		      [3, 1]
+	      Position		      [215, 463, 260, 507]
+	      SourceBlock	      "xbsIndex_r4/Logical"
+	      SourceType	      "Xilinx Logical Block Block"
+	      logical_function	      "AND"
+	      inputs		      "3"
+	      en		      off
+	      latency		      "0"
+	      precision		      "Full"
+	      arith_type	      "Unsigned"
+	      n_bits		      "16"
+	      bin_pt		      "0"
+	      align_bp		      on
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "logical"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,44,3,1,white,blue,0,5c2bfaa2"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 44 44 ],[0.77 0.82 0.91]);\npatch([10 3 13 3 1"
+"0 22 25 28 40 30 21 14 23 14 21 30 40 28 25 22 10 ],[5 12 22 32 39 39 36 39 3"
+"9 29 38 31 22 13 6 15 5 5 8 5 5 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"44 44 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');disp('\\newlineand\\newlinez^{-0}','t"
+"exmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_relational"
+	      Ports		      [2, 1]
+	      Position		      [215, 378, 260, 422]
+	      SourceBlock	      "xbsIndex_r4/Relational"
+	      SourceType	      "Xilinx Arithmetic Relational Operator B"
+"lock"
+	      mode		      "a=b"
+	      en		      off
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "relational"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,44,2,1,white,blue,0,1b68ef8e"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 44 44 ],[0.77 0.82 0.91]);\npatch([10 3 13 3 1"
+"0 22 25 28 40 30 21 14 23 14 21 30 40 28 25 22 10 ],[5 12 22 32 39 39 36 39 3"
+"9 29 38 31 22 13 6 15 5 5 8 5 5 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"44 44 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');port_label('input',1,'a');\ncolor('bl"
+"ack');port_label('input',2,'b');\ncolor('black');disp('\\newline\\bf{a=b}\\ne"
+"wlinez^{-0}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_sub"
+	      Ports		      [2, 1]
+	      Position		      [215, 607, 265, 658]
+	      SourceBlock	      "xbsIndex_r4/AddSub"
+	      SourceType	      "Xilinx Adder/Subtractor Block"
+	      mode		      "Subtraction"
+	      use_carryin	      off
+	      use_carryout	      off
+	      en		      off
+	      latency		      "0"
+	      precision		      "User Defined"
+	      arith_type	      "Unsigned"
+	      n_bits		      "4"
+	      bin_pt		      "0"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      dbl_ovrd		      off
+	      use_behavioral_HDL      off
+	      pipelined		      off
+	      use_rpm		      on
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "addsub"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,51,2,1,white,blue,0,f28631c4"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 51 51 ],[0.77 0.82 0.91]);\npatch([11 3 15 3 1"
+"1 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[6 14 26 38 46 46 42 46 4"
+"6 35 46 38 26 14 6 17 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0"
+" 51 51 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'a');\ncolor('b"
+"lack');port_label('input',2,'b');\ncolor('black');port_label('output',1,'\\bf"
+"{a - b}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ack_out"
+	      Position		      [300, 48, 330, 62]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "addr_out"
+	      Position		      [130, 253, 160, 267]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "addr"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Slice"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"addr_out"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "ack_in"
+	      SrcPort		      1
+	      Points		      [0, 0; 10, 0]
+	      Branch {
+		Points			[0, 90]
+		DstBlock		"Concat"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"ack_out"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "rnw"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 25]
+	      DstBlock		      "Concat"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Slice"
+	      SrcPort		      1
+	      DstBlock		      "Concat"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "mem_if_in"
+	  Ports			  [1]
+	  Position		  [695, 209, 815, 301]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "mem_if_in"
+	    Location		    [18, 508, 742, 972]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "opb_dbus"
+	      Position		      [110, 48, 140, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_convert"
+	      Ports		      [1, 1]
+	      Position		      [565, 254, 595, 286]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "8"
+	      bin_pt		      "6"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      pipeline		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "convert"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "30,32,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 30 30 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([7 2 9 2 7 1"
+"5 17 19 27 20 14 9 15 9 14 20 27 19 17 15 7 ],[4 9 16 23 28 28 26 28 28 21 27"
+" 22 16 10 5 11 4 4 6 4 4 ],[0.98 0.96 0.92]);\nplot([0 0 30 30 0 ],[0 32 32 0"
+" 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: beg"
+"in icon text ');\ncolor('black');port_label('output',1,'cast');\nfprintf('','"
+"COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_register"
+	      Ports		      [2, 1]
+	      Position		      [555, 110, 600, 205]
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      on
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,95,2,1,white,blue,0,cc3303a0"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 95 95 ],[0.77 0.82 0.91]);\npatch([10 3 14 3 1"
+"0 22 25 28 41 31 21 14 25 14 21 31 41 28 25 22 10 ],[30 37 48 59 66 66 63 66 "
+"66 56 66 59 48 37 30 40 30 30 33 30 30 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 "
+"0 ],[0 95 95 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf(''"
+",'COMMENT: begin icon text ');\ncolor('black');port_label('input',1,'d');\nco"
+"lor('black');port_label('input',2,'en');\ncolor('black');port_label('output',"
+"1,'q');\ncolor('black');disp('\\bf{z^{-1}}','texmode','on');\nfprintf('','COM"
+"MENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_reinterpret"
+	      Ports		      [1, 1]
+	      Position		      [560, 319, 600, 351]
+	      SourceBlock	      "xbsIndex_r4/Reinterpret"
+	      SourceType	      "Xilinx Type Reinterpreter Block"
+	      infoedit		      "Changes type of samples without alterin"
+"g their binary representation.<P><P>Hardware notes: In hardware this block co"
+"sts nothing.<P><P>Example:  Suppose the input is 6 bits wide, signed, with 2 "
+"fractional bits, and the output is forced to unsigned with 0 fractional bits."
+"  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output "
+"of 56 (111000 in binary)."
+	      force_arith_type	      on
+	      arith_type	      "Unsigned"
+	      force_bin_pt	      on
+	      bin_pt		      "0"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "cast"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "40,32,1,1,white,blue,0,8982c1db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 50 50 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([16 11 18 11 "
+"16 24 26 28 37 30 23 18 25 18 23 30 37 28 26 24 16 ],[3 8 15 22 27 27 25 27 2"
+"7 20 27 22 15 8 3 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 3"
+"2 32 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT:"
+" begin icon text');\ncolor('black');disp('reinterpret');\nfprintf('','COMMENT"
+": end icon text');\n"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "mem_if_out"
+	  Ports			  [2, 2]
+	  Position		  [705, 341, 800, 494]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "mem_if_out"
+	    Location		    [2, 84, 1138, 971]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ack_in"
+	      Position		      [440, 243, 470, 257]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "addr"
+	      Position		      [570, 173, 600, 187]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Delay"
+	      Ports		      [1, 1]
+	      Position		      [490, 227, 535, 273]
+	      SourceBlock	      "xbsIndex_r4/Delay"
+	      SourceType	      "Xilinx Delay Block"
+	      infoedit		      "Hardware notes: A delay line is a chain"
+", each link of which is an SRL16 followed by a flip-flop. If register retimin"
+"g is enabled, the delay line is a chain of flip-flops."
+	      en		      off
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      reg_retiming	      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "delay"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,46,1,1,white,blue,0,d74ee26d"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 46 46 ],[0.77 0.82 0.91]);\npatch([10 3 14 3 1"
+"0 22 25 28 41 31 21 14 25 14 21 31 41 28 25 22 10 ],[5 12 23 34 41 41 38 41 4"
+"1 31 41 34 23 12 5 15 5 5 8 5 5 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"46 46 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');disp('z^{-0}','texmode','on');\nfprin"
+"tf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Slice"
+	      Ports		      [1, 1]
+	      Position		      [665, 168, 710, 192]
+	      SourceBlock	      "xbsIndex_r4/Slice"
+	      SourceType	      "Xilinx Bit Slice Extractor Block"
+	      infoedit		      "Extracts a given range of bits from eac"
+"h input sample and presents it at the output.  The output type is ordinarily "
+"unsigned with binary point at zero, but can be Boolean when the slice is one "
+"bit wide.<P><P>Hardware notes: In hardware this block costs nothing."
+	      nbits		      "2"
+	      boolean_output	      off
+	      mode		      "Lower Bit Location + Width"
+	      bit1		      "0"
+	      base1		      "MSB of Input"
+	      bit0		      "2"
+	      base0		      "LSB of Input"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "slice"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,24,1,1,white,blue,0,fe24a11e"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 24 24 ],[0.77 0.82 0.91]);\npatch([16 12 18 12"
+" 16 22 24 26 33 28 23 19 25 19 23 28 33 26 24 22 16 ],[3 7 13 19 23 23 21 23 "
+"23 18 23 19 13 7 3 8 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"4 24 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'[a:b]');\nfprin"
+"tf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "addr_conv"
+	      Ports		      [1, 1]
+	      Position		      [640, 674, 690, 726]
+	      SourceBlock	      "xbsIndex_r4/ROM"
+	      SourceType	      "Xilinx Single Port Read-Only Memory Blo"
+"ck"
+	      depth		      "1024"
+	      initVector	      "floor((0:1023)/32)"
+	      distributed_mem	      "Block RAM"
+	      rst		      off
+	      init_reg		      "0"
+	      en		      off
+	      latency		      "1"
+	      arith_type	      "Unsigned"
+	      n_bits		      "5"
+	      bin_pt		      "0"
+	      dbl_ovrd		      off
+	      optimize		      "Area"
+	      use_rpm		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "sprom"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,52,1,1,white,blue,0,a8b86474"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 52 52 ],[0.77 0.82 0.91]);\npatch([11 3 15 3 1"
+"1 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[6 14 26 38 46 46 42 46 4"
+"6 35 46 38 26 14 6 17 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0"
+" 52 52 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'addr');\ncolor"
+"('black');disp('z^{-1}','texmode','on');\nfprintf('','COMMENT: end icon text'"
+");\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_addsub"
+	      Ports		      [2, 1]
+	      Position		      [640, 582, 690, 633]
+	      SourceBlock	      "xbsIndex_r4/AddSub"
+	      SourceType	      "Xilinx Adder/Subtractor Block"
+	      mode		      "Subtraction"
+	      use_carryin	      off
+	      use_carryout	      off
+	      en		      off
+	      latency		      "0"
+	      precision		      "User Defined"
+	      arith_type	      "Unsigned"
+	      n_bits		      "8"
+	      bin_pt		      "0"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      dbl_ovrd		      off
+	      use_behavioral_HDL      on
+	      pipelined		      off
+	      use_rpm		      on
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "addsub"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "50,51,2,1,white,blue,0,f28631c4"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 50 50 0 ],[0 0 51 51 ],[0.77 0.82 0.91]);\npatch([11 3 15 3 1"
+"1 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[6 14 26 38 46 46 42 46 4"
+"6 35 46 38 26 14 6 17 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0"
+" 51 51 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'a');\ncolor('b"
+"lack');port_label('input',2,'b');\ncolor('black');port_label('output',1,'\\bf"
+"{a - b}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_constant"
+	      Ports		      [0, 1]
+	      Position		      [640, 505, 685, 535]
+	      SourceBlock	      "xbsIndex_r4/Constant"
+	      SourceType	      "Xilinx Constant Block Block"
+	      arith_type	      "Unsigned"
+	      const		      "1"
+	      n_bits		      "1"
+	      bin_pt		      "0"
+	      explicit_period	      off
+	      period		      "1"
+	      dsp48_infoedit	      "The use of this block for DSP48 instruc"
+"tions is deprecated.  Please use the Opmode block."
+	      equ		      "P=C"
+	      opselect		      "C"
+	      inp2		      "PCIN>>17"
+	      opr		      "+"
+	      inp1		      "P"
+	      carry		      "CIN"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "constant"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,30,0,1,white,blue,0,85613821"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\npatch([15 10 17 10"
+" 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 "
+"27 20 26 21 15 9 4 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"30 30 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');port_label('output',1,'1');\nfprintf("
+"'','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above thi"
+"s line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_convert"
+	      Ports		      [1, 1]
+	      Position		      [645, 447, 685, 473]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      pipeline		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "convert"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "40,26,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 40 40 0 ],[0 0 26 26 ],[0.77 0.82 0.91]);\npatch([13 9 15 9 1"
+"3 20 22 24 31 25 19 15 21 15 19 25 31 24 22 20 13 ],[3 7 13 19 23 23 21 23 23"
+" 17 23 19 13 7 3 9 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 40 40 0 ],[0 26 "
+"26 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT:"
+" begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprintf("
+"'','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_mux"
+	      Ports		      [3, 1]
+	      Position		      [660, 762, 685, 828]
+	      SourceBlock	      "xbsIndex_r4/Mux"
+	      SourceType	      "Xilinx Bus Multiplexer Block"
+	      inputs		      "2"
+	      en		      off
+	      latency		      "0"
+	      precision		      "Full"
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "8"
+	      bin_pt		      "2"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "mux"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "25,66,3,1,white,blue,3,613f58e1"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 25 25 0 ],[0 9.42857 56.5714 66 ],[0.77 0.82 0.91]);\npatch(["
+"6 2 8 2 6 13 15 17 24 18 13 9 14 9 13 18 24 17 15 13 6 ],[23 27 33 39 43 43 4"
+"1 43 43 37 42 38 33 28 24 29 23 23 25 23 23 ],[0.98 0.96 0.92]);\nplot([0 25 "
+"25 0 0 ],[0 9.42857 56.5714 66 0 ]);\nfprintf('','COMMENT: end icon graphics'"
+");\n\nfprintf('','COMMENT: begin icon text ');\ncolor('black');port_label('in"
+"put',1,'sel');\ncolor('black');port_label('input',2,'d0');\ncolor('black');po"
+"rt_label('input',3,'d1');\ncolor('black');disp('\\bf{}','texmode','on');\nfpr"
+"intf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_register"
+	      Ports		      [1, 1]
+	      Position		      [640, 361, 685, 409]
+	      SourceBlock	      "xbsIndex_r4/Register"
+	      SourceType	      "Xilinx Register Block"
+	      init		      "0"
+	      rst		      off
+	      en		      off
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "register"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,48,1,1,white,blue,0,ac6b57db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 48 48 ],[0.77 0.82 0.91]);\npatch([10 3 14 3 1"
+"0 22 25 28 41 31 21 14 25 14 21 31 41 28 25 22 10 ],[6 13 24 35 42 42 39 42 4"
+"2 32 42 35 24 13 6 16 6 6 9 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"48 48 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');port_label('input',1,'d');\ncolor('bl"
+"ack');port_label('output',1,'q');\ncolor('black');disp('\\bf{z^{-1}}','texmod"
+"e','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "given_reinterpret"
+	      Ports		      [1, 1]
+	      Position		      [650, 869, 690, 901]
+	      SourceBlock	      "xbsIndex_r4/Reinterpret"
+	      SourceType	      "Xilinx Type Reinterpreter Block"
+	      infoedit		      "Changes type of samples without alterin"
+"g their binary representation.<P><P>Hardware notes: In hardware this block co"
+"sts nothing.<P><P>Example:  Suppose the input is 6 bits wide, signed, with 2 "
+"fractional bits, and the output is forced to unsigned with 0 fractional bits."
+"  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output "
+"of 56 (111000 in binary)."
+	      force_arith_type	      on
+	      arith_type	      "Unsigned"
+	      force_bin_pt	      on
+	      bin_pt		      "0"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "cast"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "40,32,1,1,white,blue,0,8982c1db"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 50 50 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([16 11 18 11 "
+"16 24 26 28 37 30 23 18 25 18 23 30 37 28 26 24 16 ],[3 8 15 22 27 27 25 27 2"
+"7 20 27 22 15 8 3 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 3"
+"2 32 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT:"
+" begin icon text');\ncolor('black');disp('reinterpret');\nfprintf('','COMMENT"
+": end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "repeater"
+	      Ports		      [1, 1]
+	      Position		      [565, 234, 670, 266]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"repeater"
+		Location		[378, 232, 793, 758]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "1 bit in"
+		  Position		  [25, 275, 45, 295]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concat"
+		  Ports			  [16, 1]
+		  Position		  [125, 275, 175, 500]
+		  SourceBlock		  "xbsIndex_r4/Concat"
+		  SourceType		  "Xilinx Bus Concatenator Block"
+		  infoedit		  "Concatenates two or more inputs.  O"
+"utput will be cast to an unsigned value with the binary point at zero."
+		  num_inputs		  "16"
+		  dbl_ovrd		  off
+		  has_advanced_control	  "0"
+		  sggui_pos		  "-1,-1,-1,-1"
+		  block_type		  "concat"
+		  block_version		  "VER_STRING_GOES_HERE"
+		  sg_icon_stat		  "50,225,16,1,white,blue,0,aea984b7"
+		  sg_mask_display	  "fprintf('','COMMENT: begin icon gra"
+"phics ');\npatch([0 50 50 0 ],[0 0 225 225 ],[0.77 0.82 0.91]);\npatch([11 3 "
+"15 3 11 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[93 101 113 125 133"
+" 133 129 133 133 122 133 125 113 101 93 104 93 93 97 93 93 ],[0.98 0.96 0.92]"
+");\nplot([0 0 50 50 0 ],[0 225 225 0 0 ]);\nfprintf('','COMMENT: end icon gra"
+"phics');\n\nfprintf('','COMMENT: begin icon text ');\ncolor('black');port_lab"
+"el('input',1,'hi');\ncolor('black');port_label('input',16,'lo');\nfprintf('',"
+"'COMMENT: end icon text');\n"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concat1"
+		  Ports			  [16, 1]
+		  Position		  [125, 30, 175, 255]
+		  SourceBlock		  "xbsIndex_r4/Concat"
+		  SourceType		  "Xilinx Bus Concatenator Block"
+		  infoedit		  "Concatenates two or more inputs.  O"
+"utput will be cast to an unsigned value with the binary point at zero."
+		  num_inputs		  "16"
+		  dbl_ovrd		  off
+		  has_advanced_control	  "0"
+		  sggui_pos		  "-1,-1,-1,-1"
+		  block_type		  "concat"
+		  block_version		  "VER_STRING_GOES_HERE"
+		  sg_icon_stat		  "50,225,16,1,white,blue,0,aea984b7"
+		  sg_mask_display	  "fprintf('','COMMENT: begin icon gra"
+"phics ');\npatch([0 50 50 0 ],[0 0 225 225 ],[0.77 0.82 0.91]);\npatch([11 3 "
+"15 3 11 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[93 101 113 125 133"
+" 133 129 133 133 122 133 125 113 101 93 104 93 93 97 93 93 ],[0.98 0.96 0.92]"
+");\nplot([0 0 50 50 0 ],[0 225 225 0 0 ]);\nfprintf('','COMMENT: end icon gra"
+"phics');\n\nfprintf('','COMMENT: begin icon text ');\ncolor('black');port_lab"
+"el('input',1,'hi');\ncolor('black');port_label('input',16,'lo');\nfprintf('',"
+"'COMMENT: end icon text');\n"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Concat2"
+		  Ports			  [2, 1]
+		  Position		  [260, 139, 310, 366]
+		  SourceBlock		  "xbsIndex_r4/Concat"
+		  SourceType		  "Xilinx Bus Concatenator Block"
+		  infoedit		  "Concatenates two or more inputs.  O"
+"utput will be cast to an unsigned value with the binary point at zero."
+		  num_inputs		  "2"
+		  dbl_ovrd		  off
+		  has_advanced_control	  "0"
+		  sggui_pos		  "-1,-1,-1,-1"
+		  block_type		  "concat"
+		  block_version		  "VER_STRING_GOES_HERE"
+		  sg_icon_stat		  "50,227,2,1,white,blue,0,59d62d82"
+		  sg_mask_display	  "fprintf('','COMMENT: begin icon gra"
+"phics ');\npatch([0 50 50 0 ],[0 0 227 227 ],[0.77 0.82 0.91]);\npatch([11 3 "
+"15 3 11 24 28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[94 102 114 126 134"
+" 134 130 134 134 123 134 126 114 102 94 105 94 94 98 94 94 ],[0.98 0.96 0.92]"
+");\nplot([0 0 50 50 0 ],[0 227 227 0 0 ]);\nfprintf('','COMMENT: end icon gra"
+"phics');\n\nfprintf('','COMMENT: begin icon text ');\ncolor('black');port_lab"
+"el('input',1,'hi');\ncolor('black');port_label('input',2,'lo');\nfprintf('','"
+"COMMENT: end icon text');\n"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "32 bits out"
+		  Position		  [370, 245, 390, 265]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "1 bit in"
+		  SrcPort		  1
+		  Points		  [0, 0; 60, 0]
+		  Branch {
+		    Points		    [0, 0]
+		    Branch {
+		    Points		    [0, -75]
+		    Branch {
+		    Points		    [0, -15]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -5]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -15]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    Points		    [0, -10]
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    3
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    4
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    5
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    6
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    7
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    8
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    9
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    10
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    11
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    12
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    13
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    14
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    15
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat1"
+		    DstPort		    16
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 5]
+		    Branch {
+		    Points		    [0, 15]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 5]
+		    Branch {
+		    Points		    [0, 15]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 5]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 10]
+		    Branch {
+		    Points		    [0, 5]
+		    Branch {
+		    Points		    [0, 15]
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    16
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    15
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    13
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    14
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    12
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    11
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    10
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    9
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    8
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    7
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    6
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    5
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    4
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    3
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Concat"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Concat1"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 50]
+		  DstBlock		  "Concat2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Concat"
+		  SrcPort		  1
+		  Points		  [45, 0; 0, -80]
+		  DstBlock		  "Concat2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Concat2"
+		  SrcPort		  1
+		  DstBlock		  "32 bits out"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "valid_data"
+	      Ports		      [2, 1]
+	      Position		      [730, 218, 775, 262]
+	      SourceBlock	      "xbsIndex_r4/Logical"
+	      SourceType	      "Xilinx Logical Block Block"
+	      logical_function	      "AND"
+	      inputs		      "2"
+	      en		      off
+	      latency		      "0"
+	      precision		      "Full"
+	      arith_type	      "Unsigned"
+	      n_bits		      "8"
+	      bin_pt		      "2"
+	      align_bp		      on
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "logical"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      sg_icon_stat	      "45,44,2,1,white,blue,0,087b5522"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 44 44 ],[0.77 0.82 0.91]);\npatch([10 3 13 3 1"
+"0 22 25 28 40 30 21 14 23 14 21 30 40 28 25 22 10 ],[5 12 22 32 39 39 36 39 3"
+"9 29 38 31 22 13 6 15 5 5 8 5 5 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 "
+"44 44 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');disp('\\newlineand\\newlinez^{-0}','t"
+"exmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "sgp_DBus"
+	      Position		      [815, 233, 845, 247]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ack_out"
+	      Position		      [705, 308, 735, 322]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "addr"
+	      SrcPort		      1
+	      DstBlock		      "Slice"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "repeater"
+	      SrcPort		      1
+	      DstBlock		      "valid_data"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "valid_data"
+	      SrcPort		      1
+	      DstBlock		      "sgp_DBus"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ack_in"
+	      SrcPort		      1
+	      DstBlock		      "Delay"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delay"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"repeater"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"ack_out"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  3
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "opb read"
+	  Labels		  [0, 0]
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  7
+	  Points		  [300, 0]
+	  DstBlock		  "en_gen"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  5
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "opb reset"
+	  Labels		  [0, 0]
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  6
+	  Points		  [225, 0]
+	  DstBlock		  "ack_gen"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "decode"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "ack_gen"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ack_gen"
+	  SrcPort		  1
+	  DstBlock		  "en_gen"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    DstBlock		    "IP2OPB_IF"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    Branch {
+	      DstBlock		      "IP2OPB_IF"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [0, 35]
+	      DstBlock		      "IP2OPB_IF"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Line {
+	  Name			  "opb addr"
+	  Labels		  [0, 0]
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  1
+	  Points		  [0, 0; 60, 0]
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "en_gen"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Goto"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "opb select"
+	  Labels		  [0, 0]
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  2
+	  Points		  [70, 0]
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "opb data"
+	  Labels		  [0, 0]
+	  SrcBlock		  "OPB2IP_IF"
+	  SrcPort		  4
+	  Points		  [160, 0; 0, -125]
+	  DstBlock		  "mem_if_in"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "en_gen"
+	  SrcPort		  1
+	  Points		  [105, 0]
+	  DstBlock		  "mem_if_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "en_gen"
+	  SrcPort		  2
+	  Points		  [105, 0]
+	  DstBlock		  "mem_if_out"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "mem_if_out"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, 40]
+	  DstBlock		  "IP2OPB_IF"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "mem_if_out"
+	  SrcPort		  2
+	  DstBlock		  "IP2OPB_IF"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "p_select8"
+      Ports		      [2, 1]
+      Position		      [95, 326, 155, 364]
+      BackgroundColor	      "[0.713725, 0.733333, 0.862745]"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "pselect"
+      MaskDescription	      "Address Decoding Logic"
+      MaskPromptString	      "Base Address|High Address|Address Bus Bit Width"
+"|Data Bus Bit Width"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "off,off,off,off"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,,"
+      MaskVariables	      "C_BASE=@1;C_HIGH=@2;C_OPB_AWIDTH=@3;C_OPB_DWIDT"
+"H=@4;"
+      MaskInitialization      "mdlGlobal = xlglobal(bdroot(gcbh));\nif iskey(m"
+"dlGlobal,'mdlHandle')\n  put(mdlGlobal,'opb_export_tool_v2_c_base', C_BASE);"
+"\n  put(mdlGlobal,'opb_export_tool_v2_c_high', C_HIGH);\n  put(mdlGlobal,'opb"
+"_export_tool_v2_c_opb_awidth', C_OPB_AWIDTH);\n  put(mdlGlobal,'opb_export_to"
+"ol_v2_c_opb_dwidth', C_OPB_DWIDTH);\nend"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "hex2dec('FFFE0100')|hex2dec('FFFE01FF')|32|32"
+      MaskTabNameString	      ",,,"
+      System {
+	Name			"p_select8"
+	Location		[327, 162, 1062, 721]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "addr"
+	  Position		  [20, 53, 50, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "a_valid"
+	  Position		  [20, 168, 50, 182]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant"
+	  Ports			  [0, 1]
+	  Position		  [55, 102, 125, 118]
+	  SourceBlock		  "xbsIndex_r4/Constant"
+	  SourceType		  "Xilinx Constant Block Block"
+	  arith_type		  "Unsigned"
+	  const			  "C_BASE"
+	  n_bits		  "32"
+	  bin_pt		  "0"
+	  explicit_period	  off
+	  period		  "1"
+	  dsp48_infoedit	  "The use of this block for DSP48 instruction"
+"s is deprecated.  Please use the Opmode block."
+	  equ			  "P=C"
+	  opselect		  "C"
+	  inp2			  "PCIN>>17"
+	  opr			  "+"
+	  inp1			  "P"
+	  carry			  "CIN"
+	  dbl_ovrd		  off
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "constant"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "70,16,0,1,white,blue,0,043fcfb0"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 70 70 0 ],[0 0 16 16 ],[0.77 0.82 0.91]);\npatch([31 28 32 28 31 "
+"35 36 37 42 38 35 33 37 33 35 38 42 37 36 35 31 ],[2 5 9 13 16 16 15 16 16 12"
+" 15 13 9 5 3 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 70 70 0 ],[0 16 16 0"
+" 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: beg"
+"in icon text ');\ncolor('black');port_label('output',1,'4294836480');\nfprint"
+"f('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above t"
+"his line -- machine generated code. ');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Logical"
+	  Ports			  [2, 1]
+	  Position		  [325, 144, 370, 186]
+	  ShowName		  off
+	  SourceBlock		  "xbsIndex_r4/Logical"
+	  SourceType		  "Xilinx Logical Block Block"
+	  logical_function	  "AND"
+	  inputs		  "2"
+	  en			  off
+	  latency		  "0"
+	  precision		  "Full"
+	  arith_type		  "Unsigned"
+	  n_bits		  "8"
+	  bin_pt		  "2"
+	  align_bp		  on
+	  dbl_ovrd		  off
+	  xl_use_area		  off
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "logical"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "45,42,2,1,white,blue,0,087b5522"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 45 45 0 ],[0 0 42 42 ],[0.77 0.82 0.91]);\npatch([11 4 14 4 11 22"
+" 25 28 40 31 22 15 25 15 22 31 40 28 25 22 11 ],[5 12 22 32 39 39 36 39 39 30"
+" 39 32 22 12 5 14 5 5 8 5 5 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 42 4"
+"2 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: "
+"begin icon text ');\ncolor('black');disp('\\newlineand\\newlinez^{-0}','texmo"
+"de','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Relational"
+	  Ports			  [2, 1]
+	  Position		  [235, 37, 280, 133]
+	  SourceBlock		  "xbsIndex_r4/Relational"
+	  SourceType		  "Xilinx Arithmetic Relational Operator Block"
+	  mode			  "a=b"
+	  en			  off
+	  latency		  "0"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "relational"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "45,96,2,1,white,blue,0,1b68ef8e"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 45 45 0 ],[0 0 96 96 ],[0.77 0.82 0.91]);\npatch([10 3 14 3 10 22"
+" 25 28 41 31 21 14 25 14 21 31 41 28 25 22 10 ],[30 37 48 59 66 66 63 66 66 5"
+"6 66 59 48 37 30 40 30 30 33 30 30 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],"
+"[0 96 96 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','CO"
+"MMENT: begin icon text ');\ncolor('black');port_label('input',1,'a');\ncolor("
+"'black');port_label('input',2,'b');\ncolor('black');disp('\\newline\\bf{a=b}"
+"\\newlinez^{-0}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Slice_C"
+	  Ports			  [1, 1]
+	  Position		  [150, 48, 200, 72]
+	  SourceBlock		  "xbsIndex_r4/Slice"
+	  SourceType		  "Xilinx Bit Slice Extractor Block"
+	  infoedit		  "Extracts a given range of bits from each in"
+"put sample and presents it at the output.  The output type is ordinarily unsi"
+"gned with binary point at zero, but can be Boolean when the slice is one bit "
+"wide.<P><P>Hardware notes: In hardware this block costs nothing."
+	  nbits			  "32-ceil(log2(C_HIGH-C_BASE))"
+	  boolean_output	  off
+	  mode			  "Upper Bit Location + Width"
+	  bit1			  "0"
+	  base1			  "MSB of Input"
+	  bit0			  "0"
+	  base0			  "LSB of Input"
+	  dbl_ovrd		  off
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "slice"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "50,24,1,1,white,blue,0,fe24a11e"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 50 50 0 ],[0 0 24 24 ],[0.77 0.82 0.91]);\npatch([19 15 21 15 19 "
+"25 27 29 36 31 26 22 28 22 26 31 36 29 27 25 19 ],[3 7 13 19 23 23 21 23 23 1"
+"8 23 19 13 7 3 8 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 24 24"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: b"
+"egin icon text ');\ncolor('black');port_label('output',1,'[a:b]');\nfprintf('"
+"','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Slice_D"
+	  Ports			  [1, 1]
+	  Position		  [150, 98, 200, 122]
+	  SourceBlock		  "xbsIndex_r4/Slice"
+	  SourceType		  "Xilinx Bit Slice Extractor Block"
+	  infoedit		  "Extracts a given range of bits from each in"
+"put sample and presents it at the output.  The output type is ordinarily unsi"
+"gned with binary point at zero, but can be Boolean when the slice is one bit "
+"wide.<P><P>Hardware notes: In hardware this block costs nothing."
+	  nbits			  "32-ceil(log2(C_HIGH-C_BASE))"
+	  boolean_output	  off
+	  mode			  "Upper Bit Location + Width"
+	  bit1			  "0"
+	  base1			  "MSB of Input"
+	  bit0			  "0"
+	  base0			  "LSB of Input"
+	  dbl_ovrd		  off
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "slice"
+	  block_version		  "VER_STRING_GOES_HERE"
+	  sg_icon_stat		  "50,24,1,1,white,blue,0,fe24a11e"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics ')"
+";\npatch([0 50 50 0 ],[0 0 24 24 ],[0.77 0.82 0.91]);\npatch([19 15 21 15 19 "
+"25 27 29 36 31 26 22 28 22 26 31 36 29 27 25 19 ],[3 7 13 19 23 23 21 23 23 1"
+"8 23 19 13 7 3 8 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 24 24"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMENT: b"
+"egin icon text ');\ncolor('black');port_label('output',1,'[a:b]');\nfprintf('"
+"','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ps"
+	  Position		  [395, 158, 425, 172]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Slice_C"
+	  SrcPort		  1
+	  DstBlock		  "Relational"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "addr"
+	  SrcPort		  1
+	  DstBlock		  "Slice_C"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Slice_D"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Relational"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 70]
+	  DstBlock		  "Logical"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "a_valid"
+	  SrcPort		  1
+	  DstBlock		  "Logical"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical"
+	  SrcPort		  1
+	  DstBlock		  "ps"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slice_D"
+	  SrcPort		  1
+	  DstBlock		  "Relational"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "ps_goto"
+      Position		      [185, 240, 225, 270]
+      GotoTag		      "ps"
+      TagVisibility	      "global"
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    \" (   8    (     @         %    "
+"\"     $    !     0         %  0 $     $    0    <WES9V5N:6YT97)F86-E  X   \""
+"X 0  !@    @    \"          4    (     0    $    !          4 !  -     0   $$"
+"   !P<F]C97-S;W(     8U]B87-E         &-?:&EG:         !C7V]P8E]A=VED=&@ 8U]O"
+"<&)?9'=I9'1H           .    ,     8    (    !          %    \"     $    #    "
+" 0         0  , <'!C  X    X    !@    @    $          4    (     0    @    ! "
+"        !     (    1D9&13 Q,# .    .     8    (    !          %    \"     $  "
+"  (     0         0    \"    $9&1D4P,49&#@   #@    &    \"     8         !0  "
+"  @    !     0    $         \"0    @           ! 0 X    X    !@    @    &    "
+"      4    (     0    $    !          D    (            0$ "
+  }
+}

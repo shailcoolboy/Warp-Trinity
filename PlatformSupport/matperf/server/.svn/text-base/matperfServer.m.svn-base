@@ -1,0 +1,593 @@
+function [report servrep report_port] = matperfServer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% usage: matperfServer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% initialize all variables
+pnet('closeall');
+
+yes = 1; t1 = []; t2 = []; b1 = []; b2 = [];
+j1 = []; j2 = []; l1 = []; l2 = []; tp1= [];
+t3 = []; t4 = []; b3 = []; b4 = []; j3 = [];
+j4 = []; l3 = []; l4 = []; tp3= []; oisup = 0;
+ti = []; ti2 = [];
+req_band = []; leng = []; times = [];
+reqports = []; repnum = 0; portadd = 0;
+numexp = 1; data_old = 0; 
+windows = [];
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+disp('server quits when matperfClient_complete with specific address is called');
+disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the server that receives signals from the client and execute
+% the commands client demands. Different from the client, server will
+% execute the commands and parse and collect the outputs into vectors and
+% structs.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To check if this program is running properly, check the struct values
+% with the iperf results recorded in checkresult.txt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+udp = pnet('udpsocket', 3333);
+while 1,
+    pnet(udp,'setreadtimeout',15);
+    len = pnet(udp,'readpacket');
+
+    if len > 0,
+	
+	[ip] = pnet(udp,'gethost'); % receives the address of the responded client
+    address = strcat(num2str(ip(1)),{'.'},num2str(ip(2)),{'.'},num2str(ip(3)),{'.'},num2str(ip(4)));
+	
+
+        data = pnet(udp,'read',1000,'double');
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % mode 1 -> single
+        % mode 2 -> double
+        % mode 3 -> tradeoff
+        % UdpTcp = 1 ->> UDP
+        % UdpTcp = 2 ->> TCP
+        % experiment request => 0
+        % trial request => 1
+        % asking success/failure => 4
+        % asking to parse & collect the data => 6
+        % complete exp => 7
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % when the server receives 0, it should also have received        %
+        % information of whether the client is UDP or TCP and             %
+        % its mode.                                                       %  
+        % [req; UDP/TCP ; mode] <- do not change during the exp.          % 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % when the server receives 1, it also receives length, bandwidth, %
+        % window size, port # the client wants to access on server and    %
+        % prepare the iperf command line to be executed. Then it          %
+        % executes the command and send the client a signal that allows the
+        % client to execute its iperf command.                            %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        if data(1) == 0,
+            if exist('checkresult.txt','file') == 2,
+                system('rm checkresult.txt');
+            end
+            data_old = data;
+			servrep = 0;
+			report = 0;
+			report_port = 0;
+            disp('experiment request submitted');
+            clear_set; % delete all the temporary files being used in previous trial.
+            req = 0;
+            UdpTcp = data(2); % collects info if UDP/TCP test  
+            mode = data(3); % collects info if single/dual/tradeoff
+            pnet(udp,'write',req);
+            pnet(udp,'setwritetimeout',1.2);
+            pnet(udp,'writepacket',char(address),3333); % this sends to client that server recognized the client
+            oisup = 1;
+            continue;
+        elseif data(1) ==1,
+            if oisup == 0,
+                disp('experiment not initialized');
+                return
+            end
+            clear_set;
+            data_old = data(1);
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % WARNING: only one iperf should run during the test %
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%           
+            pac = data;
+            if pac(2) == 1 %if UDP,
+                length = pac(3); % these pac variables are from the received packet from the client
+                reqband = pac(4);
+                timeb = pac(5);
+                reqport = pac(6);
+                systemcall = 'iperf -s -u -P 1 -f B -f b';
+                systemcall = strcat(systemcall,{' -p '},num2str(reqport),{' > tempo_result.txt &'});
+            elseif pac(2) ==2, % if TCP,
+                window = pac(3);
+                timeb = pac(4);
+                reqport = pac(5);
+                systemcall = 'iperf -s -P 1 -f B -f b';
+                systemcall = strcat(systemcall,{' -p '},num2str(reqport),{' > tempo_result.txt &'});
+            end
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % based on received data, above two if statements build a
+            % command line to be used to call iperf
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
+            system('ps -a > jobs_l');
+            system('python weird');
+            jobs_l = load('check_jobs');
+            if jobs_l == 1,
+                system('killall iperf');
+            end
+            disp('trial request submitted');
+            
+            % call iperf
+            system(char(systemcall));
+
+            pnet(udp,'write',1);
+            pnet(udp,'setwritetimeout',.6);
+            pnet(udp,'writepacket',char(address),3333); % server tells client to begin the iperf trial
+            continue
+        elseif data == 5 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % when the server receives 5, matlab begins to check the iperf
+        % results written on the specified file. In our case it
+        % is tempo_reult.txt. First matlab uses python to call pint.txt.
+        % pint.txt is a python script that gets rid of all unnecessary
+        % lines in the iperf output s othat all the outputs have the same
+        % structures. 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            if oisup == 0,
+                disp('experiment not initialized');
+                return
+            end
+            data_old = data;
+            
+            system('python pint.txt');
+ 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % below serverudpsingle/dual/tradeoff are the scripts that
+            % parse the output to the vectors saved into different files so
+            % that matlab can call each of them in order to use them as
+            % variables. 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            if mode == 1,
+                if UdpTcp == 1,
+                system('python serverudpsingle');
+                elseif UdpTcp == 2,
+                system('python servertcpsingle');
+                end
+            elseif mode ==2,
+                if UdpTcp == 1,
+                    system('python serverudpdual');
+                elseif UdpTcp ==2,
+                    system('python servertcpdual');
+                end
+            elseif mode == 3,
+                if UdpTcp == 1,
+                    system('python serverudptradeoff');
+                end
+            end
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % below script lines will load the results saved in separate
+            % files into matlab workspace. They will also check if the
+            % server got stuck or not by checking whether there were
+            % outputs or not. If the server gets stuck, there are no lines
+            % to parse and save into files. So If files don't exist, that
+            % means there are no outputs and also means the server was
+            % stuck. If the matlab determines that server is stuck, then it
+            % will kill the running iperf and send client 3, which means
+            % the trial failed and client has to execute the same command again.
+            % But if those lines successively parse and save them into
+            % separate files then it will send client 2, which means the
+            % trial has succeeded.
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+            if exist('repnum.txt','file') == 2 && exist('portadd.txt','file') == 2,
+                temp_repnum = textread('repnum.txt','%s') ;              
+                temp_portadd = textread('portadd.txt','%s');             
+                sf = 2;
+                if mode == 2,
+                    if exist('dual_repnum.txt','file') ==2 && exist('dual_portadd.txt','file') == 2,
+                    tempd_repnum = textread('dual_repnum.txt','%s');
+                    tempd_portadd = textread('dual_portadd.txt','%s');
+                    else
+                        disp('server stuck')
+                        system('killall iperf'); % kills iperf
+                        sf = 3; %fail
+                    end
+                elseif mode == 3,
+                    if exist('tradeoff_repnum.txt','file') ==2 && exist('tradeoff_portadd.txt','file') == 2,
+                        t_repnum = textread('tradeoff_repnum.txt','%s');
+                        t_portadd = textread('tradeoff_portadd.txt','%s');
+                    else
+                        disp('server stuck')
+                        system('killall iperf'); %klls iperf
+                        sf = 3; %fail
+                    end
+                end
+            else
+                disp('server stuck');
+                system('killall iperf');
+                sf = 3; %fail
+            end
+            clear_set;
+            pnet(udp,'write',sf); %success
+            pnet(udp,'setwritetimeout',.5);
+            pnet(udp,'writepacket',char(address),3333); % server tells client whether trial succeeded or failed
+            continue;
+
+        elseif data == 6,
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % below if statement prevents the results are  presented twice
+            % at the same time. data_old is the copied version of data and
+            % if signal 6 is sent twice at the same time, server jumps back
+            % to the start.
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            if data_old == data,
+                pnet(udp,'write',yes);
+                pnet(udp,'setwritetimeout',1.5);
+                pnet(udp,'writepacket',char(address),3333);
+                continue;
+            end
+            if mode == 2,
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                % first, portadd, the vector that carries information about
+                % the port numbers has been examined. It checks if that
+                % line tells whether server connected to client back or
+                % client connected to server. Then portadd becomes the
+                % vector consist of line that contains the data of client
+                % connected to server, and d_portadd becomes the vector that
+                % consist of line that contains the data of server
+                % connected to client.
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                porter = cell2mat(temp_portadd(7));
+        
+                if num2str(reqport) == porter,
+                    portadd = temp_portadd;
+                    d_portadd = tempd_portadd;
+                else
+                    portadd = tempd_portadd;
+                    d_portadd = temp_portadd;
+                end
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                % these below liines are to check if the results are sorted
+                % correctly or not. I checked if the results are correctly
+                % sorted by checking the ID in every lines. For example [3]
+                % is sorted with all [3] lines and [142] lines are all
+                % sorted with [142]. 
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                
+                numer = cell2mat(portadd(2));
+                if numer == cell2mat(temp_repnum(2)),
+                    repnum = temp_repnum;
+                    d_repnum = tempd_repnum;
+                else
+                    repnum = tempd_repnum;
+                    d_repnum = temp_repnum;
+                end
+       
+            elseif mode == 3,
+                repnum = temp_repnum;
+                portadd = temp_portadd;
+
+            elseif mode == 1,
+                repnum = temp_repnum;
+                portadd = temp_portadd;
+            end
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % repnum contains info about the jitter, totalpacket,loss, etc.
+            % and portadd contains info about the port and address of
+            % client and server. d_repnum and d_portadd contain info of the
+            % client's server report. 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            
+            
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % These are the algorithms that create the struct that will be
+            % shown as a result. First, I loaded a file that contains
+            % information about the bandwidth, jitter, lost,
+            % totalpackets, and port numbers of client and server into work
+            % space. Then, I just picked up a number from that vector by
+            % giving a matlab a location of those necessary values. number
+            % in below box is the row # of the vectors that contain the
+            % answers i need. 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            if UdpTcp == 1
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                % for UDP results
+                % j ==> Transfer => 7; Bandwidth => 9; Jitter => 12;        
+                %       Lost => 14; Total => 15; time => 5;
+                % k ==> s.add => 5 s.port => 7 c.add => 10 c.port => 12
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                for i = 1: size(repnum)
+                    % change rem(i,j) j to the # of lines of one report.
+                    j = rem(i,18);
+                    if (j == 5)
+                        Ti = str2double(cell2mat(repnum(i)));
+                        ti = [ti;Ti];
+                    elseif (j == 7)
+                        T1 = str2double(cell2mat(repnum(i)));
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % conversion.m
+                        % this conversion function changes the size of the
+                        % values for example from Bytes to GBytes or
+                        % KBytes. inputs are what size you want, the value,
+                        % and the current size. 
+                        % e.g. conversion('Bytes',T1,'KBytes')
+                        % first one is what size you want, second one is
+                        % the value, and the third one is the current size.
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        T1 = conversion('Bytes',T1,repnum(i+1));
+                        % it creates saves the value as vectors.
+                        t1 = [t1;T1];
+                    elseif (j == 9)
+                        B1 = str2double(cell2mat(repnum(i)));
+                        B1 = conversion('bits',B1,repnum(i+1));
+                        b1 = [b1;B1];
+                    elseif (j == 12)
+                        J1 = str2double(cell2mat(repnum(i)));
+                        j1 = [j1;J1];
+                    elseif (j == 14)
+                        L1 = str2double(cell2mat(repnum(i)));
+                        l1 = [l1;L1];
+                    elseif (j == 15)
+                        TP1 = str2double(cell2mat(repnum(i)));
+                        tp1 = [tp1; TP1];
+                    end
+                end
+                for k = 1:size(portadd)
+                    % change rem(k,l) l to the # of lines of one report.
+                    l = rem(k,12);
+                    if (l == 5)
+                        T2 = (cell2mat(portadd(k)));
+                        t2 = [t2; T2];
+                    elseif (l == 7)
+                        B2 = (cell2mat(portadd(k)));
+                        b2 = [b2;B2];
+                    elseif (l == 10)
+                        J2 = (cell2mat(portadd(k)));
+                        j2 = [j2; J2];
+                    elseif (l == 0)
+                        L2 = (cell2mat(portadd(k)));
+                        l2 = [l2; L2];
+                    end
+                end
+                if(mode == 2)
+                    for i1 = 1: size(d_repnum)
+                        % change rem(i,j) j to the # of lines of one report.
+                        j = rem(i1,18);
+                        if (j == 5)
+                            Ti2 = str2double(cell2mat(d_repnum(i1)));
+                            ti2 = [ti2;Ti2];
+                        elseif (j == 7)
+                            T3 = str2double(cell2mat(d_repnum(i1)));
+                            T3 = conversion('Bytes',T3,d_repnum(i1+1));
+                            t3 = [t3;T3];
+                        elseif (j == 9)
+                            B3 = str2double(cell2mat(d_repnum(i1)));
+                            B3 = conversion('bits',B3,d_repnum(i1+1));
+                            b3 = [b3;B3];
+                        elseif (j == 12)
+                            J3 = str2double(cell2mat(d_repnum(i1)));
+                            j3 = [j3;J3];
+                        elseif (j == 14)
+                            L3 = str2double(cell2mat(d_repnum(i1)));
+                            l3 = [l3;L3];
+                        elseif (j == 15)
+                            TP3 = str2double(cell2mat(d_repnum(i1)));
+                            tp3 = [tp3; TP3];
+                        end
+                    end
+                   
+                    for k1 = 1:size(d_portadd)
+                        % change rem(k,l) l to the # of lines of one report.
+                        l = rem(k1,12);
+                        if (l == 5)
+                            T4 = (cell2mat(d_portadd(k1)));
+                            t4 = [t4; T4];
+                        elseif (l == 7)
+                            B4 = (cell2mat(d_portadd(k1)));
+                            b4 = [b4;B4];
+                        elseif (l == 10)
+                            J4 = (cell2mat(d_portadd(k1)));
+                            j4 = [j4; J4];
+                        elseif (l == 0)
+                            L4 = (cell2mat(d_portadd(k1)));
+                            l4 = [l4; L4];
+                        end
+                    end
+                elseif mode == 3,
+                    for i1 = 1: size(t_repnum)
+                        % change rem(i,j) j to the # of lines of one report.
+                        j = rem(i1,18);
+                        if (j == 5)
+                            Ti2 = str2double(cell2mat(t_repnum(i1)));
+                            ti2 = [ti2;Ti2];
+                        elseif (j == 7)
+                            T3 = str2double(cell2mat(t_repnum(i1)));
+                            T3 = conversion('Bytes',T3,t_repnum(i1+1));
+                            t3 = [t3;T3];
+                        elseif (j == 9)
+                            B3 = str2double(cell2mat(t_repnum(i1)));
+                            B3 = conversion('bits',B3,t_repnum(i1+1));
+                            b3 = [b3;B3];
+                        elseif (j == 12)
+                            J3 = str2double(cell2mat(t_repnum(i1)));
+                            j3 = [j3;J3];
+                        elseif (j == 14)
+                            L3 = str2double(cell2mat(t_repnum(i1)));
+                            l3 = [l3;L3];
+                        elseif (j == 15)
+                            TP3 = str2double(cell2mat(t_repnum(i1)));
+                            tp3 = [tp3; TP3];
+                        end
+                    end
+
+                    for k1 = 1:size(t_portadd)
+                        % change rem(k,l) l to the # of lines of one report.
+                        l = rem(k1,12);
+                        if (l == 5)
+                            T4 = (cell2mat(t_portadd(k1)));
+                            t4 = [t4; T4];
+                        elseif (l == 7)
+                            B4 = (cell2mat(t_portadd(k1)));
+                            b4 = [b4;B4];
+                        elseif (l == 10)
+                            J4 = (cell2mat(t_portadd(k1)));
+                            j4 = [j4; J4];
+                        elseif (l == 0)
+                            L4 = (cell2mat(t_portadd(k1)));
+                            l4 = [l4; L4];
+                        end
+                    end
+                    
+                end
+                leng = [leng; length];
+                req_band = [req_band;reqband];
+                
+            elseif UdpTcp == 2,
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                % for TCP results:
+                % j ==> Throughput = 7; Bandwidth = 9; Jitter = 12; 
+                %       Lost = 14; Total 15; time => 5;
+                % k ==> s.add 5 s.port 7 c.add 10 c.port 12
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                for i = 1: size(repnum)
+                    % change rem(i,j) j to the # of lines of one report.
+                    j = rem(i,11);
+                    if (j == 5)
+                        Ti = str2double(cell2mat(repnum(i)));
+                        ti = [ti;Ti];
+                    elseif (j == 7)
+                        T1 = str2double(cell2mat(repnum(i)));
+                        T1 = conversion('Bytes',T1,repnum(i+1));
+                        t1 = [t1;T1];
+                    elseif (j == 9)
+                        B1 = str2double(cell2mat(repnum(i)));
+                        B1 = conversion('bits',B1,repnum(i+1));
+                        b1 = [b1;B1];
+                    end
+                end
+                for k = 1:size(portadd)
+                    % change rem(k,l) l to the # of lines of one report.
+                    l = rem(k,12);
+                    if (l == 5)
+                        T2 = (cell2mat(portadd(k)));
+                        t2 = [t2; T2];
+                    elseif (l == 7)
+                        B2 = (cell2mat(portadd(k)));
+                        b2 = [b2;B2];
+                    elseif (l == 10)
+                        J2 = (cell2mat(portadd(k)));
+                        j2 = [j2; J2];
+                    elseif (l == 0)
+                        L2 = (cell2mat(portadd(k)));
+                        l2 = [l2; L2];
+                    end
+                end
+                if mode == 2,
+                    for i1 = 1: size(d_repnum)
+                        % change rem(i,j) j to the # of lines of one report.
+                        j = rem(i1,11);
+                        if (j == 5)
+                            Ti2 = str2double(cell2mat(d_repnum(i1)));
+                            ti2 = [ti2;Ti2];
+                        elseif (j == 7)
+                            T3 = str2double(cell2mat(d_repnum(i1)));
+                            T3 = conversion('Bytes',T3,d_repnum(i1+1));
+                            t3 = [t3;T3];
+                        elseif (j == 9)
+                            B3 = str2double(cell2mat(d_repnum(i1)));
+                            B3 = conversion('bits',B3,d_repnum(i1+1));
+                            b3 = [b3;B3];
+                        end
+                    end
+
+                    for k1 = 1:size(d_portadd)
+                        % change rem(k,l) l to the # of lines of one report.
+                        l = rem(k1,12);
+                        if (l == 5)
+                            T4 = (cell2mat(d_portadd(k1)));
+                            t4 = [t4; T4];
+                        elseif (l == 7)
+                            B4 = (cell2mat(d_portadd(k1)));
+                            b4 = [b4;B4];
+                        elseif (l == 10)
+                            J4 = (cell2mat(d_portadd(k1)));
+                            j4 = [j4; J4];
+                        elseif (l == 0)
+                            L4 = (cell2mat(d_portadd(k1)));
+                            l4 = [l4; L4];
+                        end
+                    end
+                
+                end
+                % requested window size
+                windows = [windows;window];
+               
+            end
+            % create and save the requested time & port values as vectors
+            times = [times;timeb];
+            reqports = [reqports; reqport];
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % based on the created vectors, below command lines create
+            % structs that will be out as results. 
+            % report carries information from the server report. Servrep
+            % carries info from the client server report when dualtest or
+            % tradeoff test was ran. report_port carries the used port
+            % numbers of client and server. 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            if UdpTcp == 1,
+                report = struct('Transfer',t1','length',leng','req_bandwidth',req_band','bandwidth',b1','jitter',j1','losses',l1','totalpackets',tp1','requested_time_int',times','actual_time_int',ti','used_ports',reqports');                
+                if mode == 2 || mode == 3,
+                    servrep = struct('Transfer',t3','length',leng','req_bandwidth',req_band','bandwidth',b3','jitter',j3','losses',l3','totalpackets', tp3','requested_time_int',times','actual_time_int',ti2','used_ports',reqports');
+                end
+            elseif UdpTcp == 2,
+                report = struct('Transfer',t1','bandwidth',b1','window',windows','requested_time_int',times','actual_time_int',ti','used_ports',reqports');
+                if mode == 2 || mode == 3,
+                    servrep = struct('Transfer',t3','bandwidth',b3,'window',windows','requested_time_int',times','actual_time_int',ti2','used_ports',reqports');
+                end
+            end
+            report_port = struct('s_address',t2,'s_port',b2,'c_address',j2,'c_port',l2);
+            pnet(udp,'write',yes);
+            pnet(udp,'writepacket',char(address),3333);
+            nmep = sprintf('%d trial is done',numexp);
+            disp(nmep);
+            numexp = numexp + 1;
+            data_old = data;
+            save temp_matperf_data
+            continue
+        elseif data == 7,
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            % when 7 is received from client, the server returns the result
+            % to the matlab.
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            disp('experiment done');
+            return
+        else
+            disp('no such code');
+            continue
+        end
+
+    else
+        % give server time to prepare
+        pnet('closeall');
+        udp = pnet('udpsocket',3333);
+        continue;
+    end
+end
+
+pnet('closeall');
+    
+return

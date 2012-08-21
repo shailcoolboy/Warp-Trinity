@@ -1,0 +1,8 @@
+-batch 
+-create eeprom 
+-ver 1.04.a 
+-dir "C:\work\eeprom\MyProcessorIPLib" 
+-lang verilog 
+-bus plbv46 s 
+-mem 1 
+-xps 

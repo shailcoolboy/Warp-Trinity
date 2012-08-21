@@ -1,0 +1,2125 @@
+(edif opb2wb
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell GND
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port G
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT4
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port I2
+              (direction INPUT)
+            )
+            (port I3
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell FD
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port D
+              (direction INPUT)
+            )
+            (port C
+              (direction INPUT)
+            )
+            (port Q
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT2
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT1
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library opb2wb_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell opb2wb
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port rst
+              (direction INPUT)
+            )
+            (port OPB_Clk
+              (direction INPUT)
+            )
+            (port opb_rnw
+              (direction INPUT)
+            )
+            (port wb_err_i
+              (direction INPUT)
+            )
+            (port wb_rty_i
+              (direction INPUT)
+            )
+            (port opb_select
+              (direction INPUT)
+            )
+            (port wb_ack_i
+              (direction INPUT)
+            )
+            (port opb_seqaddr
+              (direction INPUT)
+            )
+            (port wb_stb_o
+              (direction OUTPUT)
+            )
+            (port sl_toutsup
+              (direction OUTPUT)
+            )
+            (port sl_xferack
+              (direction OUTPUT)
+            )
+            (port sl_retry
+              (direction OUTPUT)
+            )
+            (port wb_cyc_o
+              (direction OUTPUT)
+            )
+            (port sl_errack
+              (direction OUTPUT)
+            )
+            (port wb_we_o
+              (direction OUTPUT)
+            )
+            (port (array (rename opb_be "opb_be<3:0>") 4)
+              (direction INPUT))
+            (port (array (rename wb_data_i "wb_data_i<31:0>") 32)
+              (direction INPUT))
+            (port (array (rename opb_dbus "opb_dbus<31:0>") 32)
+              (direction INPUT))
+            (port (array (rename opb_abus "opb_abus<31:0>") 32)
+              (direction INPUT))
+            (port (array (rename wb_addr_o "wb_addr_o<31:0>") 32)
+              (direction OUTPUT))
+            (port (array (rename wb_data_o "wb_data_o<31:0>") 32)
+              (direction OUTPUT))
+            (port (array (rename wb_sel_o "wb_sel_o<3:0>") 4)
+              (direction OUTPUT))
+            (port (array (rename sl_dbus "sl_dbus<31:0>") 32)
+              (direction OUTPUT))
+          )
+          (contents
+            (instance XST_GND
+              (viewRef view_1 (cellRef GND (libraryRef UNISIMS)))
+            )
+            (instance sel90
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0001") (owner "Xilinx"))
+            )
+            (instance sl_dbus_11_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_10_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance wb_ack_r
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sl_dbus_9_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_8_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance wb_rty_r
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sl_dbus_7_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance opb_dbus_r_31
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sl_dbus_6_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_5_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_4_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_3_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance opb_be_r_1
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sl_dbus_12_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_2_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance opb_abus_r_31
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_be_r_3
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_rnw_r
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_select_r
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance wb_err_r
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance wb_cyc_o1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0002") (owner "Xilinx"))
+            )
+            (instance sl_dbus_0_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_xferack1
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property INIT (string "8") (owner "Xilinx"))
+            )
+            (instance sl_retry1
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property INIT (string "8") (owner "Xilinx"))
+            )
+            (instance opb_be_r_2
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sl_errack1
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property INIT (string "8") (owner "Xilinx"))
+            )
+            (instance wb_we_o1
+              (viewRef view_1 (cellRef LUT1 (libraryRef UNISIMS)))
+              (property INIT (string "1") (owner "Xilinx"))
+            )
+            (instance sel132
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0002") (owner "Xilinx"))
+            )
+            (instance sl_dbus_1_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_31_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_30_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_29_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_28_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_27_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_26_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_25_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_24_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_23_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_22_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_21_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_20_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_19_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_18_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_17_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_16_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_15_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_14_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance sl_dbus_13_1
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "4000") (owner "Xilinx"))
+            )
+            (instance opb_dbus_r_0
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_1
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_2
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_3
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_4
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_5
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_6
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_7
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_8
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_9
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_10
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_11
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_12
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_13
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_14
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_15
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_16
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_17
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_18
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_19
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_20
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_21
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_22
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_23
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_24
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_25
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_26
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_27
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_28
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_29
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_dbus_r_30
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_0
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_1
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_2
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_3
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_4
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_5
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_6
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_7
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_8
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_9
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_10
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_11
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_12
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_13
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_14
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_15
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_16
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_17
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_18
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_19
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_20
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_21
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_22
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_23
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_24
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_25
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_26
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_27
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_28
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_29
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_abus_r_30
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance opb_be_r_0
+              (viewRef view_1 (cellRef FD (libraryRef UNISIMS)))
+            )
+            (instance sel132_SW0_SW0
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "8000") (owner "Xilinx"))
+            )
+            (instance sel53
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0001") (owner "Xilinx"))
+            )
+            (instance sel103
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0001") (owner "Xilinx"))
+            )
+            (instance sel132_SW0
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "BFFF") (owner "Xilinx"))
+            )
+            (instance sel66
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0001") (owner "Xilinx"))
+            )
+            (instance sel12
+              (viewRef view_1 (cellRef LUT4 (libraryRef UNISIMS)))
+              (property INIT (string "0001") (owner "Xilinx"))
+            )
+            (net (rename opb_dbus_3_ "opb_dbus<3>")
+              (joined
+                (portRef (member opb_dbus 28))
+                (portRef D (instanceRef opb_dbus_r_3))
+              )
+            )
+            (net (rename NlwRenamedSignal_wb_addr_o_8_ "NlwRenamedSignal_wb_addr_o<8>")
+              (joined
+                (portRef sl_toutsup)
+                (portRef (member wb_addr_o 0))
+                (portRef (member wb_addr_o 1))
+                (portRef (member wb_addr_o 2))
+                (portRef (member wb_addr_o 3))
+                (portRef (member wb_addr_o 4))
+                (portRef (member wb_addr_o 5))
+                (portRef (member wb_addr_o 6))
+                (portRef (member wb_addr_o 7))
+                (portRef (member wb_addr_o 8))
+                (portRef (member wb_addr_o 9))
+                (portRef (member wb_addr_o 10))
+                (portRef (member wb_addr_o 11))
+                (portRef (member wb_addr_o 12))
+                (portRef (member wb_addr_o 13))
+                (portRef (member wb_addr_o 14))
+                (portRef (member wb_addr_o 15))
+                (portRef (member wb_addr_o 16))
+                (portRef (member wb_addr_o 17))
+                (portRef (member wb_addr_o 18))
+                (portRef (member wb_addr_o 19))
+                (portRef (member wb_addr_o 20))
+                (portRef (member wb_addr_o 21))
+                (portRef (member wb_addr_o 22))
+                (portRef (member wb_addr_o 23))
+                (portRef G (instanceRef XST_GND))
+              )
+            )
+            (net sel
+              (joined
+                (portRef I1 (instanceRef sl_dbus_11_1))
+                (portRef I1 (instanceRef sl_dbus_10_1))
+                (portRef I1 (instanceRef sl_dbus_9_1))
+                (portRef I1 (instanceRef sl_dbus_8_1))
+                (portRef I1 (instanceRef sl_dbus_7_1))
+                (portRef I1 (instanceRef sl_dbus_6_1))
+                (portRef I1 (instanceRef sl_dbus_5_1))
+                (portRef I1 (instanceRef sl_dbus_4_1))
+                (portRef I1 (instanceRef sl_dbus_3_1))
+                (portRef I1 (instanceRef sl_dbus_12_1))
+                (portRef I1 (instanceRef sl_dbus_2_1))
+                (portRef I0 (instanceRef wb_cyc_o1))
+                (portRef I1 (instanceRef sl_dbus_0_1))
+                (portRef I0 (instanceRef sl_xferack1))
+                (portRef I0 (instanceRef sl_retry1))
+                (portRef I0 (instanceRef sl_errack1))
+                (portRef O (instanceRef sel132))
+                (portRef I1 (instanceRef sl_dbus_1_1))
+                (portRef I1 (instanceRef sl_dbus_31_1))
+                (portRef I1 (instanceRef sl_dbus_30_1))
+                (portRef I1 (instanceRef sl_dbus_29_1))
+                (portRef I1 (instanceRef sl_dbus_28_1))
+                (portRef I1 (instanceRef sl_dbus_27_1))
+                (portRef I1 (instanceRef sl_dbus_26_1))
+                (portRef I1 (instanceRef sl_dbus_25_1))
+                (portRef I1 (instanceRef sl_dbus_24_1))
+                (portRef I1 (instanceRef sl_dbus_23_1))
+                (portRef I1 (instanceRef sl_dbus_22_1))
+                (portRef I1 (instanceRef sl_dbus_21_1))
+                (portRef I1 (instanceRef sl_dbus_20_1))
+                (portRef I1 (instanceRef sl_dbus_19_1))
+                (portRef I1 (instanceRef sl_dbus_18_1))
+                (portRef I1 (instanceRef sl_dbus_17_1))
+                (portRef I1 (instanceRef sl_dbus_16_1))
+                (portRef I1 (instanceRef sl_dbus_15_1))
+                (portRef I1 (instanceRef sl_dbus_14_1))
+                (portRef I1 (instanceRef sl_dbus_13_1))
+              )
+            )
+            (net (rename opb_abus_6_ "opb_abus<6>")
+              (joined
+                (portRef (member opb_abus 25))
+                (portRef D (instanceRef opb_abus_r_6))
+              )
+            )
+            (net OPB_Clk
+              (joined
+                (portRef OPB_Clk)
+                (portRef C (instanceRef wb_ack_r))
+                (portRef C (instanceRef wb_rty_r))
+                (portRef C (instanceRef opb_dbus_r_31))
+                (portRef C (instanceRef opb_be_r_1))
+                (portRef C (instanceRef opb_abus_r_31))
+                (portRef C (instanceRef opb_be_r_3))
+                (portRef C (instanceRef opb_rnw_r))
+                (portRef C (instanceRef opb_select_r))
+                (portRef C (instanceRef wb_err_r))
+                (portRef C (instanceRef opb_be_r_2))
+                (portRef C (instanceRef opb_dbus_r_0))
+                (portRef C (instanceRef opb_dbus_r_1))
+                (portRef C (instanceRef opb_dbus_r_2))
+                (portRef C (instanceRef opb_dbus_r_3))
+                (portRef C (instanceRef opb_dbus_r_4))
+                (portRef C (instanceRef opb_dbus_r_5))
+                (portRef C (instanceRef opb_dbus_r_6))
+                (portRef C (instanceRef opb_dbus_r_7))
+                (portRef C (instanceRef opb_dbus_r_8))
+                (portRef C (instanceRef opb_dbus_r_9))
+                (portRef C (instanceRef opb_dbus_r_10))
+                (portRef C (instanceRef opb_dbus_r_11))
+                (portRef C (instanceRef opb_dbus_r_12))
+                (portRef C (instanceRef opb_dbus_r_13))
+                (portRef C (instanceRef opb_dbus_r_14))
+                (portRef C (instanceRef opb_dbus_r_15))
+                (portRef C (instanceRef opb_dbus_r_16))
+                (portRef C (instanceRef opb_dbus_r_17))
+                (portRef C (instanceRef opb_dbus_r_18))
+                (portRef C (instanceRef opb_dbus_r_19))
+                (portRef C (instanceRef opb_dbus_r_20))
+                (portRef C (instanceRef opb_dbus_r_21))
+                (portRef C (instanceRef opb_dbus_r_22))
+                (portRef C (instanceRef opb_dbus_r_23))
+                (portRef C (instanceRef opb_dbus_r_24))
+                (portRef C (instanceRef opb_dbus_r_25))
+                (portRef C (instanceRef opb_dbus_r_26))
+                (portRef C (instanceRef opb_dbus_r_27))
+                (portRef C (instanceRef opb_dbus_r_28))
+                (portRef C (instanceRef opb_dbus_r_29))
+                (portRef C (instanceRef opb_dbus_r_30))
+                (portRef C (instanceRef opb_abus_r_0))
+                (portRef C (instanceRef opb_abus_r_1))
+                (portRef C (instanceRef opb_abus_r_2))
+                (portRef C (instanceRef opb_abus_r_3))
+                (portRef C (instanceRef opb_abus_r_4))
+                (portRef C (instanceRef opb_abus_r_5))
+                (portRef C (instanceRef opb_abus_r_6))
+                (portRef C (instanceRef opb_abus_r_7))
+                (portRef C (instanceRef opb_abus_r_8))
+                (portRef C (instanceRef opb_abus_r_9))
+                (portRef C (instanceRef opb_abus_r_10))
+                (portRef C (instanceRef opb_abus_r_11))
+                (portRef C (instanceRef opb_abus_r_12))
+                (portRef C (instanceRef opb_abus_r_13))
+                (portRef C (instanceRef opb_abus_r_14))
+                (portRef C (instanceRef opb_abus_r_15))
+                (portRef C (instanceRef opb_abus_r_16))
+                (portRef C (instanceRef opb_abus_r_17))
+                (portRef C (instanceRef opb_abus_r_18))
+                (portRef C (instanceRef opb_abus_r_19))
+                (portRef C (instanceRef opb_abus_r_20))
+                (portRef C (instanceRef opb_abus_r_21))
+                (portRef C (instanceRef opb_abus_r_22))
+                (portRef C (instanceRef opb_abus_r_23))
+                (portRef C (instanceRef opb_abus_r_24))
+                (portRef C (instanceRef opb_abus_r_25))
+                (portRef C (instanceRef opb_abus_r_26))
+                (portRef C (instanceRef opb_abus_r_27))
+                (portRef C (instanceRef opb_abus_r_28))
+                (portRef C (instanceRef opb_abus_r_29))
+                (portRef C (instanceRef opb_abus_r_30))
+                (portRef C (instanceRef opb_be_r_0))
+              )
+            )
+            (net sl_xferack
+              (joined
+                (portRef sl_xferack)
+                (portRef O (instanceRef sl_xferack1))
+              )
+            )
+            (net opb_rnw
+              (joined
+                (portRef opb_rnw)
+                (portRef D (instanceRef opb_rnw_r))
+              )
+            )
+            (net (rename opb_abus_5_ "opb_abus<5>")
+              (joined
+                (portRef (member opb_abus 26))
+                (portRef D (instanceRef opb_abus_r_5))
+              )
+            )
+            (net (rename opb_abus_10_ "opb_abus<10>")
+              (joined
+                (portRef (member opb_abus 21))
+                (portRef D (instanceRef opb_abus_r_10))
+              )
+            )
+            (net (rename opb_abus_9_ "opb_abus<9>")
+              (joined
+                (portRef (member opb_abus 22))
+                (portRef D (instanceRef opb_abus_r_9))
+              )
+            )
+            (net wb_err_i
+              (joined
+                (portRef wb_err_i)
+                (portRef D (instanceRef wb_err_r))
+                (portRef I1 (instanceRef sl_errack1))
+              )
+            )
+            (net sl_retry
+              (joined
+                (portRef sl_retry)
+                (portRef O (instanceRef sl_retry1))
+              )
+            )
+            (net NlwRenamedSignal_wb_cyc_o
+              (joined
+                (portRef wb_stb_o)
+                (portRef wb_cyc_o)
+                (portRef O (instanceRef wb_cyc_o1))
+              )
+            )
+            (net (rename opb_abus_8_ "opb_abus<8>")
+              (joined
+                (portRef (member opb_abus 23))
+                (portRef D (instanceRef opb_abus_r_8))
+              )
+            )
+            (net sl_errack
+              (joined
+                (portRef sl_errack)
+                (portRef O (instanceRef sl_errack1))
+              )
+            )
+            (net wb_rty_i
+              (joined
+                (portRef wb_rty_i)
+                (portRef D (instanceRef wb_rty_r))
+                (portRef I1 (instanceRef sl_retry1))
+              )
+            )
+            (net (rename opb_abus_4_ "opb_abus<4>")
+              (joined
+                (portRef (member opb_abus 27))
+                (portRef D (instanceRef opb_abus_r_4))
+              )
+            )
+            (net wb_we_o
+              (joined
+                (portRef wb_we_o)
+                (portRef O (instanceRef wb_we_o1))
+              )
+            )
+            (net opb_select
+              (joined
+                (portRef opb_select)
+                (portRef D (instanceRef opb_select_r))
+              )
+            )
+            (net wb_ack_i
+              (joined
+                (portRef wb_ack_i)
+                (portRef D (instanceRef wb_ack_r))
+                (portRef I1 (instanceRef sl_xferack1))
+              )
+            )
+            (net (rename opb_abus_3_ "opb_abus<3>")
+              (joined
+                (portRef (member opb_abus 28))
+                (portRef D (instanceRef opb_abus_r_3))
+              )
+            )
+            (net wb_rty_r
+              (joined
+                (portRef Q (instanceRef wb_rty_r))
+                (portRef I3 (instanceRef wb_cyc_o1))
+              )
+            )
+            (net (rename opb_abus_7_ "opb_abus<7>")
+              (joined
+                (portRef (member opb_abus 24))
+                (portRef D (instanceRef opb_abus_r_7))
+              )
+            )
+            (net (rename opb_abus_r_31_ "opb_abus_r<31>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_31))
+                (portRef I2 (instanceRef sel132_SW0))
+              )
+            )
+            (net wb_ack_r
+              (joined
+                (portRef I0 (instanceRef sl_dbus_11_1))
+                (portRef I0 (instanceRef sl_dbus_10_1))
+                (portRef Q (instanceRef wb_ack_r))
+                (portRef I0 (instanceRef sl_dbus_9_1))
+                (portRef I0 (instanceRef sl_dbus_8_1))
+                (portRef I0 (instanceRef sl_dbus_7_1))
+                (portRef I0 (instanceRef sl_dbus_6_1))
+                (portRef I0 (instanceRef sl_dbus_5_1))
+                (portRef I0 (instanceRef sl_dbus_4_1))
+                (portRef I0 (instanceRef sl_dbus_3_1))
+                (portRef I0 (instanceRef sl_dbus_12_1))
+                (portRef I0 (instanceRef sl_dbus_2_1))
+                (portRef I1 (instanceRef wb_cyc_o1))
+                (portRef I0 (instanceRef sl_dbus_0_1))
+                (portRef I0 (instanceRef sl_dbus_1_1))
+                (portRef I0 (instanceRef sl_dbus_31_1))
+                (portRef I0 (instanceRef sl_dbus_30_1))
+                (portRef I0 (instanceRef sl_dbus_29_1))
+                (portRef I0 (instanceRef sl_dbus_28_1))
+                (portRef I0 (instanceRef sl_dbus_27_1))
+                (portRef I0 (instanceRef sl_dbus_26_1))
+                (portRef I0 (instanceRef sl_dbus_25_1))
+                (portRef I0 (instanceRef sl_dbus_24_1))
+                (portRef I0 (instanceRef sl_dbus_23_1))
+                (portRef I0 (instanceRef sl_dbus_22_1))
+                (portRef I0 (instanceRef sl_dbus_21_1))
+                (portRef I0 (instanceRef sl_dbus_20_1))
+                (portRef I0 (instanceRef sl_dbus_19_1))
+                (portRef I0 (instanceRef sl_dbus_18_1))
+                (portRef I0 (instanceRef sl_dbus_17_1))
+                (portRef I0 (instanceRef sl_dbus_16_1))
+                (portRef I0 (instanceRef sl_dbus_15_1))
+                (portRef I0 (instanceRef sl_dbus_14_1))
+                (portRef I0 (instanceRef sl_dbus_13_1))
+              )
+            )
+            (net opb_rnw_r
+              (joined
+                (portRef I2 (instanceRef sl_dbus_11_1))
+                (portRef I2 (instanceRef sl_dbus_10_1))
+                (portRef I2 (instanceRef sl_dbus_9_1))
+                (portRef I2 (instanceRef sl_dbus_8_1))
+                (portRef I2 (instanceRef sl_dbus_7_1))
+                (portRef I2 (instanceRef sl_dbus_6_1))
+                (portRef I2 (instanceRef sl_dbus_5_1))
+                (portRef I2 (instanceRef sl_dbus_4_1))
+                (portRef I2 (instanceRef sl_dbus_3_1))
+                (portRef I2 (instanceRef sl_dbus_12_1))
+                (portRef I2 (instanceRef sl_dbus_2_1))
+                (portRef Q (instanceRef opb_rnw_r))
+                (portRef I2 (instanceRef sl_dbus_0_1))
+                (portRef I0 (instanceRef wb_we_o1))
+                (portRef I2 (instanceRef sl_dbus_1_1))
+                (portRef I2 (instanceRef sl_dbus_31_1))
+                (portRef I2 (instanceRef sl_dbus_30_1))
+                (portRef I2 (instanceRef sl_dbus_29_1))
+                (portRef I2 (instanceRef sl_dbus_28_1))
+                (portRef I2 (instanceRef sl_dbus_27_1))
+                (portRef I2 (instanceRef sl_dbus_26_1))
+                (portRef I2 (instanceRef sl_dbus_25_1))
+                (portRef I2 (instanceRef sl_dbus_24_1))
+                (portRef I2 (instanceRef sl_dbus_23_1))
+                (portRef I2 (instanceRef sl_dbus_22_1))
+                (portRef I2 (instanceRef sl_dbus_21_1))
+                (portRef I2 (instanceRef sl_dbus_20_1))
+                (portRef I2 (instanceRef sl_dbus_19_1))
+                (portRef I2 (instanceRef sl_dbus_18_1))
+                (portRef I2 (instanceRef sl_dbus_17_1))
+                (portRef I2 (instanceRef sl_dbus_16_1))
+                (portRef I2 (instanceRef sl_dbus_15_1))
+                (portRef I2 (instanceRef sl_dbus_14_1))
+                (portRef I2 (instanceRef sl_dbus_13_1))
+              )
+            )
+            (net N1734
+              (joined
+                (portRef I3 (instanceRef sel132))
+                (portRef O (instanceRef sel132_SW0))
+              )
+            )
+            (net (rename opb_dbus_4_ "opb_dbus<4>")
+              (joined
+                (portRef (member opb_dbus 27))
+                (portRef D (instanceRef opb_dbus_r_4))
+              )
+            )
+            (net (rename opb_abus_r_9_ "opb_abus_r<9>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_9))
+                (portRef I0 (instanceRef sel53))
+              )
+            )
+            (net (rename opb_abus_2_ "opb_abus<2>")
+              (joined
+                (portRef (member opb_abus 29))
+                (portRef D (instanceRef opb_abus_r_2))
+              )
+            )
+            (net (rename opb_abus_1_ "opb_abus<1>")
+              (joined
+                (portRef (member opb_abus 30))
+                (portRef D (instanceRef opb_abus_r_1))
+              )
+            )
+            (net (rename opb_abus_r_14_ "opb_abus_r<14>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_14))
+                (portRef I1 (instanceRef sel66))
+              )
+            )
+            (net (rename opb_abus_0_ "opb_abus<0>")
+              (joined
+                (portRef (member opb_abus 31))
+                (portRef D (instanceRef opb_abus_r_0))
+              )
+            )
+            (net (rename opb_abus_r_15_ "opb_abus_r<15>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_15))
+                (portRef I2 (instanceRef sel66))
+              )
+            )
+            (net (rename opb_abus_r_10_ "opb_abus_r<10>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_10))
+                (portRef I1 (instanceRef sel53))
+              )
+            )
+            (net (rename opb_abus_r_16_ "opb_abus_r<16>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_16))
+                (portRef I3 (instanceRef sel66))
+              )
+            )
+            (net (rename opb_abus_r_11_ "opb_abus_r<11>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_11))
+                (portRef I2 (instanceRef sel53))
+              )
+            )
+            (net (rename opb_abus_r_17_ "opb_abus_r<17>")
+              (joined
+                (portRef I0 (instanceRef sel90))
+                (portRef Q (instanceRef opb_abus_r_17))
+              )
+            )
+            (net (rename opb_abus_r_12_ "opb_abus_r<12>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_12))
+                (portRef I3 (instanceRef sel53))
+              )
+            )
+            (net (rename opb_abus_r_18_ "opb_abus_r<18>")
+              (joined
+                (portRef I1 (instanceRef sel90))
+                (portRef Q (instanceRef opb_abus_r_18))
+              )
+            )
+            (net (rename opb_abus_r_13_ "opb_abus_r<13>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_13))
+                (portRef I0 (instanceRef sel66))
+              )
+            )
+            (net (rename opb_abus_r_24_ "opb_abus_r<24>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_24))
+                (portRef I3 (instanceRef sel103))
+              )
+            )
+            (net (rename opb_abus_r_19_ "opb_abus_r<19>")
+              (joined
+                (portRef I2 (instanceRef sel90))
+                (portRef Q (instanceRef opb_abus_r_19))
+              )
+            )
+            (net (rename opb_abus_r_25_ "opb_abus_r<25>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_25))
+                (portRef I0 (instanceRef sel12))
+              )
+            )
+            (net (rename opb_abus_r_20_ "opb_abus_r<20>")
+              (joined
+                (portRef I3 (instanceRef sel90))
+                (portRef Q (instanceRef opb_abus_r_20))
+              )
+            )
+            (net (rename opb_abus_r_26_ "opb_abus_r<26>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_26))
+                (portRef I1 (instanceRef sel12))
+              )
+            )
+            (net (rename opb_abus_r_21_ "opb_abus_r<21>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_21))
+                (portRef I0 (instanceRef sel103))
+              )
+            )
+            (net (rename opb_abus_r_27_ "opb_abus_r<27>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_27))
+                (portRef I2 (instanceRef sel12))
+              )
+            )
+            (net (rename opb_abus_r_22_ "opb_abus_r<22>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_22))
+                (portRef I1 (instanceRef sel103))
+              )
+            )
+            (net (rename opb_abus_r_28_ "opb_abus_r<28>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_28))
+                (portRef I3 (instanceRef sel12))
+              )
+            )
+            (net (rename opb_abus_r_23_ "opb_abus_r<23>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_23))
+                (portRef I2 (instanceRef sel103))
+              )
+            )
+            (net (rename opb_abus_r_29_ "opb_abus_r<29>")
+              (joined
+                (portRef I1 (instanceRef sel132))
+                (portRef Q (instanceRef opb_abus_r_29))
+              )
+            )
+            (net (rename opb_abus_r_30_ "opb_abus_r<30>")
+              (joined
+                (portRef I2 (instanceRef sel132))
+                (portRef Q (instanceRef opb_abus_r_30))
+              )
+            )
+            (net (rename opb_abus_r_8_ "opb_abus_r<8>")
+              (joined
+                (portRef Q (instanceRef opb_abus_r_8))
+                (portRef I0 (instanceRef sel132_SW0))
+              )
+            )
+            (net opb_select_r
+              (joined
+                (portRef Q (instanceRef opb_select_r))
+                (portRef I1 (instanceRef sel132_SW0))
+              )
+            )
+            (net wb_err_r
+              (joined
+                (portRef Q (instanceRef wb_err_r))
+                (portRef I2 (instanceRef wb_cyc_o1))
+              )
+            )
+            (net (rename opb_abus_25_ "opb_abus<25>")
+              (joined
+                (portRef (member opb_abus 6))
+                (portRef D (instanceRef opb_abus_r_25))
+              )
+            )
+            (net (rename opb_abus_26_ "opb_abus<26>")
+              (joined
+                (portRef (member opb_abus 5))
+                (portRef D (instanceRef opb_abus_r_26))
+              )
+            )
+            (net (rename opb_abus_27_ "opb_abus<27>")
+              (joined
+                (portRef (member opb_abus 4))
+                (portRef D (instanceRef opb_abus_r_27))
+              )
+            )
+            (net (rename opb_abus_28_ "opb_abus<28>")
+              (joined
+                (portRef (member opb_abus 3))
+                (portRef D (instanceRef opb_abus_r_28))
+              )
+            )
+            (net (rename opb_abus_29_ "opb_abus<29>")
+              (joined
+                (portRef (member opb_abus 2))
+                (portRef D (instanceRef opb_abus_r_29))
+              )
+            )
+            (net (rename opb_abus_30_ "opb_abus<30>")
+              (joined
+                (portRef (member opb_abus 1))
+                (portRef D (instanceRef opb_abus_r_30))
+              )
+            )
+            (net (rename opb_abus_31_ "opb_abus<31>")
+              (joined
+                (portRef (member opb_abus 0))
+                (portRef D (instanceRef opb_abus_r_31))
+              )
+            )
+            (net (rename opb_dbus_0_ "opb_dbus<0>")
+              (joined
+                (portRef (member opb_dbus 31))
+                (portRef D (instanceRef opb_dbus_r_0))
+              )
+            )
+            (net (rename opb_dbus_1_ "opb_dbus<1>")
+              (joined
+                (portRef (member opb_dbus 30))
+                (portRef D (instanceRef opb_dbus_r_1))
+              )
+            )
+            (net (rename opb_dbus_2_ "opb_dbus<2>")
+              (joined
+                (portRef (member opb_dbus 29))
+                (portRef D (instanceRef opb_dbus_r_2))
+              )
+            )
+            (net (rename opb_abus_23_ "opb_abus<23>")
+              (joined
+                (portRef (member opb_abus 8))
+                (portRef D (instanceRef opb_abus_r_23))
+              )
+            )
+            (net (rename opb_abus_22_ "opb_abus<22>")
+              (joined
+                (portRef (member opb_abus 9))
+                (portRef D (instanceRef opb_abus_r_22))
+              )
+            )
+            (net (rename opb_abus_21_ "opb_abus<21>")
+              (joined
+                (portRef (member opb_abus 10))
+                (portRef D (instanceRef opb_abus_r_21))
+              )
+            )
+            (net (rename opb_abus_20_ "opb_abus<20>")
+              (joined
+                (portRef (member opb_abus 11))
+                (portRef D (instanceRef opb_abus_r_20))
+              )
+            )
+            (net (rename opb_abus_19_ "opb_abus<19>")
+              (joined
+                (portRef (member opb_abus 12))
+                (portRef D (instanceRef opb_abus_r_19))
+              )
+            )
+            (net (rename opb_abus_18_ "opb_abus<18>")
+              (joined
+                (portRef (member opb_abus 13))
+                (portRef D (instanceRef opb_abus_r_18))
+              )
+            )
+            (net (rename opb_abus_17_ "opb_abus<17>")
+              (joined
+                (portRef (member opb_abus 14))
+                (portRef D (instanceRef opb_abus_r_17))
+              )
+            )
+            (net (rename opb_abus_16_ "opb_abus<16>")
+              (joined
+                (portRef (member opb_abus 15))
+                (portRef D (instanceRef opb_abus_r_16))
+              )
+            )
+            (net (rename opb_abus_15_ "opb_abus<15>")
+              (joined
+                (portRef (member opb_abus 16))
+                (portRef D (instanceRef opb_abus_r_15))
+              )
+            )
+            (net (rename opb_abus_14_ "opb_abus<14>")
+              (joined
+                (portRef (member opb_abus 17))
+                (portRef D (instanceRef opb_abus_r_14))
+              )
+            )
+            (net (rename opb_abus_13_ "opb_abus<13>")
+              (joined
+                (portRef (member opb_abus 18))
+                (portRef D (instanceRef opb_abus_r_13))
+              )
+            )
+            (net (rename opb_abus_12_ "opb_abus<12>")
+              (joined
+                (portRef (member opb_abus 19))
+                (portRef D (instanceRef opb_abus_r_12))
+              )
+            )
+            (net (rename opb_abus_11_ "opb_abus<11>")
+              (joined
+                (portRef (member opb_abus 20))
+                (portRef D (instanceRef opb_abus_r_11))
+              )
+            )
+            (net (rename opb_abus_24_ "opb_abus<24>")
+              (joined
+                (portRef (member opb_abus 7))
+                (portRef D (instanceRef opb_abus_r_24))
+              )
+            )
+            (net (rename wb_addr_o_7_ "wb_addr_o<7>")
+              (joined
+                (portRef (member wb_addr_o 24))
+                (portRef Q (instanceRef opb_abus_r_7))
+              )
+            )
+            (net (rename wb_addr_o_6_ "wb_addr_o<6>")
+              (joined
+                (portRef (member wb_addr_o 25))
+                (portRef Q (instanceRef opb_abus_r_6))
+              )
+            )
+            (net (rename wb_addr_o_5_ "wb_addr_o<5>")
+              (joined
+                (portRef (member wb_addr_o 26))
+                (portRef Q (instanceRef opb_abus_r_5))
+              )
+            )
+            (net (rename wb_addr_o_4_ "wb_addr_o<4>")
+              (joined
+                (portRef (member wb_addr_o 27))
+                (portRef Q (instanceRef opb_abus_r_4))
+              )
+            )
+            (net (rename wb_addr_o_3_ "wb_addr_o<3>")
+              (joined
+                (portRef (member wb_addr_o 28))
+                (portRef Q (instanceRef opb_abus_r_3))
+              )
+            )
+            (net (rename wb_addr_o_2_ "wb_addr_o<2>")
+              (joined
+                (portRef (member wb_addr_o 29))
+                (portRef Q (instanceRef opb_abus_r_2))
+              )
+            )
+            (net (rename wb_addr_o_1_ "wb_addr_o<1>")
+              (joined
+                (portRef (member wb_addr_o 30))
+                (portRef Q (instanceRef opb_abus_r_1))
+              )
+            )
+            (net (rename wb_addr_o_0_ "wb_addr_o<0>")
+              (joined
+                (portRef (member wb_addr_o 31))
+                (portRef Q (instanceRef opb_abus_r_0))
+              )
+            )
+            (net (rename wb_data_o_31_ "wb_data_o<31>")
+              (joined
+                (portRef (member wb_data_o 0))
+                (portRef Q (instanceRef opb_dbus_r_31))
+              )
+            )
+            (net (rename wb_data_o_30_ "wb_data_o<30>")
+              (joined
+                (portRef (member wb_data_o 1))
+                (portRef Q (instanceRef opb_dbus_r_30))
+              )
+            )
+            (net (rename wb_data_o_29_ "wb_data_o<29>")
+              (joined
+                (portRef (member wb_data_o 2))
+                (portRef Q (instanceRef opb_dbus_r_29))
+              )
+            )
+            (net (rename wb_data_o_28_ "wb_data_o<28>")
+              (joined
+                (portRef (member wb_data_o 3))
+                (portRef Q (instanceRef opb_dbus_r_28))
+              )
+            )
+            (net (rename wb_data_o_27_ "wb_data_o<27>")
+              (joined
+                (portRef (member wb_data_o 4))
+                (portRef Q (instanceRef opb_dbus_r_27))
+              )
+            )
+            (net (rename wb_data_o_26_ "wb_data_o<26>")
+              (joined
+                (portRef (member wb_data_o 5))
+                (portRef Q (instanceRef opb_dbus_r_26))
+              )
+            )
+            (net (rename wb_data_o_25_ "wb_data_o<25>")
+              (joined
+                (portRef (member wb_data_o 6))
+                (portRef Q (instanceRef opb_dbus_r_25))
+              )
+            )
+            (net (rename wb_data_o_24_ "wb_data_o<24>")
+              (joined
+                (portRef (member wb_data_o 7))
+                (portRef Q (instanceRef opb_dbus_r_24))
+              )
+            )
+            (net (rename wb_data_o_23_ "wb_data_o<23>")
+              (joined
+                (portRef (member wb_data_o 8))
+                (portRef Q (instanceRef opb_dbus_r_23))
+              )
+            )
+            (net (rename wb_data_o_22_ "wb_data_o<22>")
+              (joined
+                (portRef (member wb_data_o 9))
+                (portRef Q (instanceRef opb_dbus_r_22))
+              )
+            )
+            (net (rename wb_data_o_21_ "wb_data_o<21>")
+              (joined
+                (portRef (member wb_data_o 10))
+                (portRef Q (instanceRef opb_dbus_r_21))
+              )
+            )
+            (net (rename wb_data_o_20_ "wb_data_o<20>")
+              (joined
+                (portRef (member wb_data_o 11))
+                (portRef Q (instanceRef opb_dbus_r_20))
+              )
+            )
+            (net (rename wb_data_o_19_ "wb_data_o<19>")
+              (joined
+                (portRef (member wb_data_o 12))
+                (portRef Q (instanceRef opb_dbus_r_19))
+              )
+            )
+            (net (rename wb_data_o_18_ "wb_data_o<18>")
+              (joined
+                (portRef (member wb_data_o 13))
+                (portRef Q (instanceRef opb_dbus_r_18))
+              )
+            )
+            (net (rename wb_data_o_17_ "wb_data_o<17>")
+              (joined
+                (portRef (member wb_data_o 14))
+                (portRef Q (instanceRef opb_dbus_r_17))
+              )
+            )
+            (net (rename wb_data_o_16_ "wb_data_o<16>")
+              (joined
+                (portRef (member wb_data_o 15))
+                (portRef Q (instanceRef opb_dbus_r_16))
+              )
+            )
+            (net (rename wb_data_o_15_ "wb_data_o<15>")
+              (joined
+                (portRef (member wb_data_o 16))
+                (portRef Q (instanceRef opb_dbus_r_15))
+              )
+            )
+            (net (rename wb_data_o_14_ "wb_data_o<14>")
+              (joined
+                (portRef (member wb_data_o 17))
+                (portRef Q (instanceRef opb_dbus_r_14))
+              )
+            )
+            (net (rename wb_data_o_13_ "wb_data_o<13>")
+              (joined
+                (portRef (member wb_data_o 18))
+                (portRef Q (instanceRef opb_dbus_r_13))
+              )
+            )
+            (net (rename wb_data_o_12_ "wb_data_o<12>")
+              (joined
+                (portRef (member wb_data_o 19))
+                (portRef Q (instanceRef opb_dbus_r_12))
+              )
+            )
+            (net (rename wb_data_o_11_ "wb_data_o<11>")
+              (joined
+                (portRef (member wb_data_o 20))
+                (portRef Q (instanceRef opb_dbus_r_11))
+              )
+            )
+            (net (rename wb_data_o_10_ "wb_data_o<10>")
+              (joined
+                (portRef (member wb_data_o 21))
+                (portRef Q (instanceRef opb_dbus_r_10))
+              )
+            )
+            (net (rename wb_data_o_9_ "wb_data_o<9>")
+              (joined
+                (portRef (member wb_data_o 22))
+                (portRef Q (instanceRef opb_dbus_r_9))
+              )
+            )
+            (net (rename wb_data_o_8_ "wb_data_o<8>")
+              (joined
+                (portRef (member wb_data_o 23))
+                (portRef Q (instanceRef opb_dbus_r_8))
+              )
+            )
+            (net (rename wb_data_o_7_ "wb_data_o<7>")
+              (joined
+                (portRef (member wb_data_o 24))
+                (portRef Q (instanceRef opb_dbus_r_7))
+              )
+            )
+            (net (rename wb_data_o_6_ "wb_data_o<6>")
+              (joined
+                (portRef (member wb_data_o 25))
+                (portRef Q (instanceRef opb_dbus_r_6))
+              )
+            )
+            (net (rename wb_data_o_5_ "wb_data_o<5>")
+              (joined
+                (portRef (member wb_data_o 26))
+                (portRef Q (instanceRef opb_dbus_r_5))
+              )
+            )
+            (net (rename wb_data_o_4_ "wb_data_o<4>")
+              (joined
+                (portRef (member wb_data_o 27))
+                (portRef Q (instanceRef opb_dbus_r_4))
+              )
+            )
+            (net (rename wb_data_o_3_ "wb_data_o<3>")
+              (joined
+                (portRef (member wb_data_o 28))
+                (portRef Q (instanceRef opb_dbus_r_3))
+              )
+            )
+            (net (rename wb_data_o_2_ "wb_data_o<2>")
+              (joined
+                (portRef (member wb_data_o 29))
+                (portRef Q (instanceRef opb_dbus_r_2))
+              )
+            )
+            (net (rename wb_data_o_1_ "wb_data_o<1>")
+              (joined
+                (portRef (member wb_data_o 30))
+                (portRef Q (instanceRef opb_dbus_r_1))
+              )
+            )
+            (net (rename wb_data_o_0_ "wb_data_o<0>")
+              (joined
+                (portRef (member wb_data_o 31))
+                (portRef Q (instanceRef opb_dbus_r_0))
+              )
+            )
+            (net (rename wb_sel_o_3_ "wb_sel_o<3>")
+              (joined
+                (portRef (member wb_sel_o 0))
+                (portRef Q (instanceRef opb_be_r_3))
+              )
+            )
+            (net (rename wb_sel_o_2_ "wb_sel_o<2>")
+              (joined
+                (portRef (member wb_sel_o 1))
+                (portRef Q (instanceRef opb_be_r_2))
+              )
+            )
+            (net (rename wb_sel_o_1_ "wb_sel_o<1>")
+              (joined
+                (portRef (member wb_sel_o 2))
+                (portRef Q (instanceRef opb_be_r_1))
+              )
+            )
+            (net (rename wb_sel_o_0_ "wb_sel_o<0>")
+              (joined
+                (portRef (member wb_sel_o 3))
+                (portRef Q (instanceRef opb_be_r_0))
+              )
+            )
+            (net (rename sl_dbus_31_ "sl_dbus<31>")
+              (joined
+                (portRef (member sl_dbus 0))
+                (portRef O (instanceRef sl_dbus_31_1))
+              )
+            )
+            (net (rename sl_dbus_30_ "sl_dbus<30>")
+              (joined
+                (portRef (member sl_dbus 1))
+                (portRef O (instanceRef sl_dbus_30_1))
+              )
+            )
+            (net (rename sl_dbus_29_ "sl_dbus<29>")
+              (joined
+                (portRef (member sl_dbus 2))
+                (portRef O (instanceRef sl_dbus_29_1))
+              )
+            )
+            (net (rename sl_dbus_28_ "sl_dbus<28>")
+              (joined
+                (portRef (member sl_dbus 3))
+                (portRef O (instanceRef sl_dbus_28_1))
+              )
+            )
+            (net (rename sl_dbus_27_ "sl_dbus<27>")
+              (joined
+                (portRef (member sl_dbus 4))
+                (portRef O (instanceRef sl_dbus_27_1))
+              )
+            )
+            (net (rename sl_dbus_26_ "sl_dbus<26>")
+              (joined
+                (portRef (member sl_dbus 5))
+                (portRef O (instanceRef sl_dbus_26_1))
+              )
+            )
+            (net (rename sl_dbus_25_ "sl_dbus<25>")
+              (joined
+                (portRef (member sl_dbus 6))
+                (portRef O (instanceRef sl_dbus_25_1))
+              )
+            )
+            (net (rename sl_dbus_24_ "sl_dbus<24>")
+              (joined
+                (portRef (member sl_dbus 7))
+                (portRef O (instanceRef sl_dbus_24_1))
+              )
+            )
+            (net (rename sl_dbus_23_ "sl_dbus<23>")
+              (joined
+                (portRef (member sl_dbus 8))
+                (portRef O (instanceRef sl_dbus_23_1))
+              )
+            )
+            (net (rename sl_dbus_22_ "sl_dbus<22>")
+              (joined
+                (portRef (member sl_dbus 9))
+                (portRef O (instanceRef sl_dbus_22_1))
+              )
+            )
+            (net (rename sl_dbus_21_ "sl_dbus<21>")
+              (joined
+                (portRef (member sl_dbus 10))
+                (portRef O (instanceRef sl_dbus_21_1))
+              )
+            )
+            (net (rename sl_dbus_20_ "sl_dbus<20>")
+              (joined
+                (portRef (member sl_dbus 11))
+                (portRef O (instanceRef sl_dbus_20_1))
+              )
+            )
+            (net (rename sl_dbus_19_ "sl_dbus<19>")
+              (joined
+                (portRef (member sl_dbus 12))
+                (portRef O (instanceRef sl_dbus_19_1))
+              )
+            )
+            (net (rename sl_dbus_18_ "sl_dbus<18>")
+              (joined
+                (portRef (member sl_dbus 13))
+                (portRef O (instanceRef sl_dbus_18_1))
+              )
+            )
+            (net (rename sl_dbus_17_ "sl_dbus<17>")
+              (joined
+                (portRef (member sl_dbus 14))
+                (portRef O (instanceRef sl_dbus_17_1))
+              )
+            )
+            (net (rename sl_dbus_16_ "sl_dbus<16>")
+              (joined
+                (portRef (member sl_dbus 15))
+                (portRef O (instanceRef sl_dbus_16_1))
+              )
+            )
+            (net (rename sl_dbus_15_ "sl_dbus<15>")
+              (joined
+                (portRef (member sl_dbus 16))
+                (portRef O (instanceRef sl_dbus_15_1))
+              )
+            )
+            (net (rename sl_dbus_14_ "sl_dbus<14>")
+              (joined
+                (portRef (member sl_dbus 17))
+                (portRef O (instanceRef sl_dbus_14_1))
+              )
+            )
+            (net (rename sl_dbus_13_ "sl_dbus<13>")
+              (joined
+                (portRef (member sl_dbus 18))
+                (portRef O (instanceRef sl_dbus_13_1))
+              )
+            )
+            (net (rename sl_dbus_12_ "sl_dbus<12>")
+              (joined
+                (portRef (member sl_dbus 19))
+                (portRef O (instanceRef sl_dbus_12_1))
+              )
+            )
+            (net (rename sl_dbus_11_ "sl_dbus<11>")
+              (joined
+                (portRef (member sl_dbus 20))
+                (portRef O (instanceRef sl_dbus_11_1))
+              )
+            )
+            (net (rename sl_dbus_10_ "sl_dbus<10>")
+              (joined
+                (portRef (member sl_dbus 21))
+                (portRef O (instanceRef sl_dbus_10_1))
+              )
+            )
+            (net (rename sl_dbus_9_ "sl_dbus<9>")
+              (joined
+                (portRef (member sl_dbus 22))
+                (portRef O (instanceRef sl_dbus_9_1))
+              )
+            )
+            (net (rename sl_dbus_8_ "sl_dbus<8>")
+              (joined
+                (portRef (member sl_dbus 23))
+                (portRef O (instanceRef sl_dbus_8_1))
+              )
+            )
+            (net (rename sl_dbus_7_ "sl_dbus<7>")
+              (joined
+                (portRef (member sl_dbus 24))
+                (portRef O (instanceRef sl_dbus_7_1))
+              )
+            )
+            (net (rename sl_dbus_6_ "sl_dbus<6>")
+              (joined
+                (portRef (member sl_dbus 25))
+                (portRef O (instanceRef sl_dbus_6_1))
+              )
+            )
+            (net (rename sl_dbus_5_ "sl_dbus<5>")
+              (joined
+                (portRef (member sl_dbus 26))
+                (portRef O (instanceRef sl_dbus_5_1))
+              )
+            )
+            (net (rename sl_dbus_4_ "sl_dbus<4>")
+              (joined
+                (portRef (member sl_dbus 27))
+                (portRef O (instanceRef sl_dbus_4_1))
+              )
+            )
+            (net (rename sl_dbus_3_ "sl_dbus<3>")
+              (joined
+                (portRef (member sl_dbus 28))
+                (portRef O (instanceRef sl_dbus_3_1))
+              )
+            )
+            (net (rename sl_dbus_2_ "sl_dbus<2>")
+              (joined
+                (portRef (member sl_dbus 29))
+                (portRef O (instanceRef sl_dbus_2_1))
+              )
+            )
+            (net (rename sl_dbus_1_ "sl_dbus<1>")
+              (joined
+                (portRef (member sl_dbus 30))
+                (portRef O (instanceRef sl_dbus_1_1))
+              )
+            )
+            (net (rename sl_dbus_0_ "sl_dbus<0>")
+              (joined
+                (portRef (member sl_dbus 31))
+                (portRef O (instanceRef sl_dbus_0_1))
+              )
+            )
+            (net (rename opb_be_3_ "opb_be<3>")
+              (joined
+                (portRef (member opb_be 0))
+                (portRef D (instanceRef opb_be_r_3))
+              )
+            )
+            (net (rename opb_be_2_ "opb_be<2>")
+              (joined
+                (portRef (member opb_be 1))
+                (portRef D (instanceRef opb_be_r_2))
+              )
+            )
+            (net (rename opb_be_1_ "opb_be<1>")
+              (joined
+                (portRef (member opb_be 2))
+                (portRef D (instanceRef opb_be_r_1))
+              )
+            )
+            (net (rename opb_be_0_ "opb_be<0>")
+              (joined
+                (portRef (member opb_be 3))
+                (portRef D (instanceRef opb_be_r_0))
+              )
+            )
+            (net (rename wb_data_i_31_ "wb_data_i<31>")
+              (joined
+                (portRef (member wb_data_i 0))
+                (portRef I3 (instanceRef sl_dbus_31_1))
+              )
+            )
+            (net (rename wb_data_i_30_ "wb_data_i<30>")
+              (joined
+                (portRef (member wb_data_i 1))
+                (portRef I3 (instanceRef sl_dbus_30_1))
+              )
+            )
+            (net (rename wb_data_i_29_ "wb_data_i<29>")
+              (joined
+                (portRef (member wb_data_i 2))
+                (portRef I3 (instanceRef sl_dbus_29_1))
+              )
+            )
+            (net (rename wb_data_i_28_ "wb_data_i<28>")
+              (joined
+                (portRef (member wb_data_i 3))
+                (portRef I3 (instanceRef sl_dbus_28_1))
+              )
+            )
+            (net (rename wb_data_i_27_ "wb_data_i<27>")
+              (joined
+                (portRef (member wb_data_i 4))
+                (portRef I3 (instanceRef sl_dbus_27_1))
+              )
+            )
+            (net (rename wb_data_i_26_ "wb_data_i<26>")
+              (joined
+                (portRef (member wb_data_i 5))
+                (portRef I3 (instanceRef sl_dbus_26_1))
+              )
+            )
+            (net (rename wb_data_i_25_ "wb_data_i<25>")
+              (joined
+                (portRef (member wb_data_i 6))
+                (portRef I3 (instanceRef sl_dbus_25_1))
+              )
+            )
+            (net (rename wb_data_i_24_ "wb_data_i<24>")
+              (joined
+                (portRef (member wb_data_i 7))
+                (portRef I3 (instanceRef sl_dbus_24_1))
+              )
+            )
+            (net (rename wb_data_i_23_ "wb_data_i<23>")
+              (joined
+                (portRef (member wb_data_i 8))
+                (portRef I3 (instanceRef sl_dbus_23_1))
+              )
+            )
+            (net (rename wb_data_i_22_ "wb_data_i<22>")
+              (joined
+                (portRef (member wb_data_i 9))
+                (portRef I3 (instanceRef sl_dbus_22_1))
+              )
+            )
+            (net (rename wb_data_i_21_ "wb_data_i<21>")
+              (joined
+                (portRef (member wb_data_i 10))
+                (portRef I3 (instanceRef sl_dbus_21_1))
+              )
+            )
+            (net (rename wb_data_i_20_ "wb_data_i<20>")
+              (joined
+                (portRef (member wb_data_i 11))
+                (portRef I3 (instanceRef sl_dbus_20_1))
+              )
+            )
+            (net (rename wb_data_i_19_ "wb_data_i<19>")
+              (joined
+                (portRef (member wb_data_i 12))
+                (portRef I3 (instanceRef sl_dbus_19_1))
+              )
+            )
+            (net (rename wb_data_i_18_ "wb_data_i<18>")
+              (joined
+                (portRef (member wb_data_i 13))
+                (portRef I3 (instanceRef sl_dbus_18_1))
+              )
+            )
+            (net (rename wb_data_i_17_ "wb_data_i<17>")
+              (joined
+                (portRef (member wb_data_i 14))
+                (portRef I3 (instanceRef sl_dbus_17_1))
+              )
+            )
+            (net (rename wb_data_i_16_ "wb_data_i<16>")
+              (joined
+                (portRef (member wb_data_i 15))
+                (portRef I3 (instanceRef sl_dbus_16_1))
+              )
+            )
+            (net (rename wb_data_i_15_ "wb_data_i<15>")
+              (joined
+                (portRef (member wb_data_i 16))
+                (portRef I3 (instanceRef sl_dbus_15_1))
+              )
+            )
+            (net (rename wb_data_i_14_ "wb_data_i<14>")
+              (joined
+                (portRef (member wb_data_i 17))
+                (portRef I3 (instanceRef sl_dbus_14_1))
+              )
+            )
+            (net (rename wb_data_i_13_ "wb_data_i<13>")
+              (joined
+                (portRef (member wb_data_i 18))
+                (portRef I3 (instanceRef sl_dbus_13_1))
+              )
+            )
+            (net (rename wb_data_i_12_ "wb_data_i<12>")
+              (joined
+                (portRef (member wb_data_i 19))
+                (portRef I3 (instanceRef sl_dbus_12_1))
+              )
+            )
+            (net (rename wb_data_i_11_ "wb_data_i<11>")
+              (joined
+                (portRef (member wb_data_i 20))
+                (portRef I3 (instanceRef sl_dbus_11_1))
+              )
+            )
+            (net (rename wb_data_i_10_ "wb_data_i<10>")
+              (joined
+                (portRef (member wb_data_i 21))
+                (portRef I3 (instanceRef sl_dbus_10_1))
+              )
+            )
+            (net (rename wb_data_i_9_ "wb_data_i<9>")
+              (joined
+                (portRef (member wb_data_i 22))
+                (portRef I3 (instanceRef sl_dbus_9_1))
+              )
+            )
+            (net (rename wb_data_i_8_ "wb_data_i<8>")
+              (joined
+                (portRef (member wb_data_i 23))
+                (portRef I3 (instanceRef sl_dbus_8_1))
+              )
+            )
+            (net (rename wb_data_i_7_ "wb_data_i<7>")
+              (joined
+                (portRef (member wb_data_i 24))
+                (portRef I3 (instanceRef sl_dbus_7_1))
+              )
+            )
+            (net (rename wb_data_i_6_ "wb_data_i<6>")
+              (joined
+                (portRef (member wb_data_i 25))
+                (portRef I3 (instanceRef sl_dbus_6_1))
+              )
+            )
+            (net (rename wb_data_i_5_ "wb_data_i<5>")
+              (joined
+                (portRef (member wb_data_i 26))
+                (portRef I3 (instanceRef sl_dbus_5_1))
+              )
+            )
+            (net (rename wb_data_i_4_ "wb_data_i<4>")
+              (joined
+                (portRef (member wb_data_i 27))
+                (portRef I3 (instanceRef sl_dbus_4_1))
+              )
+            )
+            (net (rename wb_data_i_3_ "wb_data_i<3>")
+              (joined
+                (portRef (member wb_data_i 28))
+                (portRef I3 (instanceRef sl_dbus_3_1))
+              )
+            )
+            (net (rename wb_data_i_2_ "wb_data_i<2>")
+              (joined
+                (portRef (member wb_data_i 29))
+                (portRef I3 (instanceRef sl_dbus_2_1))
+              )
+            )
+            (net (rename wb_data_i_1_ "wb_data_i<1>")
+              (joined
+                (portRef (member wb_data_i 30))
+                (portRef I3 (instanceRef sl_dbus_1_1))
+              )
+            )
+            (net (rename wb_data_i_0_ "wb_data_i<0>")
+              (joined
+                (portRef (member wb_data_i 31))
+                (portRef I3 (instanceRef sl_dbus_0_1))
+              )
+            )
+            (net (rename opb_dbus_31_ "opb_dbus<31>")
+              (joined
+                (portRef (member opb_dbus 0))
+                (portRef D (instanceRef opb_dbus_r_31))
+              )
+            )
+            (net (rename opb_dbus_30_ "opb_dbus<30>")
+              (joined
+                (portRef (member opb_dbus 1))
+                (portRef D (instanceRef opb_dbus_r_30))
+              )
+            )
+            (net (rename opb_dbus_29_ "opb_dbus<29>")
+              (joined
+                (portRef (member opb_dbus 2))
+                (portRef D (instanceRef opb_dbus_r_29))
+              )
+            )
+            (net (rename opb_dbus_28_ "opb_dbus<28>")
+              (joined
+                (portRef (member opb_dbus 3))
+                (portRef D (instanceRef opb_dbus_r_28))
+              )
+            )
+            (net (rename opb_dbus_27_ "opb_dbus<27>")
+              (joined
+                (portRef (member opb_dbus 4))
+                (portRef D (instanceRef opb_dbus_r_27))
+              )
+            )
+            (net (rename opb_dbus_26_ "opb_dbus<26>")
+              (joined
+                (portRef (member opb_dbus 5))
+                (portRef D (instanceRef opb_dbus_r_26))
+              )
+            )
+            (net (rename opb_dbus_25_ "opb_dbus<25>")
+              (joined
+                (portRef (member opb_dbus 6))
+                (portRef D (instanceRef opb_dbus_r_25))
+              )
+            )
+            (net (rename opb_dbus_24_ "opb_dbus<24>")
+              (joined
+                (portRef (member opb_dbus 7))
+                (portRef D (instanceRef opb_dbus_r_24))
+              )
+            )
+            (net (rename opb_dbus_23_ "opb_dbus<23>")
+              (joined
+                (portRef (member opb_dbus 8))
+                (portRef D (instanceRef opb_dbus_r_23))
+              )
+            )
+            (net (rename opb_dbus_22_ "opb_dbus<22>")
+              (joined
+                (portRef (member opb_dbus 9))
+                (portRef D (instanceRef opb_dbus_r_22))
+              )
+            )
+            (net (rename opb_dbus_21_ "opb_dbus<21>")
+              (joined
+                (portRef (member opb_dbus 10))
+                (portRef D (instanceRef opb_dbus_r_21))
+              )
+            )
+            (net (rename opb_dbus_20_ "opb_dbus<20>")
+              (joined
+                (portRef (member opb_dbus 11))
+                (portRef D (instanceRef opb_dbus_r_20))
+              )
+            )
+            (net (rename opb_dbus_19_ "opb_dbus<19>")
+              (joined
+                (portRef (member opb_dbus 12))
+                (portRef D (instanceRef opb_dbus_r_19))
+              )
+            )
+            (net (rename opb_dbus_18_ "opb_dbus<18>")
+              (joined
+                (portRef (member opb_dbus 13))
+                (portRef D (instanceRef opb_dbus_r_18))
+              )
+            )
+            (net (rename opb_dbus_17_ "opb_dbus<17>")
+              (joined
+                (portRef (member opb_dbus 14))
+                (portRef D (instanceRef opb_dbus_r_17))
+              )
+            )
+            (net (rename opb_dbus_16_ "opb_dbus<16>")
+              (joined
+                (portRef (member opb_dbus 15))
+                (portRef D (instanceRef opb_dbus_r_16))
+              )
+            )
+            (net (rename opb_dbus_15_ "opb_dbus<15>")
+              (joined
+                (portRef (member opb_dbus 16))
+                (portRef D (instanceRef opb_dbus_r_15))
+              )
+            )
+            (net (rename opb_dbus_14_ "opb_dbus<14>")
+              (joined
+                (portRef (member opb_dbus 17))
+                (portRef D (instanceRef opb_dbus_r_14))
+              )
+            )
+            (net (rename opb_dbus_13_ "opb_dbus<13>")
+              (joined
+                (portRef (member opb_dbus 18))
+                (portRef D (instanceRef opb_dbus_r_13))
+              )
+            )
+            (net (rename opb_dbus_12_ "opb_dbus<12>")
+              (joined
+                (portRef (member opb_dbus 19))
+                (portRef D (instanceRef opb_dbus_r_12))
+              )
+            )
+            (net (rename opb_dbus_11_ "opb_dbus<11>")
+              (joined
+                (portRef (member opb_dbus 20))
+                (portRef D (instanceRef opb_dbus_r_11))
+              )
+            )
+            (net (rename opb_dbus_10_ "opb_dbus<10>")
+              (joined
+                (portRef (member opb_dbus 21))
+                (portRef D (instanceRef opb_dbus_r_10))
+              )
+            )
+            (net (rename opb_dbus_9_ "opb_dbus<9>")
+              (joined
+                (portRef (member opb_dbus 22))
+                (portRef D (instanceRef opb_dbus_r_9))
+              )
+            )
+            (net (rename opb_dbus_8_ "opb_dbus<8>")
+              (joined
+                (portRef (member opb_dbus 23))
+                (portRef D (instanceRef opb_dbus_r_8))
+              )
+            )
+            (net (rename opb_dbus_7_ "opb_dbus<7>")
+              (joined
+                (portRef (member opb_dbus 24))
+                (portRef D (instanceRef opb_dbus_r_7))
+              )
+            )
+            (net (rename opb_dbus_6_ "opb_dbus<6>")
+              (joined
+                (portRef (member opb_dbus 25))
+                (portRef D (instanceRef opb_dbus_r_6))
+              )
+            )
+            (net (rename opb_dbus_5_ "opb_dbus<5>")
+              (joined
+                (portRef (member opb_dbus 26))
+                (portRef D (instanceRef opb_dbus_r_5))
+              )
+            )
+            (net CHOICE36
+              (joined
+                (portRef O (instanceRef sel90))
+                (portRef I2 (instanceRef sel132_SW0_SW0))
+              )
+            )
+            (net CHOICE43
+              (joined
+                (portRef I3 (instanceRef sel132_SW0_SW0))
+                (portRef O (instanceRef sel103))
+              )
+            )
+            (net CHOICE21
+              (joined
+                (portRef I0 (instanceRef sel132_SW0_SW0))
+                (portRef O (instanceRef sel53))
+              )
+            )
+            (net N1770
+              (joined
+                (portRef O (instanceRef sel132_SW0_SW0))
+                (portRef I3 (instanceRef sel132_SW0))
+              )
+            )
+            (net CHOICE6
+              (joined
+                (portRef I0 (instanceRef sel132))
+                (portRef O (instanceRef sel12))
+              )
+            )
+            (net CHOICE28
+              (joined
+                (portRef I1 (instanceRef sel132_SW0_SW0))
+                (portRef O (instanceRef sel66))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design opb2wb
+    (cellRef opb2wb
+      (libraryRef opb2wb_lib)
+    )
+  )
+)
+

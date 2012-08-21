@@ -1,0 +1,105 @@
+
+# this is a python script that parse the dualtest output into a vector of words to be used later.
+
+# it is the same process as serverudpsingle in the below box.
+###############################################
+import re
+result = open('result.txt').readlines() 
+length1 = len(result) 
+import pdb
+for i in range(0, length1): 
+        result[i] = result[i].replace('- ', '-')
+        result[i] = result[i].replace('/ ', '/')
+        result[i] = result[i].replace('[','[ ')
+        result[i] = result[i].replace(']',' ]')
+        result[i] = result[i].replace(':',' :')
+        result[i] = result[i].replace('(','( ')
+        result[i] = result[i].replace(')',' )')
+for i in range(0, length1): 
+        result[i] = result[i].replace('-', ' ')
+        result[i] = result[i].replace('/', ' ')
+
+
+#################################################
+
+# When checking the result of dual test, it was found that output was not parsed the same way but in possible 4 ways.
+# first i defined the number of output lines to be 20. 
+start = 0
+end = 20
+#############################################################################################################################################################
+# I found the outputs of iperf are not always arranged in the same format. Sometimes, server report was before client report that usually is after client report.
+# So i had to find the way the python will recognize the pattern and parse the data we need to give to the matlab. 
+# it is very fundamental method. I checked a specific line's size that tells if it is the server report or client report. IN UDP server report, 
+# the line contains words 'jitter, transfer, loss,total packet'. Client one contains only 'transfer bandwidth'. So i checked the size of the line. If it was 
+# big, python assumeed it was a server report. It is always good to check with your eyes by running bunch of iperf -s -d at the terminal and see the pattern.
+###########################################################################################################################################################
+
+if(len(result[12]) > 60):
+        j = 13
+elif(len(result[12]) < 60):
+    if( result[17].find('Server')) != -1:
+        j=  16
+    else:
+        j = 17
+### the remainder from division of i and 20 (the number of lines) is the line where the information is stored.
+for i in range(start, end+1):
+    if (i%20) == 11:
+        f = open('ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%20) == 10:
+        f = open('dual_ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%20) == j:
+        f = open('rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+    elif (i%20) == 19:
+        f = open('dual_rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+
+
+##############################################################################
+# from this line, python separates the sentence into words and store the words
+# into a vector, and save them into separate files, portadd and repnum.
+# Matlab deals with vectors better and it makes
+# the matlab users very convenient.
+###############################################################################
+o = open('ptmp.txt').readlines()
+for i in range(0, len(o)):
+    portadd = o[i]
+    q = re.split('\s+', str(portadd))
+    s = open('portadd.txt','a')
+    for j in range(0, len(q)):
+        s.write(str(q[j])+'\n')
+    s.close()
+
+f = open('rtmp.txt').readlines()
+for i in range(0, len(f)):
+    repnum = f[i]
+    p = re.split('\s+', str(repnum))
+    s = open('repnum.txt','a')    
+    for j in range(0, len(p)):
+        s.write(str(p[j])+'\n')
+    s.close()
+
+
+a = open('dual_rtmp.txt').readlines()
+for i in range(0, len(a)):
+    d_repnum = a[i]
+    r = re.split('\s+', str(d_repnum))
+    s = open('dual_repnum.txt','a')
+    for j in range(0, len(r)):
+        s.write(str(r[j])+'\n')
+    s.close()
+
+t = open('dual_ptmp.txt').readlines()
+for i in range(0, len(t)):
+    d_portadd = t[i]
+    q = re.split('\s+', str(d_portadd))
+    s = open('dual_portadd.txt','a')
+    for j in range(0, len(q)):
+        s.write(str(q[j])+'\n')
+    s.close()

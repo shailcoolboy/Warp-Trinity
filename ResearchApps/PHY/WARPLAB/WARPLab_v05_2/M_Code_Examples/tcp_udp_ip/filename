@@ -1,0 +1,70 @@
+hey whats uppp
+{Warning: File 'MUMIMO_decode_rxn1.txt' not found.} 
+> In <a href="matlab: opentoline('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Examples/multiTxAP.m',26,1)">multiTxAP at 26</a>
+{Warning: File 'MUMIMO_decode_rxn2.txt' not found.} 
+> In <a href="matlab: opentoline('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Examples/multiTxAP.m',26,1)">multiTxAP at 26</a>
+
+===============================================================================
+Loaded pnet MEX-file for the tcp/udp/ip-toolbox Compiled @ Jun 25 2012 10:15:18
+Version  2.0.5  2003-09-16
+Copyright (C) Peter Rydesäter, Sweden, et al. , 1998 - 2003
+GNU General Public License, se license.txt for full license notis.
+You are allowed to (dynamicaly) link this file with non-free code. 
+
+   http://www.rydesater.com 
+
+===============================================================================
+
+
+txa =
+
+     1
+
+
+rxa =
+
+     1
+
+
+txa =
+
+     2
+
+
+rxa =
+
+     1
+
+
+txa =
+
+     1
+
+
+rxa =
+
+     2
+
+
+txa =
+
+     2
+
+
+rxa =
+
+     2
+
+ERROR!!! data overflow!
+builtin('cd','/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference');
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_pktSend.m',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_initialize.m',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_int2IP.m',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_readSMRO.m',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_sendCmd.m',1)
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference/warplab_writeSMWO.m',1)
+builtin('cd','/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Reference');
+builtin('cd','/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Examples');
+uiopen('/Users/shailcoolboy/Documents/warp_xyu/ResearchApps/PHY/WARPLAB/WARPLab_v05_2/M_Code_Examples/multiTxAP.m',1)
+multiTxAP
+{Warning: Unloading mex file. Unclosed tcp/udp/ip connections will be closed!} 

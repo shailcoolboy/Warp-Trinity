@@ -1,0 +1,8 @@
+###################################################################
+# Copyright (c) 2006 Rice University
+# All Rights Reserved
+# This code is covered by the Rice-WARP license
+# See http://warp.rice.edu/license/ for details
+###################################################################
+
+lib radio_bridge_v1_20_a radio_bridge verilog

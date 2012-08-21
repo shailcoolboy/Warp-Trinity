@@ -1,0 +1,7 @@
+function [index] = Quantizer(Channel)
+
+load('Codebooks\Grassmannian\codebook_4_64vec_Grassm','codebook_4_64vec_Grassm_original');
+
+Codebook_Original = codebook_4_64vec_Grassm_original;
+
+Q = Channel * Codebook_Original.'; % Columns are inde

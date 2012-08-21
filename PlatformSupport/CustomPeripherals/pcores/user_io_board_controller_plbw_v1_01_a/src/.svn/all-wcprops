@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/src
+END
+user_io_board_controller_plbw.c
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/src/user_io_board_controller_plbw.c
+END
+xcope.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/src/xcope.h
+END
+user_io_board_controller_plbw.h
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/src/user_io_board_controller_plbw.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WARP/!svn/ver/1051/PlatformSupport/CustomPeripherals/pcores/user_io_board_controller_plbw_v1_01_a/src/Makefile
+END

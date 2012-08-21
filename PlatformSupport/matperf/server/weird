@@ -1,0 +1,9 @@
+check = open('jobs_l').read()
+cal = open('check_jobs','w')
+
+if check.find('iperf') != -1:
+    cal.write('1')
+else:
+    cal.write('0')
+        
+

@@ -1,0 +1,22 @@
+cheq = open('tempo_result.txt').readlines()
+cla = open('checkresult.txt','a')
+for j in range(len(cheq)):
+    cla.write(cheq[j])
+cla.close()
+
+cal = open('result.txt','a')
+for i in range(len(cheq)):
+    if cheq[i].find('WARNING') != -1:
+       cheq[i] = ''
+    if cheq[i].find('out') != -1:
+        cheq[i] = ''
+    if (cheq[i].find('failed') != -1 | cheq[i].find('refused') != -1):
+        cheq[i] = ''
+    if cheq[i].find('quit') != -1:
+        cheq[i] = ''
+
+for i in range(len(cheq)):
+    if cheq[i] == '':
+        continue
+    cal.write(cheq[i])
+cal.close()

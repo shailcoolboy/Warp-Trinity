@@ -1,0 +1,26 @@
+###############################################################
+# Copyright (c) 2004 Xilinx, Inc. All Rights Reserved.
+# You may copy and modify these files for your own internal use solely with
+# Xilinx programmable logic devices and  Xilinx EDK system or create IP
+# modules solely for Xilinx programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they are distributed in
+# Xilinx programmable logic devices. 
+###############################################################
+
+OPTION psf_version = 2.1.0 ; 
+
+BEGIN LIBRARY WARPxilnet 
+
+ OPTION drc = net_drc ; 
+ option copyfiles = all;
+ #OPTION library_state = "deprecated";
+ OPTION desc = "WARP/Xilinx Networking TCP/IP stack library";
+
+ PARAM name = emac_instname, desc = "Name of Emac instance to be used with WARP/xilnet", type = peripheral_instance, range = (none, opb_ethernet, plb_ethernet, opb_ethernetlite, xps_ethernetlite), default = none; 
+
+ PARAM name = no_of_tcp_conns, type = int, default = 5, permit = user,  desc = "No. of Open TCP connections";
+
+ PARAM name = no_of_udp_conns, type = int, default = 5, permit = user,  desc = "No. of Open UDP connections";
+
+END LIBRARY 
+

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist
+END
+dual_port_block_memory_virtex2p_6_1_299a9f537bb5a43d.edn
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/dual_port_block_memory_virtex2p_6_1_299a9f537bb5a43d.edn
+END
+adder_subtracter_virtex2p_7_0_cb748602b0616a72.edn
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/adder_subtracter_virtex2p_7_0_cb748602b0616a72.edn
+END
+binary_counter_virtex2p_7_0_0611420023f6fdd6.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_0611420023f6fdd6.edn
+END
+binary_counter_virtex2p_7_0_016610e0863621bf.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_016610e0863621bf.edn
+END
+binary_counter_virtex2p_7_0_edc7d761bd25890d.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_edc7d761bd25890d.edn
+END
+dual_port_block_memory_virtex2p_6_1_a4748ac34de4a8d3.edn
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/dual_port_block_memory_virtex2p_6_1_a4748ac34de4a8d3.edn
+END
+adder_subtracter_virtex2p_7_0_219d4ec01152994f.edn
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/adder_subtracter_virtex2p_7_0_219d4ec01152994f.edn
+END
+xlpersistentdff.ngc
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/xlpersistentdff.ngc
+END
+adder_subtracter_virtex2p_7_0_2cb583e55ff51f1e.edn
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/adder_subtracter_virtex2p_7_0_2cb583e55ff51f1e.edn
+END
+binary_counter_virtex2p_7_0_67ac1d95fffad199.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_67ac1d95fffad199.edn
+END
+binary_counter_virtex2p_7_0_18e84c36111bc674.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_18e84c36111bc674.edn
+END
+binary_counter_virtex2p_7_0_dbb5736f3ec3cba8.edn
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/binary_counter_virtex2p_7_0_dbb5736f3ec3cba8.edn
+END
+dual_port_block_memory_virtex2p_6_1_46032f721e0f73ab.edn
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/netlist/dual_port_block_memory_virtex2p_6_1_46032f721e0f73ab.edn
+END

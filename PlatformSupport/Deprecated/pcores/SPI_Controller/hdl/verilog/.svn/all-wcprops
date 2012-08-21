@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog
+END
+spi_top.v
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/spi_top.v
+END
+ourspi.v
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/ourspi.v
+END
+opb2wb_shell.v
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/opb2wb_shell.v
+END
+spi_clgen.v
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/spi_clgen.v
+END
+timescale.v
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/timescale.v
+END
+spi_defines.v
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/spi_defines.v
+END
+spi_shift.v
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/SPI_Controller/hdl/verilog/spi_shift.v
+END

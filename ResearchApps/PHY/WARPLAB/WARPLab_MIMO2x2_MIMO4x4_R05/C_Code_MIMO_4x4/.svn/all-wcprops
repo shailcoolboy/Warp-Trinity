@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WARP/!svn/ver/1320/ResearchApps/PHY/WARPLAB/WARPLab_MIMO2x2_MIMO4x4_R05/C_Code_MIMO_4x4
+END
+warplab_regmacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WARP/!svn/ver/1311/ResearchApps/PHY/WARPLAB/WARPLab_MIMO2x2_MIMO4x4_R05/C_Code_MIMO_4x4/warplab_regmacros.h
+END
+warp_userio.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WARP/!svn/ver/1311/ResearchApps/PHY/WARPLAB/WARPLab_MIMO2x2_MIMO4x4_R05/C_Code_MIMO_4x4/warp_userio.h
+END
+warplab_mimo_4x4.c
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WARP/!svn/ver/1320/ResearchApps/PHY/WARPLAB/WARPLab_MIMO2x2_MIMO4x4_R05/C_Code_MIMO_4x4/warplab_mimo_4x4.c
+END
+warplab_defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WARP/!svn/ver/1320/ResearchApps/PHY/WARPLAB/WARPLab_MIMO2x2_MIMO4x4_R05/C_Code_MIMO_4x4/warplab_defines.h
+END

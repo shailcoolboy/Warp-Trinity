@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog
+END
+global_logic.v
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/global_logic.v
+END
+chbond_count_dec_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/chbond_count_dec_4byte.v
+END
+error_detect_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/error_detect_4byte.v
+END
+sym_dec_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/sym_dec_4byte.v
+END
+channel_init_sm.v
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/channel_init_sm.v
+END
+user_logic.v
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/user_logic.v
+END
+aurora_lane_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/aurora_lane_4byte.v
+END
+clock_module.v
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/clock_module.v
+END
+rx_stream.v
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/rx_stream.v
+END
+idle_and_ver_gen.v
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/idle_and_ver_gen.v
+END
+tx_stream.v
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/tx_stream.v
+END
+sym_gen_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/sym_gen_4byte.v
+END
+lane_init_sm_4byte.v
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/lane_init_sm_4byte.v
+END
+channel_error_detect.v
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/channel_error_detect.v
+END
+aurora4bitstream1.v
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/aurora4bitstream1.v
+END
+standard_cc_module.v
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/standard_cc_module.v
+END
+phase_align.v
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WARP/!svn/ver/299/PlatformSupport/Deprecated/pcores/Aurora_MGT/Pcore/mgt_fifo1_v1_00_a/hdl/verilog/phase_align.v
+END

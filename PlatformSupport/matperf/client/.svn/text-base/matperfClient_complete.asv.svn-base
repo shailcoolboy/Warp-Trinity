@@ -1,0 +1,16 @@
+% this program terminates the server and return the structs it made.
+% it basically sends signal 7 which the serve recognizes as a sign to
+% terminate the experiment.
+function matperfClient_complete
+while
+    udp = pnet('udpsocket',3333);
+    pnet(udp,'write',7);
+    pnet(udp,'writepacket','10.96.94.199',3333);
+    pnet(udp,'setreadtimeout',1);
+    pnet(udp,'readpacket');
+    data = pnet(udp,'read',1000,'double');
+    if data == 1,
+        disp('server terminated');
+    elseif data < 0 || data == 0
+end
+return

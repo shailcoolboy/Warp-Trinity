@@ -1,0 +1,8 @@
+The OneWire master Verilog used here is provided by Maxim/Dallas Semi. The
+code is pretty hard to find via their web page, but the license statement
+at the top of each file indicates it's available for use and distribution
+without licensing restriction.
+
+We got the code from:
+ftp://ftp.dalsemi.com/pub/auto_id/licensed/ds1wm.zip
+

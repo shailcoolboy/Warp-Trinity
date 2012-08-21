@@ -1,0 +1,701 @@
+
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 10.1.03 Build EDK_K_SP3.6
+# Thu Jan 08 11:25:14 2009
+# Target Board:  Rice University - WARP Project WARP Kits (FPGA/Clock/Radio Boards) Rev FPGA 1.2 / Radio 1.4 / Clock 1.1
+# Family:    virtex2p
+# Device:    XC2VP70
+# Package:   FF1517
+# Speed Grade:  -6
+# Processor: ppc405_0
+# Processor clock frequency: 240.00 MHz
+# Bus clock frequency: 80.00 MHz
+# On Chip Memory :  96 KB
+# ##############################################################################
+# ##############################################################################
+# Template for PPC405 v3 with PLBv46 bus interface
+# ##############################################################################
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_clk_board_config_sys_clk_pin = fpga_0_clk_board_config_sys_clk, DIR = I
+ PORT fpga_0_clk_board_config_cfg_radio_dat_out_pin = fpga_0_clk_board_config_cfg_radio_dat_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_radio_csb_out_pin = fpga_0_clk_board_config_cfg_radio_csb_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_radio_en_out_pin = fpga_0_clk_board_config_cfg_radio_en_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_radio_clk_out_pin = fpga_0_clk_board_config_cfg_radio_clk_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_logic_dat_out_pin = fpga_0_clk_board_config_cfg_logic_dat_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_logic_csb_out_pin = fpga_0_clk_board_config_cfg_logic_csb_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_logic_en_out_pin = fpga_0_clk_board_config_cfg_logic_en_out, DIR = O
+ PORT fpga_0_clk_board_config_cfg_logic_clk_out_pin = fpga_0_clk_board_config_cfg_logic_clk_out, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_converter_clock_out_pin = fpga_0_radio_bridge_slot_2_converter_clock_out, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_EEPROM_IO = fpga_0_radio_bridge_slot_2_radio_EEPROM_IO, DIR = IO
+ PORT fpga_0_radio_bridge_slot_2_dac_spi_clk_pin = fpga_0_radio_bridge_slot_2_dac_spi_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_dac_spi_cs_pin = fpga_0_radio_bridge_slot_2_dac_spi_cs, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_dac_spi_data_pin = fpga_0_radio_bridge_slot_2_dac_spi_data, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_24PA_pin = fpga_0_radio_bridge_slot_2_radio_24PA, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_5PA_pin = fpga_0_radio_bridge_slot_2_radio_5PA, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_ANTSW_pin = fpga_0_radio_bridge_slot_2_radio_ANTSW, DIR = O, VEC = [1:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_dac_PLL_LOCK_pin = fpga_0_radio_bridge_slot_2_radio_dac_PLL_LOCK, DIR = I
+ PORT fpga_0_radio_bridge_slot_2_radio_dac_RESET_pin = fpga_0_radio_bridge_slot_2_radio_dac_RESET, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_DIPSW_pin = fpga_0_radio_bridge_slot_2_radio_DIPSW, DIR = I, VEC = [3:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_LD_pin = fpga_0_radio_bridge_slot_2_radio_LD, DIR = I
+ PORT fpga_0_radio_bridge_slot_2_radio_LED_pin = fpga_0_radio_bridge_slot_2_radio_LED, DIR = O, VEC = [2:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_clk_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_CLAMP_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_CLAMP, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_D_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_D, DIR = I, VEC = [9:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_HIZ_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_HIZ, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_OTR_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_OTR, DIR = I
+ PORT fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_SLEEP_pin = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_SLEEP, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_DCS_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_DCS, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_DFS_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_DFS, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRA_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRA, DIR = I
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRB_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRB, DIR = I
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNA_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNA, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNB_pin = fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNB, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_TxEn_pin = fpga_0_radio_bridge_slot_2_radio_TxEn, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RxEn_pin = fpga_0_radio_bridge_slot_2_radio_RxEn, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_RxHP_pin = fpga_0_radio_bridge_slot_2_radio_RxHP, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_SHDN_pin = fpga_0_radio_bridge_slot_2_radio_SHDN, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_spi_clk_pin = fpga_0_radio_bridge_slot_2_radio_spi_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_spi_cs_pin = fpga_0_radio_bridge_slot_2_radio_spi_cs, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_spi_data_pin = fpga_0_radio_bridge_slot_2_radio_spi_data, DIR = O
+ PORT fpga_0_radio_bridge_slot_2_radio_B_pin = fpga_0_radio_bridge_slot_2_radio_B, DIR = O, VEC = [6:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_DAC_I_pin = fpga_0_radio_bridge_slot_2_radio_DAC_I, DIR = O, VEC = [15:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_DAC_Q_pin = fpga_0_radio_bridge_slot_2_radio_DAC_Q, DIR = O, VEC = [15:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_ADC_I_pin = fpga_0_radio_bridge_slot_2_radio_ADC_I, DIR = I, VEC = [13:0]
+ PORT fpga_0_radio_bridge_slot_2_radio_ADC_Q_pin = fpga_0_radio_bridge_slot_2_radio_ADC_Q, DIR = I, VEC = [13:0]
+ PORT fpga_0_radio_bridge_slot_3_converter_clock_out_pin = fpga_0_radio_bridge_slot_3_converter_clock_out, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_EEPROM_IO = fpga_0_radio_bridge_slot_3_radio_EEPROM_IO, DIR = IO
+ PORT fpga_0_radio_bridge_slot_3_dac_spi_clk_pin = fpga_0_radio_bridge_slot_3_dac_spi_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_dac_spi_cs_pin = fpga_0_radio_bridge_slot_3_dac_spi_cs, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_dac_spi_data_pin = fpga_0_radio_bridge_slot_3_dac_spi_data, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_24PA_pin = fpga_0_radio_bridge_slot_3_radio_24PA, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_5PA_pin = fpga_0_radio_bridge_slot_3_radio_5PA, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_ANTSW_pin = fpga_0_radio_bridge_slot_3_radio_ANTSW, DIR = O, VEC = [1:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_dac_PLL_LOCK_pin = fpga_0_radio_bridge_slot_3_radio_dac_PLL_LOCK, DIR = I
+ PORT fpga_0_radio_bridge_slot_3_radio_dac_RESET_pin = fpga_0_radio_bridge_slot_3_radio_dac_RESET, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_DIPSW_pin = fpga_0_radio_bridge_slot_3_radio_DIPSW, DIR = I, VEC = [3:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_LD_pin = fpga_0_radio_bridge_slot_3_radio_LD, DIR = I
+ PORT fpga_0_radio_bridge_slot_3_radio_LED_pin = fpga_0_radio_bridge_slot_3_radio_LED, DIR = O, VEC = [2:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_clk_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_CLAMP_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_CLAMP, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_D_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_D, DIR = I, VEC = [9:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_HIZ_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_HIZ, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_OTR_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_OTR, DIR = I
+ PORT fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_SLEEP_pin = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_SLEEP, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_DCS_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_DCS, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_DFS_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_DFS, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRA_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRA, DIR = I
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRB_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRB, DIR = I
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNA_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNA, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNB_pin = fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNB, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_TxEn_pin = fpga_0_radio_bridge_slot_3_radio_TxEn, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RxEn_pin = fpga_0_radio_bridge_slot_3_radio_RxEn, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_RxHP_pin = fpga_0_radio_bridge_slot_3_radio_RxHP, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_SHDN_pin = fpga_0_radio_bridge_slot_3_radio_SHDN, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_spi_clk_pin = fpga_0_radio_bridge_slot_3_radio_spi_clk, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_spi_cs_pin = fpga_0_radio_bridge_slot_3_radio_spi_cs, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_spi_data_pin = fpga_0_radio_bridge_slot_3_radio_spi_data, DIR = O
+ PORT fpga_0_radio_bridge_slot_3_radio_B_pin = fpga_0_radio_bridge_slot_3_radio_B, DIR = O, VEC = [6:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_DAC_I_pin = fpga_0_radio_bridge_slot_3_radio_DAC_I, DIR = O, VEC = [15:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_DAC_Q_pin = fpga_0_radio_bridge_slot_3_radio_DAC_Q, DIR = O, VEC = [15:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_ADC_I_pin = fpga_0_radio_bridge_slot_3_radio_ADC_I, DIR = I, VEC = [13:0]
+ PORT fpga_0_radio_bridge_slot_3_radio_ADC_Q_pin = fpga_0_radio_bridge_slot_3_radio_ADC_Q, DIR = I, VEC = [13:0]
+ PORT fpga_0_USER_IO_GPIO2_d_out_pin = fpga_0_USER_IO_GPIO2_d_out, DIR = O, VEC = [0:17]
+ PORT fpga_0_USER_IO_GPIO_in_pin = fpga_0_USER_IO_GPIO_in, DIR = I, VEC = [0:7]
+ PORT fpga_0_rs232_RX_pin = fpga_0_rs232_RX, DIR = I
+ PORT fpga_0_rs232_TX_pin = fpga_0_rs232_TX, DIR = O
+ PORT fpga_0_eeprom_controller_DQ0_pin = fpga_0_eeprom_controller_DQ0, DIR = IO
+ PORT fpga_0_Ethernet_MAC_slew1_pin = net_vcc, DIR = O
+ PORT fpga_0_Ethernet_MAC_slew2_pin = net_vcc, DIR = O
+ PORT fpga_0_Ethernet_MAC_PHY_rst_n_pin = fpga_0_Ethernet_MAC_PHY_rst_n, DIR = O
+ PORT fpga_0_Ethernet_MAC_PHY_crs_pin = fpga_0_Ethernet_MAC_PHY_crs, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_col_pin = fpga_0_Ethernet_MAC_PHY_col, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_tx_data_pin = fpga_0_Ethernet_MAC_PHY_tx_data, DIR = O, VEC = [3:0]
+ PORT fpga_0_Ethernet_MAC_PHY_tx_en_pin = fpga_0_Ethernet_MAC_PHY_tx_en, DIR = O
+ PORT fpga_0_Ethernet_MAC_PHY_tx_clk_pin = fpga_0_Ethernet_MAC_PHY_tx_clk, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_rx_er_pin = fpga_0_Ethernet_MAC_PHY_rx_er, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_rx_clk_pin = fpga_0_Ethernet_MAC_PHY_rx_clk, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_dv_pin = fpga_0_Ethernet_MAC_PHY_dv, DIR = I
+ PORT fpga_0_Ethernet_MAC_PHY_rx_data_pin = fpga_0_Ethernet_MAC_PHY_rx_data, DIR = I, VEC = [3:0]
+ PORT sys_clk_pin = dcm_clk_s, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT sys_rst_pin = sys_rst_s, DIR = I, RST_POLARITY = 1, SIGIS = RST
+ PORT debug = rxrun & txrun & agcsetdone & ff_fpga_0_Ethernet_MAC_PHY_ensigs & 0b0 & 0b0 & 0b0 & debug_sw_gpio_O, VEC = [0:15], DIR = O
+
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_0
+ PARAMETER HW_VER = 3.00.a
+ PARAMETER C_FASTEST_PLB_CLOCK = DPLB0
+ BUS_INTERFACE DPLB0 = plb0
+ BUS_INTERFACE IPLB0 = plb0
+ BUS_INTERFACE JTAGPPC = jtagppc_cntlr_0_0
+ BUS_INTERFACE ISOCM = ppc405_0_iocm
+ BUS_INTERFACE DSOCM = ppc405_0_docm
+ BUS_INTERFACE RESETPPC = ppc_reset_bus
+ PORT BRAMISOCMCLK = sys_clk_s
+ PORT BRAMDSOCMCLK = sys_clk_s
+ PORT CPMC405CLOCK = proc_clk_s
+END
+
+BEGIN jtagppc_cntlr
+ PARAMETER INSTANCE = jtagppc_cntlr_0
+ PARAMETER HW_VER = 2.01.c
+ BUS_INTERFACE JTAGPPC0 = jtagppc_cntlr_0_0
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb0
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_NUM_CLK_PLB2OPB_REARB = 100
+ PARAMETER HW_VER = 1.03.a
+ PORT PLB_Clk = sys_clk_s
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = USER_IO
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_GPIO_WIDTH = 18
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_IS_BIDIR = 0
+ PARAMETER C_ALL_INPUTS = 1
+ PARAMETER C_IS_BIDIR_2 = 1
+ PARAMETER C_ALL_INPUTS_2 = 0
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = plb0
+ PORT GPIO_in = fpga_0_USER_IO_GPIO_in & 0b0000000000
+ PORT GPIO2_d_out = fpga_0_USER_IO_GPIO2_d_out
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = rs232
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BAUDRATE = 57600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_SPLB_CLK_FREQ_HZ = 80000000
+ PARAMETER C_BASEADDR = 0x84000000
+ PARAMETER C_HIGHADDR = 0x8400ffff
+ BUS_INTERFACE SPLB = plb0
+ PORT RX = fpga_0_rs232_RX
+ PORT TX = fpga_0_rs232_TX
+END
+
+BEGIN clock_board_config
+ PARAMETER INSTANCE = clk_board_config
+ PARAMETER HW_VER = 1.04.a
+ PORT sys_clk = fpga_0_clk_board_config_sys_clk
+ PORT sys_rst = net_gnd
+ PORT cfg_radio_dat_out = fpga_0_clk_board_config_cfg_radio_dat_out
+ PORT cfg_radio_csb_out = fpga_0_clk_board_config_cfg_radio_csb_out
+ PORT cfg_radio_en_out = fpga_0_clk_board_config_cfg_radio_en_out
+ PORT cfg_radio_clk_out = fpga_0_clk_board_config_cfg_radio_clk_out
+ PORT cfg_logic_dat_out = fpga_0_clk_board_config_cfg_logic_dat_out
+ PORT cfg_logic_csb_out = fpga_0_clk_board_config_cfg_logic_csb_out
+ PORT cfg_logic_en_out = fpga_0_clk_board_config_cfg_logic_en_out
+ PORT cfg_logic_clk_out = fpga_0_clk_board_config_cfg_logic_clk_out
+ PORT config_invalid = clk_board_config_config_invalid
+END
+
+BEGIN eeprom
+ PARAMETER INSTANCE = eeprom_controller
+ PARAMETER HW_VER = 1.07.a
+ PARAMETER C_MEM0_BASEADDR = 0xc5400000
+ PARAMETER C_MEM0_HIGHADDR = 0xc540ffff
+ BUS_INTERFACE SPLB = plb_32b_40MHz
+ PORT DQ0 = fpga_0_eeprom_controller_DQ0
+ PORT DQ1_I = net_vcc
+ PORT DQ2_T = eeprom_controller_DQ2_T_radio_bridge_slot_2_user_EEPROM_IO_T
+ PORT DQ2_O = eeprom_controller_DQ2_O_radio_bridge_slot_2_user_EEPROM_IO_O
+ PORT DQ2_I = eeprom_controller_DQ2_I_radio_bridge_slot_2_user_EEPROM_IO_I
+ PORT DQ3_T = eeprom_controller_DQ3_T_radio_bridge_slot_3_user_EEPROM_IO_T
+ PORT DQ3_O = eeprom_controller_DQ3_O_radio_bridge_slot_3_user_EEPROM_IO_O
+ PORT DQ3_I = eeprom_controller_DQ3_I_radio_bridge_slot_3_user_EEPROM_IO_I
+ PORT DQ4_I = net_vcc
+ PORT DQ5_I = net_vcc
+ PORT DQ6_I = net_vcc
+ PORT DQ7_I = net_vcc
+ PORT SPLB_Rst = net_gnd
+END
+
+BEGIN xps_ethernetlite
+ PARAMETER INSTANCE = Ethernet_MAC
+ PARAMETER HW_VER = 2.00.b
+ PARAMETER C_SPLB_CLK_PERIOD_PS = 12500
+ PARAMETER C_BASEADDR = 0x81000000
+ PARAMETER C_HIGHADDR = 0x8100ffff
+ BUS_INTERFACE SPLB = plb0
+ PORT PHY_rst_n = fpga_0_Ethernet_MAC_PHY_rst_n
+ PORT PHY_crs = fpga_0_Ethernet_MAC_PHY_crs
+ PORT PHY_col = fpga_0_Ethernet_MAC_PHY_col
+ PORT PHY_tx_data = fpga_0_Ethernet_MAC_PHY_tx_data
+ PORT PHY_tx_en = fpga_0_Ethernet_MAC_PHY_tx_en
+ PORT PHY_tx_clk = fpga_0_Ethernet_MAC_PHY_tx_clk
+ PORT PHY_rx_er = fpga_0_Ethernet_MAC_PHY_rx_er
+ PORT PHY_rx_clk = fpga_0_Ethernet_MAC_PHY_rx_clk
+ PORT PHY_dv = fpga_0_Ethernet_MAC_PHY_dv
+ PORT PHY_rx_data = fpga_0_Ethernet_MAC_PHY_rx_data
+END
+
+BEGIN radio_controller
+ PARAMETER INSTANCE = radio_controller_0
+ PARAMETER HW_VER = 1.22.a
+ PARAMETER C_BASEADDR = 0xcac00000
+ PARAMETER C_HIGHADDR = 0xcac0ffff
+ BUS_INTERFACE SPLB = plb_32b_40MHz
+ PORT controller_logic_clk = radio_bridge_slot_1_controller_logic_clk_radio_bridge_slot_2_controller_logic_clk_radio_bridge_slot_3_controller_logic_clk_radio_bridge_slot_4_controller_logic_clk_radio_controller_0_controller_logic_clk
+ PORT spi_clk = radio_bridge_slot_1_controller_spi_clk_radio_bridge_slot_2_controller_spi_clk_radio_bridge_slot_3_controller_spi_clk_radio_bridge_slot_4_controller_spi_clk_radio_controller_0_spi_clk
+ PORT data_out = radio_bridge_slot_1_controller_spi_data_radio_bridge_slot_2_controller_spi_data_radio_bridge_slot_3_controller_spi_data_radio_bridge_slot_4_controller_spi_data_radio_controller_0_data_out
+ PORT radio2_cs = radio_bridge_slot_2_controller_radio_cs_radio_controller_0_radio2_cs
+ PORT radio3_cs = radio_bridge_slot_3_controller_radio_cs_radio_controller_0_radio3_cs
+ PORT dac2_cs = radio_bridge_slot_2_controller_dac_cs_radio_controller_0_dac2_cs
+ PORT dac3_cs = radio_bridge_slot_3_controller_dac_cs_radio_controller_0_dac3_cs
+ PORT radio2_SHDN = radio_bridge_slot_2_controller_SHDN_radio_controller_0_radio2_SHDN
+ PORT radio2_TxEn = radio_bridge_slot_2_controller_TxEn_radio_controller_0_radio2_TxEn
+ PORT radio2_RxEn = radio_bridge_slot_2_controller_RxEn_radio_controller_0_radio2_RxEn
+ PORT radio2_RxHP = radio_bridge_slot_2_controller_RxHP_radio_controller_0_radio2_RxHP
+ PORT radio2_LD = radio_bridge_slot_2_controller_LD_radio_controller_0_radio2_LD
+ PORT radio2_24PA = radio_bridge_slot_2_controller_24PA_radio_controller_0_radio2_24PA
+ PORT radio2_5PA = radio_bridge_slot_2_controller_5PA_radio_controller_0_radio2_5PA
+ PORT radio2_ANTSW = radio_bridge_slot_2_controller_ANTSW_radio_controller_0_radio2_ANTSW
+ PORT radio2_LED = radio_bridge_slot_2_controller_LED_radio_controller_0_radio2_LED
+ PORT radio2_ADC_RX_DCS = radio_bridge_slot_2_controller_RX_ADC_DCS_radio_controller_0_radio2_ADC_RX_DCS
+ PORT radio2_ADC_RX_DFS = radio_bridge_slot_2_controller_RX_ADC_DFS_radio_controller_0_radio2_ADC_RX_DFS
+ PORT radio2_ADC_RX_OTRA = radio_bridge_slot_2_controller_RX_ADC_OTRA_radio_controller_0_radio2_ADC_RX_OTRA
+ PORT radio2_ADC_RX_OTRB = radio_bridge_slot_2_controller_RX_ADC_OTRB_radio_controller_0_radio2_ADC_RX_OTRB
+ PORT radio2_ADC_RX_PWDNA = radio_bridge_slot_2_controller_RX_ADC_PWDNA_radio_controller_0_radio2_ADC_RX_PWDNA
+ PORT radio2_ADC_RX_PWDNB = radio_bridge_slot_2_controller_RX_ADC_PWDNB_radio_controller_0_radio2_ADC_RX_PWDNB
+ PORT radio2_DIPSW = radio_bridge_slot_2_controller_DIPSW_radio_controller_0_radio2_DIPSW
+ PORT radio2_RSSI_ADC_CLAMP = radio_bridge_slot_2_controller_RSSI_ADC_CLAMP_radio_controller_0_radio2_RSSI_ADC_CLAMP
+ PORT radio2_RSSI_ADC_HIZ = radio_bridge_slot_2_controller_RSSI_ADC_HIZ_radio_controller_0_radio2_RSSI_ADC_HIZ
+ PORT radio2_RSSI_ADC_OTR = radio_bridge_slot_2_controller_RSSI_ADC_OTR_radio_controller_0_radio2_RSSI_ADC_OTR
+ PORT radio2_RSSI_ADC_SLEEP = radio_bridge_slot_2_controller_RSSI_ADC_SLEEP_radio_controller_0_radio2_RSSI_ADC_SLEEP
+ PORT radio2_RSSI_ADC_D = radio_bridge_slot_2_controller_RSSI_ADC_D_radio_controller_0_radio2_RSSI_ADC_D
+ PORT radio2_TX_DAC_PLL_LOCK = radio_bridge_slot_2_controller_dac_PLL_LOCK_radio_controller_0_radio2_TX_DAC_PLL_LOCK
+ PORT radio2_TX_DAC_RESET = radio_bridge_slot_2_controller_dac_RESET_radio_controller_0_radio2_TX_DAC_RESET
+ PORT radio2_SHDN_external = radio_bridge_slot_2_controller_SHDN_external_radio_controller_0_radio2_SHDN_external
+ PORT radio2_TxEn_external = radio_bridge_slot_2_controller_TxEn_external_radio_controller_0_radio2_TxEn_external
+ PORT radio2_RxEn_external = radio_bridge_slot_2_controller_RxEn_external_radio_controller_0_radio2_RxEn_external
+ PORT radio2_RxHP_external = radio_bridge_slot_2_controller_RxHP_external_radio_controller_0_radio2_RxHP_external
+ PORT radio2_TxGain = radio_bridge_slot_2_user_Tx_gain_radio_controller_0_radio2_TxGain
+ PORT radio2_TxStart = radio_bridge_slot_2_controller_TxStart_radio_controller_0_radio2_TxStart
+ PORT radio3_SHDN = radio_bridge_slot_3_controller_SHDN_radio_controller_0_radio3_SHDN
+ PORT radio3_TxEn = radio_bridge_slot_3_controller_TxEn_radio_controller_0_radio3_TxEn
+ PORT radio3_RxEn = radio_bridge_slot_3_controller_RxEn_radio_controller_0_radio3_RxEn
+ PORT radio3_RxHP = radio_bridge_slot_3_controller_RxHP_radio_controller_0_radio3_RxHP
+ PORT radio3_LD = radio_bridge_slot_3_controller_LD_radio_controller_0_radio3_LD
+ PORT radio3_24PA = radio_bridge_slot_3_controller_24PA_radio_controller_0_radio3_24PA
+ PORT radio3_5PA = radio_bridge_slot_3_controller_5PA_radio_controller_0_radio3_5PA
+ PORT radio3_ANTSW = radio_bridge_slot_3_controller_ANTSW_radio_controller_0_radio3_ANTSW
+ PORT radio3_LED = radio_bridge_slot_3_controller_LED_radio_controller_0_radio3_LED
+ PORT radio3_ADC_RX_DCS = radio_bridge_slot_3_controller_RX_ADC_DCS_radio_controller_0_radio3_ADC_RX_DCS
+ PORT radio3_ADC_RX_DFS = radio_bridge_slot_3_controller_RX_ADC_DFS_radio_controller_0_radio3_ADC_RX_DFS
+ PORT radio3_ADC_RX_OTRA = radio_bridge_slot_3_controller_RX_ADC_OTRA_radio_controller_0_radio3_ADC_RX_OTRA
+ PORT radio3_ADC_RX_OTRB = radio_bridge_slot_3_controller_RX_ADC_OTRB_radio_controller_0_radio3_ADC_RX_OTRB
+ PORT radio3_ADC_RX_PWDNA = radio_bridge_slot_3_controller_RX_ADC_PWDNA_radio_controller_0_radio3_ADC_RX_PWDNA
+ PORT radio3_ADC_RX_PWDNB = radio_bridge_slot_3_controller_RX_ADC_PWDNB_radio_controller_0_radio3_ADC_RX_PWDNB
+ PORT radio3_DIPSW = radio_bridge_slot_3_controller_DIPSW_radio_controller_0_radio3_DIPSW
+ PORT radio3_RSSI_ADC_CLAMP = radio_bridge_slot_3_controller_RSSI_ADC_CLAMP_radio_controller_0_radio3_RSSI_ADC_CLAMP
+ PORT radio3_RSSI_ADC_HIZ = radio_bridge_slot_3_controller_RSSI_ADC_HIZ_radio_controller_0_radio3_RSSI_ADC_HIZ
+ PORT radio3_RSSI_ADC_OTR = radio_bridge_slot_3_controller_RSSI_ADC_OTR_radio_controller_0_radio3_RSSI_ADC_OTR
+ PORT radio3_RSSI_ADC_SLEEP = radio_bridge_slot_3_controller_RSSI_ADC_SLEEP_radio_controller_0_radio3_RSSI_ADC_SLEEP
+ PORT radio3_RSSI_ADC_D = radio_bridge_slot_3_controller_RSSI_ADC_D_radio_controller_0_radio3_RSSI_ADC_D
+ PORT radio3_TX_DAC_PLL_LOCK = radio_bridge_slot_3_controller_dac_PLL_LOCK_radio_controller_0_radio3_TX_DAC_PLL_LOCK
+ PORT radio3_TX_DAC_RESET = radio_bridge_slot_3_controller_dac_RESET_radio_controller_0_radio3_TX_DAC_RESET
+ PORT radio3_SHDN_external = radio_bridge_slot_3_controller_SHDN_external_radio_controller_0_radio3_SHDN_external
+ PORT radio3_TxEn_external = radio_bridge_slot_3_controller_TxEn_external_radio_controller_0_radio3_TxEn_external
+ PORT radio3_RxEn_external = radio_bridge_slot_3_controller_RxEn_external_radio_controller_0_radio3_RxEn_external
+ PORT radio3_RxHP_external = radio_bridge_slot_3_controller_RxHP_external_radio_controller_0_radio3_RxHP_external
+ PORT radio3_TxGain = radio_bridge_slot_3_user_Tx_gain_radio_controller_0_radio3_TxGain
+ PORT radio3_TxStart = radio_bridge_slot_3_controller_TxStart_radio_controller_0_radio3_TxStart
+END
+
+BEGIN radio_bridge
+ PARAMETER INSTANCE = radio_bridge_slot_2
+ PARAMETER HW_VER = 1.22.a
+ PORT converter_clock_out = fpga_0_radio_bridge_slot_2_converter_clock_out
+ PORT radio_B = fpga_0_radio_bridge_slot_2_radio_B
+ PORT radio_ADC_I = fpga_0_radio_bridge_slot_2_radio_ADC_I
+ PORT radio_ADC_Q = fpga_0_radio_bridge_slot_2_radio_ADC_Q
+ PORT radio_DAC_I = fpga_0_radio_bridge_slot_2_radio_DAC_I
+ PORT radio_DAC_Q = fpga_0_radio_bridge_slot_2_radio_DAC_Q
+ PORT controller_logic_clk = radio_bridge_slot_1_controller_logic_clk_radio_bridge_slot_2_controller_logic_clk_radio_bridge_slot_3_controller_logic_clk_radio_bridge_slot_4_controller_logic_clk_radio_controller_0_controller_logic_clk
+ PORT controller_spi_clk = radio_bridge_slot_1_controller_spi_clk_radio_bridge_slot_2_controller_spi_clk_radio_bridge_slot_3_controller_spi_clk_radio_bridge_slot_4_controller_spi_clk_radio_controller_0_spi_clk
+ PORT controller_spi_data = radio_bridge_slot_1_controller_spi_data_radio_bridge_slot_2_controller_spi_data_radio_bridge_slot_3_controller_spi_data_radio_bridge_slot_4_controller_spi_data_radio_controller_0_data_out
+ PORT controller_radio_cs = radio_bridge_slot_2_controller_radio_cs_radio_controller_0_radio2_cs
+ PORT controller_dac_cs = radio_bridge_slot_2_controller_dac_cs_radio_controller_0_dac2_cs
+ PORT controller_SHDN = radio_bridge_slot_2_controller_SHDN_radio_controller_0_radio2_SHDN
+ PORT controller_TxEn = radio_bridge_slot_2_controller_TxEn_radio_controller_0_radio2_TxEn
+ PORT controller_RxEn = radio_bridge_slot_2_controller_RxEn_radio_controller_0_radio2_RxEn
+ PORT controller_RxHP = radio_bridge_slot_2_controller_RxHP_radio_controller_0_radio2_RxHP
+ PORT controller_24PA = radio_bridge_slot_2_controller_24PA_radio_controller_0_radio2_24PA
+ PORT controller_5PA = radio_bridge_slot_2_controller_5PA_radio_controller_0_radio2_5PA
+ PORT controller_ANTSW = radio_bridge_slot_2_controller_ANTSW_radio_controller_0_radio2_ANTSW
+ PORT controller_LED = radio_bridge_slot_2_controller_LED_radio_controller_0_radio2_LED
+ PORT controller_RX_ADC_DCS = radio_bridge_slot_2_controller_RX_ADC_DCS_radio_controller_0_radio2_ADC_RX_DCS
+ PORT controller_RX_ADC_DFS = radio_bridge_slot_2_controller_RX_ADC_DFS_radio_controller_0_radio2_ADC_RX_DFS
+ PORT controller_RX_ADC_PWDNA = radio_bridge_slot_2_controller_RX_ADC_PWDNA_radio_controller_0_radio2_ADC_RX_PWDNA
+ PORT controller_RX_ADC_PWDNB = radio_bridge_slot_2_controller_RX_ADC_PWDNB_radio_controller_0_radio2_ADC_RX_PWDNB
+ PORT controller_DIPSW = radio_bridge_slot_2_controller_DIPSW_radio_controller_0_radio2_DIPSW
+ PORT controller_RSSI_ADC_CLAMP = radio_bridge_slot_2_controller_RSSI_ADC_CLAMP_radio_controller_0_radio2_RSSI_ADC_CLAMP
+ PORT controller_RSSI_ADC_HIZ = radio_bridge_slot_2_controller_RSSI_ADC_HIZ_radio_controller_0_radio2_RSSI_ADC_HIZ
+ PORT controller_RSSI_ADC_SLEEP = radio_bridge_slot_2_controller_RSSI_ADC_SLEEP_radio_controller_0_radio2_RSSI_ADC_SLEEP
+ PORT controller_RSSI_ADC_D = radio_bridge_slot_2_controller_RSSI_ADC_D_radio_controller_0_radio2_RSSI_ADC_D
+ PORT controller_LD = radio_bridge_slot_2_controller_LD_radio_controller_0_radio2_LD
+ PORT controller_RX_ADC_OTRA = radio_bridge_slot_2_controller_RX_ADC_OTRA_radio_controller_0_radio2_ADC_RX_OTRA
+ PORT controller_RX_ADC_OTRB = radio_bridge_slot_2_controller_RX_ADC_OTRB_radio_controller_0_radio2_ADC_RX_OTRB
+ PORT controller_RSSI_ADC_OTR = radio_bridge_slot_2_controller_RSSI_ADC_OTR_radio_controller_0_radio2_RSSI_ADC_OTR
+ PORT controller_dac_PLL_LOCK = radio_bridge_slot_2_controller_dac_PLL_LOCK_radio_controller_0_radio2_TX_DAC_PLL_LOCK
+ PORT controller_dac_RESET = radio_bridge_slot_2_controller_dac_RESET_radio_controller_0_radio2_TX_DAC_RESET
+ PORT user_Tx_gain = radio_bridge_slot_2_user_Tx_gain_radio_controller_0_radio2_TxGain
+ PORT controller_TxStart = radio_bridge_slot_2_controller_TxStart_radio_controller_0_radio2_TxStart
+ PORT controller_SHDN_external = radio_bridge_slot_2_controller_SHDN_external_radio_controller_0_radio2_SHDN_external
+ PORT controller_RxEn_external = radio_bridge_slot_2_controller_RxEn_external_radio_controller_0_radio2_RxEn_external
+ PORT controller_TxEn_external = radio_bridge_slot_2_controller_TxEn_external_radio_controller_0_radio2_TxEn_external
+ PORT controller_RxHP_external = radio_bridge_slot_2_controller_RxHP_external_radio_controller_0_radio2_RxHP_external
+ PORT dac_spi_data = fpga_0_radio_bridge_slot_2_dac_spi_data
+ PORT dac_spi_cs = fpga_0_radio_bridge_slot_2_dac_spi_cs
+ PORT dac_spi_clk = fpga_0_radio_bridge_slot_2_dac_spi_clk
+ PORT radio_spi_clk = fpga_0_radio_bridge_slot_2_radio_spi_clk
+ PORT radio_spi_data = fpga_0_radio_bridge_slot_2_radio_spi_data
+ PORT radio_spi_cs = fpga_0_radio_bridge_slot_2_radio_spi_cs
+ PORT radio_SHDN = fpga_0_radio_bridge_slot_2_radio_SHDN
+ PORT radio_TxEn = fpga_0_radio_bridge_slot_2_radio_TxEn
+ PORT radio_RxEn = fpga_0_radio_bridge_slot_2_radio_RxEn
+ PORT radio_RxHP = fpga_0_radio_bridge_slot_2_radio_RxHP
+ PORT radio_24PA = fpga_0_radio_bridge_slot_2_radio_24PA
+ PORT radio_5PA = fpga_0_radio_bridge_slot_2_radio_5PA
+ PORT radio_ANTSW = fpga_0_radio_bridge_slot_2_radio_ANTSW
+ PORT radio_LED = fpga_0_radio_bridge_slot_2_radio_LED
+ PORT radio_RX_ADC_DCS = fpga_0_radio_bridge_slot_2_radio_RX_ADC_DCS
+ PORT radio_RX_ADC_DFS = fpga_0_radio_bridge_slot_2_radio_RX_ADC_DFS
+ PORT radio_RX_ADC_PWDNA = fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNA
+ PORT radio_RX_ADC_PWDNB = fpga_0_radio_bridge_slot_2_radio_RX_ADC_PWDNB
+ PORT radio_DIPSW = fpga_0_radio_bridge_slot_2_radio_DIPSW
+ PORT radio_RSSI_ADC_clk = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_clk
+ PORT radio_RSSI_ADC_CLAMP = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_CLAMP
+ PORT radio_RSSI_ADC_HIZ = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_HIZ
+ PORT radio_RSSI_ADC_SLEEP = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_SLEEP
+ PORT radio_RSSI_ADC_D = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_D
+ PORT radio_LD = fpga_0_radio_bridge_slot_2_radio_LD
+ PORT radio_RX_ADC_OTRA = fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRA
+ PORT radio_RX_ADC_OTRB = fpga_0_radio_bridge_slot_2_radio_RX_ADC_OTRB
+ PORT radio_RSSI_ADC_OTR = fpga_0_radio_bridge_slot_2_radio_RSSI_ADC_OTR
+ PORT radio_dac_PLL_LOCK = fpga_0_radio_bridge_slot_2_radio_dac_PLL_LOCK
+ PORT radio_dac_RESET = fpga_0_radio_bridge_slot_2_radio_dac_RESET
+ PORT user_EEPROM_IO_T = eeprom_controller_DQ2_T_radio_bridge_slot_2_user_EEPROM_IO_T
+ PORT user_EEPROM_IO_O = eeprom_controller_DQ2_O_radio_bridge_slot_2_user_EEPROM_IO_O
+ PORT user_EEPROM_IO_I = eeprom_controller_DQ2_I_radio_bridge_slot_2_user_EEPROM_IO_I
+ PORT radio_EEPROM_IO = fpga_0_radio_bridge_slot_2_radio_EEPROM_IO
+ PORT user_ADC_I = radio_bridge_slot_2_user_ADC_I
+ PORT user_ADC_Q = radio_bridge_slot_2_user_ADC_Q
+ PORT user_DAC_I = radio_bridge_slot_2_user_DAC_I
+ PORT user_DAC_Q = radio_bridge_slot_2_user_DAC_Q
+ PORT user_TxModelStart = radio2_txStart
+ PORT user_RSSI_ADC_clk = rssi_clk_out
+ PORT user_RSSI_ADC_D = radio_bridge_slot_2_user_RSSI_ADC_D
+ PORT converter_clock_in = clk_40MHz
+ PORT user_RxHP_external = agc_rxhp_b
+ PORT user_RxBB_gain = agc_g_bb_b
+ PORT user_RxRF_gain = agc_g_rf_b
+END
+
+BEGIN radio_bridge
+ PARAMETER INSTANCE = radio_bridge_slot_3
+ PARAMETER HW_VER = 1.22.a
+ PORT converter_clock_out = fpga_0_radio_bridge_slot_3_converter_clock_out
+ PORT radio_B = fpga_0_radio_bridge_slot_3_radio_B
+ PORT radio_ADC_I = fpga_0_radio_bridge_slot_3_radio_ADC_I
+ PORT radio_ADC_Q = fpga_0_radio_bridge_slot_3_radio_ADC_Q
+ PORT radio_DAC_I = fpga_0_radio_bridge_slot_3_radio_DAC_I
+ PORT radio_DAC_Q = fpga_0_radio_bridge_slot_3_radio_DAC_Q
+ PORT controller_logic_clk = radio_bridge_slot_1_controller_logic_clk_radio_bridge_slot_2_controller_logic_clk_radio_bridge_slot_3_controller_logic_clk_radio_bridge_slot_4_controller_logic_clk_radio_controller_0_controller_logic_clk
+ PORT controller_spi_clk = radio_bridge_slot_1_controller_spi_clk_radio_bridge_slot_2_controller_spi_clk_radio_bridge_slot_3_controller_spi_clk_radio_bridge_slot_4_controller_spi_clk_radio_controller_0_spi_clk
+ PORT controller_spi_data = radio_bridge_slot_1_controller_spi_data_radio_bridge_slot_2_controller_spi_data_radio_bridge_slot_3_controller_spi_data_radio_bridge_slot_4_controller_spi_data_radio_controller_0_data_out
+ PORT controller_radio_cs = radio_bridge_slot_3_controller_radio_cs_radio_controller_0_radio3_cs
+ PORT controller_dac_cs = radio_bridge_slot_3_controller_dac_cs_radio_controller_0_dac3_cs
+ PORT controller_SHDN = radio_bridge_slot_3_controller_SHDN_radio_controller_0_radio3_SHDN
+ PORT controller_TxEn = radio_bridge_slot_3_controller_TxEn_radio_controller_0_radio3_TxEn
+ PORT controller_RxEn = radio_bridge_slot_3_controller_RxEn_radio_controller_0_radio3_RxEn
+ PORT controller_RxHP = radio_bridge_slot_3_controller_RxHP_radio_controller_0_radio3_RxHP
+ PORT controller_24PA = radio_bridge_slot_3_controller_24PA_radio_controller_0_radio3_24PA
+ PORT controller_5PA = radio_bridge_slot_3_controller_5PA_radio_controller_0_radio3_5PA
+ PORT controller_ANTSW = radio_bridge_slot_3_controller_ANTSW_radio_controller_0_radio3_ANTSW
+ PORT controller_LED = radio_bridge_slot_3_controller_LED_radio_controller_0_radio3_LED
+ PORT controller_RX_ADC_DCS = radio_bridge_slot_3_controller_RX_ADC_DCS_radio_controller_0_radio3_ADC_RX_DCS
+ PORT controller_RX_ADC_DFS = radio_bridge_slot_3_controller_RX_ADC_DFS_radio_controller_0_radio3_ADC_RX_DFS
+ PORT controller_RX_ADC_PWDNA = radio_bridge_slot_3_controller_RX_ADC_PWDNA_radio_controller_0_radio3_ADC_RX_PWDNA
+ PORT controller_RX_ADC_PWDNB = radio_bridge_slot_3_controller_RX_ADC_PWDNB_radio_controller_0_radio3_ADC_RX_PWDNB
+ PORT controller_DIPSW = radio_bridge_slot_3_controller_DIPSW_radio_controller_0_radio3_DIPSW
+ PORT controller_RSSI_ADC_CLAMP = radio_bridge_slot_3_controller_RSSI_ADC_CLAMP_radio_controller_0_radio3_RSSI_ADC_CLAMP
+ PORT controller_RSSI_ADC_HIZ = radio_bridge_slot_3_controller_RSSI_ADC_HIZ_radio_controller_0_radio3_RSSI_ADC_HIZ
+ PORT controller_RSSI_ADC_SLEEP = radio_bridge_slot_3_controller_RSSI_ADC_SLEEP_radio_controller_0_radio3_RSSI_ADC_SLEEP
+ PORT controller_RSSI_ADC_D = radio_bridge_slot_3_controller_RSSI_ADC_D_radio_controller_0_radio3_RSSI_ADC_D
+ PORT controller_LD = radio_bridge_slot_3_controller_LD_radio_controller_0_radio3_LD
+ PORT controller_RX_ADC_OTRA = radio_bridge_slot_3_controller_RX_ADC_OTRA_radio_controller_0_radio3_ADC_RX_OTRA
+ PORT controller_RX_ADC_OTRB = radio_bridge_slot_3_controller_RX_ADC_OTRB_radio_controller_0_radio3_ADC_RX_OTRB
+ PORT controller_RSSI_ADC_OTR = radio_bridge_slot_3_controller_RSSI_ADC_OTR_radio_controller_0_radio3_RSSI_ADC_OTR
+ PORT controller_dac_PLL_LOCK = radio_bridge_slot_3_controller_dac_PLL_LOCK_radio_controller_0_radio3_TX_DAC_PLL_LOCK
+ PORT controller_dac_RESET = radio_bridge_slot_3_controller_dac_RESET_radio_controller_0_radio3_TX_DAC_RESET
+ PORT user_Tx_gain = radio_bridge_slot_3_user_Tx_gain_radio_controller_0_radio3_TxGain
+ PORT controller_TxStart = radio_bridge_slot_3_controller_TxStart_radio_controller_0_radio3_TxStart
+ PORT controller_SHDN_external = radio_bridge_slot_3_controller_SHDN_external_radio_controller_0_radio3_SHDN_external
+ PORT controller_RxEn_external = radio_bridge_slot_3_controller_RxEn_external_radio_controller_0_radio3_RxEn_external
+ PORT controller_TxEn_external = radio_bridge_slot_3_controller_TxEn_external_radio_controller_0_radio3_TxEn_external
+ PORT controller_RxHP_external = radio_bridge_slot_3_controller_RxHP_external_radio_controller_0_radio3_RxHP_external
+ PORT dac_spi_data = fpga_0_radio_bridge_slot_3_dac_spi_data
+ PORT dac_spi_cs = fpga_0_radio_bridge_slot_3_dac_spi_cs
+ PORT dac_spi_clk = fpga_0_radio_bridge_slot_3_dac_spi_clk
+ PORT radio_spi_clk = fpga_0_radio_bridge_slot_3_radio_spi_clk
+ PORT radio_spi_data = fpga_0_radio_bridge_slot_3_radio_spi_data
+ PORT radio_spi_cs = fpga_0_radio_bridge_slot_3_radio_spi_cs
+ PORT radio_SHDN = fpga_0_radio_bridge_slot_3_radio_SHDN
+ PORT radio_TxEn = fpga_0_radio_bridge_slot_3_radio_TxEn
+ PORT radio_RxEn = fpga_0_radio_bridge_slot_3_radio_RxEn
+ PORT radio_RxHP = fpga_0_radio_bridge_slot_3_radio_RxHP
+ PORT radio_24PA = fpga_0_radio_bridge_slot_3_radio_24PA
+ PORT radio_5PA = fpga_0_radio_bridge_slot_3_radio_5PA
+ PORT radio_ANTSW = fpga_0_radio_bridge_slot_3_radio_ANTSW
+ PORT radio_LED = fpga_0_radio_bridge_slot_3_radio_LED
+ PORT radio_RX_ADC_DCS = fpga_0_radio_bridge_slot_3_radio_RX_ADC_DCS
+ PORT radio_RX_ADC_DFS = fpga_0_radio_bridge_slot_3_radio_RX_ADC_DFS
+ PORT radio_RX_ADC_PWDNA = fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNA
+ PORT radio_RX_ADC_PWDNB = fpga_0_radio_bridge_slot_3_radio_RX_ADC_PWDNB
+ PORT radio_DIPSW = fpga_0_radio_bridge_slot_3_radio_DIPSW
+ PORT radio_RSSI_ADC_clk = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_clk
+ PORT radio_RSSI_ADC_CLAMP = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_CLAMP
+ PORT radio_RSSI_ADC_HIZ = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_HIZ
+ PORT radio_RSSI_ADC_SLEEP = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_SLEEP
+ PORT radio_RSSI_ADC_D = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_D
+ PORT radio_LD = fpga_0_radio_bridge_slot_3_radio_LD
+ PORT radio_RX_ADC_OTRA = fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRA
+ PORT radio_RX_ADC_OTRB = fpga_0_radio_bridge_slot_3_radio_RX_ADC_OTRB
+ PORT radio_RSSI_ADC_OTR = fpga_0_radio_bridge_slot_3_radio_RSSI_ADC_OTR
+ PORT radio_dac_PLL_LOCK = fpga_0_radio_bridge_slot_3_radio_dac_PLL_LOCK
+ PORT radio_dac_RESET = fpga_0_radio_bridge_slot_3_radio_dac_RESET
+ PORT user_EEPROM_IO_T = eeprom_controller_DQ3_T_radio_bridge_slot_3_user_EEPROM_IO_T
+ PORT user_EEPROM_IO_O = eeprom_controller_DQ3_O_radio_bridge_slot_3_user_EEPROM_IO_O
+ PORT user_EEPROM_IO_I = eeprom_controller_DQ3_I_radio_bridge_slot_3_user_EEPROM_IO_I
+ PORT radio_EEPROM_IO = fpga_0_radio_bridge_slot_3_radio_EEPROM_IO
+ PORT user_ADC_I = radio_bridge_slot_3_user_ADC_I
+ PORT user_ADC_Q = radio_bridge_slot_3_user_ADC_Q
+ PORT user_DAC_I = radio_bridge_slot_3_user_DAC_I
+ PORT user_DAC_Q = radio_bridge_slot_3_user_DAC_Q
+ PORT user_TxModelStart = radio3_txStart
+ PORT user_RSSI_ADC_clk = rssi_clk_out
+ PORT user_RSSI_ADC_D = radio_bridge_slot_3_user_RSSI_ADC_D
+ PORT converter_clock_in = clk_40MHz
+ PORT user_RxHP_external = agc_rxhp_c
+ PORT user_RxBB_gain = agc_g_bb_c
+ PORT user_RxRF_gain = agc_g_rf_c
+END
+
+BEGIN isocm_v10
+ PARAMETER INSTANCE = ppc405_0_iocm
+ PARAMETER HW_VER = 2.00.b
+ PARAMETER C_ISCNTLVALUE = 0x85
+ PORT ISOCM_Clk = sys_clk_s
+ PORT sys_rst = sys_bus_reset
+END
+
+BEGIN isbram_if_cntlr
+ PARAMETER INSTANCE = ppc405_0_iocm_cntlr
+ PARAMETER HW_VER = 3.00.b
+ PARAMETER C_BASEADDR = 0xffff0000
+ PARAMETER C_HIGHADDR = 0xffffffff
+ BUS_INTERFACE ISOCM = ppc405_0_iocm
+ BUS_INTERFACE DCR_WRITE_PORT = isocm_porta
+ BUS_INTERFACE INSTRN_READ_PORT = isocm_portb
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = isocm_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = isocm_porta
+ BUS_INTERFACE PORTB = isocm_portb
+END
+
+BEGIN dsocm_v10
+ PARAMETER INSTANCE = ppc405_0_docm
+ PARAMETER HW_VER = 2.00.b
+ PARAMETER C_DSCNTLVALUE = 0x85
+ PORT DSOCM_Clk = sys_clk_s
+ PORT sys_rst = sys_bus_reset
+END
+
+BEGIN dsbram_if_cntlr
+ PARAMETER INSTANCE = ppc405_0_docm_cntlr
+ PARAMETER HW_VER = 3.00.b
+ PARAMETER C_BASEADDR = 0x40800000
+ PARAMETER C_HIGHADDR = 0x40807fff
+ BUS_INTERFACE DSOCM = ppc405_0_docm
+ BUS_INTERFACE PORTA = dsocm_porta
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = dsocm_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = dsocm_porta
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER HW_VER = 2.01.a
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER C_CLKIN_FREQ = 40000000
+ PARAMETER C_CLKOUT0_FREQ = 80000000
+ PARAMETER C_CLKOUT0_BUF = TRUE
+ PARAMETER C_CLKOUT0_PHASE = 0
+ PARAMETER C_CLKOUT0_GROUP = DCM0
+ PARAMETER C_CLKOUT1_FREQ = 240000000
+ PARAMETER C_CLKOUT1_BUF = TRUE
+ PARAMETER C_CLKOUT1_PHASE = 0
+ PARAMETER C_CLKOUT1_GROUP = DCM0
+ PARAMETER C_CLKOUT2_FREQ = 40000000
+ PORT CLKOUT0 = sys_clk_s
+ PORT CLKOUT1 = proc_clk_s
+ PORT CLKOUT2 = clk_40MHz
+ PORT CLKIN = dcm_clk_s
+ PORT LOCKED = Dcm_all_locked
+ PORT RST = clk_board_config_config_invalid
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = proc_sys_reset_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_EXT_RESET_HIGH = 1
+ BUS_INTERFACE RESETPPC0 = ppc_reset_bus
+ PORT Slowest_sync_clk = clk_40MHz
+ PORT Dcm_locked = Dcm_all_locked
+ PORT Ext_Reset_In = sys_rst_s
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Peripheral_Reset = sys_periph_reset
+END
+
+BEGIN plbv46_plbv46_bridge
+ PARAMETER INSTANCE = plbv46_plbv46_bridge_0
+ PARAMETER HW_VER = 1.01.a
+ PARAMETER C_BUS_CLOCK_RATIO = 2
+ PARAMETER C_NUM_ADDR_RNG = 1
+ PARAMETER C_BRIDGE_BASEADDR = 0x86200000
+ PARAMETER C_BRIDGE_HIGHADDR = 0x8620ffff
+ PARAMETER C_RNG0_BASEADDR = 0xc0000000
+ PARAMETER C_RNG0_HIGHADDR = 0xcfffffff
+ BUS_INTERFACE SPLB = plb0
+ BUS_INTERFACE MPLB = plb_32b_40MHz
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb_32b_40MHz
+ PARAMETER HW_VER = 1.03.a
+ PORT PLB_Clk = clk_40MHz
+END
+
+BEGIN warplab_mimo_4x4_plbw
+ PARAMETER INSTANCE = warplab_mimo_4x4_plbw_0
+ PARAMETER HW_VER = 1.04.a
+ PARAMETER C_BASEADDR = 0x84400000
+ PARAMETER C_HIGHADDR = 0x847fffff
+ BUS_INTERFACE SPLB = plb0
+ PORT sysgen_clk = clk_40MHz
+ PORT radio2_adc_i = radio_bridge_slot_2_user_ADC_I
+ PORT radio2_adc_q = radio_bridge_slot_2_user_ADC_Q
+ PORT radio2_adc_i_otr = radio_bridge_slot_2_controller_RX_ADC_OTRA_radio_controller_0_radio2_ADC_RX_OTRA
+ PORT radio2_adc_q_otr = radio_bridge_slot_2_controller_RX_ADC_OTRB_radio_controller_0_radio2_ADC_RX_OTRB
+ PORT startcapture = net_gnd
+ PORT StartTx = net_gnd
+ PORT StopTx = net_gnd
+ PORT radio2_dac_i = radio_bridge_slot_2_user_DAC_I
+ PORT radio2_dac_q = radio_bridge_slot_2_user_DAC_Q
+ PORT rssi_adc_clk = rssi_clk_out
+ PORT debug_capturing = rxrun
+ PORT debug_transmitting = txrun
+ PORT debug_agc_done = agcsetdone
+ PORT radio3_adc_i = radio_bridge_slot_3_user_ADC_I
+ PORT radio3_adc_i_otr = radio_bridge_slot_3_controller_RX_ADC_OTRA_radio_controller_0_radio3_ADC_RX_OTRA
+ PORT radio3_adc_q = radio_bridge_slot_3_user_ADC_Q
+ PORT radio3_adc_q_otr = radio_bridge_slot_3_controller_RX_ADC_OTRB_radio_controller_0_radio3_ADC_RX_OTRB
+ PORT radio3_dac_i = radio_bridge_slot_3_user_DAC_I
+ PORT radio3_dac_q = radio_bridge_slot_3_user_DAC_Q
+ PORT radio2_rssi = radio_bridge_slot_2_user_RSSI_ADC_D
+ PORT radio3_rssi = radio_bridge_slot_3_user_RSSI_ADC_D
+ PORT agc_done = agc_is_done
+ PORT fromagc_radio2_i = dc_filtered_i_b
+ PORT fromagc_radio2_q = dc_filtered_q_b
+ PORT fromagc_radio3_i = dc_filtered_i_c
+ PORT fromagc_radio3_q = dc_filtered_q_c
+END
+
+BEGIN warplab_mimo_4x4_agc_plbw
+ PARAMETER INSTANCE = warplab_mimo_4x4_agc_plbw_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0xc4a00000
+ PARAMETER C_HIGHADDR = 0xc4a0ffff
+ BUS_INTERFACE SPLB = plb_32b_40MHz
+ PORT sysgen_clk = clk_40MHz
+ PORT rxhp_d = agc_rxhp_d
+ PORT rxhp_c = agc_rxhp_c
+ PORT rxhp_b = agc_rxhp_b
+ PORT rxhp_a = agc_rxhp_a
+ PORT g_rf_d = agc_g_rf_d
+ PORT g_rf_c = agc_g_rf_c
+ PORT g_rf_b = agc_g_rf_b
+ PORT g_rf_a = agc_g_rf_a
+ PORT g_bb_d = agc_g_bb_d
+ PORT g_bb_c = agc_g_bb_c
+ PORT g_bb_b = agc_g_bb_b
+ PORT g_bb_a = agc_g_bb_a
+ PORT agc_done = agc_is_done
+ PORT rssi_in_d = net_gnd
+ PORT rssi_in_c = radio_bridge_slot_3_user_RSSI_ADC_D
+ PORT rssi_in_b = radio_bridge_slot_2_user_RSSI_ADC_D
+ PORT rssi_in_a = net_gnd
+ PORT reset_in = net_gnd
+ PORT q_in_d = net_gnd
+ PORT q_in_c = radio_bridge_slot_3_user_ADC_Q
+ PORT q_in_b = radio_bridge_slot_2_user_ADC_Q
+ PORT q_in_a = net_gnd
+ PORT packet_in = net_gnd
+ PORT mreset_in = net_gnd
+ PORT i_in_d = net_gnd
+ PORT i_in_c = radio_bridge_slot_3_user_ADC_I
+ PORT i_in_b = radio_bridge_slot_2_user_ADC_I
+ PORT i_in_a = net_gnd
+ PORT i_out_a = dc_filtered_i_a
+ PORT i_out_b = dc_filtered_i_b
+ PORT i_out_c = dc_filtered_i_c
+ PORT i_out_d = dc_filtered_i_d
+ PORT q_out_a = dc_filtered_q_a
+ PORT q_out_b = dc_filtered_q_b
+ PORT q_out_c = dc_filtered_q_c
+ PORT q_out_d = dc_filtered_q_d
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = debug_sw_gpio
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_IS_BIDIR = 0
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ BUS_INTERFACE SPLB = plb0
+ PORT GPIO_d_out = debug_sw_gpio_O
+END
+
+BEGIN util_flipflop
+ PARAMETER INSTANCE = util_flipflop_0
+ PARAMETER HW_VER = 1.10.a
+ PARAMETER C_USE_RST = 0
+ PARAMETER C_USE_SET = 0
+ PARAMETER C_SET_RST_HIGH = 0
+ PARAMETER C_USE_CE = 0
+ PARAMETER C_USE_ASYNCH = 0
+ PARAMETER C_SIZE = 2
+ PORT Clk = sys_clk_s
+ PORT D = fpga_0_Ethernet_MAC_PHY_dv & fpga_0_Ethernet_MAC_PHY_tx_en
+ PORT Q = ff_fpga_0_Ethernet_MAC_PHY_ensigs
+END
+

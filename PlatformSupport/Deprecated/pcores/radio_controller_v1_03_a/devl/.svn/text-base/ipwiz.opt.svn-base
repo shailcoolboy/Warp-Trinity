@@ -1,0 +1,10 @@
+-batch 
+-create radio_controller 
+-ver 1.03.a 
+-dir C:\localhome\sgupta\spiper\MyProcessorIPLib 
+-lang verilog 
+-bus opb s 
+-regn 8 32 
+-xps 
+-ise 
+-driver 

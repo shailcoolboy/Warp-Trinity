@@ -1,0 +1,74 @@
+[-- START CONFIGURATION --]
+
+web safe= true
+text encoding= utf8
+newline = unix
+lesson folder=sections
+font family = lucida
+
+[-- END CONFIGURATION --]
+
+[-- START CONTENT --]
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="ScreenSteps http://www.screensteps.com/" />
+	<title>Rice University WARP - %TopicTitle%</title>
+	<link href="neutral.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="%FontFamily%">
+	<div id="wrapper">
+		<div id="header">
+			<a id="logo" href="http://warp.rice.edu/trac/"><img src="http://warp.rice.edu/images/warpLogo.jpg" alt="Rice University WARP - Wireless Open-Access Research Platform" height="45" width="285" /></a>
+		</div>
+	<div id="mainnav" class="nav">
+		<ul>
+			<li class="first active"><a href="/trac/wiki">Home</a></li><li><a href="/forums">Forums</a></li><li><a href="/trac/browser">Browse Source</a></li>
+		</ul>
+	</div>
+  <div id="main">
+
+			<div id="TOC">
+				%SECTIONS%
+			</div><!-- END TOC -->
+		</div><!-- END main -->
+	</div><!-- END wrapper -->
+</body>
+</html>
+
+[-- END CONTENT --]
+
+
+[-- START SECTION --]
+		<div class="section">
+			<h2>%SectionTitle%</h2>
+			<ul class="lessons">
+				%LESSONS%
+			</ul>
+		</div>
+[-- END SECTION --]
+
+
+[-- START LESSONS --]
+<ol class="lessons">
+	%LESSON%
+</ol>
+[-- END LESSONS --]
+
+
+[-- START LESSON --]
+<li>
+	<div class="lesson-title"><a href="%LessonLink%">%LessonTitle%</a></div>
+	%LESSON_DESCRIPTION%
+</li>
+[-- END LESSON --]
+
+
+[-- START LESSON DESCRIPTION --]
+<div class="description">%LessonDescription%</div>
+[-- END LESSON DESCRIPTION --]

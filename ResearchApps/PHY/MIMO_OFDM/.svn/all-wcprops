@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/WARP/!svn/ver/1673/ResearchApps/PHY/MIMO_OFDM
+END
+CRC_table_gen.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WARP/!svn/ver/1531/ResearchApps/PHY/MIMO_OFDM/CRC_table_gen.m
+END
+ofdm_txrx_supermimo.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WARP/!svn/ver/1610/ResearchApps/PHY/MIMO_OFDM/ofdm_txrx_supermimo.mdl
+END
+calcCRC32.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WARP/!svn/ver/1531/ResearchApps/PHY/MIMO_OFDM/calcCRC32.m
+END
+calcCRC16.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WARP/!svn/ver/1532/ResearchApps/PHY/MIMO_OFDM/calcCRC16.m
+END
+ofdm_rx_supermimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WARP/!svn/ver/1584/ResearchApps/PHY/MIMO_OFDM/ofdm_rx_supermimo_init.m
+END
+tx_pilot_select.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WARP/!svn/ver/1472/ResearchApps/PHY/MIMO_OFDM/tx_pilot_select.m
+END
+fixScopes.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WARP/!svn/ver/1185/ResearchApps/PHY/MIMO_OFDM/fixScopes.m
+END
+ofdm_tx_supermimo_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WARP/!svn/ver/1610/ResearchApps/PHY/MIMO_OFDM/ofdm_tx_supermimo_init.m
+END

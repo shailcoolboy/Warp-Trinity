@@ -1,0 +1,2903 @@
+Library {
+  Name			  "WARP_Blockset"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Oct 18 14:10:55 2006"
+  Creator		  "murphpo"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "murphpo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 28 21:31:46 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:29>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Lucida Sans"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "WARP_Blockset"
+    Location		    [372, 403, 1554, 1073]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Register Wrappers\n(Sysgen 10.1+)"
+      Ports		      []
+      Position		      [220, 350, 287, 392]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Register Wrappers\n(Sysgen 10.1+)"
+	Location		[372, 403, 841, 663]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read Only Register"
+	  Ports			  [2]
+	  Position		  [80, 186, 130, 219]
+	  AttributesFormatString  "RO Reg: %<regName>"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "This block is a wrapper for System Generato"
+"r's To Register shared memory block. This register is designed for use with W"
+"ARP's sysgen2opb tool.\n\nNote: The Regisger Name paramter below must be uniq"
+"ue for every instance of Read-Write and Read-Only registers in your system."
+	  MaskPromptString	  "Register Name"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "regName=&1;"
+	  MaskInitialization	  "regBlock = find_system(gcb, 'LookUnderMasks"
+"', 'all', 'FollowLinks', 'on',   'block_type', 'toreg');\n\nif(length(regBloc"
+"k) > 0)\n\n    %Set the shared memory name\n    set_param(regBlock{1}, 'share"
+"d_memory_name', regName);\n\n	set_param(regBlock{1}, 'explicit_data_ty"
+"pe', 'on')\n    set_param(regBlock{1}, 'arith_type', 'unsigned');\n	se"
+"t_param(regBlock{1}, 'ownership', 'Locally owned and initialized')\n\n"
+"	set_param(regBlock{1}, 'n_bits', '32');\n	set_param(regBlock{1"
+"}, 'bin_pt', '0');\n	set_param(regBlock{1}, 'init', '0');\nend\n\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "'RO_Reg'"
+	  System {
+	    Name		    "Read Only Register"
+	    Location		    [567, 173, 1136, 671]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "D"
+	      Position		      [15, 183, 45, 197]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "En"
+	      Position		      [15, 223, 45, 237]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert"
+	      Ports		      [1, 1]
+	      Position		      [180, 175, 225, 205]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      latency		      "0"
+	      dbl_ovrd		      off
+	      pipeline		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,461,334"
+	      block_type	      "convert"
+	      block_version	      "10.1"
+	      sg_icon_stat	      "45,30,1,1,white,blue,0,74901e60,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\npatch([15 10 17 10 "
+"15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 2"
+"7 20 26 21 15 9 4 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0"
+" 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT:"
+" begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('"
+"','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Reinterpret"
+	      Ports		      [1, 1]
+	      Position		      [90, 174, 140, 206]
+	      SourceBlock	      "xbsIndex_r4/Reinterpret"
+	      SourceType	      "Xilinx Type Reinterpreter Block"
+	      infoedit		      "Changes signal type without altering th"
+"e binary representation.   You can changed the signal between signed and unsi"
+"gned, and relocate the binary point.<P><P>Hardware notes: In hardware this bl"
+"ock costs nothing.<P><P>Example:  Suppose the input is 6 bits wide, signed, w"
+"ith 2 fractional bits, and the output is forced to unsigned with 0 fractional"
+" bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an o"
+"utput of 56 (111000 in binary)."
+	      force_arith_type	      on
+	      arith_type	      "Unsigned"
+	      force_bin_pt	      on
+	      bin_pt		      "0"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,336,312"
+	      block_type	      "reinterpret"
+	      block_version	      "10.1"
+	      sg_icon_stat	      "50,32,1,1,white,blue,0,8982c1db,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 50 50 0 ],[0 0 32 32 ],[0.77 0.82 0.91]);\npatch([16 11 18 11 "
+"16 24 26 28 37 30 23 18 25 18 23 30 37 28 26 24 16 ],[3 8 15 22 27 27 25 27 2"
+"7 20 27 22 15 8 3 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0"
+" 32 32 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT:"
+" begin icon text');\ncolor('black');disp('reinterpret');\nfprintf('','COMMENT"
+": end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [410, 195, 430, 215]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "To Register"
+	      Ports		      [2, 1]
+	      Position		      [310, 176, 365, 229]
+	      ShowName		      off
+	      AttributesFormatString  "To Register\\n<< %<shared_memory_name> "
+">>"
+	      SourceBlock	      "xbsIndex_r4/To Register"
+	      SourceType	      "Xilinx Shared Memory Based To Register "
+"Block"
+	      infoedit		      "Register block that writes data to a sh"
+"ared memory register.  Delay of one sample period."
+	      shared_memory_name      "'RO_Reg'"
+	      init		      "0"
+	      ownership		      "Locally owned and initialized"
+	      explicit_data_type      on
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,381,270"
+	      block_type	      "toreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "55,53,1,1,white,blue,0,77cabcdf,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('input',1,'din');\ncolor('bla"
+"ck');port_label('input',2,'en');\ncolor('black');port_label('output',1,'dout'"
+");\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Line {
+	      SrcBlock		      "Convert"
+	      SrcPort		      1
+	      DstBlock		      "To Register"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Reinterpret"
+	      SrcPort		      1
+	      DstBlock		      "Convert"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "D"
+	      SrcPort		      1
+	      DstBlock		      "Reinterpret"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "To Register"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "En"
+	      SrcPort		      1
+	      Points		      [215, 0; 0, -15]
+	      DstBlock		      "To Register"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read-Write Register"
+	  Ports			  [0, 1]
+	  Position		  [75, 114, 130, 146]
+	  AttributesFormatString  "RW Reg: %<regName>"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "This block is a wrapper for two registers f"
+"rom the System Generator Shared Memory blockset:\na) A \"From Register\" bloc"
+"k, which provides a write-only register for the host processor\nb) A \"To Reg"
+"ister\" block, which provides a read-only register for the host processor\n\n"
+"Note: The Regisger Name paramter below must be unique for every instance of s"
+"hared-memory registers in your system. System Generator will throw an error i"
+"f duplicate names are found.\n"
+	  MaskPromptString	  "Register Name|Output Type|Output Num Bits|O"
+"utput Binary Point|Initial Value|Sample Period"
+	  MaskStyleString	  "edit,popup(Unsigned|Signed  (2's comp)),edi"
+"t,edit,edit,edit"
+	  MaskTunableValueString  "off,off,off,off,off,off"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskVarAliasString	  ",,,,,"
+	  MaskVariables		  "regName=&1;out_dataType=&2;out_numBits=@3;o"
+"ut_binaryPt=@4;initValue=@5;sampPeriod=@6;"
+	  MaskInitialization	  "wo_regBlock = find_system(gcb, 'LookUnderMa"
+"sks', 'all', 'FollowLinks', 'on', 'block_type', 'fromreg');\nro_regBlock = fi"
+"nd_system(gcb, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'block_type', 't"
+"oreg');\n\nif(length(wo_regBlock)>0)\n\n	%Set the shared memory name\n"
+"	set_param(wo_regBlock{1}, 'shared_memory_name', ['''' strcat(regName("
+"2:end-1), '_w') '''']);\n\n	set_param(wo_regBlock{1}, 'arith_type', sp"
+"rintf('%s', out_dataType));\n	set_param(wo_regBlock{1}, 'ownership', '"
+"Locally owned and initialized')\n\n	set_param(wo_regBlock{1}, 'n_bits'"
+", num2str(out_numBits));\n	set_param(wo_regBlock{1}, 'bin_pt', num2str"
+"(out_binaryPt));\n	set_param(wo_regBlock{1}, 'init', num2str(initValue"
+"));\nend\n\nif(length(ro_regBlock)>0)\n\n	%Set the shared memory name"
+"\n	set_param(ro_regBlock{1}, 'shared_memory_name', ['''' strcat(regNam"
+"e(2:end-1), '_r') '''']);\n\n	set_param(ro_regBlock{1}, 'explicit_data"
+"_type', 'on')\n    set_param(ro_regBlock{1}, 'arith_type', sprintf('%s', out_"
+"dataType));\n	set_param(ro_regBlock{1}, 'ownership', 'Locally owned an"
+"d initialized')\n\n	set_param(ro_regBlock{1}, 'n_bits', num2str(out_nu"
+"mBits));\n	set_param(ro_regBlock{1}, 'bin_pt', num2str(out_binaryPt));"
+"\n	set_param(ro_regBlock{1}, 'init', num2str(initValue));\nend\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "'RW_Reg'|Unsigned|32|0|0|1"
+	  MaskTabNameString	  ",,,,,"
+	  System {
+	    Name		    "Read-Write Register"
+	    Location		    [2, 74, 582, 375]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant"
+	      Ports		      [0, 1]
+	      Position		      [175, 216, 200, 234]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Constant"
+	      SourceType	      "Xilinx Constant Block Block"
+	      arith_type	      "Boolean"
+	      const		      "1"
+	      n_bits		      "16"
+	      bin_pt		      "14"
+	      explicit_period	      on
+	      period		      "sampPeriod"
+	      dsp48_infoedit	      "The use of this block for DSP48 instruc"
+"tions is deprecated.  Please use the Opmode block."
+	      equ		      "P=C"
+	      opselect		      "C"
+	      inp2		      "PCIN>>17"
+	      opr		      "+"
+	      inp1		      "P"
+	      carry		      "CIN"
+	      dbl_ovrd		      off
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,400,346"
+	      block_type	      "constant"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "25,18,1,1,white,blue,0,06094819,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 55 55 0 ],[0 0 26 26 ],[0.77 0.82 0.91]);\npatch([20 16 22 16 "
+"20 27 29 31 38 32 26 22 28 22 26 32 38 31 29 27 20 ],[3 7 13 19 23 23 21 23 2"
+"3 17 23 19 13 7 3 9 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 "
+"26 26 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: "
+"begin icon text');\ncolor('black');port_label('output',1,'1');\nfprintf('','C"
+"OMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "From Register"
+	      Ports		      [0, 1]
+	      Position		      [150, 35, 195, 85]
+	      ShowName		      off
+	      AttributesFormatString  "From Register\\n<< %<shared_memory_name"
+"> >>\\n%<n_bits>\\n%<period>\\n%<bin_pt>\\n%<arith_type>\\n%<ownership>\\n%<i"
+"nit>"
+	      SourceBlock	      "xbsIndex_r4/From Register"
+	      SourceType	      "Xilinx Shared Memory Based From Registe"
+"r Block"
+	      infoedit		      "Register block that reads data to a sha"
+"red memory register.  Delay of one sample period."
+	      shared_memory_name      "'RW_Reg_w'"
+	      init		      "0"
+	      period		      "sampPeriod"
+	      ownership		      "Locally owned and initialized"
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,381,246"
+	      block_type	      "fromreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "45,50,1,1,white,blue,0,4b212927,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('output',1,'dout');\nfprintf("
+"'','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [370, 205, 390, 225]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "To Register"
+	      Ports		      [2, 1]
+	      Position		      [270, 186, 325, 239]
+	      ShowName		      off
+	      AttributesFormatString  "To Register\\n<< %<shared_memory_name> "
+">>"
+	      SourceBlock	      "xbsIndex_r4/To Register"
+	      SourceType	      "Xilinx Shared Memory Based To Register "
+"Block"
+	      infoedit		      "Register block that writes data to a sh"
+"ared memory register.  Delay of one sample period."
+	      shared_memory_name      "'RW_Reg_r'"
+	      init		      "0"
+	      ownership		      "Locally owned and initialized"
+	      explicit_data_type      on
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,381,270"
+	      block_type	      "toreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "55,53,1,1,white,blue,0,77cabcdf,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('input',1,'din');\ncolor('bla"
+"ck');port_label('input',2,'en');\ncolor('black');port_label('output',1,'dout'"
+");\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "D"
+	      Position		      [285, 53, 315, 67]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "From Register"
+	      SrcPort		      1
+	      Points		      [0, 0; 35, 0]
+	      Branch {
+		DstBlock		"D"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 140]
+		DstBlock		"To Register"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "To Register"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "To Register"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Write-Only Register"
+	  Ports			  [0, 1]
+	  Position		  [70, 39, 125, 71]
+	  AttributesFormatString  "RW Reg: %<regName>"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "This block is a wrapper for System Generato"
+"r's \"From Register\" shared memory block.\n\nNote: The Regisger Name paramte"
+"r below must be unique for every instance of shared-memory registers in your "
+"system. System Generator will throw an error if duplicate names are found."
+	  MaskPromptString	  "Register Name|Output Type|Output Num Bits|O"
+"utput Binary Point|Initial Value|Sample Period"
+	  MaskStyleString	  "edit,popup(Unsigned|Signed  (2's comp)),edi"
+"t,edit,edit,edit"
+	  MaskTunableValueString  "off,off,off,off,off,off"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskVarAliasString	  ",,,,,"
+	  MaskVariables		  "regName=&1;out_dataType=&2;out_numBits=@3;o"
+"ut_binaryPt=@4;initValue=@5;sampPeriod=@6;"
+	  MaskInitialization	  "regBlock = find_system(gcb, 'LookUnderMasks"
+"', 'all', 'FollowLinks', 'on', 'block_type', 'fromreg');\n\nif(length(regBloc"
+"k)>0)\n\n	%Set the shared memory name\n\n    set_param(regBlock{1}, 's"
+"hared_memory_name', ['''' strcat(regName(2:end-1), '_w') '''']);\n\n	s"
+"et_param(regBlock{1}, 'arith_type', sprintf('%s', out_dataType));\n	se"
+"t_param(regBlock{1}, 'ownership', 'Locally owned and initialized')\n\n"
+"	set_param(regBlock{1}, 'n_bits', num2str(out_numBits));\n	set_"
+"param(regBlock{1}, 'bin_pt', num2str(out_binaryPt));\n	set_param(regBl"
+"ock{1}, 'init', num2str(initValue));\nend\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "'WO_Reg'|Unsigned|32|0|0|1"
+	  MaskTabNameString	  ",,,,,"
+	  System {
+	    Name		    "Write-Only Register"
+	    Location		    [567, 173, 1136, 671]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "From Register"
+	      Ports		      [0, 1]
+	      Position		      [150, 35, 195, 85]
+	      ShowName		      off
+	      AttributesFormatString  "From Register\\n<< %<shared_memory_name"
+"> >>\\n%<n_bits>\\n%<period>\\n%<bin_pt>\\n%<arith_type>\\n%<ownership>\\n%<i"
+"nit>"
+	      SourceBlock	      "xbsIndex_r4/From Register"
+	      SourceType	      "Xilinx Shared Memory Based From Registe"
+"r Block"
+	      infoedit		      "Register block that reads data to a sha"
+"red memory register.  Delay of one sample period."
+	      shared_memory_name      "'WO_Reg_w'"
+	      init		      "0"
+	      period		      "sampPeriod"
+	      ownership		      "Locally owned and initialized"
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      dbl_ovrd		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,381,246"
+	      block_type	      "fromreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "45,50,1,1,white,blue,0,4b212927,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('output',1,'dout');\nfprintf("
+"'','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "D"
+	      Position		      [265, 53, 295, 67]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "From Register"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "D"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "WARP Radio ADC/DACs"
+      Ports		      []
+      Position		      [220, 175, 284, 227]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"WARP Radio ADC/DACs"
+	Location		[-23, 74, 800, 590]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 1 ADC I"
+	  Ports			  [1, 1]
+	  Position		  [165, 242, 240, 278]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Sample Period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 1 ADC I"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio1_ADC_I"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio1_ADC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "radio1_ADC_I"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 1 ADC Q"
+	  Ports			  [1, 1]
+	  Position		  [165, 302, 240, 338]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "adc_sample_period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 1 ADC Q"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio1_ADC_Q"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      DstBlock		      "radio1_ADC_Q"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio1_ADC_Q"
+	      SrcPort		      1
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 1 DAC I"
+	  Ports			  [1, 1]
+	  Position		  [165, 112, 240, 148]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #1 I-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 1 DAC I"
+	    Location		    [-848, 197, -543, 272]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 83, 230, 97]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert"
+	      Ports		      [1, 1]
+	      Position		      [255, 80, 300, 100]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio1_DAC_I"
+	      Ports		      [1, 1]
+	      Position		      [345, 79, 400, 101]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [425, 83, 455, 97]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Convert"
+	      SrcPort		      1
+	      DstBlock		      "radio1_DAC_I"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "Convert"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio1_DAC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 1 DAC Q"
+	  Ports			  [1, 1]
+	  Position		  [165, 177, 240, 213]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #1Q-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 1 DAC Q"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert1"
+	      Ports		      [1, 1]
+	      Position		      [255, 140, 300, 160]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio1_DAC_Q"
+	      Ports		      [1, 1]
+	      Position		      [345, 139, 400, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [425, 143, 455, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio1_DAC_Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Convert1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Convert1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "radio1_DAC_Q"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 2 ADC I"
+	  Ports			  [1, 1]
+	  Position		  [295, 242, 370, 278]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Sample Period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 2 ADC I"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio2_ADC_I"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "radio2_ADC_I"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio2_ADC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 2 ADC Q"
+	  Ports			  [1, 1]
+	  Position		  [295, 302, 370, 338]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "adc_sample_period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 2 ADC Q"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio2_ADC_Q"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio2_ADC_Q"
+	      SrcPort		      1
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      DstBlock		      "radio2_ADC_Q"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 2 DAC I"
+	  Ports			  [1, 1]
+	  Position		  [295, 112, 370, 148]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #2 I-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 2 DAC I"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 83, 230, 97]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert"
+	      Ports		      [1, 1]
+	      Position		      [255, 80, 300, 100]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio2_DAC_I"
+	      Ports		      [1, 1]
+	      Position		      [345, 79, 400, 101]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [425, 83, 455, 97]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio2_DAC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "Convert"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Convert"
+	      SrcPort		      1
+	      DstBlock		      "radio2_DAC_I"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 2 DAC Q"
+	  Ports			  [1, 1]
+	  Position		  [295, 177, 370, 213]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #2 Q-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 2 DAC Q"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert1"
+	      Ports		      [1, 1]
+	      Position		      [255, 140, 300, 160]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio2_DAC_Q"
+	      Ports		      [1, 1]
+	      Position		      [345, 139, 400, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [425, 143, 455, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Convert1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "radio2_DAC_Q"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Convert1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio2_DAC_Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 3 ADC I"
+	  Ports			  [1, 1]
+	  Position		  [425, 242, 500, 278]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Sample Period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 3 ADC I"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio3_ADC_I"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio3_ADC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "radio3_ADC_I"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 3 ADC Q"
+	  Ports			  [1, 1]
+	  Position		  [425, 302, 500, 338]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "adc_sample_period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 3 ADC Q"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio3_ADC_Q"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      DstBlock		      "radio3_ADC_Q"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio3_ADC_Q"
+	      SrcPort		      1
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 3 DAC I"
+	  Ports			  [1, 1]
+	  Position		  [425, 112, 500, 148]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #3 I-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 3 DAC I"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 83, 230, 97]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert"
+	      Ports		      [1, 1]
+	      Position		      [255, 80, 300, 100]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio3_DAC_I"
+	      Ports		      [1, 1]
+	      Position		      [345, 79, 400, 101]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [425, 83, 455, 97]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Convert"
+	      SrcPort		      1
+	      DstBlock		      "radio3_DAC_I"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "Convert"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio3_DAC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 3 DAC Q"
+	  Ports			  [1, 1]
+	  Position		  [425, 177, 500, 213]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #3 Q-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 3 DAC Q"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert1"
+	      Ports		      [1, 1]
+	      Position		      [255, 140, 300, 160]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio3_DAC_Q"
+	      Ports		      [1, 1]
+	      Position		      [345, 139, 400, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [425, 143, 455, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio3_DAC_Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Convert1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Convert1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "radio3_DAC_Q"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 4 ADC I"
+	  Ports			  [1, 1]
+	  Position		  [545, 242, 620, 278]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Sample Period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 4 ADC I"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio4_ADC_I"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "radio4_ADC_I"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio4_ADC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 4 ADC Q"
+	  Ports			  [1, 1]
+	  Position		  [545, 307, 620, 343]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskPromptString	  "adc_sample_period"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "adc_sample_period=@1;"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1"
+	  System {
+	    Name		    "Radio 4 ADC Q"
+	    Location		    [2, 74, 1278, 1000]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio4_ADC_Q"
+	      Ports		      [1, 1]
+	      Position		      [265, 139, 320, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway In"
+	      SourceType	      "Xilinx Gateway In Block"
+	      infoedit		      "Gateway in block.  Converts inputs of t"
+"ype Simulink integer, double and fixed point to  Xilinx fixed point type.<P><"
+"P>Hardware notes:  In hardware these blocks become top level input ports."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "14"
+	      bin_pt		      "13"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Flag as error"
+	      period		      "adc_sample_period"
+	      dbl_ovrd		      "off"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,356,423"
+	      block_type	      "gatewayin"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,4bb76ffd"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt}"
+"\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprin"
+"tf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above "
+"this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [355, 143, 385, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio4_ADC_Q"
+	      SrcPort		      1
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      DstBlock		      "radio4_ADC_Q"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 4 DAC I"
+	  Ports			  [1, 1]
+	  Position		  [545, 112, 620, 148]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #4 I-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 4 DAC I"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [200, 83, 230, 97]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert"
+	      Ports		      [1, 1]
+	      Position		      [255, 80, 300, 100]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio4_DAC_I"
+	      Ports		      [1, 1]
+	      Position		      [345, 79, 400, 101]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_out"
+	      Position		      [425, 83, 455, 97]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "radio4_DAC_I"
+	      SrcPort		      1
+	      DstBlock		      "I_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      DstBlock		      "Convert"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Convert"
+	      SrcPort		      1
+	      DstBlock		      "radio4_DAC_I"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Radio 4 DAC Q"
+	  Ports			  [1, 1]
+	  Position		  [545, 177, 620, 213]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "WARP Radio Board #4 Q-channel DAC"
+	  MaskDisplay		  "image(imread('WARP_Logo.jpg'))"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Radio 4 DAC Q"
+	    Location		    [-1278, 70, -2, 1004]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Q"
+	      Position		      [200, 143, 230, 157]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Convert1"
+	      Ports		      [1, 1]
+	      Position		      [255, 140, 300, 160]
+	      SourceBlock	      "xbsIndex_r4/Convert"
+	      SourceType	      "Xilinx Type Converter Block"
+	      infoedit		      "Hardware notes: rounding and saturating"
+" require hardware resources; truncating and wrapping do not."
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "15"
+	      quantization	      "Truncate"
+	      overflow		      "Flag as error"
+	      latency		      "0"
+	      dbl_ovrd		      "off"
+	      pipeline		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,374,366"
+	      block_type	      "convert"
+	      sg_icon_stat	      "45,20,1,1,white,blue,0,0eb6e735"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 45 45 0 ],[0 0 20 20 ],[0.77 0.82 0.91]);\npatch([17 14 19 14"
+" 17 22 23 24 30 26 22 19 24 19 22 26 30 24 23 22 17 ],[2 5 10 15 18 18 17 18 "
+"18 14 18 15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 2"
+"0 20 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('output',1,'cast');\nfprint"
+"f('','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "radio4_DAC_Q"
+	      Ports		      [1, 1]
+	      Position		      [345, 139, 400, 161]
+	      ForegroundColor	      "[0.250980, 0.000000, 0.000000]"
+	      SourceBlock	      "xbsIndex_r4/Gateway Out"
+	      SourceType	      "Xilinx Gateway Out Block"
+	      infoedit		      "Gateway out block.  Converts Xilinx fix"
+"ed point inputs into ouputs of type Simulink integer, double, or fixed point."
+"<P><P>Hardware notes:  In hardware these blocks become top level output ports"
+" or are discarded, depending on how they are configured."
+	      hdl_port		      "on"
+	      timing_constraint	      "None"
+	      locs_specified	      "off"
+	      LOCs		      "{}"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      block_version	      "VER_STRING_GOES_HERE"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "gatewayout"
+	      sg_icon_stat	      "55,22,1,1,white,yellow,0,f0cec300"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.95 0.93 0.65]);\npatch([22 18 23 18"
+" 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 "
+"20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 2"
+"2 22 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMMEN"
+"T: begin icon text ');\ncolor('black');port_label('input',1,' ');\ncolor('bla"
+"ck');port_label('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfpri"
+"ntf('','COMMENT: end icon text');\nfprintf('','COMMENT: Make no changes above"
+" this line -- machine generated code. ');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_out"
+	      Position		      [425, 143, 455, 157]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Convert1"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "radio4_DAC_Q"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Convert1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "radio4_DAC_Q"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "Q_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "sysgen2opb Blocks\n(Deprecated)"
+      Ports		      []
+      Position		      [220, 260, 285, 306]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"sysgen2opb Blocks\n(Deprecated)"
+	Location		[104, 383, 504, 656]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read Only Register"
+	  Ports			  [1]
+	  Position		  [190, 29, 240, 61]
+	  AttributesFormatString  "RO Reg: %<regName>"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "This block is a wrapper for System Generato"
+"r's To Register shared memory block. This register is designed for use with W"
+"ARP's sysgen2opb tool.\n\nNote: The Regisger Name paramter below must be uniq"
+"ue for every instance of Read-Write and Read-Only registers in your system."
+	  MaskPromptString	  "Register Name|Initial Value"
+	  MaskStyleString	  "edit,edit"
+	  MaskTunableValueString  "off,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "regName=&1;initValue=@2;"
+	  MaskInitialization	  "regBlock = find_system(gcb, 'LookUnderMasks"
+"', 'all', 'FollowLinks', 'on',   'block_type', 'toreg');\n\nif(length(regBloc"
+"k) > 0)\n\n    %Set the shared memory name\n    set_param(regBlock{1}, 'share"
+"d_memory_name', regName);\nend\n\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "'RO_Reg'|0"
+	  MaskTabNameString	  ","
+	  System {
+	    Name		    "Read Only Register"
+	    Location		    [2, 74, 582, 375]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "D"
+	      Position		      [180, 183, 210, 197]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant"
+	      Ports		      [0, 1]
+	      Position		      [235, 206, 260, 224]
+	      ShowName		      off
+	      SourceBlock	      "xbsIndex_r4/Constant"
+	      SourceType	      "Xilinx Constant Block Block"
+	      arith_type	      "Boolean"
+	      const		      "1"
+	      n_bits		      "16"
+	      bin_pt		      "14"
+	      explicit_period	      "off"
+	      period		      "1"
+	      dsp48_infoedit	      "The use of this block for DSP48 instruc"
+"tions is deprecated.  Please use the Opmode block."
+	      equ		      "P=C"
+	      opselect		      "C"
+	      inp2		      "PCIN>>17"
+	      opr		      "+"
+	      inp1		      "P"
+	      carry		      "CIN"
+	      dbl_ovrd		      "off"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "constant"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "25,18,0,1,white,blue,0,06094819,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 55 55 0 ],[0 0 26 26 ],[0.77 0.82 0.91]);\npatch([20 16 22 16 "
+"20 27 29 31 38 32 26 22 28 22 26 32 38 31 29 27 20 ],[3 7 13 19 23 23 21 23 2"
+"3 17 23 19 13 7 3 9 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 "
+"26 26 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: "
+"begin icon text');\ncolor('black');port_label('output',1,'1');\nfprintf('','C"
+"OMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "To Register"
+	      Ports		      [2, 1]
+	      Position		      [310, 176, 365, 229]
+	      ShowName		      off
+	      AttributesFormatString  "To Register\\n<< %<shared_memory_name> "
+">>"
+	      SourceBlock	      "xbsIndex_r4/To Register"
+	      SourceType	      "Xilinx Shared Memory Based To Register "
+"Block"
+	      infoedit		      "Register block that writes data to a sh"
+"ared memory register.  Delay of one sample period."
+	      shared_memory_name      "'RO_Reg'"
+	      init		      "14"
+	      ownership		      "Locally owned and initialized"
+	      explicit_data_type      "off"
+	      arith_type	      "Unsigned"
+	      n_bits		      "24"
+	      bin_pt		      "0"
+	      dbl_ovrd		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,379,270"
+	      block_type	      "toreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "55,53,1,1,white,blue,0,77cabcdf,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('input',1,'din');\ncolor('bla"
+"ck');port_label('input',2,'en');\ncolor('black');port_label('output',1,'dout'"
+");\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    Line {
+	      SrcBlock		      "D"
+	      SrcPort		      1
+	      DstBlock		      "To Register"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "To Register"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read-Write Register"
+	  Ports			  [0, 1]
+	  Position		  [55, 29, 110, 61]
+	  AttributesFormatString  "RW Reg: %<regName>"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskDescription	  "This block is a wrapper for System Generato"
+"r's From Register shared memory block. This register is designed for use with"
+" WARP's sysgen2opb tool.\n\nNote: The Regisger Name paramter below must be un"
+"ique for every instance of Read-Write and Read-Only registers in your system."
+	  MaskPromptString	  "Register Name|Output Type|Output Num Bits|O"
+"utput Binary Point|Initial Value|Sample Period"
+	  MaskStyleString	  "edit,popup(Unsigned|Signed  (2's comp)),edi"
+"t,edit,edit,edit"
+	  MaskTunableValueString  "off,off,off,off,off,off"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskVarAliasString	  ",,,,,"
+	  MaskVariables		  "regName=&1;out_dataType=&2;out_numBits=@3;o"
+"ut_binaryPt=@4;initValue=@5;sampPeriod=@6;"
+	  MaskInitialization	  "regBlock = find_system(gcb, 'LookUnderMasks"
+"', 'all', 'FollowLinks', 'on', 'block_type', 'fromreg');\n\nif(length(regBloc"
+"k)>0)\n\n	%Set the shared memory name\n	set_param(regBlock{1}, "
+"'shared_memory_name', regName);\n\n	set_param(regBlock{1}, 'arith_type"
+"', sprintf('%s', out_dataType));\n	set_param(regBlock{1}, 'ownership',"
+" 'Locally owned and initialized')\n\n	set_param(regBlock{1}, 'n_bits',"
+" num2str(out_numBits));\n	set_param(regBlock{1}, 'bin_pt', num2str(out"
+"_binaryPt));\n	set_param(regBlock{1}, 'init', num2str(initValue));\nen"
+"d\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "'RW_Reg'|Unsigned|32|0|0|1"
+	  MaskTabNameString	  ",,,,,"
+	  System {
+	    Name		    "Read-Write Register"
+	    Location		    [2, 74, 582, 375]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "From Register"
+	      Ports		      [0, 1]
+	      Position		      [150, 35, 195, 85]
+	      ShowName		      off
+	      AttributesFormatString  "From Register\\n<< %<shared_memory_name"
+"> >>\\n%<n_bits>\\n%<period>\\n%<bin_pt>\\n%<arith_type>\\n%<ownership>\\n%<i"
+"nit>"
+	      SourceBlock	      "xbsIndex_r4/From Register"
+	      SourceType	      "Xilinx Shared Memory Based From Registe"
+"r Block"
+	      infoedit		      "Register block that reads data to a sha"
+"red memory register.  Delay of one sample period."
+	      shared_memory_name      "'RW_Reg'"
+	      init		      "0"
+	      period		      "1"
+	      ownership		      "Locally owned and initialized"
+	      arith_type	      "Unsigned"
+	      n_bits		      "32"
+	      bin_pt		      "0"
+	      dbl_ovrd		      "off"
+	      xl_use_area	      "off"
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "20,20,379,246"
+	      block_type	      "fromreg"
+	      block_version	      "8.2.02"
+	      sg_icon_stat	      "45,50,1,1,white,blue,0,4b212927,right"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s');\npatch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15"
+" 30 34 38 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50"
+" 37 49 40 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 "
+"0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+": begin icon text');\ncolor('black');port_label('output',1,'dout');\nfprintf("
+"'','COMMENT: end icon text');\n"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "D"
+	      Position		      [265, 53, 295, 67]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "From Register"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      DstBlock		      "D"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc
+END
+init_lcd.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc/init_lcd.m
+END
+user_io_board_controller_cw.xcf
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc/user_io_board_controller_cw.xcf
+END
+user_io_board_controller.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc/user_io_board_controller.mdl
+END
+user_io_board_controller_unconverted_backup.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc/user_io_board_controller_unconverted_backup.mdl
+END
+charMapBuilder.m
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WARP/!svn/ver/1288/PlatformSupport/Deprecated/pcores/user_io_board_controller_opbw_v1_00_a/mdlsrc/charMapBuilder.m
+END

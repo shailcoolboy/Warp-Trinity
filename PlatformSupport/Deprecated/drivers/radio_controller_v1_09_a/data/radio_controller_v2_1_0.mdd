@@ -1,0 +1,14 @@
+##############################################################################
+## Description:       Microprocessor Driver Definition
+## Date:              Thu Jan 04 01:30:44 2007 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER radio_controller
+
+  OPTION supported_peripherals = (radio_controller);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

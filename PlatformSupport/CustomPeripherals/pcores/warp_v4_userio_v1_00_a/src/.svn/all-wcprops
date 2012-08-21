@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WARP/!svn/ver/1583/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/src
+END
+warp_v4_userio.c
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WARP/!svn/ver/1345/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/src/warp_v4_userio.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WARP/!svn/ver/1354/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/src/Makefile
+END
+warp_v4_userio.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WARP/!svn/ver/1583/PlatformSupport/CustomPeripherals/pcores/warp_v4_userio_v1_00_a/src/warp_v4_userio.h
+END

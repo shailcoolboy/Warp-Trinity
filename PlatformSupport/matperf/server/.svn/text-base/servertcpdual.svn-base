@@ -1,0 +1,75 @@
+import re
+result = open('result.txt').readlines() 
+length1 = len(result) 
+for i in range(0, length1): 
+        result[i] = result[i].replace('- ', '-')
+        result[i] = result[i].replace('/ ', '/')
+        result[i] = result[i].replace('[','[ ')
+        result[i] = result[i].replace(']',' ]')
+        result[i] = result[i].replace(':',' :')
+        result[i] = result[i].replace('(','( ')
+        result[i] = result[i].replace(')',' )')
+for i in range(0, length1): 
+        result[i] = result[i].replace('-', ' ')
+        result[i] = result[i].replace('/', ' ')
+
+# from below for loops, 13 is the total output line numbers and the remainder of i divided by 13 is 
+# the location of the line tht contains port #, bandwidth, loss, and etc. 
+
+for i in range(0,length1):
+    if (i%13) == 4:
+        f = open('ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%13) == 8:
+        f = open('dual_ptmp.txt','a')
+        f.write(str(result[i])+'\n')
+        f.close()
+    elif (i%13) == 10:
+        f = open('rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+    elif (i%13) == 12:
+        f = open('dual_rtmp.txt','a')
+        f.write(str(result[i])+ '\n')
+        f.close()
+
+# in each file, ptmp.txt and rtmp.txt, there are sentences that contain port#, and bandwidth, etc. 
+# below command lines separates the sentences into words and rearrange them into vector forms
+# so that they could be imported into matlab workspace.
+
+o = open('ptmp.txt').readlines()
+for i in range(0, len(o)):
+    portadd = o[i]
+    q = re.split('\s+', str(portadd))
+    s = open('portadd.txt','a')
+    for j in range(0, len(q)):
+        s.write(str(q[j])+'\n')
+    s.close()
+
+f = open('rtmp.txt').readlines()
+for i in range(0, len(f)):
+    repnum = f[i]
+    p = re.split('\s+', str(repnum))
+    s = open('repnum.txt','a')    
+    for j in range(0, len(p)):
+        s.write(str(p[j])+'\n')
+    s.close()
+
+a = open('dual_rtmp.txt').readlines()
+for i in range(0, len(a)):
+    d_repnum = a[i]
+    r = re.split('\s+', str(d_repnum))
+    s = open('dual_repnum.txt','a')
+    for j in range(0, len(r)):
+        s.write(str(r[j])+'\n')
+    s.close()
+
+t = open('dual_ptmp.txt').readlines()
+for i in range(0, len(t)):
+    d_portadd = t[i]
+    q = re.split('\s+', str(d_portadd))
+    s = open('dual_portadd.txt','a')
+    for j in range(0, len(q)):
+        s.write(str(q[j])+'\n')
+    s.close()

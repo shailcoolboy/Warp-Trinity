@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti
+END
+ofdm_txrx_alamouti.mdl
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/ofdm_txrx_alamouti.mdl
+END
+calcTxCRC.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/calcTxCRC.m
+END
+CRC_table_gen.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/CRC_table_gen.m
+END
+ofdm_rx_alamouti_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/ofdm_rx_alamouti_init.m
+END
+ofdm_tx_alamouti_init.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/ofdm_tx_alamouti_init.m
+END
+ofdm_rx_init_packetTimingControl.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WARP/!svn/ver/1408/ResearchApps/PHY/MIMO_OFDM/Deprecated/Alamouti/ofdm_rx_init_packetTimingControl.m
+END

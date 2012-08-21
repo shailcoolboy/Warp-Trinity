@@ -1,0 +1,86 @@
+###################################################################
+# Copyright (c) 2006 Rice University
+# All Rights Reserved
+# This code is covered by the Rice-WARP license
+# See http://warp.rice.edu/license/ for details
+###################################################################
+
+BEGIN eeprom
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = MIXED
+OPTION ARCH_SUPPORT_MAP = (virtex2p=PREFERRED, virtex4=PREFERRED, others=AVAILABLE)
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION USAGE_LEVEL = BASE_USER
+
+IO_INTERFACE IO_IF = EEPROM, IO_TYPE = WARP_EEPROM_V1
+
+## Bus Interfaces
+BUS_INTERFACE BUS = SOPB, BUS_TYPE = SLAVE, BUS_STD = OPB
+
+## Generics for VHDL or Parameters for Verilog
+PARAMETER C_BASEADDR = 0xffffffff, DT = std_logic_vector, BUS = SOPB, ADDRESS = BASE, PAIR = C_HIGHADDR, MIN_SIZE = 0x00010000
+PARAMETER C_HIGHADDR = 0x00000000, DT = std_logic_vector, BUS = SOPB, ADDRESS = HIGH, PAIR = C_BASEADDR
+PARAMETER C_OPB_AWIDTH = 32, DT = INTEGER, BUS = SOPB
+PARAMETER C_OPB_DWIDTH = 32, DT = INTEGER, BUS = SOPB
+PARAMETER C_USER_ID_CODE = 3, DT = INTEGER
+PARAMETER C_FAMILY = virtex2p, DT = STRING
+
+## Ports
+PORT DQ0 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ0_I, TRI_O = DQ0_O, TRI_T = DQ0_T
+PORT DQ0_T = "", DIR = O
+PORT DQ0_O = "", DIR = O
+PORT DQ0_I = "", DIR = I
+
+PORT DQ1 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ1_I, TRI_O = DQ1_O, TRI_T = DQ1_T
+PORT DQ1_T = "", DIR = O
+PORT DQ1_O = "", DIR = O
+PORT DQ1_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ2 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ2_I, TRI_O = DQ2_O, TRI_T = DQ2_T
+PORT DQ2_T = "", DIR = O
+PORT DQ2_O = "", DIR = O
+PORT DQ2_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ3 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ3_I, TRI_O = DQ3_O, TRI_T = DQ3_T
+PORT DQ3_T = "", DIR = O
+PORT DQ3_O = "", DIR = O
+PORT DQ3_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ4 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ4_I, TRI_O = DQ4_O, TRI_T = DQ4_T
+PORT DQ4_T = "", DIR = O
+PORT DQ4_O = "", DIR = O
+PORT DQ4_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ5 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ5_I, TRI_O = DQ5_O, TRI_T = DQ5_T
+PORT DQ5_T = "", DIR = O
+PORT DQ5_O = "", DIR = O
+PORT DQ5_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ6 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ6_I, TRI_O = DQ6_O, TRI_T = DQ6_T
+PORT DQ6_T = "", DIR = O
+PORT DQ6_O = "", DIR = O
+PORT DQ6_I = "", DIR = I, INITIALVAL = VCC
+
+PORT DQ7 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = DQ7_I, TRI_O = DQ7_O, TRI_T = DQ7_T
+PORT DQ7_T = "", DIR = O
+PORT DQ7_O = "", DIR = O
+PORT DQ7_I = "", DIR = I, INITIALVAL = VCC
+
+PORT OPB_Clk = "", DIR = I, SIGIS = Clk, BUS = SOPB
+PORT OPB_Rst = OPB_Rst, DIR = I, SIGIS = Rst, BUS = SOPB
+PORT Sl_DBus = Sl_DBus, DIR = O, VEC = [0:(C_OPB_DWIDTH-1)], BUS = SOPB
+PORT Sl_errAck = Sl_errAck, DIR = O, BUS = SOPB
+PORT Sl_retry = Sl_retry, DIR = O, BUS = SOPB
+PORT Sl_toutSup = Sl_toutSup, DIR = O, BUS = SOPB
+PORT Sl_xferAck = Sl_xferAck, DIR = O, BUS = SOPB
+PORT OPB_ABus = OPB_ABus, DIR = I, VEC = [0:(C_OPB_AWIDTH-1)], BUS = SOPB
+PORT OPB_BE = OPB_BE, DIR = I, VEC = [0:((C_OPB_DWIDTH/8)-1)], BUS = SOPB
+PORT OPB_DBus = OPB_DBus, DIR = I, VEC = [0:(C_OPB_DWIDTH-1)], BUS = SOPB
+PORT OPB_RNW = OPB_RNW, DIR = I, BUS = SOPB
+PORT OPB_select = OPB_select, DIR = I, BUS = SOPB
+PORT OPB_seqAddr = OPB_seqAddr, DIR = I, BUS = SOPB
+
+END
