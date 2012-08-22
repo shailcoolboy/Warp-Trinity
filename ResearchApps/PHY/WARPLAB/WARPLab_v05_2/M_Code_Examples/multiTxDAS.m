@@ -13,7 +13,7 @@ numTxNode = 1;
 txID = 1; % currently we only allow one transmitter with ID txID
 numRxNode = 2;
 %rxID = 2;
-numTxAntenna = 1; % number of tx antennas
+numTxAntenna = 2; % number of tx antennas
 numRxAntenna = 2; % number of rx antennas
 osamp = 8; % Oversampling rate or Number of samples per symbol, 40Mhz/osamp wide band
 numOFDMsymb = 10;
@@ -217,8 +217,47 @@ for k = 1:numBits
 end
 fclose(fg);
 
+fg = fopen('databits1.dat', 'w');
+numBits = 48*numOFDMsymb;
+for i=1:10
+for k = 1:48 
+	if (k>32)%CSMA
+			if (rand < 0.5)
+				for kk = 1:numRxNode
+					fprintf(fg, '1 ');
+				end
+			else        
+				for kk = 1:numRxNode
+					fprintf(fg, '0 ');
 
-inb = load('databits.dat');
+				end 
+			end
+	else
+			for kk = 1:numRxNode
+					if (rand < 0.5)
+						%fprintf(fg, '1 1');   
+					    fprintf(fg, '1 ');
+					else        
+						%fprintf(fg, '0 0');    
+    					fprintf(fg, '0 ');
+ 					end 
+			end
+	end %end else if not CSMA
+	fprintf(fg, '\n');
+end
+end
+fclose(fg);
+
+inb = load('databits1.dat');
+
+
+
+
+
+
+
+
+%inb = load('databits.dat');
 numBitsInPkt = length(inb(:,1)); 
 
 s = 1;
@@ -399,7 +438,7 @@ end
 %display(precodeM);
 % precoding
 for s = 1:64 %subcarrier index 
-    %if (subc <= 6 || subc >= 60 || subc == 33) continue; end 
+    %if (subc >32) continue; end 
 	% Antenna power allocation here
 	if (numTxAntenna==1 && numRxAntenna==1) %CSMA
 		precodeM(:,:,s) = zeros(1,numRxAntenna);
@@ -419,6 +458,15 @@ for s = 1:64 %subcarrier index
     end
     
     %display(VLTF_freq(1:numRxNode,s));
+
+    for l=1:64
+        if ( l>47 && l ~=58)
+    %if(l>32)
+       % precodeM(:,:,l) = 1;
+
+
+    end
+end
 
     
     for txa = 1:numTxAntenna
@@ -449,6 +497,13 @@ end
 %display('final precode');
 %hey = VLTF_coded(:,1);
 %hey1 = VLTF_coded(:,2);
+
+%shw=precodeM(:,:,:);
+
+
+
+
+
 
 maxamp=0;
 for txa = 1:numTxAntenna
@@ -538,8 +593,8 @@ end  % end for ds = 1:64:l1
 for txa = 1:numTxAntenna
      DATA_up2(:,txa) = DATA_up2(:,txa) / maxamp; 
 end
-
-
+sh=DATA_up2(:,1);
+sh1=DATA_up2(:,2);
 % ------- Concatenate all tx samples ---------
 zero_vector = zeros(1, length(LTF_up2));
 %zero_data = zeros(1, length(DATA_up2));
@@ -601,12 +656,13 @@ elseif numTxAntenna == 4
 td = [STF_up2, zero_vector, LTF_up2, zero_vector, zero_vector, VLTF_t_up(2,:), DATA_up2(:,2).'];
 end
 end % end txantenna 2
+
 if (USESIM==0)
     TxData(:,2,txn) = [td zeros(1,max(1,TxLength-length(td)))];
 else
     TxData(:,2,txn) = [zero_vector td zeros(1,max(1,TxLength-length(td)))];
 end
-
+sh3 = TxData(:,:,:);
 % tx antenna 3
 td = [];
 if (numTxAntenna >= 3)
@@ -942,6 +998,13 @@ if (USE_POWEROPT == 0 || USE_POWEROPT==2)
         % display(H1)
         %if (norm(H1)==0) continue; end
         precodeM(:,:,subc) = H1' * inv(H1 * H1'); 
+    end
+    for l=1:64
+        if (l <= 6 || l >= 60 || l == 33) continue; end 
+        if ( l>47)
+    %if(l>32)
+        precodeM(:,:,l) = 1;
+        end
     end
 elseif (USE_POWEROPT==1 && numPrecodeRounds ~=totalPrecodeRounds) % use joint power control and precoding
 	decomp_powerAlloc_warp; 

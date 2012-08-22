@@ -680,7 +680,7 @@ while ns < sigLen - 161
     
     % ================ Decode OFDM data symbols ===================
     if DECODE_DATA
-	inb = load('databits.dat');
+	inb = load('databits1.dat');
     totalSymb = length(inb(:,1))/48; %total number of OFDM symbols 
     nsymbol = 0;
 	if (DEBUG_OUT)
@@ -766,7 +766,8 @@ while ns < sigLen - 161
             continue;
         end
         %datasymb(k) = lsigsymb(k)/ltfch(k);
-        
+        %hello = datasymb(k); 
+        fprintf(1, 'data = %g ',datasymb(k) );
 		datasymb1(symbcount) = datasymb(k);
         datasymbOut(symbcount) = 1;
         if (real(datasymb(k)) < 0)
